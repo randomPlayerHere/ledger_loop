@@ -1,0 +1,28 @@
+# Configuration
+
+# LLM settings
+llm:
+  model: claude-3-5-sonnet-20241022
+  temperature: 0.0
+  max_tokens: 1000
+
+# Matching tolerances
+tolerances:
+  amount_pct: 0.005  # 0.5% tolerance for amount matching
+  tds_rate: 0.02    # 2% TDS rate
+  bank_charge_min: 50  # Minimum bank charge (₹)
+  bank_charge_pct: 0.005  # Bank charge as percentage
+
+# Date matching
+dates:
+  max_days_gap: 7  # Maximum days between invoice and transaction
+
+# Confidence thresholds
+thresholds:
+  auto_match: 0.95  # Min confidence to auto-match
+  exception: 0.50   # Min confidence to attempt LLM resolution
+
+# Exception handling
+exceptions:
+  max_per_batch: 100  # Max exceptions to queue
+  llm_timeout: 30    # Seconds

@@ -1,25 +1,27 @@
 {
   "profile": "standard",
+  "seed": 42,
   "n_invoices": 500,
-  "n_bank_txns": 505,
-  "n_truth_links": 505,
-  "unmatchable": 43,
+  "n_bank_txns": 520,
+  "n_truth_links": 520,
+  "unmatchable": 45,
   "link_type_distribution": {
-    "CONSOLIDATED": 16,
-    "CLEAN": 151,
-    "PARTIAL": 112,
-    "SHORT_PAID_TDS": 48,
-    "SHORT_PAID_CHARGES": 41,
-    "OVERPAID": 12,
-    "NO_REF": 42,
-    "LATE": 40,
-    "DUPLICATE": 13,
-    "ORPHAN": 30
+    "CONSOLIDATED": 17,
+    "CLEAN": 142,
+    "PARTIAL": 104,
+    "SHORT_PAID_TDS": 43,
+    "SHORT_PAID_CHARGES": 43,
+    "DISPUTED": 20,
+    "DUPLICATE": 14,
+    "LATE": 42,
+    "NO_REF": 48,
+    "OVERPAID": 16,
+    "ORPHAN": 31
   },
   "difficulty_distribution": {
-    "HARD": 183,
-    "EASY": 191,
-    "MEDIUM": 101,
-    "IMPOSSIBLE": 30
+    "HARD": 203,
+    "EASY": 184,
+    "MEDIUM": 102,
+    "IMPOSSIBLE": 31
   }
 }

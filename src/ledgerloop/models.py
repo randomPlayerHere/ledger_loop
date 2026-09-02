@@ -4,21 +4,21 @@ from typing import Literal
 from decimal import Decimal
 
 class BankTransaction(BaseModel):
-    txn_id :str
+    txn_id: str
     value_date: date
-    amount : int = Field(gt=0)
+    amount: Decimal = Field(gt=0)
     direction: Literal["CREDIT", "DEBIT"]
-    narration: str | None
-    utr: int
-    balance_after: int
+    narration: str
+    utr: str | None
+    balance_after: Decimal
 
 class LedgerEntry(BaseModel):
-    invoice_id :str
+    invoice_id: str
     counterparty: str
     counterparty_id: str
-    gross_amount: float
+    gross_amount: Decimal
     tds_applicable: bool
-    tds_rate: float
+    tds_rate: Decimal
     issue_date: date
     due_date: date
     status: Literal["OPEN", "PARTIALLY_PAID", "PAID", "WRITTEN_OFF"]
@@ -29,7 +29,7 @@ class GroundTruthLink(BaseModel):
     link_type: Literal[
         "CLEAN", "SHORT_PAID_TDS", "SHORT_PAID_CHARGES",
         "LATE", "PARTIAL", "CONSOLIDATED", "OVERPAID",
-        "ORPHAN", "DUPLICATE", "REVERSAL",
+        "DISPUTED", "ORPHAN", "DUPLICATE", "REVERSAL",
     ]
     allocated: dict[str, str]
     difficulty: str

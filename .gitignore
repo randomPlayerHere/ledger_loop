@@ -7,7 +7,9 @@ wheels/
 *.egg-info
 
 # Virtual environments
-.venv
+.venv/
+
+# Local-only docs, not part of the public repo
 CLAUDE.md
 guide.md
 
@@ -19,9 +21,10 @@ guide.md
 *.db
 *.sqlite
 
-# Generated data (reproducible via make data)
-data/*.json
-data/*.csv
+# NOTE: data/ is deliberately committed, not ignored. A committed eval report
+# is only interpretable against the exact batch that produced it, and the
+# generator changes as rules evolve. Each manifest.json records its seed, so
+# any batch can be rebuilt byte-identically.
 
 # Pytest & type checking caches
 .pytest_cache/

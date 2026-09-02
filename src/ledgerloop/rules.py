@@ -3,7 +3,7 @@
 from decimal import Decimal
 from typing import Dict, Optional
 
-from .models import Invoice, Transaction, MatchDecision, MatchStatus
+from .models import LedgerEntry, BankTransaction, MatchDecision
 
 # TODO: Implement rules per §6
 # - R1: Exact match

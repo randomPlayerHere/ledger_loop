@@ -1,0 +1,27 @@
+{
+  "profile": "stress",
+  "seed": 7,
+  "n_invoices": 500,
+  "n_bank_txns": 531,
+  "n_truth_links": 531,
+  "unmatchable": 59,
+  "link_type_distribution": {
+    "CONSOLIDATED": 37,
+    "SHORT_PAID_CHARGES": 43,
+    "PARTIAL": 142,
+    "NO_REF": 67,
+    "LATE": 24,
+    "OVERPAID": 26,
+    "SHORT_PAID_TDS": 37,
+    "CLEAN": 51,
+    "DUPLICATE": 28,
+    "DISPUTED": 45,
+    "ORPHAN": 31
+  },
+  "difficulty_distribution": {
+    "HARD": 319,
+    "MEDIUM": 106,
+    "EASY": 75,
+    "IMPOSSIBLE": 31
+  }
+}

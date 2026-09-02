@@ -6,7 +6,7 @@ scenario first, then emit the ledger row, the bank row, and the truth link
 together. The answer key is correct by construction, never inferred.
 
 Usage:
-    python -m ledgerloop.generate --invoices 500 --seed 42 --out data/batch_dev
+    python -m src.ledgerloop.generate --invoices 500 --seed 42 --out data/batch_dev
 """
 
 from __future__ import annotations
@@ -65,16 +65,17 @@ ORPHAN_NARRATIONS = [
 
 # scenario -> (share of invoices, difficulty)
 SCENARIOS = {
-    "CLEAN":               (0.30, "EASY"),
+    "CLEAN":               (0.28, "EASY"),
     "LATE":                (0.10, "EASY"),
     "SHORT_PAID_TDS":      (0.10, "MEDIUM"),
     "SHORT_PAID_CHARGES":  (0.08, "MEDIUM"),
     "OVERPAID":            (0.03, "MEDIUM"),
+    "DISPUTED":            (0.04, "HARD"),
     "PARTIAL":             (0.08, "HARD"),
     "CONSOLIDATED":        (0.10, "HARD"),
     "NO_REF":              (0.08, "HARD"),
     "DUPLICATE":           (0.02, "HARD"),
-    "UNPAID":              (0.11, "EASY"),
+    "UNPAID":              (0.09, "EASY"),
 }
 # Hard-skewed mix, used for the failure demo in the pitch video.
 STRESS_SCENARIOS = {
@@ -83,9 +84,10 @@ STRESS_SCENARIOS = {
     "SHORT_PAID_TDS":      (0.10, "MEDIUM"),
     "SHORT_PAID_CHARGES":  (0.10, "MEDIUM"),
     "OVERPAID":            (0.05, "MEDIUM"),
-    "PARTIAL":             (0.20, "HARD"),
+    "DISPUTED":            (0.08, "HARD"),
+    "PARTIAL":             (0.16, "HARD"),
     "CONSOLIDATED":        (0.20, "HARD"),
-    "NO_REF":              (0.15, "HARD"),
+    "NO_REF":              (0.11, "HARD"),
     "DUPLICATE":           (0.05, "HARD"),
     "UNPAID":              (0.05, "EASY"),
 }
@@ -154,6 +156,7 @@ class Generator:
         self.rng = random.Random(seed)
         self.scenarios = STRESS_SCENARIOS if profile == "stress" else SCENARIOS
         self.profile = profile
+        self.seed = seed
         self.n_invoices = n_invoices
         self.start = start
         self.days = days
@@ -339,7 +342,9 @@ class Generator:
                     f"TDS deducted at {rate}"))
 
             elif scenario == "SHORT_PAID_CHARGES":
-                chg = money(self.rng.uniform(18, 590))
+                # real NEFT/RTGS fees are single/double digits plus GST; the old
+                # 18-590 band produced "charges" R3 can never explain
+                chg = money(self.rng.uniform(5, 60))
                 t = make(g - chg, 1, 20)
                 self.truth.append(GroundTruthLink(
                     t.txn_id, [inv_id], "SHORT_PAID_CHARGES",
@@ -351,6 +356,19 @@ class Generator:
                 self.truth.append(GroundTruthLink(
                     t.txn_id, [inv_id], "OVERPAID",
                     {inv_id: str(g)}, diff, f"advance/rounding excess {extra}"))
+
+            elif scenario == "DISPUTED":
+                # customer contests part of the bill and never pays the rest.
+                # 0.55-0.85 keeps the gap clear of 2%/10% TDS and the charge
+                # ceiling, so the shortfall is genuinely unexplainable -- the
+                # engine should identify the invoice and refuse to auto-match
+                frac = Decimal(str(round(self.rng.uniform(0.55, 0.85), 3)))
+                paid = money(g * frac)
+                t = make(paid, 1, 30)
+                self.truth.append(GroundTruthLink(
+                    t.txn_id, [inv_id], "DISPUTED", {inv_id: str(paid)}, diff,
+                    f"short by {money(g - paid)} with no explanation; "
+                    "the balance never arrives"))
 
             elif scenario == "PARTIAL":
                 frac = Decimal(str(round(self.rng.uniform(0.3, 0.7), 3)))
@@ -444,6 +462,7 @@ class Generator:
             diff[l.difficulty] = diff.get(l.difficulty, 0) + 1
         manifest = {
             "profile": self.profile,
+            "seed": self.seed,          # regenerating the batch needs this
             "n_invoices": len(self.ledger),
             "n_bank_txns": len(self.bank),
             "n_truth_links": len(self.truth),

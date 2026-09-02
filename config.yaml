@@ -8,9 +8,10 @@ llm:
 
 # Matching tolerances
 tolerances:
-  amount_pct: 0.005  # 0.5% tolerance for amount matching
-  tds_rate: 0.02    # 2% TDS rate
-  bank_charge_min: 50  # Minimum bank charge (₹)
+  amount_exact: 0.01      # paisa-level slack for "same amount"
+  tds_rates: [0.02, 0.10] # both statutory rates in use — 0.02 alone misses ~half
+  tds_tolerance: 1.00     # ₹ rounding slack on the computed TDS
+  bank_charge_min: 50     # Minimum bank charge (₹)
   bank_charge_pct: 0.005  # Bank charge as percentage
 
 # Date matching
@@ -26,3 +27,12 @@ thresholds:
 exceptions:
   max_per_batch: 100  # Max exceptions to queue
   llm_timeout: 30    # Seconds
+
+blocking:
+  name_min: 70          # fuzzy score to accept a counterparty
+  date_back_days: 75    # invoice can be this old
+  date_fwd_days: 10     # ...or this far in the future
+  amount_lo: 0.80       # invoice gross × this
+  amount_hi: 1.25
+  max_candidates: 8
+  max_ref_digits: 5     # longer digit-runs are UTRs, not invoices

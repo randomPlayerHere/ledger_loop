@@ -1,0 +1,25 @@
+{
+  "profile": "standard",
+  "n_invoices": 500,
+  "n_bank_txns": 504,
+  "n_truth_links": 504,
+  "unmatchable": 38,
+  "link_type_distribution": {
+    "CONSOLIDATED": 14,
+    "CLEAN": 150,
+    "NO_REF": 42,
+    "LATE": 52,
+    "SHORT_PAID_TDS": 56,
+    "SHORT_PAID_CHARGES": 42,
+    "PARTIAL": 96,
+    "OVERPAID": 14,
+    "DUPLICATE": 8,
+    "ORPHAN": 30
+  },
+  "difficulty_distribution": {
+    "HARD": 160,
+    "EASY": 202,
+    "MEDIUM": 112,
+    "IMPOSSIBLE": 30
+  }
+}

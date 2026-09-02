@@ -1,0 +1,6246 @@
+[
+  {
+    "txn_id": "BNK-000001",
+    "invoice_ids": [
+      "INV-1063",
+      "INV-1114"
+    ],
+    "link_type": "CONSOLIDATED",
+    "allocated": {
+      "INV-1063": "109799.91",
+      "INV-1114": "86572.55"
+    },
+    "difficulty": "HARD",
+    "notes": "2 invoices settled by one credit"
+  },
+  {
+    "txn_id": "BNK-000002",
+    "invoice_ids": [
+      "INV-1208",
+      "INV-1186",
+      "INV-1138"
+    ],
+    "link_type": "CONSOLIDATED",
+    "allocated": {
+      "INV-1208": "6384.00",
+      "INV-1186": "19034.52",
+      "INV-1138": "92618.30"
+    },
+    "difficulty": "HARD",
+    "notes": "3 invoices settled by one credit"
+  },
+  {
+    "txn_id": "BNK-000003",
+    "invoice_ids": [
+      "INV-1094",
+      "INV-1359"
+    ],
+    "link_type": "CONSOLIDATED",
+    "allocated": {
+      "INV-1094": "13102.52",
+      "INV-1359": "12311.53"
+    },
+    "difficulty": "HARD",
+    "notes": "2 invoices settled by one credit"
+  },
+  {
+    "txn_id": "BNK-000004",
+    "invoice_ids": [
+      "INV-1396",
+      "INV-1159",
+      "INV-1465"
+    ],
+    "link_type": "CONSOLIDATED",
+    "allocated": {
+      "INV-1396": "7616.17",
+      "INV-1159": "77186.42",
+      "INV-1465": "44588.98"
+    },
+    "difficulty": "HARD",
+    "notes": "3 invoices settled by one credit"
+  },
+  {
+    "txn_id": "BNK-000005",
+    "invoice_ids": [
+      "INV-1228",
+      "INV-1292",
+      "INV-1140"
+    ],
+    "link_type": "CONSOLIDATED",
+    "allocated": {
+      "INV-1228": "51167.12",
+      "INV-1292": "23459.12",
+      "INV-1140": "41888.06"
+    },
+    "difficulty": "HARD",
+    "notes": "3 invoices settled by one credit"
+  },
+  {
+    "txn_id": "BNK-000006",
+    "invoice_ids": [
+      "INV-1020",
+      "INV-1001"
+    ],
+    "link_type": "CONSOLIDATED",
+    "allocated": {
+      "INV-1020": "70129.45",
+      "INV-1001": "23463.84"
+    },
+    "difficulty": "HARD",
+    "notes": "2 invoices settled by one credit"
+  },
+  {
+    "txn_id": "BNK-000007",
+    "invoice_ids": [
+      "INV-1143",
+      "INV-1264",
+      "INV-1018"
+    ],
+    "link_type": "CONSOLIDATED",
+    "allocated": {
+      "INV-1143": "45726.08",
+      "INV-1264": "46901.93",
+      "INV-1018": "155800.09"
+    },
+    "difficulty": "HARD",
+    "notes": "3 invoices settled by one credit"
+  },
+  {
+    "txn_id": "BNK-000008",
+    "invoice_ids": [
+      "INV-1014",
+      "INV-1009"
+    ],
+    "link_type": "CONSOLIDATED",
+    "allocated": {
+      "INV-1014": "38511.51",
+      "INV-1009": "16736.20"
+    },
+    "difficulty": "HARD",
+    "notes": "2 invoices settled by one credit"
+  },
+  {
+    "txn_id": "BNK-000009",
+    "invoice_ids": [
+      "INV-1154",
+      "INV-1013"
+    ],
+    "link_type": "CONSOLIDATED",
+    "allocated": {
+      "INV-1154": "8310.27",
+      "INV-1013": "20436.96"
+    },
+    "difficulty": "HARD",
+    "notes": "2 invoices settled by one credit"
+  },
+  {
+    "txn_id": "BNK-000010",
+    "invoice_ids": [
+      "INV-1025",
+      "INV-1260"
+    ],
+    "link_type": "CONSOLIDATED",
+    "allocated": {
+      "INV-1025": "85859.32",
+      "INV-1260": "14673.12"
+    },
+    "difficulty": "HARD",
+    "notes": "2 invoices settled by one credit"
+  },
+  {
+    "txn_id": "BNK-000011",
+    "invoice_ids": [
+      "INV-1028",
+      "INV-1282"
+    ],
+    "link_type": "CONSOLIDATED",
+    "allocated": {
+      "INV-1028": "128162.21",
+      "INV-1282": "43613.98"
+    },
+    "difficulty": "HARD",
+    "notes": "2 invoices settled by one credit"
+  },
+  {
+    "txn_id": "BNK-000012",
+    "invoice_ids": [
+      "INV-1043",
+      "INV-1371",
+      "INV-1380"
+    ],
+    "link_type": "CONSOLIDATED",
+    "allocated": {
+      "INV-1043": "25737.23",
+      "INV-1371": "48837.42",
+      "INV-1380": "68571.82"
+    },
+    "difficulty": "HARD",
+    "notes": "3 invoices settled by one credit"
+  },
+  {
+    "txn_id": "BNK-000013",
+    "invoice_ids": [
+      "INV-1489",
+      "INV-1290",
+      "INV-1055"
+    ],
+    "link_type": "CONSOLIDATED",
+    "allocated": {
+      "INV-1489": "63303.06",
+      "INV-1290": "30255.89",
+      "INV-1055": "67150.97"
+    },
+    "difficulty": "HARD",
+    "notes": "3 invoices settled by one credit"
+  },
+  {
+    "txn_id": "BNK-000014",
+    "invoice_ids": [
+      "INV-1082",
+      "INV-1426",
+      "INV-1330"
+    ],
+    "link_type": "CONSOLIDATED",
+    "allocated": {
+      "INV-1082": "19656.79",
+      "INV-1426": "129102.58",
+      "INV-1330": "58990.14"
+    },
+    "difficulty": "HARD",
+    "notes": "3 invoices settled by one credit"
+  },
+  {
+    "txn_id": "BNK-000015",
+    "invoice_ids": [
+      "INV-1310",
+      "INV-1079",
+      "INV-1400",
+      "INV-1326"
+    ],
+    "link_type": "CONSOLIDATED",
+    "allocated": {
+      "INV-1310": "30336.01",
+      "INV-1079": "40707.02",
+      "INV-1400": "16910.60",
+      "INV-1326": "21930.24"
+    },
+    "difficulty": "HARD",
+    "notes": "4 invoices settled by one credit"
+  },
+  {
+    "txn_id": "BNK-000016",
+    "invoice_ids": [
+      "INV-1129",
+      "INV-1056"
+    ],
+    "link_type": "CONSOLIDATED",
+    "allocated": {
+      "INV-1129": "74762.83",
+      "INV-1056": "28439.17"
+    },
+    "difficulty": "HARD",
+    "notes": "2 invoices settled by one credit"
+  },
+  {
+    "txn_id": "BNK-000017",
+    "invoice_ids": [
+      "INV-1212",
+      "INV-1453",
+      "INV-1059"
+    ],
+    "link_type": "CONSOLIDATED",
+    "allocated": {
+      "INV-1212": "47633.24",
+      "INV-1453": "77335.57",
+      "INV-1059": "63030.89"
+    },
+    "difficulty": "HARD",
+    "notes": "3 invoices settled by one credit"
+  },
+  {
+    "txn_id": "BNK-000018",
+    "invoice_ids": [
+      "INV-1391",
+      "INV-1251"
+    ],
+    "link_type": "CONSOLIDATED",
+    "allocated": {
+      "INV-1391": "39122.01",
+      "INV-1251": "46188.18"
+    },
+    "difficulty": "HARD",
+    "notes": "2 invoices settled by one credit"
+  },
+  {
+    "txn_id": "BNK-000019",
+    "invoice_ids": [
+      "INV-1089",
+      "INV-1475"
+    ],
+    "link_type": "CONSOLIDATED",
+    "allocated": {
+      "INV-1089": "13538.55",
+      "INV-1475": "75473.55"
+    },
+    "difficulty": "HARD",
+    "notes": "2 invoices settled by one credit"
+  },
+  {
+    "txn_id": "BNK-000020",
+    "invoice_ids": [
+      "INV-1331",
+      "INV-1062",
+      "INV-1311"
+    ],
+    "link_type": "CONSOLIDATED",
+    "allocated": {
+      "INV-1331": "55599.46",
+      "INV-1062": "95955.25",
+      "INV-1311": "17470.36"
+    },
+    "difficulty": "HARD",
+    "notes": "3 invoices settled by one credit"
+  },
+  {
+    "txn_id": "BNK-000021",
+    "invoice_ids": [
+      "INV-1064",
+      "INV-1397",
+      "INV-1170"
+    ],
+    "link_type": "CONSOLIDATED",
+    "allocated": {
+      "INV-1064": "104660.31",
+      "INV-1397": "17115.34",
+      "INV-1170": "166247.01"
+    },
+    "difficulty": "HARD",
+    "notes": "3 invoices settled by one credit"
+  },
+  {
+    "txn_id": "BNK-000022",
+    "invoice_ids": [
+      "INV-1192",
+      "INV-1265",
+      "INV-1305"
+    ],
+    "link_type": "CONSOLIDATED",
+    "allocated": {
+      "INV-1192": "55148.30",
+      "INV-1265": "38869.67",
+      "INV-1305": "19919.14"
+    },
+    "difficulty": "HARD",
+    "notes": "3 invoices settled by one credit"
+  },
+  {
+    "txn_id": "BNK-000023",
+    "invoice_ids": [
+      "INV-1277",
+      "INV-1067"
+    ],
+    "link_type": "CONSOLIDATED",
+    "allocated": {
+      "INV-1277": "36869.01",
+      "INV-1067": "28999.55"
+    },
+    "difficulty": "HARD",
+    "notes": "2 invoices settled by one credit"
+  },
+  {
+    "txn_id": "BNK-000024",
+    "invoice_ids": [
+      "INV-1472",
+      "INV-1364"
+    ],
+    "link_type": "CONSOLIDATED",
+    "allocated": {
+      "INV-1472": "43757.03",
+      "INV-1364": "25533.96"
+    },
+    "difficulty": "HARD",
+    "notes": "2 invoices settled by one credit"
+  },
+  {
+    "txn_id": "BNK-000025",
+    "invoice_ids": [
+      "INV-1218",
+      "INV-1087"
+    ],
+    "link_type": "CONSOLIDATED",
+    "allocated": {
+      "INV-1218": "97668.70",
+      "INV-1087": "11665.38"
+    },
+    "difficulty": "HARD",
+    "notes": "2 invoices settled by one credit"
+  },
+  {
+    "txn_id": "BNK-000026",
+    "invoice_ids": [
+      "INV-1144",
+      "INV-1382"
+    ],
+    "link_type": "CONSOLIDATED",
+    "allocated": {
+      "INV-1144": "114932.91",
+      "INV-1382": "38469.54"
+    },
+    "difficulty": "HARD",
+    "notes": "2 invoices settled by one credit"
+  },
+  {
+    "txn_id": "BNK-000027",
+    "invoice_ids": [
+      "INV-1236",
+      "INV-1373",
+      "INV-1146"
+    ],
+    "link_type": "CONSOLIDATED",
+    "allocated": {
+      "INV-1236": "77907.11",
+      "INV-1373": "19328.32",
+      "INV-1146": "109640.74"
+    },
+    "difficulty": "HARD",
+    "notes": "3 invoices settled by one credit"
+  },
+  {
+    "txn_id": "BNK-000028",
+    "invoice_ids": [
+      "INV-1155",
+      "INV-1433"
+    ],
+    "link_type": "CONSOLIDATED",
+    "allocated": {
+      "INV-1155": "43429.58",
+      "INV-1433": "121615.33"
+    },
+    "difficulty": "HARD",
+    "notes": "2 invoices settled by one credit"
+  },
+  {
+    "txn_id": "BNK-000029",
+    "invoice_ids": [
+      "INV-1161",
+      "INV-1482"
+    ],
+    "link_type": "CONSOLIDATED",
+    "allocated": {
+      "INV-1161": "70587.24",
+      "INV-1482": "55936.43"
+    },
+    "difficulty": "HARD",
+    "notes": "2 invoices settled by one credit"
+  },
+  {
+    "txn_id": "BNK-000030",
+    "invoice_ids": [
+      "INV-1388",
+      "INV-1214"
+    ],
+    "link_type": "CONSOLIDATED",
+    "allocated": {
+      "INV-1388": "25731.64",
+      "INV-1214": "39924.47"
+    },
+    "difficulty": "HARD",
+    "notes": "2 invoices settled by one credit"
+  },
+  {
+    "txn_id": "BNK-000031",
+    "invoice_ids": [
+      "INV-1346",
+      "INV-1241"
+    ],
+    "link_type": "CONSOLIDATED",
+    "allocated": {
+      "INV-1346": "28432.79",
+      "INV-1241": "27544.02"
+    },
+    "difficulty": "HARD",
+    "notes": "2 invoices settled by one credit"
+  },
+  {
+    "txn_id": "BNK-000032",
+    "invoice_ids": [
+      "INV-1249",
+      "INV-1309",
+      "INV-1405"
+    ],
+    "link_type": "CONSOLIDATED",
+    "allocated": {
+      "INV-1249": "37741.56",
+      "INV-1309": "50280.76",
+      "INV-1405": "84215.17"
+    },
+    "difficulty": "HARD",
+    "notes": "3 invoices settled by one credit"
+  },
+  {
+    "txn_id": "BNK-000033",
+    "invoice_ids": [
+      "INV-1257",
+      "INV-1487"
+    ],
+    "link_type": "CONSOLIDATED",
+    "allocated": {
+      "INV-1257": "18761.79",
+      "INV-1487": "16800.48"
+    },
+    "difficulty": "HARD",
+    "notes": "2 invoices settled by one credit"
+  },
+  {
+    "txn_id": "BNK-000034",
+    "invoice_ids": [
+      "INV-1275",
+      "INV-1409"
+    ],
+    "link_type": "CONSOLIDATED",
+    "allocated": {
+      "INV-1275": "33763.31",
+      "INV-1409": "96762.31"
+    },
+    "difficulty": "HARD",
+    "notes": "2 invoices settled by one credit"
+  },
+  {
+    "txn_id": "BNK-000035",
+    "invoice_ids": [
+      "INV-1439",
+      "INV-1291",
+      "INV-1406"
+    ],
+    "link_type": "CONSOLIDATED",
+    "allocated": {
+      "INV-1439": "52780.15",
+      "INV-1291": "8385.57",
+      "INV-1406": "25182.82"
+    },
+    "difficulty": "HARD",
+    "notes": "3 invoices settled by one credit"
+  },
+  {
+    "txn_id": "BNK-000036",
+    "invoice_ids": [
+      "INV-1432",
+      "INV-1313"
+    ],
+    "link_type": "CONSOLIDATED",
+    "allocated": {
+      "INV-1432": "171500.43",
+      "INV-1313": "112732.71"
+    },
+    "difficulty": "HARD",
+    "notes": "2 invoices settled by one credit"
+  },
+  {
+    "txn_id": "BNK-000037",
+    "invoice_ids": [
+      "INV-1383",
+      "INV-1499",
+      "INV-1366"
+    ],
+    "link_type": "CONSOLIDATED",
+    "allocated": {
+      "INV-1383": "37393.78",
+      "INV-1499": "41752.09",
+      "INV-1366": "16553.75"
+    },
+    "difficulty": "HARD",
+    "notes": "3 invoices settled by one credit"
+  },
+  {
+    "txn_id": "BNK-000038",
+    "invoice_ids": [
+      "INV-1000"
+    ],
+    "link_type": "SHORT_PAID_CHARGES",
+    "allocated": {
+      "INV-1000": "33711.34"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "bank charges 14.23"
+  },
+  {
+    "txn_id": "BNK-000039",
+    "invoice_ids": [
+      "INV-1002"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1002": "22084.83"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000040",
+    "invoice_ids": [
+      "INV-1002"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1002": "10250.20"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000041",
+    "invoice_ids": [
+      "INV-1003"
+    ],
+    "link_type": "NO_REF",
+    "allocated": {
+      "INV-1003": "38364.45"
+    },
+    "difficulty": "HARD",
+    "notes": "amount matches but narration carries no invoice number"
+  },
+  {
+    "txn_id": "BNK-000042",
+    "invoice_ids": [
+      "INV-1004"
+    ],
+    "link_type": "NO_REF",
+    "allocated": {
+      "INV-1004": "28583.64"
+    },
+    "difficulty": "HARD",
+    "notes": "amount matches but narration carries no invoice number"
+  },
+  {
+    "txn_id": "BNK-000043",
+    "invoice_ids": [
+      "INV-1005"
+    ],
+    "link_type": "LATE",
+    "allocated": {
+      "INV-1005": "175613.16"
+    },
+    "difficulty": "EASY",
+    "notes": "settled well after due date"
+  },
+  {
+    "txn_id": "BNK-000044",
+    "invoice_ids": [
+      "INV-1006"
+    ],
+    "link_type": "OVERPAID",
+    "allocated": {
+      "INV-1006": "16763.66"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "advance/rounding excess 1452.27"
+  },
+  {
+    "txn_id": "BNK-000045",
+    "invoice_ids": [
+      "INV-1007"
+    ],
+    "link_type": "LATE",
+    "allocated": {
+      "INV-1007": "106758.95"
+    },
+    "difficulty": "EASY",
+    "notes": "settled well after due date"
+  },
+  {
+    "txn_id": "BNK-000046",
+    "invoice_ids": [
+      "INV-1008"
+    ],
+    "link_type": "SHORT_PAID_CHARGES",
+    "allocated": {
+      "INV-1008": "4111.79"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "bank charges 40.19"
+  },
+  {
+    "txn_id": "BNK-000047",
+    "invoice_ids": [
+      "INV-1010"
+    ],
+    "link_type": "SHORT_PAID_TDS",
+    "allocated": {
+      "INV-1010": "34251.51"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "TDS deducted at 0.10"
+  },
+  {
+    "txn_id": "BNK-000048",
+    "invoice_ids": [
+      "INV-1011"
+    ],
+    "link_type": "OVERPAID",
+    "allocated": {
+      "INV-1011": "68160.11"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "advance/rounding excess 2354.06"
+  },
+  {
+    "txn_id": "BNK-000049",
+    "invoice_ids": [
+      "INV-1012"
+    ],
+    "link_type": "LATE",
+    "allocated": {
+      "INV-1012": "24729.25"
+    },
+    "difficulty": "EASY",
+    "notes": "settled well after due date"
+  },
+  {
+    "txn_id": "BNK-000050",
+    "invoice_ids": [
+      "INV-1015"
+    ],
+    "link_type": "SHORT_PAID_TDS",
+    "allocated": {
+      "INV-1015": "20150.56"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "TDS deducted at 0.10"
+  },
+  {
+    "txn_id": "BNK-000051",
+    "invoice_ids": [
+      "INV-1016"
+    ],
+    "link_type": "OVERPAID",
+    "allocated": {
+      "INV-1016": "24058.98"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "advance/rounding excess 2102.86"
+  },
+  {
+    "txn_id": "BNK-000052",
+    "invoice_ids": [
+      "INV-1017"
+    ],
+    "link_type": "CLEAN",
+    "allocated": {
+      "INV-1017": "40440.67"
+    },
+    "difficulty": "EASY",
+    "notes": ""
+  },
+  {
+    "txn_id": "BNK-000053",
+    "invoice_ids": [],
+    "link_type": "DUPLICATE",
+    "allocated": {},
+    "difficulty": "HARD",
+    "notes": "duplicate of BNK-000052; must not be matched again"
+  },
+  {
+    "txn_id": "BNK-000054",
+    "invoice_ids": [
+      "INV-1019"
+    ],
+    "link_type": "CLEAN",
+    "allocated": {
+      "INV-1019": "13382.74"
+    },
+    "difficulty": "EASY",
+    "notes": ""
+  },
+  {
+    "txn_id": "BNK-000055",
+    "invoice_ids": [
+      "INV-1021"
+    ],
+    "link_type": "SHORT_PAID_TDS",
+    "allocated": {
+      "INV-1021": "20677.68"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "TDS deducted at 0.10"
+  },
+  {
+    "txn_id": "BNK-000056",
+    "invoice_ids": [
+      "INV-1022"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1022": "17892.84"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000057",
+    "invoice_ids": [
+      "INV-1022"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1022": "19306.42"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000058",
+    "invoice_ids": [
+      "INV-1023"
+    ],
+    "link_type": "SHORT_PAID_TDS",
+    "allocated": {
+      "INV-1023": "44326.11"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "TDS deducted at 0.10"
+  },
+  {
+    "txn_id": "BNK-000059",
+    "invoice_ids": [
+      "INV-1024"
+    ],
+    "link_type": "NO_REF",
+    "allocated": {
+      "INV-1024": "40778.43"
+    },
+    "difficulty": "HARD",
+    "notes": "amount matches but narration carries no invoice number"
+  },
+  {
+    "txn_id": "BNK-000060",
+    "invoice_ids": [
+      "INV-1026"
+    ],
+    "link_type": "SHORT_PAID_CHARGES",
+    "allocated": {
+      "INV-1026": "16785.58"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "bank charges 43.73"
+  },
+  {
+    "txn_id": "BNK-000061",
+    "invoice_ids": [
+      "INV-1027"
+    ],
+    "link_type": "CLEAN",
+    "allocated": {
+      "INV-1027": "6127.82"
+    },
+    "difficulty": "EASY",
+    "notes": ""
+  },
+  {
+    "txn_id": "BNK-000062",
+    "invoice_ids": [],
+    "link_type": "DUPLICATE",
+    "allocated": {},
+    "difficulty": "HARD",
+    "notes": "duplicate of BNK-000061; must not be matched again"
+  },
+  {
+    "txn_id": "BNK-000063",
+    "invoice_ids": [
+      "INV-1030"
+    ],
+    "link_type": "LATE",
+    "allocated": {
+      "INV-1030": "36547.79"
+    },
+    "difficulty": "EASY",
+    "notes": "settled well after due date"
+  },
+  {
+    "txn_id": "BNK-000064",
+    "invoice_ids": [
+      "INV-1031"
+    ],
+    "link_type": "CLEAN",
+    "allocated": {
+      "INV-1031": "17485.79"
+    },
+    "difficulty": "EASY",
+    "notes": ""
+  },
+  {
+    "txn_id": "BNK-000065",
+    "invoice_ids": [
+      "INV-1032"
+    ],
+    "link_type": "NO_REF",
+    "allocated": {
+      "INV-1032": "14913.46"
+    },
+    "difficulty": "HARD",
+    "notes": "amount matches but narration carries no invoice number"
+  },
+  {
+    "txn_id": "BNK-000066",
+    "invoice_ids": [
+      "INV-1033"
+    ],
+    "link_type": "CLEAN",
+    "allocated": {
+      "INV-1033": "45091.93"
+    },
+    "difficulty": "EASY",
+    "notes": ""
+  },
+  {
+    "txn_id": "BNK-000067",
+    "invoice_ids": [
+      "INV-1034"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1034": "41438.54"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000068",
+    "invoice_ids": [
+      "INV-1034"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1034": "29275.69"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000069",
+    "invoice_ids": [
+      "INV-1035"
+    ],
+    "link_type": "OVERPAID",
+    "allocated": {
+      "INV-1035": "15622.32"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "advance/rounding excess 2916.66"
+  },
+  {
+    "txn_id": "BNK-000070",
+    "invoice_ids": [
+      "INV-1036"
+    ],
+    "link_type": "LATE",
+    "allocated": {
+      "INV-1036": "148864.75"
+    },
+    "difficulty": "EASY",
+    "notes": "settled well after due date"
+  },
+  {
+    "txn_id": "BNK-000071",
+    "invoice_ids": [
+      "INV-1038"
+    ],
+    "link_type": "LATE",
+    "allocated": {
+      "INV-1038": "61308.28"
+    },
+    "difficulty": "EASY",
+    "notes": "settled well after due date"
+  },
+  {
+    "txn_id": "BNK-000072",
+    "invoice_ids": [
+      "INV-1039"
+    ],
+    "link_type": "NO_REF",
+    "allocated": {
+      "INV-1039": "44233.67"
+    },
+    "difficulty": "HARD",
+    "notes": "amount matches but narration carries no invoice number"
+  },
+  {
+    "txn_id": "BNK-000073",
+    "invoice_ids": [
+      "INV-1040"
+    ],
+    "link_type": "LATE",
+    "allocated": {
+      "INV-1040": "78804.06"
+    },
+    "difficulty": "EASY",
+    "notes": "settled well after due date"
+  },
+  {
+    "txn_id": "BNK-000074",
+    "invoice_ids": [
+      "INV-1041"
+    ],
+    "link_type": "DISPUTED",
+    "allocated": {
+      "INV-1041": "17598.42"
+    },
+    "difficulty": "HARD",
+    "notes": "short by 9899.11 with no explanation; the balance never arrives"
+  },
+  {
+    "txn_id": "BNK-000075",
+    "invoice_ids": [
+      "INV-1042"
+    ],
+    "link_type": "DISPUTED",
+    "allocated": {
+      "INV-1042": "91758.91"
+    },
+    "difficulty": "HARD",
+    "notes": "short by 20690.73 with no explanation; the balance never arrives"
+  },
+  {
+    "txn_id": "BNK-000076",
+    "invoice_ids": [
+      "INV-1045"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1045": "11185.87"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000077",
+    "invoice_ids": [
+      "INV-1045"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1045": "12363.34"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000078",
+    "invoice_ids": [
+      "INV-1046"
+    ],
+    "link_type": "NO_REF",
+    "allocated": {
+      "INV-1046": "55293.23"
+    },
+    "difficulty": "HARD",
+    "notes": "amount matches but narration carries no invoice number"
+  },
+  {
+    "txn_id": "BNK-000079",
+    "invoice_ids": [
+      "INV-1047"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1047": "16753.98"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000080",
+    "invoice_ids": [
+      "INV-1047"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1047": "10312.22"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000081",
+    "invoice_ids": [
+      "INV-1049"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1049": "25947.88"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000082",
+    "invoice_ids": [
+      "INV-1049"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1049": "53403.43"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000083",
+    "invoice_ids": [
+      "INV-1050"
+    ],
+    "link_type": "SHORT_PAID_CHARGES",
+    "allocated": {
+      "INV-1050": "43196.82"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "bank charges 21.00"
+  },
+  {
+    "txn_id": "BNK-000084",
+    "invoice_ids": [
+      "INV-1052"
+    ],
+    "link_type": "OVERPAID",
+    "allocated": {
+      "INV-1052": "37083.45"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "advance/rounding excess 515.34"
+  },
+  {
+    "txn_id": "BNK-000085",
+    "invoice_ids": [
+      "INV-1053"
+    ],
+    "link_type": "LATE",
+    "allocated": {
+      "INV-1053": "20505.09"
+    },
+    "difficulty": "EASY",
+    "notes": "settled well after due date"
+  },
+  {
+    "txn_id": "BNK-000086",
+    "invoice_ids": [
+      "INV-1054"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1054": "3261.49"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000087",
+    "invoice_ids": [
+      "INV-1054"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1054": "7362.26"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000088",
+    "invoice_ids": [
+      "INV-1057"
+    ],
+    "link_type": "SHORT_PAID_TDS",
+    "allocated": {
+      "INV-1057": "18665.28"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "TDS deducted at 0.02"
+  },
+  {
+    "txn_id": "BNK-000089",
+    "invoice_ids": [
+      "INV-1058"
+    ],
+    "link_type": "DISPUTED",
+    "allocated": {
+      "INV-1058": "14298.63"
+    },
+    "difficulty": "HARD",
+    "notes": "short by 3778.02 with no explanation; the balance never arrives"
+  },
+  {
+    "txn_id": "BNK-000090",
+    "invoice_ids": [
+      "INV-1060"
+    ],
+    "link_type": "CLEAN",
+    "allocated": {
+      "INV-1060": "44805.36"
+    },
+    "difficulty": "EASY",
+    "notes": ""
+  },
+  {
+    "txn_id": "BNK-000091",
+    "invoice_ids": [],
+    "link_type": "DUPLICATE",
+    "allocated": {},
+    "difficulty": "HARD",
+    "notes": "duplicate of BNK-000090; must not be matched again"
+  },
+  {
+    "txn_id": "BNK-000092",
+    "invoice_ids": [
+      "INV-1061"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1061": "7453.91"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000093",
+    "invoice_ids": [
+      "INV-1061"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1061": "3209.76"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000094",
+    "invoice_ids": [
+      "INV-1066"
+    ],
+    "link_type": "LATE",
+    "allocated": {
+      "INV-1066": "72765.97"
+    },
+    "difficulty": "EASY",
+    "notes": "settled well after due date"
+  },
+  {
+    "txn_id": "BNK-000095",
+    "invoice_ids": [
+      "INV-1068"
+    ],
+    "link_type": "NO_REF",
+    "allocated": {
+      "INV-1068": "28081.78"
+    },
+    "difficulty": "HARD",
+    "notes": "amount matches but narration carries no invoice number"
+  },
+  {
+    "txn_id": "BNK-000096",
+    "invoice_ids": [
+      "INV-1070"
+    ],
+    "link_type": "NO_REF",
+    "allocated": {
+      "INV-1070": "147997.17"
+    },
+    "difficulty": "HARD",
+    "notes": "amount matches but narration carries no invoice number"
+  },
+  {
+    "txn_id": "BNK-000097",
+    "invoice_ids": [
+      "INV-1071"
+    ],
+    "link_type": "SHORT_PAID_CHARGES",
+    "allocated": {
+      "INV-1071": "124945.21"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "bank charges 51.72"
+  },
+  {
+    "txn_id": "BNK-000098",
+    "invoice_ids": [
+      "INV-1072"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1072": "21195.03"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000099",
+    "invoice_ids": [
+      "INV-1072"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1072": "9974.13"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000100",
+    "invoice_ids": [
+      "INV-1073"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1073": "7557.82"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000101",
+    "invoice_ids": [
+      "INV-1073"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1073": "4573.52"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000102",
+    "invoice_ids": [
+      "INV-1074"
+    ],
+    "link_type": "NO_REF",
+    "allocated": {
+      "INV-1074": "53971.38"
+    },
+    "difficulty": "HARD",
+    "notes": "amount matches but narration carries no invoice number"
+  },
+  {
+    "txn_id": "BNK-000103",
+    "invoice_ids": [
+      "INV-1075"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1075": "13168.05"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000104",
+    "invoice_ids": [
+      "INV-1075"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1075": "26735.14"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000105",
+    "invoice_ids": [
+      "INV-1076"
+    ],
+    "link_type": "CLEAN",
+    "allocated": {
+      "INV-1076": "44249.65"
+    },
+    "difficulty": "EASY",
+    "notes": ""
+  },
+  {
+    "txn_id": "BNK-000106",
+    "invoice_ids": [],
+    "link_type": "DUPLICATE",
+    "allocated": {},
+    "difficulty": "HARD",
+    "notes": "duplicate of BNK-000105; must not be matched again"
+  },
+  {
+    "txn_id": "BNK-000107",
+    "invoice_ids": [
+      "INV-1077"
+    ],
+    "link_type": "NO_REF",
+    "allocated": {
+      "INV-1077": "16867.09"
+    },
+    "difficulty": "HARD",
+    "notes": "amount matches but narration carries no invoice number"
+  },
+  {
+    "txn_id": "BNK-000108",
+    "invoice_ids": [
+      "INV-1078"
+    ],
+    "link_type": "LATE",
+    "allocated": {
+      "INV-1078": "64891.60"
+    },
+    "difficulty": "EASY",
+    "notes": "settled well after due date"
+  },
+  {
+    "txn_id": "BNK-000109",
+    "invoice_ids": [
+      "INV-1080"
+    ],
+    "link_type": "DISPUTED",
+    "allocated": {
+      "INV-1080": "4470.18"
+    },
+    "difficulty": "HARD",
+    "notes": "short by 2065.17 with no explanation; the balance never arrives"
+  },
+  {
+    "txn_id": "BNK-000110",
+    "invoice_ids": [
+      "INV-1083"
+    ],
+    "link_type": "OVERPAID",
+    "allocated": {
+      "INV-1083": "105957.99"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "advance/rounding excess 1997.57"
+  },
+  {
+    "txn_id": "BNK-000111",
+    "invoice_ids": [
+      "INV-1084"
+    ],
+    "link_type": "DISPUTED",
+    "allocated": {
+      "INV-1084": "46108.82"
+    },
+    "difficulty": "HARD",
+    "notes": "short by 9310.44 with no explanation; the balance never arrives"
+  },
+  {
+    "txn_id": "BNK-000112",
+    "invoice_ids": [
+      "INV-1085"
+    ],
+    "link_type": "CLEAN",
+    "allocated": {
+      "INV-1085": "56688.58"
+    },
+    "difficulty": "EASY",
+    "notes": ""
+  },
+  {
+    "txn_id": "BNK-000113",
+    "invoice_ids": [],
+    "link_type": "DUPLICATE",
+    "allocated": {},
+    "difficulty": "HARD",
+    "notes": "duplicate of BNK-000112; must not be matched again"
+  },
+  {
+    "txn_id": "BNK-000114",
+    "invoice_ids": [
+      "INV-1086"
+    ],
+    "link_type": "SHORT_PAID_CHARGES",
+    "allocated": {
+      "INV-1086": "24322.56"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "bank charges 20.13"
+  },
+  {
+    "txn_id": "BNK-000115",
+    "invoice_ids": [
+      "INV-1088"
+    ],
+    "link_type": "NO_REF",
+    "allocated": {
+      "INV-1088": "63859.36"
+    },
+    "difficulty": "HARD",
+    "notes": "amount matches but narration carries no invoice number"
+  },
+  {
+    "txn_id": "BNK-000116",
+    "invoice_ids": [
+      "INV-1090"
+    ],
+    "link_type": "CLEAN",
+    "allocated": {
+      "INV-1090": "232858.77"
+    },
+    "difficulty": "EASY",
+    "notes": ""
+  },
+  {
+    "txn_id": "BNK-000117",
+    "invoice_ids": [],
+    "link_type": "DUPLICATE",
+    "allocated": {},
+    "difficulty": "HARD",
+    "notes": "duplicate of BNK-000116; must not be matched again"
+  },
+  {
+    "txn_id": "BNK-000118",
+    "invoice_ids": [
+      "INV-1091"
+    ],
+    "link_type": "DISPUTED",
+    "allocated": {
+      "INV-1091": "48293.43"
+    },
+    "difficulty": "HARD",
+    "notes": "short by 27999.51 with no explanation; the balance never arrives"
+  },
+  {
+    "txn_id": "BNK-000119",
+    "invoice_ids": [
+      "INV-1092"
+    ],
+    "link_type": "OVERPAID",
+    "allocated": {
+      "INV-1092": "39813.19"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "advance/rounding excess 2815.85"
+  },
+  {
+    "txn_id": "BNK-000120",
+    "invoice_ids": [
+      "INV-1093"
+    ],
+    "link_type": "OVERPAID",
+    "allocated": {
+      "INV-1093": "261641.01"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "advance/rounding excess 685.46"
+  },
+  {
+    "txn_id": "BNK-000121",
+    "invoice_ids": [
+      "INV-1096"
+    ],
+    "link_type": "NO_REF",
+    "allocated": {
+      "INV-1096": "349079.06"
+    },
+    "difficulty": "HARD",
+    "notes": "amount matches but narration carries no invoice number"
+  },
+  {
+    "txn_id": "BNK-000122",
+    "invoice_ids": [
+      "INV-1097"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1097": "14588.97"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000123",
+    "invoice_ids": [
+      "INV-1097"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1097": "9171.56"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000124",
+    "invoice_ids": [
+      "INV-1098"
+    ],
+    "link_type": "DISPUTED",
+    "allocated": {
+      "INV-1098": "50762.45"
+    },
+    "difficulty": "HARD",
+    "notes": "short by 22382.29 with no explanation; the balance never arrives"
+  },
+  {
+    "txn_id": "BNK-000125",
+    "invoice_ids": [
+      "INV-1099"
+    ],
+    "link_type": "SHORT_PAID_CHARGES",
+    "allocated": {
+      "INV-1099": "89537.89"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "bank charges 19.73"
+  },
+  {
+    "txn_id": "BNK-000126",
+    "invoice_ids": [
+      "INV-1100"
+    ],
+    "link_type": "SHORT_PAID_TDS",
+    "allocated": {
+      "INV-1100": "18919.13"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "TDS deducted at 0.02"
+  },
+  {
+    "txn_id": "BNK-000127",
+    "invoice_ids": [
+      "INV-1101"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1101": "65623.53"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000128",
+    "invoice_ids": [
+      "INV-1101"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1101": "30457.77"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000129",
+    "invoice_ids": [
+      "INV-1102"
+    ],
+    "link_type": "LATE",
+    "allocated": {
+      "INV-1102": "13050.07"
+    },
+    "difficulty": "EASY",
+    "notes": "settled well after due date"
+  },
+  {
+    "txn_id": "BNK-000130",
+    "invoice_ids": [
+      "INV-1103"
+    ],
+    "link_type": "DISPUTED",
+    "allocated": {
+      "INV-1103": "26232.72"
+    },
+    "difficulty": "HARD",
+    "notes": "short by 5449.31 with no explanation; the balance never arrives"
+  },
+  {
+    "txn_id": "BNK-000131",
+    "invoice_ids": [
+      "INV-1104"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1104": "20199.10"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000132",
+    "invoice_ids": [
+      "INV-1104"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1104": "19720.07"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000133",
+    "invoice_ids": [
+      "INV-1105"
+    ],
+    "link_type": "CLEAN",
+    "allocated": {
+      "INV-1105": "27153.73"
+    },
+    "difficulty": "EASY",
+    "notes": ""
+  },
+  {
+    "txn_id": "BNK-000134",
+    "invoice_ids": [
+      "INV-1106"
+    ],
+    "link_type": "OVERPAID",
+    "allocated": {
+      "INV-1106": "6055.96"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "advance/rounding excess 1617.47"
+  },
+  {
+    "txn_id": "BNK-000135",
+    "invoice_ids": [
+      "INV-1108"
+    ],
+    "link_type": "SHORT_PAID_TDS",
+    "allocated": {
+      "INV-1108": "39014.40"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "TDS deducted at 0.02"
+  },
+  {
+    "txn_id": "BNK-000136",
+    "invoice_ids": [
+      "INV-1109"
+    ],
+    "link_type": "NO_REF",
+    "allocated": {
+      "INV-1109": "88397.93"
+    },
+    "difficulty": "HARD",
+    "notes": "amount matches but narration carries no invoice number"
+  },
+  {
+    "txn_id": "BNK-000137",
+    "invoice_ids": [
+      "INV-1110"
+    ],
+    "link_type": "DISPUTED",
+    "allocated": {
+      "INV-1110": "40844.29"
+    },
+    "difficulty": "HARD",
+    "notes": "short by 33148.99 with no explanation; the balance never arrives"
+  },
+  {
+    "txn_id": "BNK-000138",
+    "invoice_ids": [
+      "INV-1111"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1111": "14457.38"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000139",
+    "invoice_ids": [
+      "INV-1111"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1111": "6284.91"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000140",
+    "invoice_ids": [
+      "INV-1112"
+    ],
+    "link_type": "SHORT_PAID_CHARGES",
+    "allocated": {
+      "INV-1112": "47965.68"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "bank charges 56.23"
+  },
+  {
+    "txn_id": "BNK-000141",
+    "invoice_ids": [
+      "INV-1113"
+    ],
+    "link_type": "SHORT_PAID_CHARGES",
+    "allocated": {
+      "INV-1113": "51839.25"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "bank charges 50.03"
+  },
+  {
+    "txn_id": "BNK-000142",
+    "invoice_ids": [
+      "INV-1115"
+    ],
+    "link_type": "DISPUTED",
+    "allocated": {
+      "INV-1115": "59329.95"
+    },
+    "difficulty": "HARD",
+    "notes": "short by 39553.30 with no explanation; the balance never arrives"
+  },
+  {
+    "txn_id": "BNK-000143",
+    "invoice_ids": [
+      "INV-1116"
+    ],
+    "link_type": "NO_REF",
+    "allocated": {
+      "INV-1116": "11460.22"
+    },
+    "difficulty": "HARD",
+    "notes": "amount matches but narration carries no invoice number"
+  },
+  {
+    "txn_id": "BNK-000144",
+    "invoice_ids": [
+      "INV-1117"
+    ],
+    "link_type": "DISPUTED",
+    "allocated": {
+      "INV-1117": "41600.15"
+    },
+    "difficulty": "HARD",
+    "notes": "short by 24431.83 with no explanation; the balance never arrives"
+  },
+  {
+    "txn_id": "BNK-000145",
+    "invoice_ids": [
+      "INV-1118"
+    ],
+    "link_type": "OVERPAID",
+    "allocated": {
+      "INV-1118": "32090.86"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "advance/rounding excess 2972.29"
+  },
+  {
+    "txn_id": "BNK-000146",
+    "invoice_ids": [
+      "INV-1119"
+    ],
+    "link_type": "SHORT_PAID_TDS",
+    "allocated": {
+      "INV-1119": "39098.13"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "TDS deducted at 0.10"
+  },
+  {
+    "txn_id": "BNK-000147",
+    "invoice_ids": [
+      "INV-1120"
+    ],
+    "link_type": "SHORT_PAID_TDS",
+    "allocated": {
+      "INV-1120": "45756.34"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "TDS deducted at 0.10"
+  },
+  {
+    "txn_id": "BNK-000148",
+    "invoice_ids": [
+      "INV-1121"
+    ],
+    "link_type": "DISPUTED",
+    "allocated": {
+      "INV-1121": "18789.16"
+    },
+    "difficulty": "HARD",
+    "notes": "short by 5965.99 with no explanation; the balance never arrives"
+  },
+  {
+    "txn_id": "BNK-000149",
+    "invoice_ids": [
+      "INV-1122"
+    ],
+    "link_type": "NO_REF",
+    "allocated": {
+      "INV-1122": "30884.78"
+    },
+    "difficulty": "HARD",
+    "notes": "amount matches but narration carries no invoice number"
+  },
+  {
+    "txn_id": "BNK-000150",
+    "invoice_ids": [
+      "INV-1123"
+    ],
+    "link_type": "NO_REF",
+    "allocated": {
+      "INV-1123": "20840.52"
+    },
+    "difficulty": "HARD",
+    "notes": "amount matches but narration carries no invoice number"
+  },
+  {
+    "txn_id": "BNK-000151",
+    "invoice_ids": [
+      "INV-1125"
+    ],
+    "link_type": "OVERPAID",
+    "allocated": {
+      "INV-1125": "18716.21"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "advance/rounding excess 989.02"
+  },
+  {
+    "txn_id": "BNK-000152",
+    "invoice_ids": [
+      "INV-1126"
+    ],
+    "link_type": "OVERPAID",
+    "allocated": {
+      "INV-1126": "263931.51"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "advance/rounding excess 1152.42"
+  },
+  {
+    "txn_id": "BNK-000153",
+    "invoice_ids": [
+      "INV-1127"
+    ],
+    "link_type": "NO_REF",
+    "allocated": {
+      "INV-1127": "63389.73"
+    },
+    "difficulty": "HARD",
+    "notes": "amount matches but narration carries no invoice number"
+  },
+  {
+    "txn_id": "BNK-000154",
+    "invoice_ids": [
+      "INV-1128"
+    ],
+    "link_type": "NO_REF",
+    "allocated": {
+      "INV-1128": "215137.01"
+    },
+    "difficulty": "HARD",
+    "notes": "amount matches but narration carries no invoice number"
+  },
+  {
+    "txn_id": "BNK-000155",
+    "invoice_ids": [
+      "INV-1130"
+    ],
+    "link_type": "NO_REF",
+    "allocated": {
+      "INV-1130": "73394.74"
+    },
+    "difficulty": "HARD",
+    "notes": "amount matches but narration carries no invoice number"
+  },
+  {
+    "txn_id": "BNK-000156",
+    "invoice_ids": [
+      "INV-1132"
+    ],
+    "link_type": "DISPUTED",
+    "allocated": {
+      "INV-1132": "42706.74"
+    },
+    "difficulty": "HARD",
+    "notes": "short by 13265.40 with no explanation; the balance never arrives"
+  },
+  {
+    "txn_id": "BNK-000157",
+    "invoice_ids": [
+      "INV-1133"
+    ],
+    "link_type": "CLEAN",
+    "allocated": {
+      "INV-1133": "40405.76"
+    },
+    "difficulty": "EASY",
+    "notes": ""
+  },
+  {
+    "txn_id": "BNK-000158",
+    "invoice_ids": [
+      "INV-1134"
+    ],
+    "link_type": "NO_REF",
+    "allocated": {
+      "INV-1134": "32361.58"
+    },
+    "difficulty": "HARD",
+    "notes": "amount matches but narration carries no invoice number"
+  },
+  {
+    "txn_id": "BNK-000159",
+    "invoice_ids": [
+      "INV-1135"
+    ],
+    "link_type": "SHORT_PAID_TDS",
+    "allocated": {
+      "INV-1135": "12741.95"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "TDS deducted at 0.1"
+  },
+  {
+    "txn_id": "BNK-000160",
+    "invoice_ids": [
+      "INV-1136"
+    ],
+    "link_type": "SHORT_PAID_CHARGES",
+    "allocated": {
+      "INV-1136": "96464.45"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "bank charges 52.72"
+  },
+  {
+    "txn_id": "BNK-000161",
+    "invoice_ids": [
+      "INV-1137"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1137": "3065.53"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000162",
+    "invoice_ids": [
+      "INV-1137"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1137": "4014.22"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000163",
+    "invoice_ids": [
+      "INV-1145"
+    ],
+    "link_type": "SHORT_PAID_TDS",
+    "allocated": {
+      "INV-1145": "43535.93"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "TDS deducted at 0.10"
+  },
+  {
+    "txn_id": "BNK-000164",
+    "invoice_ids": [
+      "INV-1147"
+    ],
+    "link_type": "SHORT_PAID_CHARGES",
+    "allocated": {
+      "INV-1147": "55009.75"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "bank charges 17.83"
+  },
+  {
+    "txn_id": "BNK-000165",
+    "invoice_ids": [
+      "INV-1148"
+    ],
+    "link_type": "DISPUTED",
+    "allocated": {
+      "INV-1148": "10109.08"
+    },
+    "difficulty": "HARD",
+    "notes": "short by 1812.00 with no explanation; the balance never arrives"
+  },
+  {
+    "txn_id": "BNK-000166",
+    "invoice_ids": [
+      "INV-1149"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1149": "11960.26"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000167",
+    "invoice_ids": [
+      "INV-1149"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1149": "18242.41"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000168",
+    "invoice_ids": [
+      "INV-1150"
+    ],
+    "link_type": "OVERPAID",
+    "allocated": {
+      "INV-1150": "73332.91"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "advance/rounding excess 2819.57"
+  },
+  {
+    "txn_id": "BNK-000169",
+    "invoice_ids": [
+      "INV-1151"
+    ],
+    "link_type": "SHORT_PAID_CHARGES",
+    "allocated": {
+      "INV-1151": "36981.77"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "bank charges 28.79"
+  },
+  {
+    "txn_id": "BNK-000170",
+    "invoice_ids": [
+      "INV-1152"
+    ],
+    "link_type": "SHORT_PAID_CHARGES",
+    "allocated": {
+      "INV-1152": "66914.16"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "bank charges 11.27"
+  },
+  {
+    "txn_id": "BNK-000171",
+    "invoice_ids": [
+      "INV-1153"
+    ],
+    "link_type": "OVERPAID",
+    "allocated": {
+      "INV-1153": "8929.70"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "advance/rounding excess 1873.51"
+  },
+  {
+    "txn_id": "BNK-000172",
+    "invoice_ids": [
+      "INV-1156"
+    ],
+    "link_type": "CLEAN",
+    "allocated": {
+      "INV-1156": "26354.63"
+    },
+    "difficulty": "EASY",
+    "notes": ""
+  },
+  {
+    "txn_id": "BNK-000173",
+    "invoice_ids": [],
+    "link_type": "DUPLICATE",
+    "allocated": {},
+    "difficulty": "HARD",
+    "notes": "duplicate of BNK-000172; must not be matched again"
+  },
+  {
+    "txn_id": "BNK-000174",
+    "invoice_ids": [
+      "INV-1157"
+    ],
+    "link_type": "NO_REF",
+    "allocated": {
+      "INV-1157": "323516.44"
+    },
+    "difficulty": "HARD",
+    "notes": "amount matches but narration carries no invoice number"
+  },
+  {
+    "txn_id": "BNK-000175",
+    "invoice_ids": [
+      "INV-1158"
+    ],
+    "link_type": "LATE",
+    "allocated": {
+      "INV-1158": "18145.14"
+    },
+    "difficulty": "EASY",
+    "notes": "settled well after due date"
+  },
+  {
+    "txn_id": "BNK-000176",
+    "invoice_ids": [
+      "INV-1160"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1160": "14039.13"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000177",
+    "invoice_ids": [
+      "INV-1160"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1160": "26654.01"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000178",
+    "invoice_ids": [
+      "INV-1162"
+    ],
+    "link_type": "CLEAN",
+    "allocated": {
+      "INV-1162": "77417.26"
+    },
+    "difficulty": "EASY",
+    "notes": ""
+  },
+  {
+    "txn_id": "BNK-000179",
+    "invoice_ids": [
+      "INV-1163"
+    ],
+    "link_type": "NO_REF",
+    "allocated": {
+      "INV-1163": "227426.18"
+    },
+    "difficulty": "HARD",
+    "notes": "amount matches but narration carries no invoice number"
+  },
+  {
+    "txn_id": "BNK-000180",
+    "invoice_ids": [
+      "INV-1164"
+    ],
+    "link_type": "NO_REF",
+    "allocated": {
+      "INV-1164": "26802.37"
+    },
+    "difficulty": "HARD",
+    "notes": "amount matches but narration carries no invoice number"
+  },
+  {
+    "txn_id": "BNK-000181",
+    "invoice_ids": [
+      "INV-1165"
+    ],
+    "link_type": "SHORT_PAID_TDS",
+    "allocated": {
+      "INV-1165": "8060.00"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "TDS deducted at 0.02"
+  },
+  {
+    "txn_id": "BNK-000182",
+    "invoice_ids": [
+      "INV-1166"
+    ],
+    "link_type": "DISPUTED",
+    "allocated": {
+      "INV-1166": "67248.89"
+    },
+    "difficulty": "HARD",
+    "notes": "short by 12147.68 with no explanation; the balance never arrives"
+  },
+  {
+    "txn_id": "BNK-000183",
+    "invoice_ids": [
+      "INV-1167"
+    ],
+    "link_type": "OVERPAID",
+    "allocated": {
+      "INV-1167": "18700.06"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "advance/rounding excess 1477.84"
+  },
+  {
+    "txn_id": "BNK-000184",
+    "invoice_ids": [
+      "INV-1168"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1168": "23042.56"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000185",
+    "invoice_ids": [
+      "INV-1168"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1168": "15490.15"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000186",
+    "invoice_ids": [
+      "INV-1169"
+    ],
+    "link_type": "SHORT_PAID_TDS",
+    "allocated": {
+      "INV-1169": "11088.78"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "TDS deducted at 0.10"
+  },
+  {
+    "txn_id": "BNK-000187",
+    "invoice_ids": [
+      "INV-1171"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1171": "40403.71"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000188",
+    "invoice_ids": [
+      "INV-1171"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1171": "36118.46"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000189",
+    "invoice_ids": [
+      "INV-1172"
+    ],
+    "link_type": "CLEAN",
+    "allocated": {
+      "INV-1172": "131884.52"
+    },
+    "difficulty": "EASY",
+    "notes": ""
+  },
+  {
+    "txn_id": "BNK-000190",
+    "invoice_ids": [],
+    "link_type": "DUPLICATE",
+    "allocated": {},
+    "difficulty": "HARD",
+    "notes": "duplicate of BNK-000189; must not be matched again"
+  },
+  {
+    "txn_id": "BNK-000191",
+    "invoice_ids": [
+      "INV-1173"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1173": "13543.35"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000192",
+    "invoice_ids": [
+      "INV-1173"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1173": "24077.08"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000193",
+    "invoice_ids": [
+      "INV-1174"
+    ],
+    "link_type": "CLEAN",
+    "allocated": {
+      "INV-1174": "80249.70"
+    },
+    "difficulty": "EASY",
+    "notes": ""
+  },
+  {
+    "txn_id": "BNK-000194",
+    "invoice_ids": [
+      "INV-1175"
+    ],
+    "link_type": "CLEAN",
+    "allocated": {
+      "INV-1175": "90057.35"
+    },
+    "difficulty": "EASY",
+    "notes": ""
+  },
+  {
+    "txn_id": "BNK-000195",
+    "invoice_ids": [],
+    "link_type": "DUPLICATE",
+    "allocated": {},
+    "difficulty": "HARD",
+    "notes": "duplicate of BNK-000194; must not be matched again"
+  },
+  {
+    "txn_id": "BNK-000196",
+    "invoice_ids": [
+      "INV-1176"
+    ],
+    "link_type": "SHORT_PAID_CHARGES",
+    "allocated": {
+      "INV-1176": "27627.67"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "bank charges 30.38"
+  },
+  {
+    "txn_id": "BNK-000197",
+    "invoice_ids": [
+      "INV-1177"
+    ],
+    "link_type": "SHORT_PAID_TDS",
+    "allocated": {
+      "INV-1177": "19512.42"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "TDS deducted at 0.10"
+  },
+  {
+    "txn_id": "BNK-000198",
+    "invoice_ids": [
+      "INV-1178"
+    ],
+    "link_type": "CLEAN",
+    "allocated": {
+      "INV-1178": "9708.50"
+    },
+    "difficulty": "EASY",
+    "notes": ""
+  },
+  {
+    "txn_id": "BNK-000199",
+    "invoice_ids": [],
+    "link_type": "DUPLICATE",
+    "allocated": {},
+    "difficulty": "HARD",
+    "notes": "duplicate of BNK-000198; must not be matched again"
+  },
+  {
+    "txn_id": "BNK-000200",
+    "invoice_ids": [
+      "INV-1179"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1179": "29978.61"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000201",
+    "invoice_ids": [
+      "INV-1179"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1179": "22248.93"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000202",
+    "invoice_ids": [
+      "INV-1181"
+    ],
+    "link_type": "SHORT_PAID_TDS",
+    "allocated": {
+      "INV-1181": "74663.38"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "TDS deducted at 0.1"
+  },
+  {
+    "txn_id": "BNK-000203",
+    "invoice_ids": [
+      "INV-1182"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1182": "44418.47"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000204",
+    "invoice_ids": [
+      "INV-1182"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1182": "32831.04"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000205",
+    "invoice_ids": [
+      "INV-1185"
+    ],
+    "link_type": "SHORT_PAID_CHARGES",
+    "allocated": {
+      "INV-1185": "27061.76"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "bank charges 55.91"
+  },
+  {
+    "txn_id": "BNK-000206",
+    "invoice_ids": [
+      "INV-1187"
+    ],
+    "link_type": "CLEAN",
+    "allocated": {
+      "INV-1187": "9584.83"
+    },
+    "difficulty": "EASY",
+    "notes": ""
+  },
+  {
+    "txn_id": "BNK-000207",
+    "invoice_ids": [
+      "INV-1188"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1188": "31833.53"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000208",
+    "invoice_ids": [
+      "INV-1188"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1188": "27008.48"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000209",
+    "invoice_ids": [
+      "INV-1189"
+    ],
+    "link_type": "DISPUTED",
+    "allocated": {
+      "INV-1189": "125857.12"
+    },
+    "difficulty": "HARD",
+    "notes": "short by 38661.99 with no explanation; the balance never arrives"
+  },
+  {
+    "txn_id": "BNK-000210",
+    "invoice_ids": [
+      "INV-1190"
+    ],
+    "link_type": "LATE",
+    "allocated": {
+      "INV-1190": "34865.78"
+    },
+    "difficulty": "EASY",
+    "notes": "settled well after due date"
+  },
+  {
+    "txn_id": "BNK-000211",
+    "invoice_ids": [
+      "INV-1193"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1193": "7575.63"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000212",
+    "invoice_ids": [
+      "INV-1193"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1193": "10249.37"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000213",
+    "invoice_ids": [
+      "INV-1195"
+    ],
+    "link_type": "DISPUTED",
+    "allocated": {
+      "INV-1195": "52114.84"
+    },
+    "difficulty": "HARD",
+    "notes": "short by 30085.22 with no explanation; the balance never arrives"
+  },
+  {
+    "txn_id": "BNK-000214",
+    "invoice_ids": [
+      "INV-1196"
+    ],
+    "link_type": "CLEAN",
+    "allocated": {
+      "INV-1196": "64122.49"
+    },
+    "difficulty": "EASY",
+    "notes": ""
+  },
+  {
+    "txn_id": "BNK-000215",
+    "invoice_ids": [],
+    "link_type": "DUPLICATE",
+    "allocated": {},
+    "difficulty": "HARD",
+    "notes": "duplicate of BNK-000214; must not be matched again"
+  },
+  {
+    "txn_id": "BNK-000216",
+    "invoice_ids": [
+      "INV-1197"
+    ],
+    "link_type": "OVERPAID",
+    "allocated": {
+      "INV-1197": "15624.60"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "advance/rounding excess 2439.22"
+  },
+  {
+    "txn_id": "BNK-000217",
+    "invoice_ids": [
+      "INV-1198"
+    ],
+    "link_type": "NO_REF",
+    "allocated": {
+      "INV-1198": "73906.34"
+    },
+    "difficulty": "HARD",
+    "notes": "amount matches but narration carries no invoice number"
+  },
+  {
+    "txn_id": "BNK-000218",
+    "invoice_ids": [
+      "INV-1199"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1199": "86239.04"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000219",
+    "invoice_ids": [
+      "INV-1199"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1199": "82526.20"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000220",
+    "invoice_ids": [
+      "INV-1200"
+    ],
+    "link_type": "CLEAN",
+    "allocated": {
+      "INV-1200": "10678.44"
+    },
+    "difficulty": "EASY",
+    "notes": ""
+  },
+  {
+    "txn_id": "BNK-000221",
+    "invoice_ids": [
+      "INV-1201"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1201": "56684.00"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000222",
+    "invoice_ids": [
+      "INV-1201"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1201": "74225.92"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000223",
+    "invoice_ids": [
+      "INV-1202"
+    ],
+    "link_type": "NO_REF",
+    "allocated": {
+      "INV-1202": "114602.47"
+    },
+    "difficulty": "HARD",
+    "notes": "amount matches but narration carries no invoice number"
+  },
+  {
+    "txn_id": "BNK-000224",
+    "invoice_ids": [
+      "INV-1203"
+    ],
+    "link_type": "SHORT_PAID_CHARGES",
+    "allocated": {
+      "INV-1203": "31054.39"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "bank charges 10.17"
+  },
+  {
+    "txn_id": "BNK-000225",
+    "invoice_ids": [
+      "INV-1204"
+    ],
+    "link_type": "NO_REF",
+    "allocated": {
+      "INV-1204": "64628.39"
+    },
+    "difficulty": "HARD",
+    "notes": "amount matches but narration carries no invoice number"
+  },
+  {
+    "txn_id": "BNK-000226",
+    "invoice_ids": [
+      "INV-1205"
+    ],
+    "link_type": "LATE",
+    "allocated": {
+      "INV-1205": "29602.16"
+    },
+    "difficulty": "EASY",
+    "notes": "settled well after due date"
+  },
+  {
+    "txn_id": "BNK-000227",
+    "invoice_ids": [
+      "INV-1206"
+    ],
+    "link_type": "OVERPAID",
+    "allocated": {
+      "INV-1206": "66848.10"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "advance/rounding excess 614.29"
+  },
+  {
+    "txn_id": "BNK-000228",
+    "invoice_ids": [
+      "INV-1207"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1207": "12455.61"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000229",
+    "invoice_ids": [
+      "INV-1207"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1207": "12307.03"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000230",
+    "invoice_ids": [
+      "INV-1209"
+    ],
+    "link_type": "CLEAN",
+    "allocated": {
+      "INV-1209": "68955.37"
+    },
+    "difficulty": "EASY",
+    "notes": ""
+  },
+  {
+    "txn_id": "BNK-000231",
+    "invoice_ids": [],
+    "link_type": "DUPLICATE",
+    "allocated": {},
+    "difficulty": "HARD",
+    "notes": "duplicate of BNK-000230; must not be matched again"
+  },
+  {
+    "txn_id": "BNK-000232",
+    "invoice_ids": [
+      "INV-1210"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1210": "25722.54"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000233",
+    "invoice_ids": [
+      "INV-1210"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1210": "51291.04"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000234",
+    "invoice_ids": [
+      "INV-1213"
+    ],
+    "link_type": "DISPUTED",
+    "allocated": {
+      "INV-1213": "50304.21"
+    },
+    "difficulty": "HARD",
+    "notes": "short by 12341.13 with no explanation; the balance never arrives"
+  },
+  {
+    "txn_id": "BNK-000235",
+    "invoice_ids": [
+      "INV-1215"
+    ],
+    "link_type": "SHORT_PAID_CHARGES",
+    "allocated": {
+      "INV-1215": "55870.47"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "bank charges 39.54"
+  },
+  {
+    "txn_id": "BNK-000236",
+    "invoice_ids": [
+      "INV-1216"
+    ],
+    "link_type": "NO_REF",
+    "allocated": {
+      "INV-1216": "11904.73"
+    },
+    "difficulty": "HARD",
+    "notes": "amount matches but narration carries no invoice number"
+  },
+  {
+    "txn_id": "BNK-000237",
+    "invoice_ids": [
+      "INV-1217"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1217": "3857.83"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000238",
+    "invoice_ids": [
+      "INV-1217"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1217": "2539.90"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000239",
+    "invoice_ids": [
+      "INV-1219"
+    ],
+    "link_type": "CLEAN",
+    "allocated": {
+      "INV-1219": "24224.79"
+    },
+    "difficulty": "EASY",
+    "notes": ""
+  },
+  {
+    "txn_id": "BNK-000240",
+    "invoice_ids": [],
+    "link_type": "DUPLICATE",
+    "allocated": {},
+    "difficulty": "HARD",
+    "notes": "duplicate of BNK-000239; must not be matched again"
+  },
+  {
+    "txn_id": "BNK-000241",
+    "invoice_ids": [
+      "INV-1220"
+    ],
+    "link_type": "DISPUTED",
+    "allocated": {
+      "INV-1220": "57896.32"
+    },
+    "difficulty": "HARD",
+    "notes": "short by 38758.63 with no explanation; the balance never arrives"
+  },
+  {
+    "txn_id": "BNK-000242",
+    "invoice_ids": [
+      "INV-1222"
+    ],
+    "link_type": "DISPUTED",
+    "allocated": {
+      "INV-1222": "124306.90"
+    },
+    "difficulty": "HARD",
+    "notes": "short by 24385.57 with no explanation; the balance never arrives"
+  },
+  {
+    "txn_id": "BNK-000243",
+    "invoice_ids": [
+      "INV-1223"
+    ],
+    "link_type": "OVERPAID",
+    "allocated": {
+      "INV-1223": "65557.84"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "advance/rounding excess 1143.53"
+  },
+  {
+    "txn_id": "BNK-000244",
+    "invoice_ids": [
+      "INV-1224"
+    ],
+    "link_type": "NO_REF",
+    "allocated": {
+      "INV-1224": "7554.73"
+    },
+    "difficulty": "HARD",
+    "notes": "amount matches but narration carries no invoice number"
+  },
+  {
+    "txn_id": "BNK-000245",
+    "invoice_ids": [
+      "INV-1225"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1225": "26984.89"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000246",
+    "invoice_ids": [
+      "INV-1225"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1225": "23738.59"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000247",
+    "invoice_ids": [
+      "INV-1226"
+    ],
+    "link_type": "SHORT_PAID_TDS",
+    "allocated": {
+      "INV-1226": "231339.59"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "TDS deducted at 0.10"
+  },
+  {
+    "txn_id": "BNK-000248",
+    "invoice_ids": [
+      "INV-1227"
+    ],
+    "link_type": "CLEAN",
+    "allocated": {
+      "INV-1227": "45671.19"
+    },
+    "difficulty": "EASY",
+    "notes": ""
+  },
+  {
+    "txn_id": "BNK-000249",
+    "invoice_ids": [],
+    "link_type": "DUPLICATE",
+    "allocated": {},
+    "difficulty": "HARD",
+    "notes": "duplicate of BNK-000248; must not be matched again"
+  },
+  {
+    "txn_id": "BNK-000250",
+    "invoice_ids": [
+      "INV-1229"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1229": "69209.25"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000251",
+    "invoice_ids": [
+      "INV-1229"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1229": "98367.63"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000252",
+    "invoice_ids": [
+      "INV-1230"
+    ],
+    "link_type": "DISPUTED",
+    "allocated": {
+      "INV-1230": "27768.98"
+    },
+    "difficulty": "HARD",
+    "notes": "short by 9858.37 with no explanation; the balance never arrives"
+  },
+  {
+    "txn_id": "BNK-000253",
+    "invoice_ids": [
+      "INV-1231"
+    ],
+    "link_type": "SHORT_PAID_TDS",
+    "allocated": {
+      "INV-1231": "50846.36"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "TDS deducted at 0.10"
+  },
+  {
+    "txn_id": "BNK-000254",
+    "invoice_ids": [
+      "INV-1232"
+    ],
+    "link_type": "NO_REF",
+    "allocated": {
+      "INV-1232": "81468.90"
+    },
+    "difficulty": "HARD",
+    "notes": "amount matches but narration carries no invoice number"
+  },
+  {
+    "txn_id": "BNK-000255",
+    "invoice_ids": [
+      "INV-1233"
+    ],
+    "link_type": "CLEAN",
+    "allocated": {
+      "INV-1233": "9013.82"
+    },
+    "difficulty": "EASY",
+    "notes": ""
+  },
+  {
+    "txn_id": "BNK-000256",
+    "invoice_ids": [
+      "INV-1234"
+    ],
+    "link_type": "SHORT_PAID_CHARGES",
+    "allocated": {
+      "INV-1234": "393045.38"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "bank charges 13.61"
+  },
+  {
+    "txn_id": "BNK-000257",
+    "invoice_ids": [
+      "INV-1235"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1235": "57115.63"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000258",
+    "invoice_ids": [
+      "INV-1235"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1235": "28259.00"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000259",
+    "invoice_ids": [
+      "INV-1237"
+    ],
+    "link_type": "NO_REF",
+    "allocated": {
+      "INV-1237": "34190.69"
+    },
+    "difficulty": "HARD",
+    "notes": "amount matches but narration carries no invoice number"
+  },
+  {
+    "txn_id": "BNK-000260",
+    "invoice_ids": [
+      "INV-1238"
+    ],
+    "link_type": "DISPUTED",
+    "allocated": {
+      "INV-1238": "9951.08"
+    },
+    "difficulty": "HARD",
+    "notes": "short by 6388.96 with no explanation; the balance never arrives"
+  },
+  {
+    "txn_id": "BNK-000261",
+    "invoice_ids": [
+      "INV-1239"
+    ],
+    "link_type": "LATE",
+    "allocated": {
+      "INV-1239": "144697.21"
+    },
+    "difficulty": "EASY",
+    "notes": "settled well after due date"
+  },
+  {
+    "txn_id": "BNK-000262",
+    "invoice_ids": [
+      "INV-1240"
+    ],
+    "link_type": "DISPUTED",
+    "allocated": {
+      "INV-1240": "63931.34"
+    },
+    "difficulty": "HARD",
+    "notes": "short by 18242.62 with no explanation; the balance never arrives"
+  },
+  {
+    "txn_id": "BNK-000263",
+    "invoice_ids": [
+      "INV-1242"
+    ],
+    "link_type": "DISPUTED",
+    "allocated": {
+      "INV-1242": "36280.23"
+    },
+    "difficulty": "HARD",
+    "notes": "short by 19621.51 with no explanation; the balance never arrives"
+  },
+  {
+    "txn_id": "BNK-000264",
+    "invoice_ids": [
+      "INV-1243"
+    ],
+    "link_type": "NO_REF",
+    "allocated": {
+      "INV-1243": "71272.06"
+    },
+    "difficulty": "HARD",
+    "notes": "amount matches but narration carries no invoice number"
+  },
+  {
+    "txn_id": "BNK-000265",
+    "invoice_ids": [
+      "INV-1244"
+    ],
+    "link_type": "NO_REF",
+    "allocated": {
+      "INV-1244": "45919.40"
+    },
+    "difficulty": "HARD",
+    "notes": "amount matches but narration carries no invoice number"
+  },
+  {
+    "txn_id": "BNK-000266",
+    "invoice_ids": [
+      "INV-1245"
+    ],
+    "link_type": "SHORT_PAID_TDS",
+    "allocated": {
+      "INV-1245": "28452.11"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "TDS deducted at 0.10"
+  },
+  {
+    "txn_id": "BNK-000267",
+    "invoice_ids": [
+      "INV-1246"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1246": "18407.41"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000268",
+    "invoice_ids": [
+      "INV-1246"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1246": "24400.52"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000269",
+    "invoice_ids": [
+      "INV-1247"
+    ],
+    "link_type": "CLEAN",
+    "allocated": {
+      "INV-1247": "78037.68"
+    },
+    "difficulty": "EASY",
+    "notes": ""
+  },
+  {
+    "txn_id": "BNK-000270",
+    "invoice_ids": [
+      "INV-1248"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1248": "45695.18"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000271",
+    "invoice_ids": [
+      "INV-1248"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1248": "37690.18"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000272",
+    "invoice_ids": [
+      "INV-1250"
+    ],
+    "link_type": "OVERPAID",
+    "allocated": {
+      "INV-1250": "48175.01"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "advance/rounding excess 1747.18"
+  },
+  {
+    "txn_id": "BNK-000273",
+    "invoice_ids": [
+      "INV-1252"
+    ],
+    "link_type": "DISPUTED",
+    "allocated": {
+      "INV-1252": "15922.97"
+    },
+    "difficulty": "HARD",
+    "notes": "short by 6922.04 with no explanation; the balance never arrives"
+  },
+  {
+    "txn_id": "BNK-000274",
+    "invoice_ids": [
+      "INV-1254"
+    ],
+    "link_type": "NO_REF",
+    "allocated": {
+      "INV-1254": "16970.43"
+    },
+    "difficulty": "HARD",
+    "notes": "amount matches but narration carries no invoice number"
+  },
+  {
+    "txn_id": "BNK-000275",
+    "invoice_ids": [
+      "INV-1255"
+    ],
+    "link_type": "NO_REF",
+    "allocated": {
+      "INV-1255": "15409.35"
+    },
+    "difficulty": "HARD",
+    "notes": "amount matches but narration carries no invoice number"
+  },
+  {
+    "txn_id": "BNK-000276",
+    "invoice_ids": [
+      "INV-1256"
+    ],
+    "link_type": "LATE",
+    "allocated": {
+      "INV-1256": "43436.41"
+    },
+    "difficulty": "EASY",
+    "notes": "settled well after due date"
+  },
+  {
+    "txn_id": "BNK-000277",
+    "invoice_ids": [
+      "INV-1258"
+    ],
+    "link_type": "NO_REF",
+    "allocated": {
+      "INV-1258": "13110.76"
+    },
+    "difficulty": "HARD",
+    "notes": "amount matches but narration carries no invoice number"
+  },
+  {
+    "txn_id": "BNK-000278",
+    "invoice_ids": [
+      "INV-1259"
+    ],
+    "link_type": "NO_REF",
+    "allocated": {
+      "INV-1259": "125234.19"
+    },
+    "difficulty": "HARD",
+    "notes": "amount matches but narration carries no invoice number"
+  },
+  {
+    "txn_id": "BNK-000279",
+    "invoice_ids": [
+      "INV-1261"
+    ],
+    "link_type": "CLEAN",
+    "allocated": {
+      "INV-1261": "57635.92"
+    },
+    "difficulty": "EASY",
+    "notes": ""
+  },
+  {
+    "txn_id": "BNK-000280",
+    "invoice_ids": [],
+    "link_type": "DUPLICATE",
+    "allocated": {},
+    "difficulty": "HARD",
+    "notes": "duplicate of BNK-000279; must not be matched again"
+  },
+  {
+    "txn_id": "BNK-000281",
+    "invoice_ids": [
+      "INV-1262"
+    ],
+    "link_type": "SHORT_PAID_TDS",
+    "allocated": {
+      "INV-1262": "26502.75"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "TDS deducted at 0.1"
+  },
+  {
+    "txn_id": "BNK-000282",
+    "invoice_ids": [
+      "INV-1263"
+    ],
+    "link_type": "SHORT_PAID_TDS",
+    "allocated": {
+      "INV-1263": "32333.63"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "TDS deducted at 0.10"
+  },
+  {
+    "txn_id": "BNK-000283",
+    "invoice_ids": [
+      "INV-1266"
+    ],
+    "link_type": "SHORT_PAID_TDS",
+    "allocated": {
+      "INV-1266": "23154.66"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "TDS deducted at 0.10"
+  },
+  {
+    "txn_id": "BNK-000284",
+    "invoice_ids": [
+      "INV-1267"
+    ],
+    "link_type": "DISPUTED",
+    "allocated": {
+      "INV-1267": "12555.08"
+    },
+    "difficulty": "HARD",
+    "notes": "short by 4185.03 with no explanation; the balance never arrives"
+  },
+  {
+    "txn_id": "BNK-000285",
+    "invoice_ids": [
+      "INV-1268"
+    ],
+    "link_type": "NO_REF",
+    "allocated": {
+      "INV-1268": "30161.68"
+    },
+    "difficulty": "HARD",
+    "notes": "amount matches but narration carries no invoice number"
+  },
+  {
+    "txn_id": "BNK-000286",
+    "invoice_ids": [
+      "INV-1270"
+    ],
+    "link_type": "NO_REF",
+    "allocated": {
+      "INV-1270": "41916.76"
+    },
+    "difficulty": "HARD",
+    "notes": "amount matches but narration carries no invoice number"
+  },
+  {
+    "txn_id": "BNK-000287",
+    "invoice_ids": [
+      "INV-1271"
+    ],
+    "link_type": "DISPUTED",
+    "allocated": {
+      "INV-1271": "99317.87"
+    },
+    "difficulty": "HARD",
+    "notes": "short by 79311.39 with no explanation; the balance never arrives"
+  },
+  {
+    "txn_id": "BNK-000288",
+    "invoice_ids": [
+      "INV-1272"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1272": "26208.85"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000289",
+    "invoice_ids": [
+      "INV-1272"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1272": "22326.05"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000290",
+    "invoice_ids": [
+      "INV-1273"
+    ],
+    "link_type": "OVERPAID",
+    "allocated": {
+      "INV-1273": "39697.74"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "advance/rounding excess 603.28"
+  },
+  {
+    "txn_id": "BNK-000291",
+    "invoice_ids": [
+      "INV-1274"
+    ],
+    "link_type": "NO_REF",
+    "allocated": {
+      "INV-1274": "90129.53"
+    },
+    "difficulty": "HARD",
+    "notes": "amount matches but narration carries no invoice number"
+  },
+  {
+    "txn_id": "BNK-000292",
+    "invoice_ids": [
+      "INV-1276"
+    ],
+    "link_type": "SHORT_PAID_TDS",
+    "allocated": {
+      "INV-1276": "82922.22"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "TDS deducted at 0.10"
+  },
+  {
+    "txn_id": "BNK-000293",
+    "invoice_ids": [
+      "INV-1278"
+    ],
+    "link_type": "DISPUTED",
+    "allocated": {
+      "INV-1278": "14244.45"
+    },
+    "difficulty": "HARD",
+    "notes": "short by 8992.83 with no explanation; the balance never arrives"
+  },
+  {
+    "txn_id": "BNK-000294",
+    "invoice_ids": [
+      "INV-1279"
+    ],
+    "link_type": "CLEAN",
+    "allocated": {
+      "INV-1279": "4169.27"
+    },
+    "difficulty": "EASY",
+    "notes": ""
+  },
+  {
+    "txn_id": "BNK-000295",
+    "invoice_ids": [],
+    "link_type": "DUPLICATE",
+    "allocated": {},
+    "difficulty": "HARD",
+    "notes": "duplicate of BNK-000294; must not be matched again"
+  },
+  {
+    "txn_id": "BNK-000296",
+    "invoice_ids": [
+      "INV-1280"
+    ],
+    "link_type": "SHORT_PAID_CHARGES",
+    "allocated": {
+      "INV-1280": "35096.87"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "bank charges 51.80"
+  },
+  {
+    "txn_id": "BNK-000297",
+    "invoice_ids": [
+      "INV-1281"
+    ],
+    "link_type": "SHORT_PAID_CHARGES",
+    "allocated": {
+      "INV-1281": "35176.35"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "bank charges 28.00"
+  },
+  {
+    "txn_id": "BNK-000298",
+    "invoice_ids": [
+      "INV-1283"
+    ],
+    "link_type": "CLEAN",
+    "allocated": {
+      "INV-1283": "79287.16"
+    },
+    "difficulty": "EASY",
+    "notes": ""
+  },
+  {
+    "txn_id": "BNK-000299",
+    "invoice_ids": [],
+    "link_type": "DUPLICATE",
+    "allocated": {},
+    "difficulty": "HARD",
+    "notes": "duplicate of BNK-000298; must not be matched again"
+  },
+  {
+    "txn_id": "BNK-000300",
+    "invoice_ids": [
+      "INV-1284"
+    ],
+    "link_type": "LATE",
+    "allocated": {
+      "INV-1284": "28217.55"
+    },
+    "difficulty": "EASY",
+    "notes": "settled well after due date"
+  },
+  {
+    "txn_id": "BNK-000301",
+    "invoice_ids": [
+      "INV-1285"
+    ],
+    "link_type": "CLEAN",
+    "allocated": {
+      "INV-1285": "75856.76"
+    },
+    "difficulty": "EASY",
+    "notes": ""
+  },
+  {
+    "txn_id": "BNK-000302",
+    "invoice_ids": [
+      "INV-1286"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1286": "17701.06"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000303",
+    "invoice_ids": [
+      "INV-1286"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1286": "7989.89"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000304",
+    "invoice_ids": [
+      "INV-1287"
+    ],
+    "link_type": "SHORT_PAID_CHARGES",
+    "allocated": {
+      "INV-1287": "19257.44"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "bank charges 51.01"
+  },
+  {
+    "txn_id": "BNK-000305",
+    "invoice_ids": [
+      "INV-1288"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1288": "18702.15"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000306",
+    "invoice_ids": [
+      "INV-1288"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1288": "35350.31"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000307",
+    "invoice_ids": [
+      "INV-1289"
+    ],
+    "link_type": "SHORT_PAID_CHARGES",
+    "allocated": {
+      "INV-1289": "226357.65"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "bank charges 37.31"
+  },
+  {
+    "txn_id": "BNK-000308",
+    "invoice_ids": [
+      "INV-1293"
+    ],
+    "link_type": "NO_REF",
+    "allocated": {
+      "INV-1293": "154024.25"
+    },
+    "difficulty": "HARD",
+    "notes": "amount matches but narration carries no invoice number"
+  },
+  {
+    "txn_id": "BNK-000309",
+    "invoice_ids": [
+      "INV-1294"
+    ],
+    "link_type": "SHORT_PAID_TDS",
+    "allocated": {
+      "INV-1294": "5398.92"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "TDS deducted at 0.10"
+  },
+  {
+    "txn_id": "BNK-000310",
+    "invoice_ids": [
+      "INV-1295"
+    ],
+    "link_type": "SHORT_PAID_CHARGES",
+    "allocated": {
+      "INV-1295": "13523.83"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "bank charges 13.19"
+  },
+  {
+    "txn_id": "BNK-000311",
+    "invoice_ids": [
+      "INV-1296"
+    ],
+    "link_type": "NO_REF",
+    "allocated": {
+      "INV-1296": "4871.20"
+    },
+    "difficulty": "HARD",
+    "notes": "amount matches but narration carries no invoice number"
+  },
+  {
+    "txn_id": "BNK-000312",
+    "invoice_ids": [
+      "INV-1297"
+    ],
+    "link_type": "SHORT_PAID_CHARGES",
+    "allocated": {
+      "INV-1297": "27697.89"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "bank charges 50.02"
+  },
+  {
+    "txn_id": "BNK-000313",
+    "invoice_ids": [
+      "INV-1298"
+    ],
+    "link_type": "SHORT_PAID_TDS",
+    "allocated": {
+      "INV-1298": "46419.39"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "TDS deducted at 0.1"
+  },
+  {
+    "txn_id": "BNK-000314",
+    "invoice_ids": [
+      "INV-1299"
+    ],
+    "link_type": "SHORT_PAID_CHARGES",
+    "allocated": {
+      "INV-1299": "93580.64"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "bank charges 50.04"
+  },
+  {
+    "txn_id": "BNK-000315",
+    "invoice_ids": [
+      "INV-1300"
+    ],
+    "link_type": "CLEAN",
+    "allocated": {
+      "INV-1300": "54293.76"
+    },
+    "difficulty": "EASY",
+    "notes": ""
+  },
+  {
+    "txn_id": "BNK-000316",
+    "invoice_ids": [
+      "INV-1302"
+    ],
+    "link_type": "CLEAN",
+    "allocated": {
+      "INV-1302": "52257.33"
+    },
+    "difficulty": "EASY",
+    "notes": ""
+  },
+  {
+    "txn_id": "BNK-000317",
+    "invoice_ids": [],
+    "link_type": "DUPLICATE",
+    "allocated": {},
+    "difficulty": "HARD",
+    "notes": "duplicate of BNK-000316; must not be matched again"
+  },
+  {
+    "txn_id": "BNK-000318",
+    "invoice_ids": [
+      "INV-1303"
+    ],
+    "link_type": "DISPUTED",
+    "allocated": {
+      "INV-1303": "24208.04"
+    },
+    "difficulty": "HARD",
+    "notes": "short by 4372.88 with no explanation; the balance never arrives"
+  },
+  {
+    "txn_id": "BNK-000319",
+    "invoice_ids": [
+      "INV-1304"
+    ],
+    "link_type": "SHORT_PAID_CHARGES",
+    "allocated": {
+      "INV-1304": "44283.13"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "bank charges 58.82"
+  },
+  {
+    "txn_id": "BNK-000320",
+    "invoice_ids": [
+      "INV-1306"
+    ],
+    "link_type": "NO_REF",
+    "allocated": {
+      "INV-1306": "7069.56"
+    },
+    "difficulty": "HARD",
+    "notes": "amount matches but narration carries no invoice number"
+  },
+  {
+    "txn_id": "BNK-000321",
+    "invoice_ids": [
+      "INV-1307"
+    ],
+    "link_type": "DISPUTED",
+    "allocated": {
+      "INV-1307": "71006.50"
+    },
+    "difficulty": "HARD",
+    "notes": "short by 25078.08 with no explanation; the balance never arrives"
+  },
+  {
+    "txn_id": "BNK-000322",
+    "invoice_ids": [
+      "INV-1308"
+    ],
+    "link_type": "NO_REF",
+    "allocated": {
+      "INV-1308": "23004.10"
+    },
+    "difficulty": "HARD",
+    "notes": "amount matches but narration carries no invoice number"
+  },
+  {
+    "txn_id": "BNK-000323",
+    "invoice_ids": [
+      "INV-1312"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1312": "26544.32"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000324",
+    "invoice_ids": [
+      "INV-1312"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1312": "35620.36"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000325",
+    "invoice_ids": [
+      "INV-1314"
+    ],
+    "link_type": "CLEAN",
+    "allocated": {
+      "INV-1314": "112964.75"
+    },
+    "difficulty": "EASY",
+    "notes": ""
+  },
+  {
+    "txn_id": "BNK-000326",
+    "invoice_ids": [],
+    "link_type": "DUPLICATE",
+    "allocated": {},
+    "difficulty": "HARD",
+    "notes": "duplicate of BNK-000325; must not be matched again"
+  },
+  {
+    "txn_id": "BNK-000327",
+    "invoice_ids": [
+      "INV-1315"
+    ],
+    "link_type": "OVERPAID",
+    "allocated": {
+      "INV-1315": "112732.07"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "advance/rounding excess 1637.73"
+  },
+  {
+    "txn_id": "BNK-000328",
+    "invoice_ids": [
+      "INV-1316"
+    ],
+    "link_type": "DISPUTED",
+    "allocated": {
+      "INV-1316": "35546.23"
+    },
+    "difficulty": "HARD",
+    "notes": "short by 18230.22 with no explanation; the balance never arrives"
+  },
+  {
+    "txn_id": "BNK-000329",
+    "invoice_ids": [
+      "INV-1317"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1317": "6515.70"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000330",
+    "invoice_ids": [
+      "INV-1317"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1317": "8779.38"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000331",
+    "invoice_ids": [
+      "INV-1318"
+    ],
+    "link_type": "NO_REF",
+    "allocated": {
+      "INV-1318": "59934.40"
+    },
+    "difficulty": "HARD",
+    "notes": "amount matches but narration carries no invoice number"
+  },
+  {
+    "txn_id": "BNK-000332",
+    "invoice_ids": [
+      "INV-1319"
+    ],
+    "link_type": "LATE",
+    "allocated": {
+      "INV-1319": "41185.82"
+    },
+    "difficulty": "EASY",
+    "notes": "settled well after due date"
+  },
+  {
+    "txn_id": "BNK-000333",
+    "invoice_ids": [
+      "INV-1320"
+    ],
+    "link_type": "CLEAN",
+    "allocated": {
+      "INV-1320": "42531.16"
+    },
+    "difficulty": "EASY",
+    "notes": ""
+  },
+  {
+    "txn_id": "BNK-000334",
+    "invoice_ids": [
+      "INV-1321"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1321": "19477.98"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000335",
+    "invoice_ids": [
+      "INV-1321"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1321": "17272.92"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000336",
+    "invoice_ids": [
+      "INV-1322"
+    ],
+    "link_type": "SHORT_PAID_TDS",
+    "allocated": {
+      "INV-1322": "15038.95"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "TDS deducted at 0.02"
+  },
+  {
+    "txn_id": "BNK-000337",
+    "invoice_ids": [
+      "INV-1324"
+    ],
+    "link_type": "SHORT_PAID_CHARGES",
+    "allocated": {
+      "INV-1324": "23817.41"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "bank charges 44.27"
+  },
+  {
+    "txn_id": "BNK-000338",
+    "invoice_ids": [
+      "INV-1325"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1325": "8030.79"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000339",
+    "invoice_ids": [
+      "INV-1325"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1325": "10689.01"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000340",
+    "invoice_ids": [
+      "INV-1327"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1327": "24402.50"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000341",
+    "invoice_ids": [
+      "INV-1327"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1327": "11325.91"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000342",
+    "invoice_ids": [
+      "INV-1328"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1328": "10575.10"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000343",
+    "invoice_ids": [
+      "INV-1328"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1328": "20619.89"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000344",
+    "invoice_ids": [
+      "INV-1332"
+    ],
+    "link_type": "CLEAN",
+    "allocated": {
+      "INV-1332": "17707.75"
+    },
+    "difficulty": "EASY",
+    "notes": ""
+  },
+  {
+    "txn_id": "BNK-000345",
+    "invoice_ids": [
+      "INV-1333"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1333": "100866.25"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000346",
+    "invoice_ids": [
+      "INV-1333"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1333": "62877.66"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000347",
+    "invoice_ids": [
+      "INV-1334"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1334": "20323.68"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000348",
+    "invoice_ids": [
+      "INV-1334"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1334": "41450.41"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000349",
+    "invoice_ids": [
+      "INV-1335"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1335": "17712.46"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000350",
+    "invoice_ids": [
+      "INV-1335"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1335": "11956.66"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000351",
+    "invoice_ids": [
+      "INV-1336"
+    ],
+    "link_type": "SHORT_PAID_CHARGES",
+    "allocated": {
+      "INV-1336": "188835.07"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "bank charges 52.24"
+  },
+  {
+    "txn_id": "BNK-000352",
+    "invoice_ids": [
+      "INV-1337"
+    ],
+    "link_type": "CLEAN",
+    "allocated": {
+      "INV-1337": "153674.41"
+    },
+    "difficulty": "EASY",
+    "notes": ""
+  },
+  {
+    "txn_id": "BNK-000353",
+    "invoice_ids": [],
+    "link_type": "DUPLICATE",
+    "allocated": {},
+    "difficulty": "HARD",
+    "notes": "duplicate of BNK-000352; must not be matched again"
+  },
+  {
+    "txn_id": "BNK-000354",
+    "invoice_ids": [
+      "INV-1339"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1339": "7815.34"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000355",
+    "invoice_ids": [
+      "INV-1339"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1339": "15036.53"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000356",
+    "invoice_ids": [
+      "INV-1340"
+    ],
+    "link_type": "SHORT_PAID_CHARGES",
+    "allocated": {
+      "INV-1340": "18272.04"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "bank charges 34.44"
+  },
+  {
+    "txn_id": "BNK-000357",
+    "invoice_ids": [
+      "INV-1341"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1341": "24073.17"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000358",
+    "invoice_ids": [
+      "INV-1341"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1341": "48002.20"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000359",
+    "invoice_ids": [
+      "INV-1342"
+    ],
+    "link_type": "NO_REF",
+    "allocated": {
+      "INV-1342": "25807.70"
+    },
+    "difficulty": "HARD",
+    "notes": "amount matches but narration carries no invoice number"
+  },
+  {
+    "txn_id": "BNK-000360",
+    "invoice_ids": [
+      "INV-1343"
+    ],
+    "link_type": "SHORT_PAID_CHARGES",
+    "allocated": {
+      "INV-1343": "27538.72"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "bank charges 17.53"
+  },
+  {
+    "txn_id": "BNK-000361",
+    "invoice_ids": [
+      "INV-1345"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1345": "27117.97"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000362",
+    "invoice_ids": [
+      "INV-1345"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1345": "31706.27"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000363",
+    "invoice_ids": [
+      "INV-1347"
+    ],
+    "link_type": "SHORT_PAID_CHARGES",
+    "allocated": {
+      "INV-1347": "53647.72"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "bank charges 8.19"
+  },
+  {
+    "txn_id": "BNK-000364",
+    "invoice_ids": [
+      "INV-1348"
+    ],
+    "link_type": "SHORT_PAID_TDS",
+    "allocated": {
+      "INV-1348": "21929.98"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "TDS deducted at 0.10"
+  },
+  {
+    "txn_id": "BNK-000365",
+    "invoice_ids": [
+      "INV-1349"
+    ],
+    "link_type": "NO_REF",
+    "allocated": {
+      "INV-1349": "35086.08"
+    },
+    "difficulty": "HARD",
+    "notes": "amount matches but narration carries no invoice number"
+  },
+  {
+    "txn_id": "BNK-000366",
+    "invoice_ids": [
+      "INV-1350"
+    ],
+    "link_type": "SHORT_PAID_CHARGES",
+    "allocated": {
+      "INV-1350": "41822.48"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "bank charges 6.09"
+  },
+  {
+    "txn_id": "BNK-000367",
+    "invoice_ids": [
+      "INV-1351"
+    ],
+    "link_type": "DISPUTED",
+    "allocated": {
+      "INV-1351": "73279.91"
+    },
+    "difficulty": "HARD",
+    "notes": "short by 19833.06 with no explanation; the balance never arrives"
+  },
+  {
+    "txn_id": "BNK-000368",
+    "invoice_ids": [
+      "INV-1353"
+    ],
+    "link_type": "SHORT_PAID_CHARGES",
+    "allocated": {
+      "INV-1353": "51206.46"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "bank charges 33.39"
+  },
+  {
+    "txn_id": "BNK-000369",
+    "invoice_ids": [
+      "INV-1354"
+    ],
+    "link_type": "LATE",
+    "allocated": {
+      "INV-1354": "56450.13"
+    },
+    "difficulty": "EASY",
+    "notes": "settled well after due date"
+  },
+  {
+    "txn_id": "BNK-000370",
+    "invoice_ids": [
+      "INV-1355"
+    ],
+    "link_type": "SHORT_PAID_TDS",
+    "allocated": {
+      "INV-1355": "85594.02"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "TDS deducted at 0.02"
+  },
+  {
+    "txn_id": "BNK-000371",
+    "invoice_ids": [
+      "INV-1356"
+    ],
+    "link_type": "DISPUTED",
+    "allocated": {
+      "INV-1356": "81876.28"
+    },
+    "difficulty": "HARD",
+    "notes": "short by 15133.53 with no explanation; the balance never arrives"
+  },
+  {
+    "txn_id": "BNK-000372",
+    "invoice_ids": [
+      "INV-1358"
+    ],
+    "link_type": "DISPUTED",
+    "allocated": {
+      "INV-1358": "24997.78"
+    },
+    "difficulty": "HARD",
+    "notes": "short by 12201.29 with no explanation; the balance never arrives"
+  },
+  {
+    "txn_id": "BNK-000373",
+    "invoice_ids": [
+      "INV-1360"
+    ],
+    "link_type": "NO_REF",
+    "allocated": {
+      "INV-1360": "31603.27"
+    },
+    "difficulty": "HARD",
+    "notes": "amount matches but narration carries no invoice number"
+  },
+  {
+    "txn_id": "BNK-000374",
+    "invoice_ids": [
+      "INV-1361"
+    ],
+    "link_type": "LATE",
+    "allocated": {
+      "INV-1361": "24124.21"
+    },
+    "difficulty": "EASY",
+    "notes": "settled well after due date"
+  },
+  {
+    "txn_id": "BNK-000375",
+    "invoice_ids": [
+      "INV-1362"
+    ],
+    "link_type": "DISPUTED",
+    "allocated": {
+      "INV-1362": "57915.65"
+    },
+    "difficulty": "HARD",
+    "notes": "short by 26632.75 with no explanation; the balance never arrives"
+  },
+  {
+    "txn_id": "BNK-000376",
+    "invoice_ids": [
+      "INV-1363"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1363": "37218.03"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000377",
+    "invoice_ids": [
+      "INV-1363"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1363": "32740.67"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000378",
+    "invoice_ids": [
+      "INV-1365"
+    ],
+    "link_type": "SHORT_PAID_CHARGES",
+    "allocated": {
+      "INV-1365": "7779.41"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "bank charges 42.71"
+  },
+  {
+    "txn_id": "BNK-000379",
+    "invoice_ids": [
+      "INV-1367"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1367": "30487.13"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000380",
+    "invoice_ids": [
+      "INV-1367"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1367": "30855.19"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000381",
+    "invoice_ids": [
+      "INV-1368"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1368": "32152.70"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000382",
+    "invoice_ids": [
+      "INV-1368"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1368": "24956.89"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000383",
+    "invoice_ids": [
+      "INV-1370"
+    ],
+    "link_type": "NO_REF",
+    "allocated": {
+      "INV-1370": "6529.85"
+    },
+    "difficulty": "HARD",
+    "notes": "amount matches but narration carries no invoice number"
+  },
+  {
+    "txn_id": "BNK-000384",
+    "invoice_ids": [
+      "INV-1372"
+    ],
+    "link_type": "SHORT_PAID_TDS",
+    "allocated": {
+      "INV-1372": "96243.91"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "TDS deducted at 0.10"
+  },
+  {
+    "txn_id": "BNK-000385",
+    "invoice_ids": [
+      "INV-1374"
+    ],
+    "link_type": "SHORT_PAID_TDS",
+    "allocated": {
+      "INV-1374": "130710.05"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "TDS deducted at 0.02"
+  },
+  {
+    "txn_id": "BNK-000386",
+    "invoice_ids": [
+      "INV-1375"
+    ],
+    "link_type": "SHORT_PAID_TDS",
+    "allocated": {
+      "INV-1375": "33049.75"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "TDS deducted at 0.10"
+  },
+  {
+    "txn_id": "BNK-000387",
+    "invoice_ids": [
+      "INV-1377"
+    ],
+    "link_type": "LATE",
+    "allocated": {
+      "INV-1377": "43637.92"
+    },
+    "difficulty": "EASY",
+    "notes": "settled well after due date"
+  },
+  {
+    "txn_id": "BNK-000388",
+    "invoice_ids": [
+      "INV-1378"
+    ],
+    "link_type": "NO_REF",
+    "allocated": {
+      "INV-1378": "18937.18"
+    },
+    "difficulty": "HARD",
+    "notes": "amount matches but narration carries no invoice number"
+  },
+  {
+    "txn_id": "BNK-000389",
+    "invoice_ids": [
+      "INV-1379"
+    ],
+    "link_type": "CLEAN",
+    "allocated": {
+      "INV-1379": "11762.30"
+    },
+    "difficulty": "EASY",
+    "notes": ""
+  },
+  {
+    "txn_id": "BNK-000390",
+    "invoice_ids": [
+      "INV-1381"
+    ],
+    "link_type": "NO_REF",
+    "allocated": {
+      "INV-1381": "173870.87"
+    },
+    "difficulty": "HARD",
+    "notes": "amount matches but narration carries no invoice number"
+  },
+  {
+    "txn_id": "BNK-000391",
+    "invoice_ids": [
+      "INV-1384"
+    ],
+    "link_type": "SHORT_PAID_CHARGES",
+    "allocated": {
+      "INV-1384": "149416.69"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "bank charges 21.96"
+  },
+  {
+    "txn_id": "BNK-000392",
+    "invoice_ids": [
+      "INV-1386"
+    ],
+    "link_type": "NO_REF",
+    "allocated": {
+      "INV-1386": "57411.24"
+    },
+    "difficulty": "HARD",
+    "notes": "amount matches but narration carries no invoice number"
+  },
+  {
+    "txn_id": "BNK-000393",
+    "invoice_ids": [
+      "INV-1387"
+    ],
+    "link_type": "SHORT_PAID_CHARGES",
+    "allocated": {
+      "INV-1387": "67998.88"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "bank charges 13.27"
+  },
+  {
+    "txn_id": "BNK-000394",
+    "invoice_ids": [
+      "INV-1389"
+    ],
+    "link_type": "CLEAN",
+    "allocated": {
+      "INV-1389": "198468.83"
+    },
+    "difficulty": "EASY",
+    "notes": ""
+  },
+  {
+    "txn_id": "BNK-000395",
+    "invoice_ids": [
+      "INV-1392"
+    ],
+    "link_type": "CLEAN",
+    "allocated": {
+      "INV-1392": "68884.05"
+    },
+    "difficulty": "EASY",
+    "notes": ""
+  },
+  {
+    "txn_id": "BNK-000396",
+    "invoice_ids": [
+      "INV-1393"
+    ],
+    "link_type": "DISPUTED",
+    "allocated": {
+      "INV-1393": "16166.74"
+    },
+    "difficulty": "HARD",
+    "notes": "short by 9292.69 with no explanation; the balance never arrives"
+  },
+  {
+    "txn_id": "BNK-000397",
+    "invoice_ids": [
+      "INV-1394"
+    ],
+    "link_type": "DISPUTED",
+    "allocated": {
+      "INV-1394": "39680.02"
+    },
+    "difficulty": "HARD",
+    "notes": "short by 28149.07 with no explanation; the balance never arrives"
+  },
+  {
+    "txn_id": "BNK-000398",
+    "invoice_ids": [
+      "INV-1395"
+    ],
+    "link_type": "NO_REF",
+    "allocated": {
+      "INV-1395": "24546.74"
+    },
+    "difficulty": "HARD",
+    "notes": "amount matches but narration carries no invoice number"
+  },
+  {
+    "txn_id": "BNK-000399",
+    "invoice_ids": [
+      "INV-1398"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1398": "45827.84"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000400",
+    "invoice_ids": [
+      "INV-1398"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1398": "81471.71"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000401",
+    "invoice_ids": [
+      "INV-1399"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1399": "6011.39"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000402",
+    "invoice_ids": [
+      "INV-1399"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1399": "5162.19"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000403",
+    "invoice_ids": [
+      "INV-1401"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1401": "9614.03"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000404",
+    "invoice_ids": [
+      "INV-1401"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1401": "14301.47"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000405",
+    "invoice_ids": [
+      "INV-1402"
+    ],
+    "link_type": "OVERPAID",
+    "allocated": {
+      "INV-1402": "62614.02"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "advance/rounding excess 330.23"
+  },
+  {
+    "txn_id": "BNK-000406",
+    "invoice_ids": [
+      "INV-1403"
+    ],
+    "link_type": "DISPUTED",
+    "allocated": {
+      "INV-1403": "36703.04"
+    },
+    "difficulty": "HARD",
+    "notes": "short by 10231.79 with no explanation; the balance never arrives"
+  },
+  {
+    "txn_id": "BNK-000407",
+    "invoice_ids": [
+      "INV-1404"
+    ],
+    "link_type": "SHORT_PAID_TDS",
+    "allocated": {
+      "INV-1404": "41544.30"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "TDS deducted at 0.1"
+  },
+  {
+    "txn_id": "BNK-000408",
+    "invoice_ids": [
+      "INV-1407"
+    ],
+    "link_type": "DISPUTED",
+    "allocated": {
+      "INV-1407": "50541.75"
+    },
+    "difficulty": "HARD",
+    "notes": "short by 9555.45 with no explanation; the balance never arrives"
+  },
+  {
+    "txn_id": "BNK-000409",
+    "invoice_ids": [
+      "INV-1408"
+    ],
+    "link_type": "CLEAN",
+    "allocated": {
+      "INV-1408": "40266.92"
+    },
+    "difficulty": "EASY",
+    "notes": ""
+  },
+  {
+    "txn_id": "BNK-000410",
+    "invoice_ids": [
+      "INV-1411"
+    ],
+    "link_type": "OVERPAID",
+    "allocated": {
+      "INV-1411": "38020.78"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "advance/rounding excess 829.42"
+  },
+  {
+    "txn_id": "BNK-000411",
+    "invoice_ids": [
+      "INV-1412"
+    ],
+    "link_type": "NO_REF",
+    "allocated": {
+      "INV-1412": "87317.82"
+    },
+    "difficulty": "HARD",
+    "notes": "amount matches but narration carries no invoice number"
+  },
+  {
+    "txn_id": "BNK-000412",
+    "invoice_ids": [
+      "INV-1413"
+    ],
+    "link_type": "DISPUTED",
+    "allocated": {
+      "INV-1413": "8752.41"
+    },
+    "difficulty": "HARD",
+    "notes": "short by 4987.64 with no explanation; the balance never arrives"
+  },
+  {
+    "txn_id": "BNK-000413",
+    "invoice_ids": [
+      "INV-1414"
+    ],
+    "link_type": "NO_REF",
+    "allocated": {
+      "INV-1414": "286494.52"
+    },
+    "difficulty": "HARD",
+    "notes": "amount matches but narration carries no invoice number"
+  },
+  {
+    "txn_id": "BNK-000414",
+    "invoice_ids": [
+      "INV-1415"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1415": "20271.11"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000415",
+    "invoice_ids": [
+      "INV-1415"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1415": "42878.76"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000416",
+    "invoice_ids": [
+      "INV-1416"
+    ],
+    "link_type": "LATE",
+    "allocated": {
+      "INV-1416": "78220.64"
+    },
+    "difficulty": "EASY",
+    "notes": "settled well after due date"
+  },
+  {
+    "txn_id": "BNK-000417",
+    "invoice_ids": [
+      "INV-1417"
+    ],
+    "link_type": "OVERPAID",
+    "allocated": {
+      "INV-1417": "10985.13"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "advance/rounding excess 126.94"
+  },
+  {
+    "txn_id": "BNK-000418",
+    "invoice_ids": [
+      "INV-1418"
+    ],
+    "link_type": "OVERPAID",
+    "allocated": {
+      "INV-1418": "52064.68"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "advance/rounding excess 1776.76"
+  },
+  {
+    "txn_id": "BNK-000419",
+    "invoice_ids": [
+      "INV-1419"
+    ],
+    "link_type": "NO_REF",
+    "allocated": {
+      "INV-1419": "44342.73"
+    },
+    "difficulty": "HARD",
+    "notes": "amount matches but narration carries no invoice number"
+  },
+  {
+    "txn_id": "BNK-000420",
+    "invoice_ids": [
+      "INV-1421"
+    ],
+    "link_type": "NO_REF",
+    "allocated": {
+      "INV-1421": "6008.40"
+    },
+    "difficulty": "HARD",
+    "notes": "amount matches but narration carries no invoice number"
+  },
+  {
+    "txn_id": "BNK-000421",
+    "invoice_ids": [
+      "INV-1422"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1422": "19577.60"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000422",
+    "invoice_ids": [
+      "INV-1422"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1422": "20376.69"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000423",
+    "invoice_ids": [
+      "INV-1423"
+    ],
+    "link_type": "SHORT_PAID_CHARGES",
+    "allocated": {
+      "INV-1423": "13144.79"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "bank charges 19.78"
+  },
+  {
+    "txn_id": "BNK-000424",
+    "invoice_ids": [
+      "INV-1424"
+    ],
+    "link_type": "DISPUTED",
+    "allocated": {
+      "INV-1424": "15631.98"
+    },
+    "difficulty": "HARD",
+    "notes": "short by 7288.81 with no explanation; the balance never arrives"
+  },
+  {
+    "txn_id": "BNK-000425",
+    "invoice_ids": [
+      "INV-1425"
+    ],
+    "link_type": "DISPUTED",
+    "allocated": {
+      "INV-1425": "16106.09"
+    },
+    "difficulty": "HARD",
+    "notes": "short by 5541.88 with no explanation; the balance never arrives"
+  },
+  {
+    "txn_id": "BNK-000426",
+    "invoice_ids": [
+      "INV-1427"
+    ],
+    "link_type": "CLEAN",
+    "allocated": {
+      "INV-1427": "87387.18"
+    },
+    "difficulty": "EASY",
+    "notes": ""
+  },
+  {
+    "txn_id": "BNK-000427",
+    "invoice_ids": [],
+    "link_type": "DUPLICATE",
+    "allocated": {},
+    "difficulty": "HARD",
+    "notes": "duplicate of BNK-000426; must not be matched again"
+  },
+  {
+    "txn_id": "BNK-000428",
+    "invoice_ids": [
+      "INV-1428"
+    ],
+    "link_type": "SHORT_PAID_TDS",
+    "allocated": {
+      "INV-1428": "20467.40"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "TDS deducted at 0.10"
+  },
+  {
+    "txn_id": "BNK-000429",
+    "invoice_ids": [
+      "INV-1429"
+    ],
+    "link_type": "SHORT_PAID_CHARGES",
+    "allocated": {
+      "INV-1429": "312048.22"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "bank charges 22.64"
+  },
+  {
+    "txn_id": "BNK-000430",
+    "invoice_ids": [
+      "INV-1430"
+    ],
+    "link_type": "NO_REF",
+    "allocated": {
+      "INV-1430": "5206.34"
+    },
+    "difficulty": "HARD",
+    "notes": "amount matches but narration carries no invoice number"
+  },
+  {
+    "txn_id": "BNK-000431",
+    "invoice_ids": [
+      "INV-1431"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1431": "6791.06"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000432",
+    "invoice_ids": [
+      "INV-1431"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1431": "8608.18"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000433",
+    "invoice_ids": [
+      "INV-1434"
+    ],
+    "link_type": "SHORT_PAID_TDS",
+    "allocated": {
+      "INV-1434": "42824.21"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "TDS deducted at 0.10"
+  },
+  {
+    "txn_id": "BNK-000434",
+    "invoice_ids": [
+      "INV-1435"
+    ],
+    "link_type": "NO_REF",
+    "allocated": {
+      "INV-1435": "25350.20"
+    },
+    "difficulty": "HARD",
+    "notes": "amount matches but narration carries no invoice number"
+  },
+  {
+    "txn_id": "BNK-000435",
+    "invoice_ids": [
+      "INV-1436"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1436": "15567.72"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000436",
+    "invoice_ids": [
+      "INV-1436"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1436": "7984.05"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000437",
+    "invoice_ids": [
+      "INV-1437"
+    ],
+    "link_type": "SHORT_PAID_TDS",
+    "allocated": {
+      "INV-1437": "23189.50"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "TDS deducted at 0.10"
+  },
+  {
+    "txn_id": "BNK-000438",
+    "invoice_ids": [
+      "INV-1438"
+    ],
+    "link_type": "SHORT_PAID_TDS",
+    "allocated": {
+      "INV-1438": "29195.27"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "TDS deducted at 0.10"
+  },
+  {
+    "txn_id": "BNK-000439",
+    "invoice_ids": [
+      "INV-1440"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1440": "98996.91"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000440",
+    "invoice_ids": [
+      "INV-1440"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1440": "79697.88"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000441",
+    "invoice_ids": [
+      "INV-1441"
+    ],
+    "link_type": "CLEAN",
+    "allocated": {
+      "INV-1441": "18648.41"
+    },
+    "difficulty": "EASY",
+    "notes": ""
+  },
+  {
+    "txn_id": "BNK-000442",
+    "invoice_ids": [
+      "INV-1442"
+    ],
+    "link_type": "NO_REF",
+    "allocated": {
+      "INV-1442": "122280.84"
+    },
+    "difficulty": "HARD",
+    "notes": "amount matches but narration carries no invoice number"
+  },
+  {
+    "txn_id": "BNK-000443",
+    "invoice_ids": [
+      "INV-1444"
+    ],
+    "link_type": "LATE",
+    "allocated": {
+      "INV-1444": "44565.38"
+    },
+    "difficulty": "EASY",
+    "notes": "settled well after due date"
+  },
+  {
+    "txn_id": "BNK-000444",
+    "invoice_ids": [
+      "INV-1446"
+    ],
+    "link_type": "SHORT_PAID_CHARGES",
+    "allocated": {
+      "INV-1446": "34554.99"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "bank charges 52.14"
+  },
+  {
+    "txn_id": "BNK-000445",
+    "invoice_ids": [
+      "INV-1447"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1447": "27359.42"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000446",
+    "invoice_ids": [
+      "INV-1447"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1447": "16697.62"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000447",
+    "invoice_ids": [
+      "INV-1448"
+    ],
+    "link_type": "CLEAN",
+    "allocated": {
+      "INV-1448": "8211.57"
+    },
+    "difficulty": "EASY",
+    "notes": ""
+  },
+  {
+    "txn_id": "BNK-000448",
+    "invoice_ids": [],
+    "link_type": "DUPLICATE",
+    "allocated": {},
+    "difficulty": "HARD",
+    "notes": "duplicate of BNK-000447; must not be matched again"
+  },
+  {
+    "txn_id": "BNK-000449",
+    "invoice_ids": [
+      "INV-1449"
+    ],
+    "link_type": "NO_REF",
+    "allocated": {
+      "INV-1449": "12839.30"
+    },
+    "difficulty": "HARD",
+    "notes": "amount matches but narration carries no invoice number"
+  },
+  {
+    "txn_id": "BNK-000450",
+    "invoice_ids": [
+      "INV-1450"
+    ],
+    "link_type": "OVERPAID",
+    "allocated": {
+      "INV-1450": "15471.77"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "advance/rounding excess 791.35"
+  },
+  {
+    "txn_id": "BNK-000451",
+    "invoice_ids": [
+      "INV-1451"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1451": "8535.30"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000452",
+    "invoice_ids": [
+      "INV-1451"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1451": "16062.12"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000453",
+    "invoice_ids": [
+      "INV-1452"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1452": "23293.92"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000454",
+    "invoice_ids": [
+      "INV-1452"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1452": "38493.67"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000455",
+    "invoice_ids": [
+      "INV-1454"
+    ],
+    "link_type": "CLEAN",
+    "allocated": {
+      "INV-1454": "13691.01"
+    },
+    "difficulty": "EASY",
+    "notes": ""
+  },
+  {
+    "txn_id": "BNK-000456",
+    "invoice_ids": [],
+    "link_type": "DUPLICATE",
+    "allocated": {},
+    "difficulty": "HARD",
+    "notes": "duplicate of BNK-000455; must not be matched again"
+  },
+  {
+    "txn_id": "BNK-000457",
+    "invoice_ids": [
+      "INV-1455"
+    ],
+    "link_type": "CLEAN",
+    "allocated": {
+      "INV-1455": "23984.63"
+    },
+    "difficulty": "EASY",
+    "notes": ""
+  },
+  {
+    "txn_id": "BNK-000458",
+    "invoice_ids": [
+      "INV-1456"
+    ],
+    "link_type": "SHORT_PAID_CHARGES",
+    "allocated": {
+      "INV-1456": "39667.25"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "bank charges 20.64"
+  },
+  {
+    "txn_id": "BNK-000459",
+    "invoice_ids": [
+      "INV-1457"
+    ],
+    "link_type": "DISPUTED",
+    "allocated": {
+      "INV-1457": "22899.25"
+    },
+    "difficulty": "HARD",
+    "notes": "short by 9720.77 with no explanation; the balance never arrives"
+  },
+  {
+    "txn_id": "BNK-000460",
+    "invoice_ids": [
+      "INV-1458"
+    ],
+    "link_type": "NO_REF",
+    "allocated": {
+      "INV-1458": "23530.62"
+    },
+    "difficulty": "HARD",
+    "notes": "amount matches but narration carries no invoice number"
+  },
+  {
+    "txn_id": "BNK-000461",
+    "invoice_ids": [
+      "INV-1459"
+    ],
+    "link_type": "LATE",
+    "allocated": {
+      "INV-1459": "26366.72"
+    },
+    "difficulty": "EASY",
+    "notes": "settled well after due date"
+  },
+  {
+    "txn_id": "BNK-000462",
+    "invoice_ids": [
+      "INV-1460"
+    ],
+    "link_type": "NO_REF",
+    "allocated": {
+      "INV-1460": "30230.85"
+    },
+    "difficulty": "HARD",
+    "notes": "amount matches but narration carries no invoice number"
+  },
+  {
+    "txn_id": "BNK-000463",
+    "invoice_ids": [
+      "INV-1461"
+    ],
+    "link_type": "CLEAN",
+    "allocated": {
+      "INV-1461": "66481.90"
+    },
+    "difficulty": "EASY",
+    "notes": ""
+  },
+  {
+    "txn_id": "BNK-000464",
+    "invoice_ids": [],
+    "link_type": "DUPLICATE",
+    "allocated": {},
+    "difficulty": "HARD",
+    "notes": "duplicate of BNK-000463; must not be matched again"
+  },
+  {
+    "txn_id": "BNK-000465",
+    "invoice_ids": [
+      "INV-1462"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1462": "10463.37"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000466",
+    "invoice_ids": [
+      "INV-1462"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1462": "22965.94"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000467",
+    "invoice_ids": [
+      "INV-1463"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1463": "58437.35"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000468",
+    "invoice_ids": [
+      "INV-1463"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1463": "37048.52"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000469",
+    "invoice_ids": [
+      "INV-1464"
+    ],
+    "link_type": "CLEAN",
+    "allocated": {
+      "INV-1464": "18833.58"
+    },
+    "difficulty": "EASY",
+    "notes": ""
+  },
+  {
+    "txn_id": "BNK-000470",
+    "invoice_ids": [],
+    "link_type": "DUPLICATE",
+    "allocated": {},
+    "difficulty": "HARD",
+    "notes": "duplicate of BNK-000469; must not be matched again"
+  },
+  {
+    "txn_id": "BNK-000471",
+    "invoice_ids": [
+      "INV-1466"
+    ],
+    "link_type": "CLEAN",
+    "allocated": {
+      "INV-1466": "54642.56"
+    },
+    "difficulty": "EASY",
+    "notes": ""
+  },
+  {
+    "txn_id": "BNK-000472",
+    "invoice_ids": [],
+    "link_type": "DUPLICATE",
+    "allocated": {},
+    "difficulty": "HARD",
+    "notes": "duplicate of BNK-000471; must not be matched again"
+  },
+  {
+    "txn_id": "BNK-000473",
+    "invoice_ids": [
+      "INV-1468"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1468": "11970.69"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000474",
+    "invoice_ids": [
+      "INV-1468"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1468": "13072.59"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000475",
+    "invoice_ids": [
+      "INV-1470"
+    ],
+    "link_type": "NO_REF",
+    "allocated": {
+      "INV-1470": "84220.62"
+    },
+    "difficulty": "HARD",
+    "notes": "amount matches but narration carries no invoice number"
+  },
+  {
+    "txn_id": "BNK-000476",
+    "invoice_ids": [
+      "INV-1471"
+    ],
+    "link_type": "SHORT_PAID_TDS",
+    "allocated": {
+      "INV-1471": "57362.84"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "TDS deducted at 0.02"
+  },
+  {
+    "txn_id": "BNK-000477",
+    "invoice_ids": [
+      "INV-1473"
+    ],
+    "link_type": "NO_REF",
+    "allocated": {
+      "INV-1473": "76517.30"
+    },
+    "difficulty": "HARD",
+    "notes": "amount matches but narration carries no invoice number"
+  },
+  {
+    "txn_id": "BNK-000478",
+    "invoice_ids": [
+      "INV-1476"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1476": "15063.43"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000479",
+    "invoice_ids": [
+      "INV-1476"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1476": "24892.61"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000480",
+    "invoice_ids": [
+      "INV-1477"
+    ],
+    "link_type": "NO_REF",
+    "allocated": {
+      "INV-1477": "91657.22"
+    },
+    "difficulty": "HARD",
+    "notes": "amount matches but narration carries no invoice number"
+  },
+  {
+    "txn_id": "BNK-000481",
+    "invoice_ids": [
+      "INV-1479"
+    ],
+    "link_type": "SHORT_PAID_TDS",
+    "allocated": {
+      "INV-1479": "50264.76"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "TDS deducted at 0.10"
+  },
+  {
+    "txn_id": "BNK-000482",
+    "invoice_ids": [
+      "INV-1480"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1480": "6300.81"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000483",
+    "invoice_ids": [
+      "INV-1480"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1480": "9256.74"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000484",
+    "invoice_ids": [
+      "INV-1481"
+    ],
+    "link_type": "DISPUTED",
+    "allocated": {
+      "INV-1481": "50734.07"
+    },
+    "difficulty": "HARD",
+    "notes": "short by 14813.83 with no explanation; the balance never arrives"
+  },
+  {
+    "txn_id": "BNK-000485",
+    "invoice_ids": [
+      "INV-1483"
+    ],
+    "link_type": "NO_REF",
+    "allocated": {
+      "INV-1483": "87702.61"
+    },
+    "difficulty": "HARD",
+    "notes": "amount matches but narration carries no invoice number"
+  },
+  {
+    "txn_id": "BNK-000486",
+    "invoice_ids": [
+      "INV-1484"
+    ],
+    "link_type": "NO_REF",
+    "allocated": {
+      "INV-1484": "26101.36"
+    },
+    "difficulty": "HARD",
+    "notes": "amount matches but narration carries no invoice number"
+  },
+  {
+    "txn_id": "BNK-000487",
+    "invoice_ids": [
+      "INV-1485"
+    ],
+    "link_type": "CLEAN",
+    "allocated": {
+      "INV-1485": "10938.57"
+    },
+    "difficulty": "EASY",
+    "notes": ""
+  },
+  {
+    "txn_id": "BNK-000488",
+    "invoice_ids": [
+      "INV-1486"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1486": "11550.28"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000489",
+    "invoice_ids": [
+      "INV-1486"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1486": "9565.40"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000490",
+    "invoice_ids": [
+      "INV-1488"
+    ],
+    "link_type": "SHORT_PAID_CHARGES",
+    "allocated": {
+      "INV-1488": "51741.54"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "bank charges 20.70"
+  },
+  {
+    "txn_id": "BNK-000491",
+    "invoice_ids": [
+      "INV-1491"
+    ],
+    "link_type": "SHORT_PAID_CHARGES",
+    "allocated": {
+      "INV-1491": "25740.86"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "bank charges 41.58"
+  },
+  {
+    "txn_id": "BNK-000492",
+    "invoice_ids": [
+      "INV-1492"
+    ],
+    "link_type": "CLEAN",
+    "allocated": {
+      "INV-1492": "150606.16"
+    },
+    "difficulty": "EASY",
+    "notes": ""
+  },
+  {
+    "txn_id": "BNK-000493",
+    "invoice_ids": [],
+    "link_type": "DUPLICATE",
+    "allocated": {},
+    "difficulty": "HARD",
+    "notes": "duplicate of BNK-000492; must not be matched again"
+  },
+  {
+    "txn_id": "BNK-000494",
+    "invoice_ids": [
+      "INV-1493"
+    ],
+    "link_type": "SHORT_PAID_CHARGES",
+    "allocated": {
+      "INV-1493": "157813.48"
+    },
+    "difficulty": "MEDIUM",
+    "notes": "bank charges 31.13"
+  },
+  {
+    "txn_id": "BNK-000495",
+    "invoice_ids": [
+      "INV-1494"
+    ],
+    "link_type": "CLEAN",
+    "allocated": {
+      "INV-1494": "12414.48"
+    },
+    "difficulty": "EASY",
+    "notes": ""
+  },
+  {
+    "txn_id": "BNK-000496",
+    "invoice_ids": [
+      "INV-1495"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1495": "9052.58"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 1 of 2"
+  },
+  {
+    "txn_id": "BNK-000497",
+    "invoice_ids": [
+      "INV-1495"
+    ],
+    "link_type": "PARTIAL",
+    "allocated": {
+      "INV-1495": "4086.15"
+    },
+    "difficulty": "HARD",
+    "notes": "installment 2 of 2"
+  },
+  {
+    "txn_id": "BNK-000498",
+    "invoice_ids": [
+      "INV-1496"
+    ],
+    "link_type": "DISPUTED",
+    "allocated": {
+      "INV-1496": "15083.28"
+    },
+    "difficulty": "HARD",
+    "notes": "short by 8669.92 with no explanation; the balance never arrives"
+  },
+  {
+    "txn_id": "BNK-000499",
+    "invoice_ids": [
+      "INV-1497"
+    ],
+    "link_type": "CLEAN",
+    "allocated": {
+      "INV-1497": "152953.71"
+    },
+    "difficulty": "EASY",
+    "notes": ""
+  },
+  {
+    "txn_id": "BNK-000500",
+    "invoice_ids": [],
+    "link_type": "DUPLICATE",
+    "allocated": {},
+    "difficulty": "HARD",
+    "notes": "duplicate of BNK-000499; must not be matched again"
+  },
+  {
+    "txn_id": "BNK-000501",
+    "invoice_ids": [],
+    "link_type": "ORPHAN",
+    "allocated": {},
+    "difficulty": "IMPOSSIBLE",
+    "notes": "no ledger counterpart exists"
+  },
+  {
+    "txn_id": "BNK-000502",
+    "invoice_ids": [],
+    "link_type": "ORPHAN",
+    "allocated": {},
+    "difficulty": "IMPOSSIBLE",
+    "notes": "no ledger counterpart exists"
+  },
+  {
+    "txn_id": "BNK-000503",
+    "invoice_ids": [],
+    "link_type": "ORPHAN",
+    "allocated": {},
+    "difficulty": "IMPOSSIBLE",
+    "notes": "no ledger counterpart exists"
+  },
+  {
+    "txn_id": "BNK-000504",
+    "invoice_ids": [],
+    "link_type": "ORPHAN",
+    "allocated": {},
+    "difficulty": "IMPOSSIBLE",
+    "notes": "no ledger counterpart exists"
+  },
+  {
+    "txn_id": "BNK-000505",
+    "invoice_ids": [],
+    "link_type": "ORPHAN",
+    "allocated": {},
+    "difficulty": "IMPOSSIBLE",
+    "notes": "no ledger counterpart exists"
+  },
+  {
+    "txn_id": "BNK-000506",
+    "invoice_ids": [],
+    "link_type": "ORPHAN",
+    "allocated": {},
+    "difficulty": "IMPOSSIBLE",
+    "notes": "no ledger counterpart exists"
+  },
+  {
+    "txn_id": "BNK-000507",
+    "invoice_ids": [],
+    "link_type": "ORPHAN",
+    "allocated": {},
+    "difficulty": "IMPOSSIBLE",
+    "notes": "no ledger counterpart exists"
+  },
+  {
+    "txn_id": "BNK-000508",
+    "invoice_ids": [],
+    "link_type": "ORPHAN",
+    "allocated": {},
+    "difficulty": "IMPOSSIBLE",
+    "notes": "no ledger counterpart exists"
+  },
+  {
+    "txn_id": "BNK-000509",
+    "invoice_ids": [],
+    "link_type": "ORPHAN",
+    "allocated": {},
+    "difficulty": "IMPOSSIBLE",
+    "notes": "no ledger counterpart exists"
+  },
+  {
+    "txn_id": "BNK-000510",
+    "invoice_ids": [],
+    "link_type": "ORPHAN",
+    "allocated": {},
+    "difficulty": "IMPOSSIBLE",
+    "notes": "no ledger counterpart exists"
+  },
+  {
+    "txn_id": "BNK-000511",
+    "invoice_ids": [],
+    "link_type": "ORPHAN",
+    "allocated": {},
+    "difficulty": "IMPOSSIBLE",
+    "notes": "no ledger counterpart exists"
+  },
+  {
+    "txn_id": "BNK-000512",
+    "invoice_ids": [],
+    "link_type": "ORPHAN",
+    "allocated": {},
+    "difficulty": "IMPOSSIBLE",
+    "notes": "no ledger counterpart exists"
+  },
+  {
+    "txn_id": "BNK-000513",
+    "invoice_ids": [],
+    "link_type": "ORPHAN",
+    "allocated": {},
+    "difficulty": "IMPOSSIBLE",
+    "notes": "no ledger counterpart exists"
+  },
+  {
+    "txn_id": "BNK-000514",
+    "invoice_ids": [],
+    "link_type": "ORPHAN",
+    "allocated": {},
+    "difficulty": "IMPOSSIBLE",
+    "notes": "no ledger counterpart exists"
+  },
+  {
+    "txn_id": "BNK-000515",
+    "invoice_ids": [],
+    "link_type": "ORPHAN",
+    "allocated": {},
+    "difficulty": "IMPOSSIBLE",
+    "notes": "no ledger counterpart exists"
+  },
+  {
+    "txn_id": "BNK-000516",
+    "invoice_ids": [],
+    "link_type": "ORPHAN",
+    "allocated": {},
+    "difficulty": "IMPOSSIBLE",
+    "notes": "no ledger counterpart exists"
+  },
+  {
+    "txn_id": "BNK-000517",
+    "invoice_ids": [],
+    "link_type": "ORPHAN",
+    "allocated": {},
+    "difficulty": "IMPOSSIBLE",
+    "notes": "no ledger counterpart exists"
+  },
+  {
+    "txn_id": "BNK-000518",
+    "invoice_ids": [],
+    "link_type": "ORPHAN",
+    "allocated": {},
+    "difficulty": "IMPOSSIBLE",
+    "notes": "no ledger counterpart exists"
+  },
+  {
+    "txn_id": "BNK-000519",
+    "invoice_ids": [],
+    "link_type": "ORPHAN",
+    "allocated": {},
+    "difficulty": "IMPOSSIBLE",
+    "notes": "no ledger counterpart exists"
+  },
+  {
+    "txn_id": "BNK-000520",
+    "invoice_ids": [],
+    "link_type": "ORPHAN",
+    "allocated": {},
+    "difficulty": "IMPOSSIBLE",
+    "notes": "no ledger counterpart exists"
+  },
+  {
+    "txn_id": "BNK-000521",
+    "invoice_ids": [],
+    "link_type": "ORPHAN",
+    "allocated": {},
+    "difficulty": "IMPOSSIBLE",
+    "notes": "no ledger counterpart exists"
+  },
+  {
+    "txn_id": "BNK-000522",
+    "invoice_ids": [],
+    "link_type": "ORPHAN",
+    "allocated": {},
+    "difficulty": "IMPOSSIBLE",
+    "notes": "no ledger counterpart exists"
+  },
+  {
+    "txn_id": "BNK-000523",
+    "invoice_ids": [],
+    "link_type": "ORPHAN",
+    "allocated": {},
+    "difficulty": "IMPOSSIBLE",
+    "notes": "no ledger counterpart exists"
+  },
+  {
+    "txn_id": "BNK-000524",
+    "invoice_ids": [],
+    "link_type": "ORPHAN",
+    "allocated": {},
+    "difficulty": "IMPOSSIBLE",
+    "notes": "no ledger counterpart exists"
+  },
+  {
+    "txn_id": "BNK-000525",
+    "invoice_ids": [],
+    "link_type": "ORPHAN",
+    "allocated": {},
+    "difficulty": "IMPOSSIBLE",
+    "notes": "no ledger counterpart exists"
+  },
+  {
+    "txn_id": "BNK-000526",
+    "invoice_ids": [],
+    "link_type": "ORPHAN",
+    "allocated": {},
+    "difficulty": "IMPOSSIBLE",
+    "notes": "no ledger counterpart exists"
+  },
+  {
+    "txn_id": "BNK-000527",
+    "invoice_ids": [],
+    "link_type": "ORPHAN",
+    "allocated": {},
+    "difficulty": "IMPOSSIBLE",
+    "notes": "no ledger counterpart exists"
+  },
+  {
+    "txn_id": "BNK-000528",
+    "invoice_ids": [],
+    "link_type": "ORPHAN",
+    "allocated": {},
+    "difficulty": "IMPOSSIBLE",
+    "notes": "no ledger counterpart exists"
+  },
+  {
+    "txn_id": "BNK-000529",
+    "invoice_ids": [],
+    "link_type": "ORPHAN",
+    "allocated": {},
+    "difficulty": "IMPOSSIBLE",
+    "notes": "no ledger counterpart exists"
+  },
+  {
+    "txn_id": "BNK-000530",
+    "invoice_ids": [],
+    "link_type": "ORPHAN",
+    "allocated": {},
+    "difficulty": "IMPOSSIBLE",
+    "notes": "no ledger counterpart exists"
+  },
+  {
+    "txn_id": "BNK-000531",
+    "invoice_ids": [],
+    "link_type": "ORPHAN",
+    "allocated": {},
+    "difficulty": "IMPOSSIBLE",
+    "notes": "no ledger counterpart exists"
+  }
+]

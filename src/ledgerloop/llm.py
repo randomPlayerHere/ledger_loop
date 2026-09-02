@@ -2,7 +2,7 @@
 
 from typing import List, Optional
 
-from .models import Invoice, Transaction, MatchDecision
+from .models import LedgerEntry, BankTransaction, MatchDecision
 
 # TODO: Implement LLM integration per §8
 # - Prompt construction

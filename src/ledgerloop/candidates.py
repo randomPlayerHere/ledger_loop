@@ -6,6 +6,7 @@ cheap (a rule rejects it); a dropped one can never be matched by anything.
 
 from typing import List
 
+from .config import Blocking, Config
 from .models import LedgerEntry, BankTransaction, MatchDecision
 from .utils.amounts import explain_shortfall, relative_gap, within_ratio
 from .utils.dates import gap_days, within_window
@@ -13,14 +14,14 @@ from .utils.narration import extract_refs, name_score
 
 
 # blocking's date policy: an invoice is normally raised before the money lands
-def _date_ok(txn, inv, cfg) -> bool:
+def _date_ok(txn, inv, b: Blocking) -> bool:
     return within_window(inv.issue_date, txn.value_date,
-                         cfg["date_back_days"], cfg["date_fwd_days"])
+                         b.date_back_days, b.date_fwd_days)
 
 
-def _amount_ok(txn, inv, cfg) -> bool:
+def _amount_ok(txn, inv, b: Blocking) -> bool:
     # an overpayment is always worth a look, however far above gross it sits
-    return (within_ratio(txn.amount, inv.gross_amount, cfg["amount_lo"], cfg["amount_hi"])
+    return (within_ratio(txn.amount, inv.gross_amount, b.amount_lo, b.amount_hi)
             or txn.amount >= inv.gross_amount)
 
 
@@ -37,10 +38,10 @@ def _score(txn, inv, ns: float, ref_hit: bool, shortfall: str | None) -> float:
     )
 
 # THE MAIN FUNCTION
-def generate_candidates(txn: BankTransaction, ledger: list[LedgerEntry], cfg) -> list[LedgerEntry]:
-    b = cfg["blocking"]
-    tol = cfg["tolerances"]
-    refs = extract_refs(txn.narration, txn.utr, b["max_ref_digits"])
+def generate_candidates(txn: BankTransaction, ledger: list[LedgerEntry],
+                        cfg: Config) -> list[LedgerEntry]:
+    b, tol = cfg.blocking, cfg.tolerances
+    refs = extract_refs(txn.narration, txn.utr, b.max_ref_digits)
     keep = []
     for inv in ledger:
         num = inv.invoice_id.split("-")[-1]
@@ -52,8 +53,8 @@ def generate_candidates(txn: BankTransaction, ledger: list[LedgerEntry], cfg) ->
                 continue
         shortfall = explain_shortfall(txn.amount, inv.gross_amount, tol)
         ns = name_score(txn.narration, inv.counterparty)
-        if not ref_hit and shortfall is None and ns < b["name_min"]:
+        if not ref_hit and shortfall is None and ns < b.name_min:
             continue
         keep.append((_score(txn, inv, ns, ref_hit, shortfall), inv))
     keep.sort(key=lambda p: p[0], reverse=True)
-    return [inv for _, inv in keep[: b["max_candidates"]]]
+    return [inv for _, inv in keep[: b.max_candidates]]

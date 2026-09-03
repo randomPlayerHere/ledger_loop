@@ -7,7 +7,7 @@ cheap (a rule rejects it); a dropped one can never be matched by anything.
 from typing import List
 
 from .config import Blocking, Config
-from .models import LedgerEntry, BankTransaction, MatchDecision
+from .models import LedgerEntry, BankTransaction, Candidate
 from .utils.amounts import explain_shortfall, relative_gap, within_ratio
 from .utils.dates import gap_days, within_window
 from .utils.narration import extract_refs, name_score
@@ -39,7 +39,7 @@ def _score(txn, inv, ns: float, ref_hit: bool, shortfall: str | None) -> float:
 
 # THE MAIN FUNCTION
 def generate_candidates(txn: BankTransaction, ledger: list[LedgerEntry],
-                        cfg: Config) -> list[LedgerEntry]:
+                        cfg: Config) -> list[Candidate]:
     b, tol = cfg.blocking, cfg.tolerances
     refs = extract_refs(txn.narration, txn.utr, b.max_ref_digits)
     keep = []
@@ -55,6 +55,11 @@ def generate_candidates(txn: BankTransaction, ledger: list[LedgerEntry],
         ns = name_score(txn.narration, inv.counterparty)
         if not ref_hit and shortfall is None and ns < b.name_min:
             continue
-        keep.append((_score(txn, inv, ns, ref_hit, shortfall), inv))
+        keep.append((_score(txn, inv, ns, ref_hit, shortfall),ref_hit, shortfall,ns ,inv))
     keep.sort(key=lambda p: p[0], reverse=True)
-    return [inv for _, inv in keep[: b.max_candidates]]
+    return [Candidate(invoice=inv,
+                      ref_hit=ref_hit,
+                      name_similarity=ns,
+                      shortfall=shortfall)
+                for _, ref_hit, shortfall, ns, inv in keep[: b.max_candidates]
+    ]

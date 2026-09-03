@@ -51,3 +51,16 @@ class MatchDecision(BaseModel):
     latency_ms: int
     created_at: datetime
 
+class RuleResult(BaseModel):
+    rule_id: str                      
+    invoice_ids: list[str]
+    allocated: dict[str, Decimal]
+    confidence: float
+    reasoning: str
+    evidence: dict
+
+class Candidate(BaseModel):
+    invoice: LedgerEntry
+    ref_hit: bool
+    name_similarity: float
+    shortfall: str | None      # "EXACT" | "TDS_10PCT" | "BANK_CHARGES" | None

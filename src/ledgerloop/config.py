@@ -45,6 +45,11 @@ class Thresholds(_Section):
     exception: float
 
 
+class Confidence(_Section):
+    r1_exact: float
+    r1_exact_with_ref: float
+
+
 class Exceptions(_Section):
     max_per_batch: int
     llm_timeout: int
@@ -65,6 +70,7 @@ class Config(_Section):
     tolerances: Tolerances
     dates: Dates
     thresholds: Thresholds
+    confidence: Confidence
     exceptions: Exceptions
     blocking: Blocking
 

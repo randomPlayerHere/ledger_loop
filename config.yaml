@@ -23,6 +23,12 @@ thresholds:
   auto_match: 0.95  # Min confidence to auto-match
   exception: 0.50   # Min confidence to attempt LLM resolution
 
+# Per-rule base confidence, compared against the thresholds above.
+# A cited invoice number corroborates the amount, so it scores higher.
+confidence:
+  r1_exact: 0.97
+  r1_exact_with_ref: 0.99
+
 # Exception handling
 exceptions:
   max_per_batch: 100  # Max exceptions to queue

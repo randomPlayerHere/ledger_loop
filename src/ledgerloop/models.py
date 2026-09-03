@@ -50,6 +50,9 @@ class MatchDecision(BaseModel):
     llm_tokens_out: int | None
     latency_ms: int
     created_at: datetime
+    # set when this record corrects an earlier one. The earlier record is never
+    # edited -- the trail is append-only, and this is the link back to it.
+    supersedes: str | None = None
 
 class RuleResult(BaseModel):
     rule_id: str                      

@@ -14,3 +14,11 @@ dependencies = [
 dev = [
     "pytest>=7.0",
 ]
+
+# makes `python -m ledgerloop.run` work instead of `python -m src.ledgerloop.run`
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/ledgerloop"]

@@ -8,12 +8,13 @@ pure functions testable with hand-built inputs.
 Every bank line produces exactly one MatchDecision, including the ones nothing
 could be done with. evaluate.py divides by the truth file's length, so a
 transaction dropped on the floor here does not raise -- it quietly inflates the
-auto-match rate instead.
+auto-match rate instead.'/
 """
 
 import logging
 import time
 from datetime import datetime
+from decimal import Decimal
 from typing import Optional
 from uuid import uuid4
 
@@ -22,6 +23,7 @@ from .config import Config
 from .loaders import Batch
 from .models import BankTransaction, Candidate, MatchDecision, RuleResult
 from .rules import apply_rules
+from .utils.amounts import close
 
 logger = logging.getLogger(__name__)
 
@@ -76,9 +78,83 @@ def _decide(txn: BankTransaction, candidates: list[Candidate],
     )
 
 
+def _supersede_duplicates(history: list[MatchDecision], batch: Batch,
+                          cfg: Config) -> list[MatchDecision]:
+    """Second pass: catch one invoice being paid twice.
+
+    A rule sees one transaction at a time and so can never spot this. The
+    signal is over-allocation -- more money assigned to an invoice than it is
+    owed. Summing rather than counting matters: a partial payment legitimately
+    claims the same invoice twice (15k + 25k against a 40k invoice), and only
+    the sum can tell that apart from two full payments of 40k.
+
+    Which claimant wins is not a coin flip. Whichever transaction was
+    physically real, the outcome is identical: the invoice is settled once and
+    one credit is left unapplied for a human to chase.
+    """
+    gross = {e.invoice_id: e.gross_amount for e in batch.ledger}
+    date_of = {t.txn_id: t.value_date for t in batch.bank}
+
+    claims: dict[str, list[MatchDecision]] = {}
+    for d in history:
+        for inv_id in d.proposed_invoice_ids:
+            claims.setdefault(inv_id, []).append(d)
+
+    corrections: list[MatchDecision] = []
+    for inv_id, claimants in claims.items():
+        if len(claimants) < 2:
+            continue
+        total = sum((d.allocated.get(inv_id, Decimal("0")) for d in claimants),
+                    Decimal("0"))
+        owed = gross.get(inv_id)
+        # close() so a legitimate split that sums to the paisa isn't flagged
+        if owed is None or total <= owed or close(total, owed, cfg.tolerances.amount_exact):
+            continue
+
+        # earliest credit settles the invoice; txn_id breaks same-day ties
+        ordered = sorted(claimants, key=lambda d: (date_of[d.txn_id], d.txn_id))
+        keeper, losers = ordered[0], ordered[1:]
+
+        for d in losers:
+            corrections.append(MatchDecision(
+                decision_id=str(uuid4()),
+                txn_id=d.txn_id,
+                proposed_invoice_ids=[],
+                allocated={},
+                outcome="EXCEPTION",
+                confidence=0.0,
+                decided_by="RULE",
+                rule_id="DEDUP",
+                reasoning=(f"{inv_id} already settled by {keeper.txn_id}; "
+                           "suspected duplicate credit, left unapplied."),
+                evidence={
+                    "superseded_rule": d.rule_id,
+                    "invoice_id": inv_id,
+                    "invoice_gross": owed,
+                    "total_allocated": total,
+                    "settled_by": keeper.txn_id,
+                },
+                candidates_considered=d.candidates_considered,
+                llm_tokens_in=None,
+                llm_tokens_out=None,
+                latency_ms=0,
+                created_at=datetime.now(),
+                supersedes=d.decision_id,
+            ))
+
+    return corrections
+
+
 def reconcile(batch: Batch, cfg: Config, use_llm: bool = True) -> list[MatchDecision]:
-    """Run the pipeline over one batch. One decision per bank line, in order."""
-    decisions: list[MatchDecision] = []
+    """Run the pipeline over one batch.
+
+    Returns the *effective* decision per bank line -- one each, latest wins.
+    `history` keeps every record including superseded ones; that is what the
+    audit trail stores. Returning the history instead would double-count a
+    corrected match, since evaluate.py reads links from every decision it is
+    given.
+    """
+    history: list[MatchDecision] = []
 
     for txn in batch.bank:
         started = time.perf_counter()
@@ -88,12 +164,18 @@ def reconcile(batch: Batch, cfg: Config, use_llm: bool = True) -> list[MatchDeci
         # TODO Stage 2: when result is None and use_llm, adjudicate with the LLM
         # and rebuild the decision with decided_by="LLM" plus token counts.
 
-        decisions.append(_decide(txn, candidates, result, cfg, started))
+        history.append(_decide(txn, candidates, result, cfg, started))
+
+    corrections = _supersede_duplicates(history, batch, cfg)
+    history.extend(corrections)
+
+    effective = list({d.txn_id: d for d in history}.values())
 
     counts: dict[str, int] = {}
-    for d in decisions:
+    for d in effective:
         counts[d.outcome] = counts.get(d.outcome, 0) + 1
     logger.info("reconciled batch", extra={"batch": batch.name,
                                            "n_txns": len(batch.bank),
+                                           "superseded": len(corrections),
                                            "outcomes": counts})
-    return decisions
+    return effective

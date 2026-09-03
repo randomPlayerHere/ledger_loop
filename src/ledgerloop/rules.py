@@ -36,13 +36,7 @@ def _evidence(txn: BankTransaction, c: Candidate) -> dict:
 
 def r1_exact(txn: BankTransaction, candidates: list[Candidate],
              cfg: Config) -> Optional[RuleResult]:
-    """R1: exactly one candidate matches the amount to the paisa.
-
-    A cited invoice number is not required. Roughly half of real narrations
-    cite nothing, and a paisa-exact amount is the stronger signal anyway --
-    demanding both would discard most of what this rule exists to catch.
-    A citation raises confidence instead of gating the match.
-    """
+    """R1: exactly one candidate matches the amount to the paisa."""
     exact = [c for c in candidates if c.shortfall == "EXACT"]
 
     # 0 -> not this rule's case.
@@ -67,7 +61,7 @@ def r1_exact(txn: BankTransaction, candidates: list[Candidate],
 
 
 # ordered most-confident first; the first rule to fire wins
-RULES: list[Callable[[BankTransaction, list[Candidate], Config], Optional[RuleResult]]] = [
+RULES= [
     r1_exact,
 ]
 

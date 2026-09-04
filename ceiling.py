@@ -19,18 +19,28 @@ from pathlib import Path
 sys.path.insert(0, "src")
 from ledgerloop.config import load_config
 from ledgerloop.loaders import load_batch
-from ledgerloop.candidates import _amount_ok, _date_ok, _score, generate_candidates
+from ledgerloop.candidates import (_amount_ok, _date_ok, _score,
+                                   generate_candidates, generate_group_candidates)
 from ledgerloop.utils.amounts import explain_shortfall
 from ledgerloop.utils.narration import extract_refs, name_score
 
 cfg = load_config()
 b, tol = cfg.blocking, cfg.tolerances
-batch = load_batch(Path("data/batch_dev"))
-truth = json.load(Path("data/batch_dev/truth.json").open())
+
+# batch_holdout is off-limits until Day 4 -- a number tuned against is not a
+# metric. Run `ceiling.py stress` to check a change generalises before then.
+BATCH = sys.argv[1] if len(sys.argv) > 1 else "dev"
+if BATCH == "holdout":
+    sys.exit("refusing to touch batch_holdout: see CLAUDE.md invariant 1")
+
+root = Path(f"data/batch_{BATCH}")
+batch = load_batch(root)
+truth = json.load((root / "truth.json").open())
 by_txn = {t.txn_id: t for t in batch.bank}
 inv_by = {i.invoice_id: i for i in batch.ledger}
 
-SNAPSHOT = Path("reports/ceiling_dev.json")
+SNAPSHOT = Path(f"reports/ceiling_{BATCH}.json")
+print(f"batch_{BATCH}: {len(batch.bank)} txns, {len(batch.ledger)} invoices\n")
 
 # what a "strong" name would have to be for the 1.1 corroborated floor to rescue
 # an amount-rejected link. Sizes the fix before you write it.
@@ -70,7 +80,7 @@ def survivors(txn):
             if not _date_ok(txn, inv, b):
                 reason[inv.invoice_id] = ("DATE", ns)
                 continue
-            if not _amount_ok(txn, inv, b):
+            if not _amount_ok(txn, inv, b, ns >= b.name_strong):
                 reason[inv.invoice_id] = ("AMOUNT", ns)
                 continue
         sf = explain_shortfall(txn.amount, inv.gross_amount, tol)
@@ -108,14 +118,19 @@ for t in truth:
         drift.append(t["txn_id"])
 
     refs = extract_refs(txn.narration, txn.utr, b.max_ref_digits)
+    # the consolidated path reaches invoices the single-invoice gate cannot see,
+    # so a link is reachable if EITHER path surfaces it
+    grouped = {i.invoice_id
+               for g in generate_group_candidates(txn, batch.ledger, cfg)
+               for i in g.invoices}
     s = stat[t["link_type"]]
     s["txns"] += 1
     hits = 0
     for inv in t["invoice_ids"]:
         s["links"] += 1
-        if not has_signal(txn, inv_by[inv], refs):
+        if not has_signal(txn, inv_by[inv], refs) and inv not in grouped:
             s["nosig"] += 1
-        if inv in capped:
+        if inv in capped or inv in grouped:
             s["found"] += 1
             hits += 1
         elif inv in passed:

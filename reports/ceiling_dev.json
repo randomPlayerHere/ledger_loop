@@ -1,23 +1,23 @@
 {
-  "recall": 0.7334669338677354,
-  "whole": 0.7557894736842106,
-  "achievable": 0.8817635270541082,
+  "recall": 0.8997995991983968,
+  "whole": 0.8947368421052632,
+  "achievable": 0.9218436873747495,
   "by_type": {
-    "CONSOLIDATED": 0.21951219512195122,
+    "CONSOLIDATED": 1.0,
     "CLEAN": 1.0,
-    "PARTIAL": 0.25,
+    "PARTIAL": 0.6538461538461539,
     "SHORT_PAID_TDS": 1.0,
     "SHORT_PAID_CHARGES": 1.0,
-    "DISPUTED": 0.15,
+    "DISPUTED": 0.6,
     "LATE": 1.0,
     "NO_REF": 1.0,
     "OVERPAID": 0.625
   },
   "losses": {
-    "EVICTED": 11,
-    "DATE": 2,
-    "AMOUNT": 95,
-    "NAME": 25
+    "EVICTED": 1,
+    "DATE": 0,
+    "AMOUNT": 43,
+    "NAME": 6
   },
-  "nosig": 59
+  "nosig": 39
 }

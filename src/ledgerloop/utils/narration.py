@@ -5,6 +5,7 @@ of real narrations carry neither signal ("BY TRANSFER-856796510678-").
 """
 
 import re
+from functools import lru_cache
 
 from rapidfuzz import fuzz
 
@@ -34,6 +35,11 @@ def extract_refs(narration: str, utr: str | None, max_digits: int) -> set[str]:
 
 
 # best fuzzy score between any narration word and the counterparty name (0-100)
+#
+# Blocking scores every transaction against every invoice, so this runs ~260k
+# times a batch over only ~30k distinct (narration, counterparty) pairs. Pure
+# function of its two arguments, so the cache is safe and the repeats are free.
+@lru_cache(maxsize=200_000)
 def name_score(narration: str, counterparty: str) -> float:
     cp = _clean(counterparty)
     chunks = [

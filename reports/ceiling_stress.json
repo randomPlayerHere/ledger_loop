@@ -1,0 +1,23 @@
+{
+  "recall": 0.8726235741444867,
+  "whole": 0.8580508474576272,
+  "achievable": 0.9144486692015209,
+  "by_type": {
+    "CONSOLIDATED": 1.0,
+    "SHORT_PAID_CHARGES": 1.0,
+    "PARTIAL": 0.6901408450704225,
+    "NO_REF": 1.0,
+    "LATE": 1.0,
+    "OVERPAID": 0.5769230769230769,
+    "SHORT_PAID_TDS": 1.0,
+    "CLEAN": 1.0,
+    "DISPUTED": 0.7333333333333333
+  },
+  "losses": {
+    "EVICTED": 6,
+    "DATE": 0,
+    "AMOUNT": 47,
+    "NAME": 14
+  },
+  "nosig": 45
+}

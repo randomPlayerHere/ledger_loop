@@ -57,12 +57,17 @@ class Exceptions(_Section):
 
 class Blocking(_Section):
     name_min: float
+    name_strong: float
     date_back_days: int
     date_fwd_days: int
     amount_lo: Decimal
+    amount_lo_corroborated: Decimal
     amount_hi: Decimal
     max_candidates: int
     max_ref_digits: int
+    group_max_size: int
+    group_max_results: int
+    group_date_back_days: int
 
 
 class Config(_Section):

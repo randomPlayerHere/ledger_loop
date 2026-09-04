@@ -67,3 +67,18 @@ class Candidate(BaseModel):
     ref_hit: bool
     name_similarity: float
     shortfall: str | None      # "EXACT" | "TDS_10PCT" | "BANK_CHARGES" | None
+
+
+class CandidateGroup(BaseModel):
+    """A set of invoices that together account for one credit.
+
+    Emitted by the consolidated path, which is separate from the single-invoice
+    path because the evidence is different in kind: no member looks like a good
+    candidate on its own, and what identifies the group is that its members sum
+    to the payment and share a counterparty.
+    """
+    invoices: list[LedgerEntry]
+    counterparty_id: str
+    total: Decimal
+    name_similarity: float     # best score across members; 0 on a bare narration
+    ref_hits: list[str]        # member invoice ids whose number is in the narration

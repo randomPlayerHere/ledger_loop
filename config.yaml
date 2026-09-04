@@ -13,6 +13,10 @@ tolerances:
   tds_tolerance: 1.00     # ₹ rounding slack on the computed TDS
   bank_charge_min: 50     # Minimum bank charge (₹)
   bank_charge_pct: 0.005  # Bank charge as percentage
+  # R6: how far above gross a credit may sit and still be read as "this invoice,
+  # rounded up / paid in advance". Beyond it the excess is bigger than the story
+  # it is meant to explain, and the credit belongs to something else entirely.
+  overpay_max_ratio: 1.25
 
 # Date matching
 dates:
@@ -25,9 +29,41 @@ thresholds:
 
 # Per-rule base confidence, compared against the thresholds above.
 # A cited invoice number corroborates the amount, so it scores higher.
+#
+# These are not vibes. Each is set from the precision that tier actually
+# measured on batch_dev (see reports/), rounded down and then placed either side
+# of thresholds.auto_match so that a tier posting below the bar is a deliberate
+# statement that a human should look, not an accident of arithmetic.
 confidence:
   r1_exact: 0.97
   r1_exact_with_ref: 0.99
+
+  # R4: a 2-4 invoice sum landing on the paisa, with no second combination that
+  # also works. Coincidence is close to impossible, hence a rate near R1's.
+  r4_subset: 0.96
+  r4_subset_with_ref: 0.98
+
+  # R3: the invoice is identified AND the gap has a named cause. TDS scores
+  # above bank charges because a delta of exactly 2% or 10% of gross is a much
+  # narrower target than "at most max(Rs50, 0.5%)".
+  r3_tds: 0.96
+  r3_tds_with_ref: 0.98
+  r3_charges: 0.95
+  r3_charges_with_ref: 0.97
+
+  # R6: invoice settled in full, excess left unapplied. With the invoice number
+  # quoted this is as solid as an exact match. Without one it is the reading
+  # that competes with "part payment of a bigger invoice", so it goes to a
+  # human -- the rule only offers it at all when no larger invoice is in view.
+  r6_overpaid_with_ref: 0.96
+  r6_overpaid_named: 0.90
+
+  # R5: short by an amount nothing accounts for. A quoted invoice number still
+  # identifies the payer, so the match itself is sound and posts automatically.
+  # Without one, a fuzzy counterparty name is all that ties the payment to the
+  # invoice -- deliberately parked below auto_match so it reaches a human.
+  r5_underpaid_with_ref: 0.95
+  r5_underpaid_named: 0.72
 
 # Exception handling
 exceptions:

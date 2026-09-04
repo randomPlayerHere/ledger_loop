@@ -34,6 +34,7 @@ class Tolerances(_Section):
     tds_tolerance: Decimal
     bank_charge_min: Decimal
     bank_charge_pct: Decimal
+    overpay_max_ratio: Decimal
 
 
 class Dates(_Section):
@@ -48,6 +49,16 @@ class Thresholds(_Section):
 class Confidence(_Section):
     r1_exact: float
     r1_exact_with_ref: float
+    r4_subset: float
+    r4_subset_with_ref: float
+    r3_tds: float
+    r3_tds_with_ref: float
+    r3_charges: float
+    r3_charges_with_ref: float
+    r6_overpaid_with_ref: float
+    r6_overpaid_named: float
+    r5_underpaid_with_ref: float
+    r5_underpaid_named: float
 
 
 class Exceptions(_Section):

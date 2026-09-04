@@ -18,10 +18,11 @@ from decimal import Decimal
 from typing import Optional
 from uuid import uuid4
 
-from .candidates import generate_candidates
+from .candidates import generate_candidates, generate_group_candidates
 from .config import Config
 from .loaders import Batch
-from .models import BankTransaction, Candidate, MatchDecision, RuleResult
+from .models import (BankTransaction, Candidate, CandidateGroup, MatchDecision,
+                     RuleResult)
 from .rules import apply_rules
 from .utils.amounts import close
 
@@ -47,13 +48,26 @@ def _route(result: Optional[RuleResult], cfg: Config) -> tuple[str, str]:
 
 def _decide(txn: BankTransaction, candidates: list[Candidate],
             result: Optional[RuleResult], cfg: Config,
-            started: float) -> MatchDecision:
+            started: float,
+            groups: list[CandidateGroup] | None = None) -> MatchDecision:
     outcome, reason = _route(result, cfg)
+
+    # Everything the reviewer was entitled to consider, both shortlists. A group
+    # member is invisible to the single-invoice path, so recording only
+    # `candidates` would leave R4's own proposal absent from the list it was
+    # supposedly chosen from -- an audit trail that contradicts itself.
+    considered = [c.invoice.invoice_id for c in candidates]
+    seen = set(considered)
+    for g in groups or []:
+        for inv in g.invoices:
+            if inv.invoice_id not in seen:
+                seen.add(inv.invoice_id)
+                considered.append(inv.invoice_id)
 
     # an exception with no candidates is a different job for the reviewer than
     # one with three plausible invoices, so the queue must be able to tell them
     # apart from the record alone
-    if result is None and not candidates:
+    if result is None and not considered:
         reason = NO_CANDIDATES
 
     return MatchDecision(
@@ -70,7 +84,7 @@ def _decide(txn: BankTransaction, candidates: list[Candidate],
         rule_id=result.rule_id if result else None,
         reasoning=result.reasoning if result else reason,
         evidence=result.evidence if result else {},
-        candidates_considered=[c.invoice.invoice_id for c in candidates],
+        candidates_considered=considered,
         llm_tokens_in=None,
         llm_tokens_out=None,
         latency_ms=int((time.perf_counter() - started) * 1000),
@@ -159,12 +173,16 @@ def reconcile(batch: Batch, cfg: Config, use_llm: bool = True) -> list[MatchDeci
     for txn in batch.bank:
         started = time.perf_counter()
         candidates = generate_candidates(txn, batch.ledger, cfg)
-        result = apply_rules(txn, candidates, cfg)
+        # The consolidated path is a second, independent shortlist: a member of
+        # a group is invisible to the single-invoice gate by construction, so
+        # neither list is a subset of the other and R4 needs its own.
+        groups = generate_group_candidates(txn, batch.ledger, cfg)
+        result = apply_rules(txn, candidates, cfg, groups)
 
         # TODO Stage 2: when result is None and use_llm, adjudicate with the LLM
         # and rebuild the decision with decided_by="LLM" plus token counts.
 
-        history.append(_decide(txn, candidates, result, cfg, started))
+        history.append(_decide(txn, candidates, result, cfg, started, groups))
 
     corrections = _supersede_duplicates(history, batch, cfg)
     history.extend(corrections)

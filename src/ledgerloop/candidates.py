@@ -109,13 +109,20 @@ def _subsets_summing(invs: list[LedgerEntry], target: Decimal, max_size: int,
                      tol: Decimal, limit: int) -> list[list[LedgerEntry]]:
     """Every subset of 2..max_size invoices whose gross amounts sum to `target`.
 
-    Depth-first over amounts sorted high-to-low, with two prunes that keep this
-    tractable on the ~85-invoice sets a single counterparty can reach:
+    Depth-first over amounts sorted high-to-low, with three prunes. They matter:
+    one customer can have 85 open invoices, and C(85,4) is 2.1 million subsets,
+    so an unpruned search costs more than the rest of the pipeline put together.
 
       * overshoot -- amounts are all positive, so once the running total passes
         the target no extension of this branch can come back down
       * unreachable -- if every invoice still available summed together still
         falls short, the branch is dead
+      * out of reach in the picks left -- the sharp one. A branch may only add
+        `max_size - len(chosen)` more invoices, and sorted descending, the best
+        it can possibly do from position k is the next few largest. Once that
+        best case falls short of the target the loop stops rather than
+        continuing: every later k is smaller still, so nothing beyond it can
+        reach either.
 
     Returns as soon as `limit` subsets are found. Hitting the limit is itself
     the signal that the transaction is ambiguous, not an invitation to rank.
@@ -123,10 +130,12 @@ def _subsets_summing(invs: list[LedgerEntry], target: Decimal, max_size: int,
     invs = sorted(invs, key=lambda i: i.gross_amount, reverse=True)
     n = len(invs)
 
-    # suffix[k] = total of invs[k:], for the unreachable prune
-    suffix = [Decimal(0)] * (n + 1)
-    for k in range(n - 1, -1, -1):
-        suffix[k] = suffix[k + 1] + invs[k].gross_amount
+    # prefix[k] = total of invs[:k]. Gives both remaining-total (the
+    # unreachable prune) and best-k-more (the picks-left prune) in O(1).
+    prefix = [Decimal(0)] * (n + 1)
+    for k in range(n):
+        prefix[k + 1] = prefix[k] + invs[k].gross_amount
+    total = prefix[n]
 
     out: list[list[LedgerEntry]] = []
 
@@ -136,13 +145,20 @@ def _subsets_summing(invs: list[LedgerEntry], target: Decimal, max_size: int,
             return                       # positive amounts: no superset can also hit
         if len(chosen) == max_size or running > target + tol:
             return
-        if running + suffix[start] < target - tol:
+        if running + total - prefix[start] < target - tol:
             return
+        picks = max_size - len(chosen)   # including the one about to be taken
         for k in range(start, n):
             if len(out) >= limit:
                 return
+            amount = invs[k].gross_amount
+            if running + amount > target + tol:
+                continue                 # this one overshoots; a smaller one may not
+            best = running + prefix[min(n, k + picks)] - prefix[k]
+            if best < target - tol:
+                break                    # and every later k is smaller still
             chosen.append(invs[k])
-            walk(k + 1, chosen, running + invs[k].gross_amount)
+            walk(k + 1, chosen, running + amount)
             chosen.pop()
 
     walk(0, [], Decimal(0))

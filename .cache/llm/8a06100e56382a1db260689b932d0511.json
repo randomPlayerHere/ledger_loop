@@ -1,0 +1,13 @@
+{
+  "text": "{\"invoice_ids\":[],\"allocations\":[],\"confidence\":0.95,\"reasoning\":\"Both INV-1092 (TDS 10%) and INV-1319 (bank charges Rs119.01) produce the credit amount, creating ambiguity.\"}",
+  "tokens_in": 915,
+  "tokens_out": 604,
+  "txn_id": "BNK-000108",
+  "candidates": [
+    "INV-1092",
+    "INV-1319"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": "v1",
+  "cached_at": "2026-09-04 19:43:36"
+}

@@ -1,0 +1,19 @@
+{
+  "text": "{\"invoice_ids\":[],\"allocations\":[],\"confidence\":0.85,\"reasoning\":\"narration shows CHAUHLOG matching Chauhan Logistics invoices but credit amount 12,520.94 does not equal any invoice gross nor any allowed TDS or bank\u2011charge shortfall\"}",
+  "tokens_in": 1269,
+  "tokens_out": 916,
+  "txn_id": "BNK-000403",
+  "candidates": [
+    "INV-1485",
+    "INV-1309",
+    "INV-1066",
+    "INV-1414",
+    "INV-1076",
+    "INV-1288",
+    "INV-1377",
+    "INV-1099"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": "v1",
+  "cached_at": "2026-09-04 19:45:59"
+}

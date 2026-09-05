@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs 11,787.74 on 2026-07-31 from UPI transaction iyertex@okyesbbank does not exactly match any open invoice. The closest is INV-1005 (Iyer Textiles & Co, Rs 11,825.16) leaving a small unexplained difference of Rs 37.42.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"INV-1005\",\n  \"confidence_note\": \"weak -- amount gap is small but unexplained; narration points to Iyer Textiles but no rule fits the exact amount.\"\n}",
+  "tokens_in": 1339,
+  "tokens_out": 282,
+  "txn_id": "BNK-000322",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:14:46.306367"
+}

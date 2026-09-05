@@ -1,0 +1,13 @@
+{
+  "text": "{ \"invoice_ids\": [], \"allocations\": [], \"confidence\": 0.0, \"reasoning\": \"Both INV-1092 (10% TDS) and INV-1319 (bank charges) exactly match the credit amount, creating an ambiguous situation.\" }",
+  "tokens_in": 707,
+  "tokens_out": 211,
+  "txn_id": "BNK-000108",
+  "candidates": [
+    "INV-1092",
+    "INV-1319"
+  ],
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "prompt_version": "v1",
+  "cached_at": "2026-09-04 22:01:57"
+}

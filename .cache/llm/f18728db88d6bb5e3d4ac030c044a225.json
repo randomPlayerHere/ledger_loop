@@ -1,0 +1,14 @@
+{
+  "text": "{\"invoice_ids\":[],\"allocations\":[],\"confidence\":0.85,\"reasoning\":\"Credit amount does not equal any invoice due amount nor can the shortfall be explained by 2% TDS or allowable bank charges\"}",
+  "tokens_in": 957,
+  "tokens_out": 790,
+  "txn_id": "BNK-000361",
+  "candidates": [
+    "INV-1367",
+    "INV-1224",
+    "INV-1028"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": "v1",
+  "cached_at": "2026-09-04 19:45:25"
+}

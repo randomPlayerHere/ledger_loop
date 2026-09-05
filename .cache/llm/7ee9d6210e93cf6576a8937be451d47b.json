@@ -1,0 +1,12 @@
+{
+  "text": "{\"invoice_ids\":[\"INV-1218\"],\"allocations\":[{\"invoice_id\":\"INV-1218\",\"amount\":\"82346.37\"}],\"confidence\":0.97,\"reasoning\":\"shortfall Rs 20.66 matches allowed bank charges (max Rs 50 or 0.5% of gross)\"}",
+  "tokens_in": 832,
+  "tokens_out": 483,
+  "txn_id": "BNK-000230",
+  "candidates": [
+    "INV-1218"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": "v1",
+  "cached_at": "2026-09-04 19:48:03"
+}

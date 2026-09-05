@@ -1,0 +1,19 @@
+{
+  "text": "{\"invoice_ids\":[\"INV-1009\"],\"allocations\":[{\"invoice_id\":\"INV-1009\",\"amount\":\"15052.34\"}],\"confidence\":0.97,\"reasoning\":\"gross 19,029.51 plus delta -3,977.17 equals credit 15,052.34, matching INV-1009\"}",
+  "tokens_in": 1320,
+  "tokens_out": 830,
+  "txn_id": "BNK-000029",
+  "candidates": [
+    "INV-1009",
+    "INV-1312",
+    "INV-1198",
+    "INV-1403",
+    "INV-1166",
+    "INV-1034",
+    "INV-1072",
+    "INV-1329"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": "v1",
+  "cached_at": "2026-09-04 19:59:01"
+}

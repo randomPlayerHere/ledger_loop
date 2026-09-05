@@ -1,0 +1,13 @@
+{
+  "text": "{\"invoice_ids\":[],\"allocations\":[],\"confidence\":0.95,\"reasoning\":\"Both INV-1309 and INV-1140 match the credit after allowable bank charges, creating ambiguity\"}",
+  "tokens_in": 898,
+  "tokens_out": 620,
+  "txn_id": "BNK-000243",
+  "candidates": [
+    "INV-1309",
+    "INV-1140"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": "v1",
+  "cached_at": "2026-09-04 19:52:14"
+}

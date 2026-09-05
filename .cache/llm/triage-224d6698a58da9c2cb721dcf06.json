@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"A Rs 27,431.56 credit arrived on 2026-06-10 via RTGS (UTR 400729201651) with narration 'RTGS YESB400729201651 BSMT'. No invoice in the ledger matches this amount, date, or counterparty, so the rule engine could not find a candidate.\",\n  \"action\": \"NEEDS_MORE_DATA\",\n  \"likely_invoice\": \"\",\n  \"confidence_note\": \"low -- no candidate invoices were even close on amount, date, or counterparty.\"\n}",
+  "tokens_in": 511,
+  "tokens_out": 234,
+  "txn_id": "BNK-000359",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:11:54.872804"
+}

@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs 42,676.95 on 2026-08-17 (IMPS-844942570107-MalhoPol) does not exactly match any open invoice; the closest is INV-1162 for Iyer Textiles & Co (Rs 42,844.92), leaving a small unexplained gap of Rs -167.97. The narration mentions 'MalhoPol', which aligns with the counterparty name in INV-1162.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"INV-1162\",\n  \"confidence_note\": \"moderate -- counterparty name matches and amount gap is small, but the exact reason for the Rs 167.97 difference is unclear from the data.\"\n}",
+  "tokens_in": 1369,
+  "tokens_out": 319,
+  "txn_id": "BNK-000228",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:10:09.502843"
+}

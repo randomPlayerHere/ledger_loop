@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs 16,705.97 on 2026-06-03 (UTR 260546695013) is Rs 44.67 short of the open invoice INV-1052 for Iyer Textiles & Co (gross Rs 16,750.64, due 2026-06-04). The narration only shows an RTGS transfer with no remittance details, so the shortfall cannot be explained by the available data.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"INV-1052\",\n  \"confidence_note\": \"weak -- amount close to invoice but the exact shortfall is unexplained and no remittance info is present.\"\n}",
+  "tokens_in": 565,
+  "tokens_out": 339,
+  "txn_id": "BNK-000053",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T15:47:00.853622"
+}

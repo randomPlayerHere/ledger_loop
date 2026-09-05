@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"A credit of Rs 12,081.88 arrived on 2026-07-16 from an IMPS transfer narrated as 'CHATTSTE', suggesting a payment from a Chatterjee\u2011related party. No invoice matches this exact amount; the closest is INV-1155 (Chatterjee Steels & Co) for Rs 12,640.97, leaving an unexplained shortfall of Rs 559.09.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"INV-1155\",\n  \"confidence_note\": \"moderate -- amount is near INV-1155 but the gap is not explained by any visible discount, tax, or fee.\"\n}",
+  "tokens_in": 1346,
+  "tokens_out": 296,
+  "txn_id": "BNK-000153",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:26:49.730384"
+}

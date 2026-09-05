@@ -1,0 +1,18 @@
+{
+  "text": "{ \"invoice_ids\": [\"INV-1033\"], \"allocations\": [{\"invoice_id\": \"INV-1033\", \"amount\":  \"19742.99\"}], \"confidence\": 0.95, \"reasoning\": \"Invoice INV-1033 gross Rs 19,824.34 minus bank charges of Rs 81.35 equals the credit Rs 19,742.99, matching the narration's counterparty.\" }",
+  "tokens_in": 1147,
+  "tokens_out": 346,
+  "txn_id": "BNK-000208",
+  "candidates": [
+    "INV-1195",
+    "INV-1033",
+    "INV-1386",
+    "INV-1044",
+    "INV-1296",
+    "INV-1183",
+    "INV-1225"
+  ],
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "prompt_version": "v1",
+  "cached_at": "2026-09-04 22:05:23"
+}

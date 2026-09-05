@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The credit of Rs 187,883.12 on 2026-07-20 exactly equals the combined total of two open invoices from Iyer Textiles & Co (INV-1289 for Rs 182,897.99 and INV-1411 for Rs 4,985.13). The narration does not specify which invoices are being paid, and no single rule matched the amount.\",\n  \"action\": \"NEEDS_MORE_DATA\",\n  \"likely_invoice\": \"\",\n  \"confidence_note\": \"moderate -- amount equals sum of INV-1289 and INV-1411, but narration lacks detail to confirm which invoices are intended.\"\n}",
+  "tokens_in": 937,
+  "tokens_out": 439,
+  "txn_id": "BNK-000008",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:06:52.064982"
+}

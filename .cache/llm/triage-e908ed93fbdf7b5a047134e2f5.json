@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"A credit of Rs 15,416.35 from Bhatt Exports (NEFT/BHATTEXP/RETURN) appears to be a return or refund, but none of the open invoices from Bhatt Exports or related parties match this amount; the closest invoices differ by several thousand rupees.\",\n  \"action\": \"CHECK_REFUND\",\n  \"likely_invoice\": \"\",\n  \"confidence_note\": \"moderate -- narration indicates a return from Bhatt Exports, but amount does not correspond to any listed invoice.\"\n}",
+  "tokens_in": 1360,
+  "tokens_out": 215,
+  "txn_id": "BNK-000485",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:26:21.839744"
+}

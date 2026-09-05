@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs 17,808.05 on 2026-08-09 (UTR 518367687989) does not match any invoice exactly; it is about Rs 50\u201155 less than the open invoices INV-1284 (Rs 17,862.99) and INV-1124 (Rs 17,857.95). The narration only shows a transfer reference, with no counterparty name, so the shortfall is likely due to bank charges, TDS deduction, or a similar fee that the rule engine could not account for.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"INV-1284\",\n  \"confidence_note\": \"moderate -- amount close to INV-1284 but the exact reason for the ~Rs 55 gap is unclear from the narration.\"\n}",
+  "tokens_in": 636,
+  "tokens_out": 341,
+  "txn_id": "BNK-000277",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:25:51.643446"
+}

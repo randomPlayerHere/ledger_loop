@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs\u202f72,015.23 on 2026\u201106\u201104 (UPI transaction 403818855227) is very close to the open invoice INV\u20111090 for Iyer Logistics Ltd (Rs\u202f72,036.91), differing by only Rs\u202f21.68. No other candidate invoice matches the amount, and the narration does not reveal a different counterparty.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"INV-1090\",\n  \"confidence_note\": \"moderate -- amount gap is small and could be bank charges or rounding, but no rule explains it.\"\n}",
+  "tokens_in": 640,
+  "tokens_out": 471,
+  "txn_id": "BNK-000106",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:08:24.135759"
+}

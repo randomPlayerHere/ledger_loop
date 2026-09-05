@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The credit of Rs\u202f19,742.99 on 2026\u201106\u201111 comes from an RTGS to UTR\u202f643109100172 with narration naming \u2018MEHTACHE\u2019, suggesting a payment from Mehta Chemicals. None of the candidate invoices match this amount; the closest is INV\u20111033 (Iyer Textiles) which is off by Rs\u202f81.35 and involves a different party.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"\",\n  \"confidence_note\": \"weak -- narration hints at Mehta Chemicals but no invoice amount fits; the nearest candidate is unrelated and still off by ~Rs\u202f81.\"\n}",
+  "tokens_in": 1000,
+  "tokens_out": 289,
+  "txn_id": "BNK-000208",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:13:08.905447"
+}

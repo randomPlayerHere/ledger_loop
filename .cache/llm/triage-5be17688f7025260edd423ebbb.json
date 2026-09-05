@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"A credit of Rs 12,511.79 was received on 2026-06-28 from Mehta Agr (UTR 949011390738). The amount does not match any open invoice; the only considered invoice INV-1055 is for Rs 24,107.50 and has already been settled by this same transaction, suggesting a duplicate credit that was left unapplied.\",\n  \"action\": \"CHECK_DUPLICATE\",\n  \"likely_invoice\": \"\",\n  \"confidence_note\": \"moderate -- narration names Mehta Agr and the rule engine flagged a suspected duplicate of INV-1055.\"\n}",
+  "tokens_in": 575,
+  "tokens_out": 212,
+  "txn_id": "BNK-000056",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T15:47:15.904727"
+}

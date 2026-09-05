@@ -1,0 +1,15 @@
+{
+  "text": "{\"invoice_ids\":[],\"allocations\":[],\"confidence\":0.93,\"reasoning\":\"All four invoices have gross\u2011credit delta within allowed bank\u2011charges limit, making each an equally valid match\"}",
+  "tokens_in": 1041,
+  "tokens_out": 923,
+  "txn_id": "BNK-000499",
+  "candidates": [
+    "INV-1262",
+    "INV-1260",
+    "INV-1010",
+    "INV-1168"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": "v1",
+  "cached_at": "2026-09-04 19:48:42"
+}

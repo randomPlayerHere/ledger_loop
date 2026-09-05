@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"A bank credit of Rs 53,914.84 was received on 2026-08-11 via IMPS (UTR 194121636692) with narration 'IMPS-194121636692-IyrInf'. No counterparty name or invoice reference is present in the narration, and no invoice in the ledger matches this amount, date, or any identifiable party.\",\n  \"action\": \"NEEDS_MORE_DATA\",\n  \"likely_invoice\": \"\",\n  \"confidence_note\": \"low -- narration provides no identifiable counterparty or invoice reference, and no ledger entry is close enough to form a hypothesis.\"\n}",
+  "tokens_in": 510,
+  "tokens_out": 263,
+  "txn_id": "BNK-000115",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T15:45:43.028178"
+}

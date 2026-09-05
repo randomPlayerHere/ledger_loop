@@ -1,0 +1,118 @@
+# Razorpay-flavoured theme.
+#
+# Two colours carry it: Space Cadet navy (#0C2651), the dominant colour in
+# Razorpay's own identity, and Dodger Blue (#0D94FB) for anything interactive.
+# Everything else is white and a very pale blue-grey, because a reconciliation
+# screen is read for hours and a saturated background is exhausting to work in.
+#
+# The semantic colours below are not decoration. Outcomes are the whole point of
+# this screen -- auto-matched, needs review, exception -- so green, yellow and
+# red are tuned deliberately to sit beside the navy without shouting over it,
+# and are the same hues app.py uses for its outcome text.
+
+[theme]
+base = "light"
+
+primaryColor = "#0D94FB"                 # Dodger Blue -- buttons, focus, slider
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F2F6FC"     # pale blue-grey: cards, tables, code
+textColor = "#0C2651"                    # Space Cadet, not black
+linkColor = "#0D94FB"
+linkUnderline = false
+
+borderColor = "#DCE6F5"
+dataframeBorderColor = "#DCE6F5"
+dataframeHeaderBackgroundColor = "#EAF2FD"
+
+# Inter is loaded as a real webfont rather than hoped for, so the demo renders
+# identically on a laptop that has never installed it. The stacks below are the
+# fallback if the CDN is unreachable -- the app degrades to the nearest system
+# face instead of to Times New Roman halfway through a presentation.
+font = "Inter, 'Segoe UI', system-ui, -apple-system, sans-serif"
+headingFont = "Inter, 'Segoe UI', system-ui, -apple-system, sans-serif"
+codeFont = "'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace"
+baseFontSize = 15
+baseFontWeight = 400
+headingFontWeights = [700, 650, 600]
+metricValueFontSize = "2.1rem"
+metricValueFontWeight = 700
+
+# Rounded, but not pill-shaped. Razorpay's product surfaces sit around 4-8px.
+baseRadius = "0.5rem"
+buttonRadius = "0.5rem"
+showWidgetBorder = true
+
+# Outcome semantics, matched to the colours app.py uses inline.
+greenColor = "#1B7F3B"
+greenTextColor = "#12602B"
+greenBackgroundColor = "#E7F5EC"
+yellowColor = "#B8860B"
+yellowTextColor = "#8A6508"
+yellowBackgroundColor = "#FDF6E3"
+redColor = "#A33333"
+redTextColor = "#8A2525"
+redBackgroundColor = "#FBEBEB"
+blueColor = "#0D94FB"
+blueTextColor = "#0C2651"
+blueBackgroundColor = "#EAF2FD"
+grayColor = "#5A6B85"
+grayTextColor = "#5A6B85"
+grayBackgroundColor = "#F2F6FC"
+
+# Charts inherit the same family, so a plot never arrives in a palette the rest
+# of the page has never used.
+chartCategoricalColors = ["#0D94FB", "#0C2651", "#1B7F3B", "#B8860B", "#A33333",
+                          "#5A6B85", "#66B8FF"]
+chartSequentialColors = ["#EAF2FD", "#CFE4FC", "#A8D0FA", "#7BB8F7", "#4B9FF4",
+                         "#0D94FB", "#0A72C4", "#08558F", "#0C2651"]
+
+# The sidebar is the navigation surface, so it inverts: navy ground, white type.
+# It reads as chrome rather than as another panel of content, which is what
+# keeps the eye on the queue.
+[theme.sidebar]
+backgroundColor = "#0C2651"
+secondaryBackgroundColor = "#14345F"
+textColor = "#E8EFF9"
+primaryColor = "#3EA9FF"
+linkColor = "#7BC0FF"
+borderColor = "#22467A"
+showWidgetBorder = true
+baseRadius = "0.5rem"
+
+# Webfont delivery. Pinned versions, because a font that silently changes shape
+# between rehearsal and demo is a bad surprise.
+[[theme.fontFaces]]
+family = "Inter"
+url = "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.1.0/files/inter-latin-400-normal.woff2"
+weight = 400
+style = "normal"
+
+[[theme.fontFaces]]
+family = "Inter"
+url = "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.1.0/files/inter-latin-500-normal.woff2"
+weight = 500
+style = "normal"
+
+[[theme.fontFaces]]
+family = "Inter"
+url = "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.1.0/files/inter-latin-600-normal.woff2"
+weight = 600
+style = "normal"
+
+[[theme.fontFaces]]
+family = "Inter"
+url = "https://cdn.jsdelivr.net/npm/@fontsource/inter@5.1.0/files/inter-latin-700-normal.woff2"
+weight = 700
+style = "normal"
+
+[[theme.fontFaces]]
+family = "JetBrains Mono"
+url = "https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5.1.1/files/jetbrains-mono-latin-400-normal.woff2"
+weight = 400
+style = "normal"
+
+[client]
+# No Deploy button and no Streamlit hamburger during a demo -- the screen should
+# be the product, not the framework hosting it.
+toolbarMode = "minimal"
+showSidebarNavigation = false

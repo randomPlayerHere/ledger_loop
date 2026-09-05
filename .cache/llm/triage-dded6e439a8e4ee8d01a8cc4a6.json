@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs\u202f88,163.93 on 2026\u201106\u201118 carries a narration indicating a refund (UTR\u202f399694532718). Neither of the two open invoices matches the amount exactly; the closest is INV\u20111360 (difference\u202f\u2011Rs\u202f124.08) and INV\u20111404 (difference\u202f\u2011Rs\u202f405.53). The small gaps suggest a possible partial refund or adjustment, but the narration does not reference any specific invoice.\",\n  \"action\": \"CHECK_REFUND\",\n  \"likely_invoice\": \"\",\n  \"confidence_note\": \"weak -- narration mentions a refund but amount does not correspond precisely to any candidate invoice\"\n}",
+  "tokens_in": 638,
+  "tokens_out": 313,
+  "txn_id": "BNK-000505",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:07:45.923192"
+}

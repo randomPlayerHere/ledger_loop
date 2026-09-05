@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs 15,671.27 on 2026-06-15 (UTR 446692166741) matches invoice INV-1023 from Reddy Industries except for a Rs 319.82 shortfall, which corresponds to the 2% TDS that would be deducted on the gross invoice amount of Rs 15,991.09.\",\n  \"action\": \"CONFIRM_MATCH\",\n  \"likely_invoice\": \"INV-1023\",\n  \"confidence_note\": \"moderate -- amount gap exactly equals expected TDS, narration contains only a UTR with no party name.\"\n}",
+  "tokens_in": 609,
+  "tokens_out": 276,
+  "txn_id": "BNK-000042",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:13:52.832406"
+}

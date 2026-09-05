@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs 52,884.49 on 2026-08-10 from UPI reference deshmpac@okpunbbank closely matches invoice INV-1378 (Deshmukh Motors & Co) for Rs 52,713.87, leaving a small unexplained difference of Rs 170.62. No other candidate invoice is within a reasonable range.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"INV-1378\",\n  \"confidence_note\": \"moderate -- amount gap is small and counterparty name aligns, but the exact reason for the Rs 170.62 difference is not evident from the data.\"\n}",
+  "tokens_in": 1387,
+  "tokens_out": 268,
+  "txn_id": "BNK-000473",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:23:22.897574"
+}

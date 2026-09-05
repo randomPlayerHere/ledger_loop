@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The credit of Rs 18,315.45 from BhattTex (UTR 301352710919) does not exactly match any open invoice; the nearest is INV-1366 for Chatterjee Textiles (Rs 18,052.37), leaving an unexplained Rs 263.08 difference. No other candidate invoice is within a reasonable range.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"INV-1366\",\n  \"confidence_note\": \"weak -- amount close to INV-1366 but the small gap lacks explanation and the counterparty name differs.\"\n}",
+  "tokens_in": 1355,
+  "tokens_out": 273,
+  "txn_id": "BNK-000441",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:25:44.931503"
+}

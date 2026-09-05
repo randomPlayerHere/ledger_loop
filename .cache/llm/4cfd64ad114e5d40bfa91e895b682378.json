@@ -1,0 +1,18 @@
+{
+  "text": "{\"invoice_ids\":[\"INV-1033\"],\"allocations\":[{\"invoice_id\":\"INV-1033\",\"amount\":\"19742.99\"}],\"confidence\":0.97,\"reasoning\":\"gross 19,824.34 minus bank charges 81.35 equals credit 19,742.99\"}",
+  "tokens_in": 1237,
+  "tokens_out": 651,
+  "txn_id": "BNK-000208",
+  "candidates": [
+    "INV-1195",
+    "INV-1033",
+    "INV-1386",
+    "INV-1044",
+    "INV-1296",
+    "INV-1183",
+    "INV-1225"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": "v1",
+  "cached_at": "2026-09-04 19:47:36"
+}

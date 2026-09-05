@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs 33,635.66 on 2026-05-27 is labelled as an interest payment (INT.PD) with UTR 465926998515. It does not exactly match any open invoice; the closest candidate, INV-1190 for Rs 33,761.30, is short by Rs 125.64, suggesting the credit may be interest or a partial payment on that invoice.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"INV-1190\",\n  \"confidence_note\": \"weak -- amount close but unexplained difference; narration indicates interest payment.\"\n}",
+  "tokens_in": 564,
+  "tokens_out": 298,
+  "txn_id": "BNK-000477",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:24:34.306851"
+}

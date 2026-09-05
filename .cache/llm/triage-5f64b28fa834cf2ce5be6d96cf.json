@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs 21,136.27 on 2026-07-28 (UTR 255925254156) does not exactly match any open invoice. The closest is INV-1334 from Agarwal Enterprises LLP (gross Rs 21,206.70), leaving a small unexplained difference of Rs -70.43. No other invoice or narration details explain the amount.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"INV-1334\",\n  \"confidence_note\": \"moderate -- amount is very close to INV-1334 but the residual gap lacks explanation.\"\n}",
+  "tokens_in": 646,
+  "tokens_out": 267,
+  "txn_id": "BNK-000443",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:25:24.748440"
+}

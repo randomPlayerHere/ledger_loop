@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs 15,638.94 on 2026-08-02 (IMPS transfer UTR 564194073710) does not exactly match any invoice; the closest candidate is INV-1448 for Rs 15,700.55, leaving an unexplained shortfall of Rs 61.61. The narration does not reveal a counterparty or purpose, so the mismatch likely stems from a bank charge, partial payment, or rounding difference.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"INV-1448\",\n  \"confidence_note\": \"weak -- amount close to INV-1448 but the Rs 61.61 gap lacks explanation and the narration gives no clues.\"\n}",
+  "tokens_in": 563,
+  "tokens_out": 338,
+  "txn_id": "BNK-000244",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:13:55.336370"
+}

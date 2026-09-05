@@ -1,0 +1,23 @@
+{
+  "text": "{ \"invoice_ids\": [\"INV-1082\"], \"allocations\": [ { \"invoice_id\": \"INV-1082\", \"amount\":  \t    \t\"38,112.96\" } ], \"confidence\": 0.78, \"reasoning\": \"The credit matches invoice INV-1082 gross Rs 38,183.23 less a shortfall of Rs 70.27, which is within the allowed bank\u2011charge limit (max Rs 50 or 0.5% of gross).\" }",
+  "tokens_in": 1598,
+  "tokens_out": 430,
+  "txn_id": "BNK-000203",
+  "candidates": [
+    "INV-1329",
+    "INV-1072",
+    "INV-1117",
+    "INV-1082",
+    "INV-1188",
+    "INV-1345",
+    "INV-1166",
+    "INV-1464",
+    "INV-1129",
+    "INV-1301",
+    "INV-1214",
+    "INV-1297"
+  ],
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "prompt_version": "v1",
+  "cached_at": "2026-09-05 03:04:56"
+}

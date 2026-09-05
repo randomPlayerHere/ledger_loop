@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The credit of Rs 28,000.64 on 2026-06-15 comes from an IMPS transfer narrated as 'ChattTex', which points to a Chatterjee/Textiles counterparty, but none of the open invoices for that party match this amount exactly; the closest is INV-1082 (Nair Enterprises) differing by only Rs 0.50, yet the narration does not mention that name.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"\",\n  \"confidence_note\": \"weak -- narration suggests Chatterjee/Textiles but amount does not match any of their open invoices; the nearest invoice belongs to a different party and the narration does not support it.\"\n}",
+  "tokens_in": 1380,
+  "tokens_out": 409,
+  "txn_id": "BNK-000105",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:25:04.685696"
+}

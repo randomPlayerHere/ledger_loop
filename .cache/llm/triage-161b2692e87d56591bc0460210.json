@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The credit of Rs 17,530.67 matches Chatterjee Textiles invoice INV-1124 (gross Rs 17,857.95) but is short by Rs 327.28, which is close to the 2% TDS that would be deducted on that invoice. The narration indicates an RTGS from Chatterjee Textiles (UTR 775729128933) on 2026-07-11.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"INV-1124\",\n  \"confidence_note\": \"moderate -- amount gap aligns with expected 2% TDS on INV-1124, but no remittance advice to confirm.\"\n}",
+  "tokens_in": 1338,
+  "tokens_out": 354,
+  "txn_id": "BNK-000130",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:25:54.984844"
+}

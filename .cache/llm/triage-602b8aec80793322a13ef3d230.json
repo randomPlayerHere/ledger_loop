@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs 46,002.35 on 2026-07-25 (UTR 916605375424, narration NEFT/BHATTTEX/RETURN) is very close to invoice INV-1099 from Agarwal Exports Pvt Ltd (gross Rs 46,043.95), differing by only Rs 41.60. No other candidate invoice matches the amount within a reasonable tolerance, and the narration does not reveal a clear counterparty beyond the generic 'BHATTTEX' reference.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"INV-1099\",\n  \"confidence_note\": \"moderate -- amount gap is small (Rs 41.60) and could be due to rounding, bank charges, or minor TDS adjustment, but the narration does not explicitly confirm the match.\"\n}",
+  "tokens_in": 1348,
+  "tokens_out": 349,
+  "txn_id": "BNK-000481",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:23:43.477941"
+}

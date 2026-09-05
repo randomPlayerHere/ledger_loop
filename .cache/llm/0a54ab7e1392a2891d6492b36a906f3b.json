@@ -1,0 +1,12 @@
+{
+  "text": "{\"invoice_ids\":[\"INV-1066\"],\"allocations\":[{\"invoice_id\":\"INV-1066\",\"amount\":\"13689.41\"}],\"confidence\":0.98,\"reasoning\":\"gross 15210.45 minus 10% TDS (1521.04) equals credit 13689.41\"}",
+  "tokens_in": 836,
+  "tokens_out": 390,
+  "txn_id": "BNK-000085",
+  "candidates": [
+    "INV-1066"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": "v1",
+  "cached_at": "2026-09-04 19:44:48"
+}

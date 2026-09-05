@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"A credit of Rs\u202f37,054.82 arrived on 2026\u201105\u201108 with narration \u2018NEFT/CHATTTEX/RETURN\u2019, indicating a return or refund from Chatterjee Textiles. None of the open invoices from that party match this amount; the closest is INV\u20111085 (Rs\u202f44,278.00), which is Rs\u202f7,223.18 higher.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"\",\n  \"confidence_note\": \"weak -- narration points to Chatterjee Textiles but no invoice amount fits the credit.\"\n}",
+  "tokens_in": 1370,
+  "tokens_out": 306,
+  "txn_id": "BNK-000489",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:24:23.369001"
+}

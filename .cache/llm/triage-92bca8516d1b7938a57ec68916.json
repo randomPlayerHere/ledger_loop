@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs 88,568.81 on 2026-08-03 (UTR 560536851089) matches invoice INV-1479 for Deshmukh Packaging Ltd after applying the 2% TDS deduction (Rs 1,807.53) from the invoice gross of Rs 90,376.34. The narration only contains a payment reference, no counterparty name.\",\n  \"action\": \"CONFIRM_MATCH\",\n  \"likely_invoice\": \"INV-1479\",\n  \"confidence_note\": \"moderate -- amount gap exactly equals 2% TDS on the invoice, narration lacks details but UTR aligns.\"\n}",
+  "tokens_in": 616,
+  "tokens_out": 257,
+  "txn_id": "BNK-000458",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:21:29.392505"
+}

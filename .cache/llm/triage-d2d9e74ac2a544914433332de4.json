@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The credit of Rs 49,235.25.27 matches the exact amount of invoice INV-1088 from Iyer Textiles & Co, but the rule engine notes that INV-1088 was already settled by transaction BNK-000103, suggesting this credit is a duplicate or unapplied payment.\",\n  \"action\": \"CHECK_DUPLICATE\",\n  \"likely_invoice\": \"INV-1088\",\n  \"confidence_note\": \"strong -- amount matches invoice exactly and narration references the same invoice; only uncertainty is whether it's truly a duplicate or a missed application.\"\n}",
+  "tokens_in": 1403,
+  "tokens_out": 236,
+  "txn_id": "BNK-000104",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:09:57.077007"
+}

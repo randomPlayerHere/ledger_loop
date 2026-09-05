@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs\u202f17,285.12 on 2026\u201106\u201101 (UTR\u202f771987118879) does not match any invoice exactly; the closest candidate, INV\u20111222 for Deshmukh Solutions Pvt Ltd, is Rs\u202f79.25 higher. The narration shows an IMPS transfer from an unknown remitter, giving no clear counterparty or payment reference.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"INV-1222\",\n  \"confidence_note\": \"weak -- amount close to INV-1222 but unexplained Rs\u202f79.25 gap and no remitter details\"\n}",
+  "tokens_in": 575,
+  "tokens_out": 304,
+  "txn_id": "BNK-000476",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:26:00.757001"
+}

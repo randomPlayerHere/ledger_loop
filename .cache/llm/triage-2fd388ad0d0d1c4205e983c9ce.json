@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"A UPI credit of Rs 72,417.02 arrived on 2026-07-11 from deshmste@okutibbank. The amount is Rs 87.44 less than invoice INV-1112 (Iyer Textiles & Co) for Rs 72,504.46, and no other candidate invoice matches within a reasonable tolerance.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"INV-1112\",\n  \"confidence_note\": \"weak -- amount gap is small but narration points to Deshmukh Steels, not Iyer Textiles, so match is uncertain.\"\n}",
+  "tokens_in": 1418,
+  "tokens_out": 288,
+  "txn_id": "BNK-000131",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:08:19.783408"
+}

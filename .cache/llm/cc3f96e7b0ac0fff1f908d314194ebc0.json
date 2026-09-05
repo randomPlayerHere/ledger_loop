@@ -1,0 +1,12 @@
+{
+  "text": "{\"invoice_ids\":[\"INV-1028\"],\"allocations\":[{\"invoice_id\":\"INV-1028\",\"amount\":\"13143.44\"}],\"confidence\":0.97,\"reasoning\":\"Invoice INV-1028 gross 13,181.74, credit 13,143.44, gap 38.30 fits allowed bank charges\"}",
+  "tokens_in": 833,
+  "tokens_out": 543,
+  "txn_id": "BNK-000047",
+  "candidates": [
+    "INV-1028"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": "v1",
+  "cached_at": "2026-09-04 19:42:27"
+}

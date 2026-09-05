@@ -1,0 +1,19 @@
+{
+  "text": "{\"invoice_ids\":[\"INV-1179\"],\"allocations\":[{\"invoice_id\":\"INV-1179\",\"amount\":\"11462.27\"}],\"confidence\":0.97,\"reasoning\":\"Credit amount 11,462.27 equals gross 17,122.14 plus delta -5,659.87 for INV-1179, matching its outstanding balance.\"}",
+  "tokens_in": 1283,
+  "tokens_out": 547,
+  "txn_id": "BNK-000434",
+  "candidates": [
+    "INV-1179",
+    "INV-1325",
+    "INV-1324",
+    "INV-1336",
+    "INV-1185",
+    "INV-1113",
+    "INV-1340",
+    "INV-1169"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": "v1",
+  "cached_at": "2026-09-04 20:03:58"
+}

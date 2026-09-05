@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The credit of Rs 17,122.14 on 2026-07-24 from UPI transaction (UTR 734298329757) matches the exact amount of open invoice INV-1179 for Iyer Textiles & Co, but the rule engine notes that INV-1179 was already settled by another credit (BNK-000425), suggesting this is a duplicate or unapplied credit.\",\n  \"action\": \"CHECK_DUPLICATE\",\n  \"likely_invoice\": \"INV-1179\",\n  \"confidence_note\": \"strong -- amount matches invoice exactly and narration points to same counterparty; only uncertainty is whether it's truly a duplicate or a missed application.\"\n}",
+  "tokens_in": 1365,
+  "tokens_out": 265,
+  "txn_id": "BNK-000192",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:13:34.059626"
+}

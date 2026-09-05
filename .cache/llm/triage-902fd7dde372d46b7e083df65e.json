@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"A credit of Rs 52,335.26 from NEFT-MEHTACHE on 2026-06-23 does not exactly match any open invoice. The closest is INV-1044 (Mehta Chemicals Ltd, Rs 54,652.22), leaving an unexplained shortfall of Rs 2,316.96. No other candidate invoices are within a reasonable range.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"INV-1044\",\n  \"confidence_note\": \"weak -- amount close to INV-1044 but gap unexplained, no remittance details in narration\"\n}",
+  "tokens_in": 770,
+  "tokens_out": 250,
+  "txn_id": "BNK-000023",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T15:45:45.155483"
+}

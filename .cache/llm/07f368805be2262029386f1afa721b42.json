@@ -1,0 +1,19 @@
+{
+  "text": "{\"invoice_ids\":[\"INV-1295\"],\"allocations\":[{\"invoice_id\":\"INV-1295\",\"amount\":\"9878.78\"}],\"confidence\":0.97,\"reasoning\":\"gross 10,976.53 minus 10% TDS (\u22481,097.75) equals credit 9,878.78, matching INV-1295\"}",
+  "tokens_in": 1302,
+  "tokens_out": 621,
+  "txn_id": "BNK-000160",
+  "candidates": [
+    "INV-1295",
+    "INV-1154",
+    "INV-1417",
+    "INV-1149",
+    "INV-1147",
+    "INV-1005",
+    "INV-1152",
+    "INV-1191"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": "v1",
+  "cached_at": "2026-09-04 19:49:35"
+}

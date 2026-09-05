@@ -1,0 +1,23 @@
+{
+  "text": "{ \"invoice_ids\": [] , \"allocations\": [] , \"confidence\": 0.85 , \"reasoning\": \"No combination of candidate invoices yields a net amount close to Rs 70,708.45 after applying only the allowed TDS (2% or 10%) or bank charge adjustments.\" }",
+  "tokens_in": 1628,
+  "tokens_out": 1454,
+  "txn_id": "BNK-000429",
+  "candidates": [
+    "INV-1196",
+    "INV-1352",
+    "INV-1197",
+    "INV-1016",
+    "INV-1210",
+    "INV-1440",
+    "INV-1490",
+    "INV-1036",
+    "INV-1235",
+    "INV-1165",
+    "INV-1115",
+    "INV-1229"
+  ],
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "prompt_version": "v1",
+  "cached_at": "2026-09-05 03:05:20"
+}

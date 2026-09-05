@@ -1,0 +1,13 @@
+{
+  "text": "{\"invoice_ids\":[],\"allocations\":[],\"confidence\":0.93,\"reasoning\":\"Credit equals gross minus shortfall for both INV-1498 (bank charges 4.76) and INV-1033 (10% TDS 1,982.06), creating ambiguity\"}",
+  "tokens_in": 908,
+  "tokens_out": 756,
+  "txn_id": "BNK-000470",
+  "candidates": [
+    "INV-1498",
+    "INV-1033"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": "v1",
+  "cached_at": "2026-09-04 19:45:53"
+}

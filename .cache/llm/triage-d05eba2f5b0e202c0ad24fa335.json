@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"A credit of Rs 23,106.23 arrived on 2026-06-11 with UTR 194967664826 and narration 'BY TRANSFER-194967664826-'. The amount exactly matches open invoice INV-1485 (Chauhan Exports) but the rule engine already marked INV-1485 as settled by a prior credit (BNK-000474) and flagged this as a suspected duplicate credit.\",\n  \"action\": \"CHECK_DUPLICATE\",\n  \"likely_invoice\": \"\",\n  \"confidence_note\": \"moderate -- amount matches INV-1485 exactly, but rules indicate it is a duplicate of an already settled payment.\"\n}",
+  "tokens_in": 579,
+  "tokens_out": 243,
+  "txn_id": "BNK-000475",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:12:45.789255"
+}

@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs 76,459.39 on 2026-06-26 (UTR 130389324016) matches invoice INV-1107 for Agarwal Enterprises LLP after a 10% TDS deduction of Rs 8,495.93 from the gross invoice amount of Rs 84,955.32. The narration only contains the UTR, with no additional party details.\",\n  \"action\": \"CONFIRM_MATCH\",\n  \"likely_invoice\": \"INV-1107\",\n  \"confidence_note\": \"strong -- amount gap equals exactly 10% TDS, consistent with typical tax deduction.\"\n}",
+  "tokens_in": 606,
+  "tokens_out": 302,
+  "txn_id": "BNK-000496",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:21:50.155951"
+}

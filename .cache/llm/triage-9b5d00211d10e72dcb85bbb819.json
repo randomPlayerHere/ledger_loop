@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank shows a credit of Rs\u202f86,928.45 on 2026-05-27 with narration 'REV-690921879434-FAILED TXN' and UTR 690921879434, indicating a reversal of a failed transaction. No invoice in the ledger matches this amount, date, or counterparty, so the money cannot be linked to any outstanding receivable.\",\n  \"action\": \"NEEDS_MORE_DATA\",\n  \"likely_invoice\": \"\",\n  \"confidence_note\": \"weak -- narration suggests a failed\u2011transaction reversal but no invoice data exists to confirm.\"\n}",
+  "tokens_in": 512,
+  "tokens_out": 287,
+  "txn_id": "BNK-000493",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:07:48.247487"
+}

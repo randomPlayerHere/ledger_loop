@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs\u202f19,052.16 on 2026\u201108\u201111 (UTR\u202f614758923004) does not exactly match any open invoice. The closest candidate is INV\u20111189 (Rastogi Motors LLP, gross\u202fRs\u202f19,064.67), leaving an unexplained shortfall of Rs\u202f12.51.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"INV-1189\",\n  \"confidence_note\": \"moderate \u2013 amount is near INV\u20111189 but the small gap lacks explanation (no TDS, discount, or fee noted).\"\n}",
+  "tokens_in": 634,
+  "tokens_out": 310,
+  "txn_id": "BNK-000204",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:13:21.287438"
+}

@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs 61,045.96 on 2026-07-30 (UTR 487995468351) does not exactly match any open invoice; it is Rs 138.68 short of INV-1173 (Kulkarni Industries LLP) and Rs 303.56 short of INV-1380 (Chatterjee Steels & Co). The narration only shows a transfer reference, giving no counterparty clue.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"INV-1173\",\n  \"confidence_note\": \"weak -- amount closest to INV-1173 but the gap is unexplained and no party is named in the narration.\"\n}",
+  "tokens_in": 647,
+  "tokens_out": 297,
+  "txn_id": "BNK-000392",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:23:00.793419"
+}

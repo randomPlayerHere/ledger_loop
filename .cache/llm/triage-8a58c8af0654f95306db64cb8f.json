@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The credit of Rs 283,019.55 on 2026-07-17 exactly matches the outstanding amount of invoice INV-1145, but the system notes that INV-1145 was already settled by the prior transaction BNK-000157, suggesting this credit is a duplicate or unapplied payment.\",\n  \"action\": \"CHECK_DUPLICATE\",\n  \"likely_invoice\": \"INV-1145\",\n  \"confidence_note\": \"moderate -- amount matches invoice exactly and narration indicates a payment, but the invoice is already marked settled.\"\n}",
+  "tokens_in": 583,
+  "tokens_out": 236,
+  "txn_id": "BNK-000158",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:02:09.757415"
+}

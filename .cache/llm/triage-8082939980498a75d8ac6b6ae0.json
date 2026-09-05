@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"A credit of Rs 20,836.40 arrived from Bhatt Steels (NEFT/BHATTSTE/RETURN) on 2026-07-21. The amount does not match any open invoice; the closest candidate (INV-1075 for Chatterjee Exports) is off by Rs 41.10 and the narration points to a different party, suggesting this is a refund or return rather than a payment against an invoice.\",\n  \"action\": \"CHECK_REFUND\",\n  \"likely_invoice\": \"\",\n  \"confidence_note\": \"weak -- narration indicates Bhatt Steels return but no invoice matches the amount; the nearest invoice is for a different party and still off by Rs 41.10.\"\n}",
+  "tokens_in": 1342,
+  "tokens_out": 346,
+  "txn_id": "BNK-000497",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:25:30.513718"
+}

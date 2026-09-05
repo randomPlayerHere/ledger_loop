@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs 10,952.14 on 2026-06-02 (UTR 125776369480) matches the net amount of invoice INV-1149 after a 10% TDS deduction (gross Rs 12,169.04 less TDS Rs 1,216.90). The narration does not name a party, but the UTR and amount gap point to this invoice.\",\n  \"action\": \"CONFIRM_MATCH\",\n  \"likely_invoice\": \"INV-1149\",\n  \"confidence_note\": \"moderate -- amount gap exactly equals 10% TDS on INV-1149, narration lacks details but UTR aligns.\"\n}",
+  "tokens_in": 614,
+  "tokens_out": 305,
+  "txn_id": "BNK-000151",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:27:04.599920"
+}

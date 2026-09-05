@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"A credit of Rs 55,638.80 was received on 2026-06-22 with narration 'NEFT/PATELSTE/RETURN'. The amount does not match the open invoice INV-1068 (Rs 70,009.89), leaving a gap of Rs -14,371.09, and the rule engine flagged it as a suspected duplicate credit that was already settled by another transaction.\",\n  \"action\": \"CHECK_DUPLICATE\",\n  \"likely_invoice\": \"\",\n  \"confidence_note\": \"moderate -- narration references PatelSte and the amount is close to but not equal to the invoice, suggesting a duplicate or partial credit.\"\n}",
+  "tokens_in": 576,
+  "tokens_out": 275,
+  "txn_id": "BNK-000146",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T15:45:35.143702"
+}

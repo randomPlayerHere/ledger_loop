@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank shows a credit of Rs 57,389.35 from an unknown remitter via IMPS on 2026-06-09. The only open invoice considered (INV-1407 for Venkat Industries Ltd) is for Rs 57,543.93, leaving an unexplained shortfall of Rs 154.58, which could be a bank fee or partial payment.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"INV-1407\",\n  \"confidence_note\": \"weak -- amount close to INV-1407 but the gap is unexplained and the remitter is unknown\"\n}",
+  "tokens_in": 565,
+  "tokens_out": 277,
+  "txn_id": "BNK-000512",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:09:31.018000"
+}

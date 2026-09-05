@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"Bank credit of Rs 92,151.42 on 2026-07-12 matches the exact amount of open invoice INV-1487 (Bhatt Exports Ltd). The rule engine flagged it as a suspected duplicate because INV-1487 was already settled by another credit (BNK-000466), leaving this credit unapplied.\",\n  \"action\": \"CHECK_DUPLICATE\",\n  \"likely_invoice\": \"INV-1487\",\n  \"confidence_note\": \"moderate -- amount matches exactly but rule indicates possible duplicate settlement\"\n}",
+  "tokens_in": 721,
+  "tokens_out": 252,
+  "txn_id": "BNK-000464",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:21:10.146728"
+}

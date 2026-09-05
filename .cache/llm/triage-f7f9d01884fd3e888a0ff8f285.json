@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs 22,812.24 on 2026-06-22 (UTR 366242515962) is close to invoice INV-1291 from Iyer Polymers LLP (gross Rs 22,893.76), differing by only Rs 81.52. No other invoice matches the amount, and the narration does not name a counterparty.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"INV-1291\",\n  \"confidence_note\": \"moderate -- amount gap is small and could be fees or rounding, but narration lacks detail.\"\n}",
+  "tokens_in": 633,
+  "tokens_out": 272,
+  "txn_id": "BNK-000164",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:25:21.719370"
+}

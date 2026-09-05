@@ -1,0 +1,23 @@
+{
+  "text": "{\n  \"invoice_ids\": [\"INV-1358\"],\n  \"allocations\": [\n    {\n      \"invoice_id\": \"INV-1358\",\n      \"amount\": \n    \t\"Rs 18924.26\"\n    }\n  ],\n  \"confidence\": 0.95,\n  \"reasoning\": \"Invoice INV-1358 gross Rs 18924.44 matches credit Rs 18924.26 with a -0.18 gap explained as bank charges within allowed limit.\"\n}",
+  "tokens_in": 1554,
+  "tokens_out": 258,
+  "txn_id": "BNK-000058",
+  "candidates": [
+    "INV-1470",
+    "INV-1358",
+    "INV-1041",
+    "INV-1323",
+    "INV-1458",
+    "INV-1272",
+    "INV-1040",
+    "INV-1092",
+    "INV-1480",
+    "INV-1048",
+    "INV-1412",
+    "INV-1249"
+  ],
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "prompt_version": "v1",
+  "cached_at": "2026-09-05 03:04:37"
+}

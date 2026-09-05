@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The credit of Rs 133,409.60 on 2026-05-30 (UPI transaction mlhsl@okyesbbank) is Rs 17.35 short of the open invoice INV-1223 for Malhotra Solutions LLP (gross Rs 133,426.95, issued 2026-05-24). The narration does not name the counterparty, but the UPI ID suggests a payment from the same party; the small gap is typical of bank charges or rounding.\",\n  \"action\": \"WRITE_OFF_SMALL\",\n  \"likely_invoice\": \"INV-1223\",\n  \"confidence_note\": \"moderate -- amount gap is tiny and plausible as a fee, but no explicit remittance details to confirm.\"\n}",
+  "tokens_in": 570,
+  "tokens_out": 300,
+  "txn_id": "BNK-000234",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:07:11.113191"
+}

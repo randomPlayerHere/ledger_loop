@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"A UPI credit of Rs 9,961.76 from chatttex@okkkbkbank on 2026-07-12 does not match any open invoice; the closest is INV-1340 (Chatterjee Textiles, Rs 9,801.24) leaving a Rs 160.52 gap. The narration names no party and the rules flag this as a suspected duplicate credit of an already\u2011settled invoice (INV-1454).\",\n  \"action\": \"CHECK_DUPLICATE\",\n  \"likely_invoice\": \"\",\n  \"confidence_note\": \"weak -- narration gives no counterparty, amount gap unexplained, and duplicate\u2011credit suspicion lacks supporting evidence.\"\n}",
+  "tokens_in": 1363,
+  "tokens_out": 352,
+  "txn_id": "BNK-000317",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:27:08.675501"
+}

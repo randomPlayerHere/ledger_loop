@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs 54,200.70 on 2026-07-16 is labelled as a refund (UTR 968934176751) from a gateway, but no invoice in the ledger matches this amount, date, or counterparty, leaving the purpose of the credit unclear.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"\",\n  \"confidence_note\": \"weak -- narration indicates a refund but no corresponding invoice or remittance advice is present.\"\n}",
+  "tokens_in": 511,
+  "tokens_out": 228,
+  "txn_id": "BNK-000148",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T15:45:40.979954"
+}

@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"A credit of Rs 244,444.03 arrived via IMPS on 2026-07-12 with narration 'IMPS-977754502752-RDDYPC', indicating a payment from an entity whose name includes 'Reddy'. None of the considered invoices match this amount; the closest are off by tens of thousands of rupees, and no TDS or other adjustments explain the gap.\",\n  \"action\": \"NEEDS_MORE_DATA\",\n  \"likely_invoice\": \"\",\n  \"confidence_note\": \"low -- narration hints at a Reddy counterparty but amount does not correspond to any invoice; insufficient data to infer purpose.\"\n}",
+  "tokens_in": 1366,
+  "tokens_out": 213,
+  "txn_id": "BNK-000216",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:06:41.559997"
+}

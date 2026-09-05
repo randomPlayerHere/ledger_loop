@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The credit of Rs 40,844.84 matches invoice INV-1174 (Venkat Packaging & Co) for Rs 45,383.16 less a 10% TDS deduction, which explains the exact difference. The narration references NEFT/VENKAPAC/1174, aligning with the invoice number.\",\n  \"action\": \"CONFIRM_MATCH\",\n  \"likely_invoice\": \"INV-1174\",\n  \"confidence_note\": \"strong -- amount fits invoice after 10% TDS, narration includes invoice number.\"\n}",
+  "tokens_in": 1352,
+  "tokens_out": 337,
+  "txn_id": "BNK-000171",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:24:01.770132"
+}

@@ -1,0 +1,12 @@
+{
+  "text": "{ \"invoice_ids\": [\"INV-1023\"], \"allocations\": [{\"invoice_id\": \"INV-1023\", \"amount\":  \"Rs 15,671.27\"}], \"confidence\": 0.99, \"reasoning\": \"The credit amount equals the invoice gross minus 2% TDS (Rs 319.82), exactly matching the net payable.\" \n}",
+  "tokens_in": 609,
+  "tokens_out": 187,
+  "txn_id": "BNK-000042",
+  "candidates": [
+    "INV-1023"
+  ],
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "prompt_version": "v1",
+  "cached_at": "2026-09-04 22:12:01"
+}

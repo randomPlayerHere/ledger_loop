@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"A UPI credit of Rs 13,027.98 arrived on 2026-07-08 from UPI ID pillapol@okhdfcbank. The amount does not exactly match any open invoice; the closest are INV-1486 (Rs 13,089.46, diff -Rs 61.48) and INV-1403 (Rs 13,042.31, diff -Rs 14.33). The narration does not clearly identify the counterparty, and the rule engine flagged this as a suspected duplicate credit that remains unapplied.\",\n  \"action\": \"CHECK_DUPLICATE\",\n  \"likely_invoice\": \"\",\n  \"confidence_note\": \"weak -- amount is near two invoices but gaps remain unexplained and narration does not confirm payer\"\n}",
+  "tokens_in": 1400,
+  "tokens_out": 385,
+  "txn_id": "BNK-000389",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:26:39.647892"
+}

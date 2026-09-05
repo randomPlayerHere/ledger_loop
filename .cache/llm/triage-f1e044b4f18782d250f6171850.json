@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"A credit of Rs 13,313.61 from ChattTex (UTR 268346997804) arrived on 2026-05-12. The amount does not exactly match any open invoice; the closest is INV-1419 for Chatterjee Textiles (Rs 13,127.13), leaving an unexplained excess of Rs 186.48.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"INV-1419\",\n  \"confidence_note\": \"weak -- name matches but the amount gap is unexplained and could be fees, TDS, or partial payment.\"\n}",
+  "tokens_in": 1220,
+  "tokens_out": 265,
+  "txn_id": "BNK-000033",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:26:35.926102"
+}

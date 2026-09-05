@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank shows a credit of Rs 1,258.49 on 2026-07-12 with narration 'REFUND/928127109459/GATEWAY', indicating a refund processed through a payment gateway. No invoice in the ledger matches this amount, date, or counterparty, so the rule engine could not find a candidate.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"\",\n  \"confidence_note\": \"weak -- narration suggests a refund but no matching invoice exists; amount and date are clear but no counterparty info to verify.\"\n}",
+  "tokens_in": 510,
+  "tokens_out": 241,
+  "txn_id": "BNK-000145",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T15:47:28.045852"
+}

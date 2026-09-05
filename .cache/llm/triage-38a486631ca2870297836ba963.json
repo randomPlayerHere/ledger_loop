@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"Bank credit of Rs 48,568.55 on 2026-06-18 with narration INT.PD:314585758421 (UTR same) does not match any invoice exactly; the closest invoice INV-1025 is Rs 51.02 higher and INV-1210 is Rs 170.88 higher, with no clear counterparty name in the narration.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"\",\n  \"confidence_note\": \"weak -- narration gives no party name and amount gaps are unexplained\"\n}",
+  "tokens_in": 635,
+  "tokens_out": 299,
+  "txn_id": "BNK-000499",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:23:33.660934"
+}

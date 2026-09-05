@@ -1,0 +1,13 @@
+{
+  "text": "{\"invoice_ids\":[],\"allocations\":[],\"confidence\":0.95,\"reasoning\":\"Both INV-1386 (TDS 10%) and INV-1478 (bank charges) yield the credit amount\"}",
+  "tokens_in": 911,
+  "tokens_out": 560,
+  "txn_id": "BNK-000379",
+  "candidates": [
+    "INV-1386",
+    "INV-1478"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": "v1",
+  "cached_at": "2026-09-04 19:54:28"
+}

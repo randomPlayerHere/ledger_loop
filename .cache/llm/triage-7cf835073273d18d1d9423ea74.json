@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs 38,290.11 on 2026-07-07 (UPI transaction with UTR 721065037997) is close to invoice INV-1478 from Reddy Textiles LLP (gross Rs 38,465.57), leaving an unexplained shortfall of Rs 175.46. No other candidate invoice matches the amount within a reasonable tolerance.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"INV-1478\",\n  \"confidence_note\": \"moderate -- amount gap is small and could be a bank fee or rounding, but the exact cause is not evident from the data.\"\n}",
+  "tokens_in": 636,
+  "tokens_out": 280,
+  "txn_id": "BNK-000379",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:10:41.408929"
+}

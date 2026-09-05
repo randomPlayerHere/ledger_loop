@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs 42,494.65 on 2026-08-10 from UPI transaction (UTR 749398196359) does not exactly match any open invoice. The closest amount is invoice INV-1144 for Nair Textiles LLP (gross Rs 43,755.10), leaving a shortfall of about Rs 1,260. This suggests a partial payment of that invoice or a payment plus some other adjustment.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"INV-1144\",\n  \"confidence_note\": \"moderate -- smallest amount gap points to INV-1144, but the exact reason for the shortfall is unclear without remittance details.\"\n}",
+  "tokens_in": 1241,
+  "tokens_out": 477,
+  "txn_id": "BNK-000112",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T15:46:09.182126"
+}

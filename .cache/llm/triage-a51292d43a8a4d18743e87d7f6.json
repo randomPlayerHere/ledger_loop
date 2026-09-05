@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The credit of Rs 125,725.43 matches invoice INV-1346 (gross Rs 139,694.92) minus a Rs 13,969.49 TDS deduction, which explains the shortfall. The narration and UTR do not reveal a counterparty, but the amount gap aligns with a 10% TDS withholding.\",\n  \"action\": \"CONFIRM_MATCH\",\n  \"likely_invoice\": \"INV-1346\",\n  \"confidence_note\": \"moderate -- amount gap equals 10% TDS of the invoice, making the match plausible.\"\n}",
+  "tokens_in": 612,
+  "tokens_out": 299,
+  "txn_id": "BNK-000339",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:20:40.523174"
+}

@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"A credit of Rs 31,962.44 was received on 2026-06-19 with narration 'INT.PD:339916712200' and UTR 339916712200. The narration does not name a counterparty or invoice, and no ledger invoice matches the amount, date, or any identifiable party, leaving the source of the funds unclear.\",\n  \"action\": \"NEEDS_MORE_DATA\",\n  \"likely_invoice\": \"\",\n  \"confidence_note\": \"weak -- narration provides no identifiable counterparty and no invoice matches the amount or date.\"\n}",
+  "tokens_in": 508,
+  "tokens_out": 217,
+  "txn_id": "BNK-000147",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T15:46:41.087415"
+}

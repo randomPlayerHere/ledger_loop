@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs 76,920.21 on 2026-07-04 (UTR 579841829216) is Rs 377.98 short of the open invoice INV-1341 from Bose Chemicals Pvt Ltd (gross Rs 77,298.19, due 2026-07-15). The narration only shows a generic INB payment reference, giving no clue about the shortfall, which could be TDS, bank charges, or a partial payment.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"INV-1341\",\n  \"confidence_note\": \"weak -- amount gap unexplained, narration lacks details\"\n}",
+  "tokens_in": 564,
+  "tokens_out": 280,
+  "txn_id": "BNK-000314",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:21:48.005189"
+}

@@ -1,0 +1,18 @@
+{
+  "text": "{\"invoice_ids\":[\"INV-1149\"],\"allocations\":[{\"invoice_id\":\"INV-1149\",\"amount\":\"20326.54\"}],\"confidence\":0.97,\"reasoning\":\"Invoice INV-1149 matches credit after accounting for Rs 99.47 bank charges (within allowed max)\"}",
+  "tokens_in": 1246,
+  "tokens_out": 796,
+  "txn_id": "BNK-000333",
+  "candidates": [
+    "INV-1149",
+    "INV-1335",
+    "INV-1141",
+    "INV-1387",
+    "INV-1184",
+    "INV-1236",
+    "INV-1390"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": "v1",
+  "cached_at": "2026-09-04 20:04:07"
+}

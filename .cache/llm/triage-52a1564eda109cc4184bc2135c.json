@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs 12,156.31 on 2026-07-01 from UPI transaction (UTR 855500785939) narrated as UPI/855500785939/nairind@okutibbank does not exactly match any open invoice for Nair Industries LLP; the closest is INV-1060 (Rs 13,099.41) leaving an unexplained shortfall of Rs 943.10.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"INV-1060\",\n  \"confidence_note\": \"weak -- amount close to INV-1060 but gap unexplained, no remittance details provided.\"\n}",
+  "tokens_in": 1362,
+  "tokens_out": 315,
+  "txn_id": "BNK-000311",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:14:44.014888"
+}

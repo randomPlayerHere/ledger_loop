@@ -1,0 +1,14 @@
+{
+  "text": "{\"invoice_ids\":[],\"allocations\":[],\"confidence\":0.85,\"reasoning\":\"Credit amount matches net of three invoices (gross minus bank\u2011charge gap) equally, causing ambiguity\"}",
+  "tokens_in": 989,
+  "tokens_out": 703,
+  "txn_id": "BNK-000117",
+  "candidates": [
+    "INV-1103",
+    "INV-1231",
+    "INV-1061"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": "v1",
+  "cached_at": "2026-09-04 19:43:32"
+}

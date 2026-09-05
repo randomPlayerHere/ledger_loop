@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs 87,208.44 on 2026-05-22 is labelled as 'CHARGES GST @18%' with UTR 919281931856, indicating a GST charge rather than a payment against an invoice. No invoices in the ledger match this amount, date, or any identifiable counterparty, so the transaction cannot be resolved automatically.\",\n  \"action\": \"NEEDS_MORE_DATA\",\n  \"likely_invoice\": \"\",\n  \"confidence_note\": \"weak -- narration points to a GST charge but no invoice data is available to confirm or refute.\"\n}",
+  "tokens_in": 499,
+  "tokens_out": 274,
+  "txn_id": "BNK-000500",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:21:35.498115"
+}

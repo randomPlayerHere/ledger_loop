@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs 38,507.71 on 2026-07-04 (UTR 251117107678) does not match any invoice exactly; the closest candidate, INV-1060 for Chatterjee Textiles, is Rs 81.89 higher than the received amount. The narration only contains a generic payment reference with no counterparty name, so the shortfall cannot be explained by tax, discount, or fees visible in the data.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"INV-1060\",\n  \"confidence_note\": \"weak -- amount gap is small but unexplained; narration gives no party details to confirm the match.\"\n}",
+  "tokens_in": 570,
+  "tokens_out": 331,
+  "txn_id": "BNK-000345",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:24:13.792991"
+}

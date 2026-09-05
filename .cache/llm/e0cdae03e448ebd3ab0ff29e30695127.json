@@ -1,0 +1,12 @@
+{
+  "text": "{ \"invoice_ids\": [\"INV-1224\"], \"allocations\": [{\"invoice_id\": \"INV-1224\", \"amount\": \"Rs 20,148.14\"}], \"confidence\": 0.95, \"reasoning\": \"The credit of Rs 20,148.14 is Rs 81.02 less than invoice INV-1224 gross Rs 20,229.16, which equals a bank charge within the allowed max of Rs 101.15 (0.5% of gross).\" }",
+  "tokens_in": 615,
+  "tokens_out": 272,
+  "txn_id": "BNK-000310",
+  "candidates": [
+    "INV-1224"
+  ],
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "prompt_version": "v1",
+  "cached_at": "2026-09-05 03:05:44"
+}

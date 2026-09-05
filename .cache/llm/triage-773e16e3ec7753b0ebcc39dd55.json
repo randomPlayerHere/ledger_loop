@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs 41,972.57 on 2026-07-26 (UTR 347859694204) is Rs 22.75 short of the open invoice INV-1034 for Agarwal Textiles Pvt Ltd (gross Rs 41,995.32, issued 2026-07-08). The narration only shows a transfer reference, giving no further clue about the shortfall.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"INV-1034\",\n  \"confidence_note\": \"weak -- amount gap is small and could be TDS or rounding, but narration lacks details to confirm.\"\n}",
+  "tokens_in": 571,
+  "tokens_out": 281,
+  "txn_id": "BNK-000037",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T15:46:28.078648"
+}

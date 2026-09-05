@@ -1,0 +1,19 @@
+{
+  "text": "{\"invoice_ids\":[],\"allocations\":[],\"confidence\":0.85,\"reasoning\":\"No invoice delta matches the credit amount within allowed TDS or bank charge limits\"}",
+  "tokens_in": 1271,
+  "tokens_out": 853,
+  "txn_id": "BNK-000125",
+  "candidates": [
+    "INV-1223",
+    "INV-1142",
+    "INV-1110",
+    "INV-1443",
+    "INV-1215",
+    "INV-1174",
+    "INV-1127",
+    "INV-1061"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": "v1",
+  "cached_at": "2026-09-04 20:50:56"
+}

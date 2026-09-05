@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The credit of Rs 10,976.53 on 2026-06-30 from NEFT-IyerInf exactly matches the outstanding amount of invoice INV-1295 (Iyer Infotech). However, the rule engine flagged it as a suspected duplicate because INV-1295 was already settled by another transaction (BNK-000160).\",\n  \"action\": \"CHECK_DUPLICATE\",\n  \"likely_invoice\": \"INV-1295\",\n  \"confidence_note\": \"strong -- amount matches invoice exactly, but already marked as settled/duplicate.\"\n}",
+  "tokens_in": 1327,
+  "tokens_out": 232,
+  "txn_id": "BNK-000300",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:15:07.285464"
+}

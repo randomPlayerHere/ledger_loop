@@ -1,0 +1,19 @@
+{
+  "text": "{\"invoice_ids\":[\"INV-1120\"],\"allocations\":[{\"invoice_id\":\"INV-1120\",\"amount\":\"36454.06\"}],\"confidence\":0.97,\"reasoning\":\"Invoice INV-1120 net amount equals credit (gross 36,479.45 minus bank charges 25.39 within allowed limit)\"}",
+  "tokens_in": 1294,
+  "tokens_out": 931,
+  "txn_id": "BNK-000036",
+  "candidates": [
+    "INV-1120",
+    "INV-1496",
+    "INV-1014",
+    "INV-1427",
+    "INV-1151",
+    "INV-1012",
+    "INV-1402",
+    "INV-1255"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": "v1",
+  "cached_at": "2026-09-04 19:48:59"
+}

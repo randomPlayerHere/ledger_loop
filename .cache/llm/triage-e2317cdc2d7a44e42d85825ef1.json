@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"A UPI credit of Rs 120,930.11 on 2026-07-05 from iyertex@okkkbkbank (UTR 652721219532) does not match any open invoice; the rules engine flagged it as a suspected duplicate of BNK-000116 which already settled INV-1122.\",\n  \"action\": \"CHECK_DUPLICATE\",\n  \"likely_invoice\": \"\",\n  \"confidence_note\": \"moderate -- narration shows a counterparty but no invoice amount fits; duplicate suspicion based on prior transaction.\"\n}",
+  "tokens_in": 1395,
+  "tokens_out": 219,
+  "txn_id": "BNK-000117",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T15:45:11.102529"
+}

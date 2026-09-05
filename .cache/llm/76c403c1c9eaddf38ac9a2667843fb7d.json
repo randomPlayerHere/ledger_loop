@@ -1,0 +1,12 @@
+{
+  "text": "{\"invoice_ids\":[\"INV-1130\"],\"allocations\":[{\"invoice_id\":\"INV-1130\",\"amount\":\"152118.78\"}],\"confidence\":0.98,\"reasoning\":\"2% TDS on Rs 155,223.24 equals Rs 3,104.46 shortfall, matching the credit amount\"}",
+  "tokens_in": 843,
+  "tokens_out": 383,
+  "txn_id": "BNK-000145",
+  "candidates": [
+    "INV-1130"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": "v1",
+  "cached_at": "2026-09-04 20:01:15"
+}

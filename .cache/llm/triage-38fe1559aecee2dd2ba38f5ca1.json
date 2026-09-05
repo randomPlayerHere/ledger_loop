@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs 129,764.19 on 2026-07-05 (UTR 628961692445) does not exactly match any open invoice; the closest is INV-1095 for Iyer Chemicals, which is Rs 255.83 higher than the payment. The narration only contains a generic payment reference with no counterparty name, so the shortfall cannot be explained by discount, tax, or fees visible in the data.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"INV-1095\",\n  \"confidence_note\": \"weak -- amount gap is small and could be bank charges, but narration gives no clue to confirm.\"\n}",
+  "tokens_in": 707,
+  "tokens_out": 274,
+  "txn_id": "BNK-000095",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:20:29.123483"
+}

@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The credit of Rs 225,749.48 on 2026-07-15 comes from a NEFT to Iyer Chemicals (narration 'NEFT-IYERCHE'), but none of the open invoices from Iyer Chemicals or related parties match this exact amount; the closest is INV-1095 for Rs 130,020.02, leaving a large unexplained gap.\",\n  \"action\": \"NEEDS_MORE_DATA\",\n  \"likely_invoice\": \"\",\n  \"confidence_note\": \"weak -- narration points to Iyer Chemicals but no single invoice fits the amount; could be a batch payment needing remittance advice.\"\n}",
+  "tokens_in": 1338,
+  "tokens_out": 276,
+  "txn_id": "BNK-000007",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:20:21.535656"
+}

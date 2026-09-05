@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"An IMPS credit of Rs 76,337.33 from an unknown remitter on 2026-06-07 could not be matched to any invoice; the ledger contains no candidate with a similar amount, date, or counterparty.\",\n  \"action\": \"NEEDS_MORE_DATA\",\n  \"likely_invoice\": \"\",\n  \"confidence_note\": \"weak -- narration provides no counterparty and no invoice matches the amount or date.\"\n}",
+  "tokens_in": 513,
+  "tokens_out": 192,
+  "txn_id": "BNK-000480",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:21:53.508837"
+}

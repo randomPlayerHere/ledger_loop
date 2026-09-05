@@ -1,0 +1,23 @@
+{
+  "text": "{\"invoice_ids\": [], \"allocations\": [], \"confidence\": 0.9, \"reasoning\": \"Only INV-1120 matches the amount via allowable bank charges, but the narration references 'nairtex' not Reddy Packaging, so the match is not convincing.\"}",
+  "tokens_in": 1581,
+  "tokens_out": 447,
+  "txn_id": "BNK-000036",
+  "candidates": [
+    "INV-1120",
+    "INV-1496",
+    "INV-1014",
+    "INV-1427",
+    "INV-1151",
+    "INV-1012",
+    "INV-1402",
+    "INV-1255",
+    "INV-1260",
+    "INV-1342",
+    "INV-1420",
+    "INV-1084"
+  ],
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "prompt_version": "v1",
+  "cached_at": "2026-09-04 22:12:10"
+}

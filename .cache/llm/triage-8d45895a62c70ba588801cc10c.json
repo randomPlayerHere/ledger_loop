@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs 72,473.82 on 2026-07-22 (UTR 178257150685) is very close to invoice INV-1112 for Iyer Textiles & Co (gross Rs 72,504.46), differing by only Rs 30.64. No other invoice matches the amount, and the narration does not identify a counterparty.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"INV-1112\",\n  \"confidence_note\": \"weak -- amount gap is small but unexplained; narration gives no party details.\"\n}",
+  "tokens_in": 638,
+  "tokens_out": 305,
+  "txn_id": "BNK-000202",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:08:16.781841"
+}

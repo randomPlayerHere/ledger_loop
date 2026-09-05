@@ -1,0 +1,23 @@
+{
+  "text": "{\"invoice_ids\": [],\"allocations\": [],\"confidence\": 0.0,\"reasoning\": \"Three invoices (INV-1183, INV-1012, INV-1134) each have a payment amount exactly equal to the credit after bank charges, creating an unambiguous match.\"}",
+  "tokens_in": 1598,
+  "tokens_out": 287,
+  "txn_id": "BNK-000316",
+  "candidates": [
+    "INV-1183",
+    "INV-1012",
+    "INV-1134",
+    "INV-1317",
+    "INV-1146",
+    "INV-1264",
+    "INV-1070",
+    "INV-1364",
+    "INV-1488",
+    "INV-1367",
+    "INV-1280",
+    "INV-1224"
+  ],
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "prompt_version": "v1",
+  "cached_at": "2026-09-05 03:04:32"
+}

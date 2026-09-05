@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs 28,960.68 on 2026-05-22 is labelled as a NEFT return from 'IyerPol'. The amount is close to several open invoices from Iyer group (e.g., INV-1286 differs by only Rs 46.58) but the narration suggests a return/refund rather than a regular payment, leaving the exact invoice unclear.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"INV-1286\",\n  \"confidence_note\": \"moderate -- amount matches INV-1286 within Rs 50, but narration indicates a return, so certainty is limited.\"\n}",
+  "tokens_in": 1379,
+  "tokens_out": 352,
+  "txn_id": "BNK-000507",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:11:39.955550"
+}

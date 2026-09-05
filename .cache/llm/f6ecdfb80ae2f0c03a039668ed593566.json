@@ -1,0 +1,12 @@
+{
+  "text": "{ \"invoice_ids\": [] , \"allocations\": [] , \"confidence\": 0.2 , \"reasoning\": \"The credit amount is Rs 154.58 less than invoice INV-1407's gross, which could be bank charges, but the narration lacks any invoice reference or counterparty name, providing no concrete evidence to confirm the match.\" }",
+  "tokens_in": 606,
+  "tokens_out": 296,
+  "txn_id": "BNK-000512",
+  "candidates": [
+    "INV-1407"
+  ],
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "prompt_version": "v1",
+  "cached_at": "2026-09-04 22:05:17"
+}

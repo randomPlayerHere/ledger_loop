@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"Bank credit of Rs 71,206.74 on 2026-06-17 from IMPS transfer to CHATTTEX (UTR 202898573344) does not exactly match any invoice; the closest is INV-1161 for Gokhale Textiles Pvt Ltd (gross Rs 71,253.60), leaving an unexplained shortfall of Rs 46.86.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"INV-1161\",\n  \"confidence_note\": \"weak -- amount gap is small but unexplained; narration points to Chatterjee, yet best invoice is a different party.\"\n}",
+  "tokens_in": 1359,
+  "tokens_out": 345,
+  "txn_id": "BNK-000270",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:08:29.796996"
+}

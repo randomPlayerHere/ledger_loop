@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs 33,917.46 on 2026-08-05 matches the narration 'BY TRANSFER-667862014969-' and corresponds to invoice INV-1350 for Agarwal Logistics, but is short by Rs 3,768.61, which equals the 10% TDS that would have been deducted from the gross invoice amount of Rs 37,686.07.\",\n  \"action\": \"CONFIRM_MATCH\",\n  \"likely_invoice\": \"INV-1350\",\n  \"confidence_note\": \"strong -- amount gap exactly equals expected TDS, narration shows a transfer with UTR matching the invoice party.\"\n}",
+  "tokens_in": 607,
+  "tokens_out": 206,
+  "txn_id": "BNK-000342",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:24:30.147198"
+}

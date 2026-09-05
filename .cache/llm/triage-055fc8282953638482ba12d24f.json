@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"A credit of Rs\u202f24,420.64 arrived via NEFT with narration 'NEFT-RastoPac'. The amount does not exactly match any open invoice; the closest is INV-1349 (Nair Industries LLP, Rs\u202f24,457.71, difference \u2013Rs\u202f37.07), but the narration points to a Rastogi counterparty, making the match uncertain.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"INV-1133\",\n  \"confidence_note\": \"weak -- narration suggests Rastogi Packaging, but amount gap (\u2013Rs\u202f303) remains unexplained and no clear tie to any invoice.\"\n}",
+  "tokens_in": 971,
+  "tokens_out": 349,
+  "txn_id": "BNK-000245",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:12:44.061310"
+}

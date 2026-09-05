@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"A credit of Rs 51,117.37 arrived on 2026-07-30 via IMPS (UTR 190695225109) with narration 'Chhxp'. The amount exactly matches the open invoice INV-1499 (Chauhan Exports) for Rs 51,117.37, but the rule engine notes that INV-1499 was already settled by the prior transaction BNK-000488, suggesting this credit is a duplicate that was left unapplied.\",\n  \"action\": \"CHECK_DUPLICATE\",\n  \"likely_invoice\": \"INV-1499\",\n  \"confidence_note\": \"moderate -- amount matches INV-1499 exactly and rule flags suspected duplicate; however, without seeing BNK-000488 details we cannot confirm definitively.\"\n}",
+  "tokens_in": 796,
+  "tokens_out": 323,
+  "txn_id": "BNK-000489",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:09:50.389185"
+}

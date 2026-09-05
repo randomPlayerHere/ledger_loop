@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs 49,397.08 on 2026-07-17 (UTR 440329637250) is Rs 17.87 short of the open invoice INV-1006 for Iyer Enterprises Ltd (gross Rs 49,414.95, issued 2026-06-30, due 2026-07-15). The narration only contains a generic payment reference, so the shortfall is unexplained by any rule.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"INV-1006\",\n  \"confidence_note\": \"weak -- amount gap is small but unexplained; invoice matches party and timing but difference needs clarification.\"\n}",
+  "tokens_in": 561,
+  "tokens_out": 275,
+  "txn_id": "BNK-000010",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T15:45:53.195511"
+}

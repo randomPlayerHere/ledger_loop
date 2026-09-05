@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"A credit of Rs 98,788.48 from Iyer Infotech (UTR 651318604571) arrived on 2026-08-06. No open invoice matches this amount; the rule engine flagged it as a possible duplicate of INV-1073, which was already settled by another transaction.\",\n  \"action\": \"CHECK_DUPLICATE\",\n  \"likely_invoice\": \"\",\n  \"confidence_note\": \"weak -- narration points to Iyer Infotech but amount does not correspond to any open invoice; duplicate suspicion is the only clue.\"\n}",
+  "tokens_in": 1374,
+  "tokens_out": 271,
+  "txn_id": "BNK-000002",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:07:34.493461"
+}

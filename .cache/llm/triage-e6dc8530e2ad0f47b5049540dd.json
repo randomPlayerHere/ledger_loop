@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credited Rs 45,449.52 on 2026-06-29 with narration 'CHARGES GST @18%', indicating a GST-related charge or refund. No invoices in the ledger match this amount, date, or any identifiable counterparty, so the transaction cannot be linked to any known invoice.\",\n  \"action\": \"NEEDS_MORE_DATA\",\n  \"likely_invoice\": \"\",\n  \"confidence_note\": \"low -- narration gives no party or invoice reference and no candidate invoices exist to compare against.\"\n}",
+  "tokens_in": 499,
+  "tokens_out": 270,
+  "txn_id": "BNK-000511",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:10:04.135124"
+}

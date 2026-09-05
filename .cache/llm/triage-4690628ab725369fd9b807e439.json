@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"A UPI credit of Rs 11,185.61 on 2026-08-01 from iyerpol@okhdfcbank (UTR 816379000545) does not match any open invoice; the rule engine notes that INV-1061 (Bhatt Logistics) was already settled by BNK-000067 and suspects this is a duplicate credit left unapplied.\",\n  \"action\": \"CHECK_DUPLICATE\",\n  \"likely_invoice\": \"\",\n  \"confidence_note\": \"weak -- narration points to Iyer Polymers but no invoice matches the amount; rule flags duplicate of already\u2011settled INV-1061.\"\n}",
+  "tokens_in": 1385,
+  "tokens_out": 269,
+  "txn_id": "BNK-000090",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:26:54.905860"
+}

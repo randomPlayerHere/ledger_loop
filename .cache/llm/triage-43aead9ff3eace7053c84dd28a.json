@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs\u202f100,565.26 on 2026\u201105\u201114 (UTR\u202f188163794590) does not match the only candidate invoice INV\u20111287 for Rs\u202f100,773.75; the shortfall of Rs\u202f208.49 cannot be explained by the noted 10% TDS or any other obvious adjustment.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"\",\n  \"confidence_note\": \"weak -- amount gap unexplained and narration provides no counterparty details\"\n}",
+  "tokens_in": 575,
+  "tokens_out": 278,
+  "txn_id": "BNK-000282",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:21:06.345172"
+}

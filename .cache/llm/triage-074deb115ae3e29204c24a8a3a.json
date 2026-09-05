@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"A UPI credit of Rs 22,840.81 on 2026-05-29 from nairche@okyesbbank does not match any open invoice; the rule engine notes that INV-1266 (Rs 37,753.40) was already settled by this transaction, suggesting a duplicate credit that was left unapplied.\",\n  \"action\": \"CHECK_DUPLICATE\",\n  \"likely_invoice\": \"INV-1266\",\n  \"confidence_note\": \"weak -- amount does not equal any invoice; only clue is the rule's duplicate\u2011credit flag for INV-1266.\"\n}",
+  "tokens_in": 1395,
+  "tokens_out": 229,
+  "txn_id": "BNK-000272",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:12:49.230044"
+}

@@ -1,0 +1,13 @@
+{
+  "text": "{\"invoice_ids\": [], \"allocations\": [], \"confidence\": 0.0, \"reasoning\": \"Both invoices explain the credit equally well (INV-1200 via bank charges, INV-1172 via TDS 2%), creating ambiguity.\"}",
+  "tokens_in": 705,
+  "tokens_out": 199,
+  "txn_id": "BNK-000185",
+  "candidates": [
+    "INV-1200",
+    "INV-1172"
+  ],
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "prompt_version": "v1",
+  "cached_at": "2026-09-05 03:04:00"
+}

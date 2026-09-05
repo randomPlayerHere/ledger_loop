@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The credit of Rs 20,877.50 on 2026-05-25 (UTR 214393309804) exactly matches the outstanding amount of invoice INV-1075 from Chatterjee Exports, but the rule engine notes that INV-1075 was already settled by a prior credit (BNK-000078) and treats this as a suspected duplicate credit left unapplied.\",\n  \"action\": \"CHECK_DUPLICATE\",\n  \"likely_invoice\": \"INV-1075\",\n  \"confidence_note\": \"strong -- amount matches invoice exactly, but flagged as duplicate by rules\"\n}",
+  "tokens_in": 728,
+  "tokens_out": 255,
+  "txn_id": "BNK-000079",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:25:27.619299"
+}

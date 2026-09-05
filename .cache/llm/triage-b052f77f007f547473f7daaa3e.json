@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs 14,912.59 on 2026-07-01 references INV-1266 in the narration, but INV-1266 was already settled by transaction BNK-000272. The amount does not match any open invoice exactly; the closest is INV-1311 (Nair Industries LLP) which is Rs 213.30 lower.\",\n  \"action\": \"CHECK_DUPLICATE\",\n  \"likely_invoice\": \"\",\n  \"confidence_note\": \"weak -- narration points to INV-1266 (already settled) and no invoice matches the amount; closest match is INV-1311 but the gap is unexplained.\"\n}",
+  "tokens_in": 1381,
+  "tokens_out": 384,
+  "txn_id": "BNK-000273",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:14:12.221478"
+}

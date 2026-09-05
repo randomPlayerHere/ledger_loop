@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs 54,899.86 on 2026-08-13 matches invoice INV-1211 for Nair Textiles LLP except for a shortfall of Rs 1,120.41, which corresponds to a 2% TDS deduction. The narration only contains a UTR reference and does not name the counterparty.\",\n  \"action\": \"CONFIRM_MATCH\",\n  \"likely_invoice\": \"INV-1211\",\n  \"confidence_note\": \"high -- amount gap exactly equals expected 2% TDS on the invoice\"\n}",
+  "tokens_in": 615,
+  "tokens_out": 172,
+  "txn_id": "BNK-000224",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:09:36.829448"
+}

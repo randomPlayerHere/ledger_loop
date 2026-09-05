@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs 33,090.45 on 2026-06-13 (RTGS from Chauhan Logistics) does not exactly match any open invoice; the closest is INV-1288 for Chauhan Logistics LLP, which is only Rs 134.88 short of the payment.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"INV-1288\",\n  \"confidence_note\": \"moderate -- amount gap is small and counterparty name matches, but the exact reason for the Rs 134.88 difference is unclear without remittance details.\"\n}",
+  "tokens_in": 1325,
+  "tokens_out": 249,
+  "txn_id": "BNK-000296",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:11:17.873886"
+}

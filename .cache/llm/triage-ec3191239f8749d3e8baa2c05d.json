@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs 71,504.23 is labelled as 'CHARGES GST @18%', indicating it is a GST charge rather than payment against an invoice. Neither of the two candidate invoices matches the amount closely enough (differences of Rs -1.81 and Rs -159.03) to be explained by typical rounding or tax adjustments.\",\n  \"action\": \"NEEDS_MORE_DATA\",\n  \"likely_invoice\": \"\",\n  \"confidence_note\": \"weak -- narration points to a GST charge, and no invoice amount aligns within a reasonable tolerance.\"\n}",
+  "tokens_in": 630,
+  "tokens_out": 281,
+  "txn_id": "BNK-000492",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:21:58.028691"
+}

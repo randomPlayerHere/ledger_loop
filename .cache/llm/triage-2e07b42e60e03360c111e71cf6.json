@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"A credit of Rs 10,742.57 was received on 2026-08-13 via IMPS (UTR 923305276913) with narration referencing 'BhttPl', which appears to be a truncated reference to Bhatt Polymers & Co. None of the considered invoices from Bhatt Polymers or Bhatt Enterprises match this amount; the closest invoices differ by several thousand rupees.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"\",\n  \"confidence_note\": \"weak -- narration hints at Bhatt Polymers but amount gap is unexplained and no invoice fits.\"\n}",
+  "tokens_in": 1077,
+  "tokens_out": 220,
+  "txn_id": "BNK-000329",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:15:16.322841"
+}

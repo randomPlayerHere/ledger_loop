@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs 43,254.17 on 2026-05-17 comes from NEFT/IYERTEX/RETURN, indicating a return or refund related to Iyer Textiles. No invoice matches the exact amount; the closest is INV-1080 (Iyer Infotech) which is only Rs 96.05 short, suggesting a possible small adjustment or fee.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"INV-1080\",\n  \"confidence_note\": \"moderate -- amount gap is tiny (Rs 96.05) and narration points to Iyer Textiles, but the invoice is for a different entity (Iyer Infotech).\"\n}",
+  "tokens_in": 1351,
+  "tokens_out": 269,
+  "txn_id": "BNK-000143",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T15:46:03.435962"
+}

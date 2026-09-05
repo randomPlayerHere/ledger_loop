@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs 55,806.62 on 2026-06-07 (UTR 489187643698, narration RTGS ICIC489187643698 NAIRTEX) exceeds the amount of invoice INV-1014 (Rs 54,490.37) by Rs 1,316.25. The invoice is already settled in full, so the excess appears to be an unapplied over\u2011payment or possibly a bank charge.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"INV-1014\",\n  \"confidence_note\": \"moderate -- amount gap matches the excess over INV-1014, but we lack remittance advice to confirm if it is an over\u2011payment, fee, or something else.\"\n}",
+  "tokens_in": 997,
+  "tokens_out": 334,
+  "txn_id": "BNK-000018",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T15:45:32.403019"
+}

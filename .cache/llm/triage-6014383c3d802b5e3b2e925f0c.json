@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"A credit of Rs 39,018.97 arrived on 2026-06-25 via UTR 782196862986 with narration 'BY TRANSFER-782196862986-'. The amount exactly matches the open invoice INV-1012 (Nair Industries LLP) for Rs 39,018.97, but the rule engine flagged it as a suspected duplicate because INV-1012 was already settled by the prior credit BNK-000033, leaving this credit unapplied.\",\n  \"action\": \"CHECK_DUPLICATE\",\n  \"likely_invoice\": \"INV-1012\",\n  \"confidence_note\": \"strong -- amount matches INV-1012 exactly and narration references the same UTR; the only issue is the prior settlement indicating a possible duplicate.\"\n}",
+  "tokens_in": 729,
+  "tokens_out": 280,
+  "txn_id": "BNK-000034",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:10:21.358274"
+}

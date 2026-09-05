@@ -1,0 +1,12 @@
+{
+  "text": "{\"invoice_ids\":[\"INV-1041\"],\"allocations\":[{\"invoice_id\":\"INV-1041\",\"amount\":\"11233.10\"}],\"confidence\":0.99,\"reasoning\":\"10% TDS of Rs 12,481.22 equals Rs 1,248.12, leaving Rs 11,233.10 matching the credit\"}",
+  "tokens_in": 837,
+  "tokens_out": 384,
+  "txn_id": "BNK-000059",
+  "candidates": [
+    "INV-1041"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": "v1",
+  "cached_at": "2026-09-04 19:50:28"
+}

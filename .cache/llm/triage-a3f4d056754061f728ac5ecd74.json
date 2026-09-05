@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"A Rs 507.66 credit from a NEFT return (UTR 428591404943) dated 2026-07-24 with narration 'NEFT/BoseChe/RETURN' appears to be a refund or reversal, but no invoice in the ledger matches this amount, date, or counterparty.\",\n  \"action\": \"NEEDS_MORE_DATA\",\n  \"likely_invoice\": \"\",\n  \"confidence_note\": \"weak -- narration indicates a return/refund but no corresponding invoice found; cannot determine correct handling without additional remittance details.\"\n}",
+  "tokens_in": 497,
+  "tokens_out": 221,
+  "txn_id": "BNK-000496",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:15:43.929243"
+}

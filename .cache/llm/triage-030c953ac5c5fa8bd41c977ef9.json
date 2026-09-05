@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"A credit of Rs 46,838.55 appeared on 2026-05-27 with narration indicating a reversal of a failed transaction (UTR 955922217456). No invoices in the ledger match this amount, date, or any identifiable counterparty, so the money cannot be tied to any known receivable.\",\n  \"action\": \"NEEDS_MORE_DATA\",\n  \"likely_invoice\": \"\",\n  \"confidence_note\": \"low -- narration gives no clear payer/payee and no invoice matches the amount or date.\"\n}",
+  "tokens_in": 512,
+  "tokens_out": 242,
+  "txn_id": "BNK-000149",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T15:45:56.271878"
+}

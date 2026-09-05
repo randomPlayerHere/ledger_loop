@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"A credit of Rs 41,975.61 arrived on 2026-05-19 with narration INB/248075879021/PAYMENT. The two open invoices considered are INV-1092 (Rs 46,639.57) and INV-1319 (Rs 42,094.62); neither matches the amount, with gaps of Rs -4,663.96 and Rs -119.01 respectively.\",\n  \"action\": \"NEEDS_MORE_DATA\",\n  \"likely_invoice\": \"\",\n  \"confidence_note\": \"weak -- no invoice amount aligns; the narration does not reveal a counterparty or purpose.\"\n}",
+  "tokens_in": 640,
+  "tokens_out": 297,
+  "txn_id": "BNK-000108",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:10:12.132180"
+}

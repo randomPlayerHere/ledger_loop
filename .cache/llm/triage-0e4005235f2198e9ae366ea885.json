@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs 36,454.06 on 2026-06-17 comes from a UPI transaction to nairtex@okyesbbank (likely Nair Textiles). The amount is closest to invoice INV-1120 (Reddy Packaging Ltd) which is Rs 25.39 higher; no other candidate matches within a reasonable tolerance, and the narration does not reference Reddy Packaging.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"INV-1120\",\n  \"confidence_note\": \"weak -- amount close to INV-1120 but narration points to Nair Textiles, leaving the match uncertain.\"\n}",
+  "tokens_in": 1347,
+  "tokens_out": 324,
+  "txn_id": "BNK-000036",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:10:57.463835"
+}

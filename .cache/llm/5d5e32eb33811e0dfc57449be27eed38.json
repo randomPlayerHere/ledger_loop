@@ -1,0 +1,13 @@
+{
+  "text": "{ \"invoice_ids\": [], \"allocations\": [], \"confidence\": 0.5, \"reasoning\": \"Both invoices' shortfalls can be explained as permissible bank charges, creating equal fit.\" }",
+  "tokens_in": 706,
+  "tokens_out": 202,
+  "txn_id": "BNK-000505",
+  "candidates": [
+    "INV-1404",
+    "INV-1360"
+  ],
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "prompt_version": "v1",
+  "cached_at": "2026-09-04 22:12:22"
+}

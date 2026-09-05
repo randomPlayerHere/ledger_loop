@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The credit of Rs 16,252.56 on 2026-05-15 from NEFT-AgarwEnt exactly matches the gross amount of invoice INV-1116 (Agarwal Enterprises LLP), which the rules indicate was already settled by a prior transaction (BNK-000124). This appears to be a duplicate credit that was left unapplied.\",\n  \"action\": \"CHECK_DUPLICATE\",\n  \"likely_invoice\": \"INV-1116\",\n  \"confidence_note\": \"strong -- amount matches invoice exactly and narration points to the same counterparty; rule already flagged as suspected duplicate.\"\n}",
+  "tokens_in": 1077,
+  "tokens_out": 237,
+  "txn_id": "BNK-000125",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:26:10.163075"
+}

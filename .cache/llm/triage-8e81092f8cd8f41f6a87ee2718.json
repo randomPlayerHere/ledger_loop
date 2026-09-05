@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs 70,128.69 on 2026-05-17 (UTR 310166631363) is labelled as a failed transaction (REV-310166631363-FAILED TXN). The only invoice considered, INV-1274 for Deshmukh Packaging Ltd, is for Rs 70,394.16, leaving an unexplained shortfall of Rs 265.47. No other counterparty or invoice matches this amount.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"INV-1274\",\n  \"confidence_note\": \"weak -- invoice name present but the amount gap of Rs 265.47 cannot be explained by the data given.\"\n}",
+  "tokens_in": 575,
+  "tokens_out": 331,
+  "txn_id": "BNK-000482",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:22:06.697529"
+}

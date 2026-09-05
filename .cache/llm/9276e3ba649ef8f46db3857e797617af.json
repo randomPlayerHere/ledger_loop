@@ -1,0 +1,12 @@
+{
+  "text": "{\"invoice_ids\":[\"INV-1287\"],\"allocations\":[{\"invoice_id\":\"INV-1287\",\"amount\":\"24180.02\"}],\"confidence\":0.97,\"reasoning\":\"shortfall 48.17 matches allowed bank charges (\u2264 max(50,0.5% of 24228.19))\"}",
+  "tokens_in": 831,
+  "tokens_out": 401,
+  "txn_id": "BNK-000409",
+  "candidates": [
+    "INV-1287"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": "v1",
+  "cached_at": "2026-09-04 19:53:47"
+}

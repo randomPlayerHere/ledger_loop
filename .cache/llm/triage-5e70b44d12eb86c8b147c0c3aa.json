@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"A credit of Rs 61,347.69 arrived on 2026-07-07 from NEFT/CHATTTEX/1477/SBIN (UTR 196863233843). The narration points to Chatterjee Textiles, and the amount is almost identical to INV-1380 (Chatterjee Steels & Co) differing by only Rs 1.83, while the rule engine flagged it as a suspected duplicate of the already\u2011settled INV-1217.\",\n  \"action\": \"CHECK_DUPLICATE\",\n  \"likely_invoice\": \"INV-1380\",\n  \"confidence_note\": \"moderate \u2013 amount gap tiny and counterparty name matches narration, but duplicate flag suggests it may be an unapplied credit rather than a new invoice.\"\n}",
+  "tokens_in": 1367,
+  "tokens_out": 310,
+  "txn_id": "BNK-000456",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:22:58.758649"
+}

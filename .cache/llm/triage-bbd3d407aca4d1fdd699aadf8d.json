@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"A credit of Rs 91,587.70 arrived on 2026-07-02 from an unidentified transfer (UTR 202345912466). The amount is close to, but not equal to, two open invoices (INV-1073 for Rs 91,898.70 and INV-1053 for Rs 92,005.96), leaving unexplained gaps of Rs -311.00 and Rs -418.26 respectively. No counterparty name is given in the narration, so the payment cannot be confidently linked to any specific invoice.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"INV-1073\",\n  \"confidence_note\": \"weak -- amount is near INV-1073 but the Rs 311 shortfall lacks explanation and no payer details are provided.\"\n}",
+  "tokens_in": 636,
+  "tokens_out": 307,
+  "txn_id": "BNK-000060",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:21:12.503535"
+}

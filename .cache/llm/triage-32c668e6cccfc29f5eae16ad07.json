@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The credit of Rs 34,838.57 on 2026-06-15 (UTR 446329926627, narration NEFT-RDDYTX) exactly matches the gross amount of invoice INV-1205 from Reddy Textiles, but the rule engine notes that INV-1205 was already settled by transaction BNK-000200 and flags this as a suspected duplicate credit.\",\n  \"action\": \"CHECK_DUPLICATE\",\n  \"likely_invoice\": \"INV-1205\",\n  \"confidence_note\": \"strong -- amount matches INV-1205 exactly, but duplicate flag suggests it may already be settled.\"\n}",
+  "tokens_in": 1362,
+  "tokens_out": 260,
+  "txn_id": "BNK-000201",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:24:28.537879"
+}

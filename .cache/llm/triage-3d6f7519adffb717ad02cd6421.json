@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The credit of Rs 15,731.83 on 2026-08-07 exactly matches the gross amount of invoice INV-1097 (Deshmukh Packaging Ltd). The rule engine flagged it as a suspected duplicate because invoice INV-1097 was already settled by transaction BNK-000103, leaving this credit unapplied.\",\n  \"action\": \"CHECK_DUPLICATE\",\n  \"likely_invoice\": \"INV-1097\",\n  \"confidence_note\": \"strong -- amount matches invoice exactly, but already marked as settled/duplicate.\"\n}",
+  "tokens_in": 1398,
+  "tokens_out": 239,
+  "txn_id": "BNK-000104",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:26:11.761387"
+}

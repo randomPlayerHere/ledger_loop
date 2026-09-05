@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"A credit of Rs 265,428.06 from IyerTex (UTR 575866188934) arrived on 2026-06-16. The amount does not match any open invoice for Iyer Textiles & Co; the rule engine flagged it as a suspected duplicate of the already\u2011settled INV-1122, leaving it unapplied.\",\n  \"action\": \"CHECK_DUPLICATE\",\n  \"likely_invoice\": \"\",\n  \"confidence_note\": \"weak -- narration points to IyerTex but no invoice amount fits; duplicate suspicion unverified.\"\n}",
+  "tokens_in": 1419,
+  "tokens_out": 337,
+  "txn_id": "BNK-000116",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T15:44:54.402749"
+}

@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"Credit of Rs 15,052.34 received on 2026-07-23 from NEFT-AgarwInd (UTR 383281909609). No single invoice matches this amount; the closest candidates are INV-1403 (Rs 9,016.47) and INV-1207 (Rs 8,347.31), both leaving unexplained gaps of roughly Rs 6,000\u20136,700. The narration only indicates a generic Agarwal entity, so the payment could be a partial settlement of one or more invoices or a mis\u2011applied amount.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"\",\n  \"confidence_note\": \"weak -- narration names Agarwal but amount does not correspond to any invoice; likely partial payment needing remittance details.\"\n}",
+  "tokens_in": 1377,
+  "tokens_out": 327,
+  "txn_id": "BNK-000029",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:13:58.033938"
+}

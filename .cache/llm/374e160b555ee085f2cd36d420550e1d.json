@@ -1,0 +1,12 @@
+{
+  "text": "{\"invoice_ids\":[\"INV-1448\"],\"allocations\":[{\"invoice_id\":\"INV-1448\",\"amount\":\"15638.94\"}],\"confidence\":0.97,\"reasoning\":\"gap of Rs 61.61 matches allowed bank charges (\u2264 max(Rs50,0.5% of Rs15,700.55)=Rs78.50)\"}",
+  "tokens_in": 833,
+  "tokens_out": 415,
+  "txn_id": "BNK-000244",
+  "candidates": [
+    "INV-1448"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": "v1",
+  "cached_at": "2026-09-04 20:00:51"
+}

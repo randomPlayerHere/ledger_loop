@@ -1,0 +1,12 @@
+{
+  "text": "{\"invoice_ids\":[\"INV-1138\"],\"allocations\":[{\"invoice_id\":\"INV-1138\",\"amount\":\"21283.45\"}],\"confidence\":0.97,\"reasoning\":\"shortfall 80.05 matches allowed bank charges (\u2264 max(Rs50,0.5% of 21363.50)=106.82)\"}",
+  "tokens_in": 830,
+  "tokens_out": 483,
+  "txn_id": "BNK-000442",
+  "candidates": [
+    "INV-1138"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": "v1",
+  "cached_at": "2026-09-04 19:53:37"
+}

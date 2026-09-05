@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The credit of Rs 60,895.94 on 2026-08-01 (UTR 741684686230, narration CMS/INV-1498/CHATTSTE) closely matches invoice INV-1498 for Chatterjee Steels & Co, which is for Rs 60,949.32 and remains open. The amount is Rs 53.38 lower than the invoice, a small gap that could be due to rounding, bank charges, or a minor TDS adjustment.\",\n  \"action\": \"WRITE_OFF_SMALL\",\n  \"likely_invoice\": \"INV-1498\",\n  \"confidence_note\": \"moderate -- amount difference is small and narration references the same invoice number, but no explicit remittance details are provided.\"\n}",
+  "tokens_in": 1375,
+  "tokens_out": 307,
+  "txn_id": "BNK-000474",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:23:04.397903"
+}

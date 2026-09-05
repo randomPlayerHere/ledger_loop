@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs 89,702.60 on 2026-07-03 (UTR 510093321841) is Rs 47.03 short of the open invoice INV-1013 from Bose Industries for Rs 89,749.63. The narration only shows a transfer reference, giving no further clue about the shortfall.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"INV-1013\",\n  \"confidence_note\": \"weak -- amount gap is small and could be a bank fee or rounding, but narration lacks details to confirm.\"\n}",
+  "tokens_in": 560,
+  "tokens_out": 248,
+  "txn_id": "BNK-000035",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:07:42.102088"
+}

@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs 68,364.02 on 2026-08-06 (UTR 107459751297) does not exactly match any open invoice. The closest candidate is INV-1350 (Mehta Chemicals Ltd) which is only Rs 21.39 higher, but the narration provides no counterparty name and no rule explains this small gap.\",\n  \"action\": \"NEEDS_MORE_DATA\",\n  \"likely_invoice\": \"INV-1350\",\n  \"confidence_note\": \"weak -- amount is very close to INV-1350 but the unexplained Rs 21.39 difference and lack of identifying details in the narration prevent a confident match.\"\n}",
+  "tokens_in": 633,
+  "tokens_out": 339,
+  "txn_id": "BNK-000346",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:08:36.703917"
+}

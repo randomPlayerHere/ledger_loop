@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs 44,113.48 on 2026-06-14 (UTR 694741487011) does not exactly match any open invoice. The closest is INV-1085 for Chatterjee Textiles (Rs 44,278.00), leaving a small unexplained difference of Rs -164.52, which could be a bank charge or rounding.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"INV-1085\",\n  \"confidence_note\": \"moderate -- amount close to INV-1085 but gap remains unexplained\"\n}",
+  "tokens_in": 631,
+  "tokens_out": 291,
+  "txn_id": "BNK-000452",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:23:45.975335"
+}

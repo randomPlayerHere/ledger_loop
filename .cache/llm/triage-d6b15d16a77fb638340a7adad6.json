@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"Credit of Rs 47,517.65 from UPI transaction with counterparty iyerche@okpunbbank on 2026-06-01. The amount is closest to invoice INV-1365 (Iyer Polymers LLP, Rs 47,271.14) leaving an unexplained difference of Rs 246.51, which could be bank charges or a small fee.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"INV-1365\",\n  \"confidence_note\": \"moderate -- amount gap is small (Rs 246.51) and counterparty name matches, but no rule explains the residual.\"\n}",
+  "tokens_in": 1343,
+  "tokens_out": 259,
+  "txn_id": "BNK-000102",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:23:39.824594"
+}

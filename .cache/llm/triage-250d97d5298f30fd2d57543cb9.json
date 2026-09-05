@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs 27,854.26 on 2026-06-23 (IMPS-993258882513-IYERDIS) closely matches invoice INV-1271 from Iyer Exports (gross Rs 27,896.58), leaving an unexplained shortfall of Rs 42.32. No other candidate invoice is within a reasonable range, and the narration does not reveal a different counterparty.\",\n  \"action\": \"WRITE_OFF_SMALL\",\n  \"likely_invoice\": \"INV-1271\",\n  \"confidence_note\": \"weak -- amount gap is small but unexplained; name matches but reason for difference unclear.\"\n}",
+  "tokens_in": 1336,
+  "tokens_out": 313,
+  "txn_id": "BNK-000052",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:25:07.511718"
+}

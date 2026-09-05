@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs 9,083.46 on 2026-08-11 (UTR 989052710628, narration RTGS SBIN989052710628 CHATTTEX) appears to be a payment from Chatterjee Textiles, but none of the open invoices for that party match this exact amount; the closest is INV-1488 (Rs 9,421.21), leaving a Rs 337.75 shortfall. The rule engine flagged it as a suspected duplicate of INV-1454, which was already settled by another credit.\",\n  \"action\": \"CHECK_DUPLICATE\",\n  \"likely_invoice\": \"\",\n  \"confidence_note\": \"moderate -- narration points to Chatterjee Textiles and amount is near INV-1488, but the gap is unexplained and the system suspects a duplicate credit.\"\n}",
+  "tokens_in": 1347,
+  "tokens_out": 402,
+  "txn_id": "BNK-000465",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:27:11.970796"
+}

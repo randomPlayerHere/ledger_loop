@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"A credit of Rs\u202f100,701.80 arrived on 2026\u201107\u201110 from an unidentified transfer (UTR\u202f409971232353). The amount is Rs\u202f319.26 less than the open invoice INV\u20111219 for Iyer Polymers & Co (gross Rs\u202f101,021.06, issued 2026\u201105\u201116). No deterministic rule could explain this shortfall, so the payment appears to be a partial or under\u2011paid settlement.\",\n  \"action\": \"WRITE_OFF_SMALL\",\n  \"likely_invoice\": \"INV-1219\",\n  \"confidence_note\": \"weak -- amount close to invoice but unexplained shortfall; no remittance details to confirm intent.\"\n}",
+  "tokens_in": 566,
+  "tokens_out": 334,
+  "txn_id": "BNK-000146",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:07:27.396734"
+}

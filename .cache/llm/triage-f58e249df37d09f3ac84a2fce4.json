@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The credit of Rs 63,693.09 matches invoice INV-1146 (Chatterjee Logistics) less a Rs 1,299.86 TDS deduction (2%), which aligns with the narration referencing INV-1146 and the UTR. No other invoice in the list fits the amount within a reasonable TDS range.\",\n  \"action\": \"CONFIRM_MATCH\",\n  \"likely_invoice\": \"INV-1146\",\n  \"confidence_note\": \"strong -- amount gap equals exactly 2% TDS on INV-1146, narration cites the same invoice.\"\n}",
+  "tokens_in": 1407,
+  "tokens_out": 251,
+  "txn_id": "BNK-000148",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:22:51.407889"
+}

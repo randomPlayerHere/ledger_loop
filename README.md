@@ -200,10 +200,16 @@ make app                    # Streamlit reviewer UI
   tests that never open a network connection.
 - **Reproducible data.** Fixed seeds; `manifest.json` records each batch's seed.
 
+## Live demo
+
+The reviewer UI deploys to Streamlit Community Cloud straight from `uv.lock` —
+no Dockerfile, no `requirements.txt`. See **[DEPLOY.md](DEPLOY.md)**.
+
 ## Documentation
 
 - **[ARCHITECTURE.md](ARCHITECTURE.md)** — the four-stage diagram and every
   design decision with its rationale
 - **[FAILURES.md](FAILURES.md)** — what broke and what we did about it
+- **[DEPLOY.md](DEPLOY.md)** — hosting the reviewer UI for free
 - **[reports/](reports/)** — every eval run, in order, showing the trajectory
 - **[config.yaml](config.yaml)** — every threshold with the measurement behind it

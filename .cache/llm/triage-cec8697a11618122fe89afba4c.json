@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The credit of Rs 65,189.90 on 2026-05-22 (UTR 450464522328, narration NEFT-DESHMSTE) exactly matches the gross amount of invoice INV-1490 for Deshmukh Steels Pvt Ltd, which the rule engine already marked as settled by the prior transaction BNK-000478 and flagged as a suspected duplicate credit.\",\n  \"action\": \"CHECK_DUPLICATE\",\n  \"likely_invoice\": \"INV-1490\",\n  \"confidence_note\": \"strong -- amount matches INV-1490 exactly, but the system already considers it a duplicate of BNK-000478.\"\n}",
+  "tokens_in": 1215,
+  "tokens_out": 268,
+  "txn_id": "BNK-000479",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:08:44.951394"
+}

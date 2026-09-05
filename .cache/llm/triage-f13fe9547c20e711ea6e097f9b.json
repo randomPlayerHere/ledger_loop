@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs 36,305.31 on 2026-05-21 (UTR 566529280853) is Rs 24.94 less than the open invoice INV-1003 for Iyer Traders LLP (gross Rs 36,330.25, issued 2026-05-09). The narration only shows an internal payment reference, with no clear counterparty or remittance details, making the small shortfall unexplained by the data.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"INV-1003\",\n  \"confidence_note\": \"weak -- amount close to invoice but the Rs 24.94 gap lacks explanation; narration gives no payer info.\"\n}",
+  "tokens_in": 568,
+  "tokens_out": 330,
+  "txn_id": "BNK-000500",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:11:03.148546"
+}

@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs 70,266.69 on 2026-08-07 (UTR 226202640342) is Rs 90.51 less than the open invoice INV-1373 for Kulkarni Industries LLP (gross Rs 70,357.20, issued 2026-07-26). The narration only shows a transfer reference, so the shortfall is unexplained but could be a bank fee, rounding, or partial payment.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"INV-1373\",\n  \"confidence_note\": \"weak -- amount close but the exact Rs 90.51 gap lacks supporting evidence\"\n}",
+  "tokens_in": 563,
+  "tokens_out": 315,
+  "txn_id": "BNK-000365",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:22:00.948108"
+}

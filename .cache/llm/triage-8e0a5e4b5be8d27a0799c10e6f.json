@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"Credit of Rs 49,637.41 from Agarwal Enterprises (UTR 845336214392) on 2026-07-13. The amount is Rs 149.35 higher than invoice INV-1273 (Rs 49,488.06) and does not match any other invoice closely; the small difference could be bank charges or rounding.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"INV-1273\",\n  \"confidence_note\": \"weak -- amount close to INV-1273 but unexplained Rs 149.35 gap\"\n}",
+  "tokens_in": 1367,
+  "tokens_out": 245,
+  "txn_id": "BNK-000269",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:23:28.284796"
+}

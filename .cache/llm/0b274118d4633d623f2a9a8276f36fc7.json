@@ -1,0 +1,13 @@
+{
+  "text": "{\"invoice_ids\":[],\"allocations\":[],\"confidence\":0.9,\"reasoning\":\"credit amount does not equal gross minus applicable TDS for either invoice\"}",
+  "tokens_in": 905,
+  "tokens_out": 832,
+  "txn_id": "BNK-000124",
+  "candidates": [
+    "INV-1109",
+    "INV-1200"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": "v1",
+  "cached_at": "2026-09-04 19:57:17"
+}

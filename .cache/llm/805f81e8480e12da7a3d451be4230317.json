@@ -1,0 +1,12 @@
+{
+  "text": "{\"invoice_ids\":[\"INV-1003\"],\"allocations\":[{\"invoice_id\":\"INV-1003\",\"amount\":\"36305.31\"}],\"confidence\":0.97,\"reasoning\":\"Credit is Rs 24.94 less than invoice gross, within allowed bank charges max(Rs 50,0.5% of gross)\"}",
+  "tokens_in": 837,
+  "tokens_out": 652,
+  "txn_id": "BNK-000500",
+  "candidates": [
+    "INV-1003"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": "v1",
+  "cached_at": "2026-09-04 19:43:37"
+}

@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"A gateway refund of Rs 25,326.92 was received on 2026-06-15 (UTR 427025971044). The amount does not exactly match any open invoice; the closest is INV-1262 (difference Rs -17.37), suggesting a possible short\u2011payment or fee deduction.\",\n  \"action\": \"CHECK_REFUND\",\n  \"likely_invoice\": \"\",\n  \"confidence_note\": \"weak -- narration indicates a refund but no invoice matches the exact amount; only a small gap to the nearest candidate.\"\n}",
+  "tokens_in": 761,
+  "tokens_out": 263,
+  "txn_id": "BNK-000499",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:12:20.079485"
+}

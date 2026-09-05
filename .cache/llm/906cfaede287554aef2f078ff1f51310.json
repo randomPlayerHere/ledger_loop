@@ -1,0 +1,12 @@
+{
+  "text": "{ \"invoice_ids\": [\"INV-1066\"], \"allocations\": [{\"invoice_id\": \"INV-1066\", \"amount\":  \"Rs 13,689.41\"}], \"confidence\": 0.99, \"reasoning\": \"The credit of Rs 13,689.41 equals the invoice gross Rs 15,210.45 minus 10% TDS (Rs 1,521.04), matching the narration's implied TDS_10PCT explanation.\" }",
+  "tokens_in": 610,
+  "tokens_out": 215,
+  "txn_id": "BNK-000085",
+  "candidates": [
+    "INV-1066"
+  ],
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "prompt_version": "v1",
+  "cached_at": "2026-09-04 22:03:21"
+}

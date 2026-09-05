@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The credit of Rs 28,113.39 on 2026-06-19 from BhattExp (UTR 714412988993) is Rs 521.57 short of the gross amount of INV-1343 (Bhatt Exports Ltd, Rs 28,634.96). The shortfall closely matches a 2% TDS deduction (\u2248Rs 573), suggesting the payment is the net amount after TDS.\",\n  \"action\": \"CONFIRM_MATCH\",\n  \"likely_invoice\": \"INV-1343\",\n  \"confidence_note\": \"moderate -- amount gap aligns with expected 2% TDS on the invoice, though TDS not explicitly referenced in narration.\"\n}",
+  "tokens_in": 1357,
+  "tokens_out": 410,
+  "txn_id": "BNK-000336",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:25:01.511923"
+}

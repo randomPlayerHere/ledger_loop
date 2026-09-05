@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The credit of Rs 34,827.30 on 2026-07-02 comes from a NEFT payment referencing AgarwTex/1117, which matches invoice INV-1117 from Agarwal Textiles Pvt Ltd. The amount is only Rs 8.64 short of the invoice total, a difference that can be explained by rounding or minor bank charges, leaving no outstanding balance.\",\n  \"action\": \"CONFIRM_MATCH\",\n  \"likely_invoice\": \"INV-1117\",\n  \"confidence_note\": \"strong -- narration explicitly cites invoice 1117 and the amount gap is minimal and plausibly due to rounding/charges.\"\n}",
+  "tokens_in": 1412,
+  "tokens_out": 332,
+  "txn_id": "BNK-000133",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:11:11.163342"
+}

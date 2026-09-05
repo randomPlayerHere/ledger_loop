@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The credit of Rs 273,031.34 from NEFT-REDDYPAC exactly matches the gross amount of invoice INV-1039 (Reddy Packaging Ltd), but the rules indicate that INV-1039 was already settled by a prior credit (BNK-000055). This suggests the current credit is a duplicate or unapplied payment.\",\n  \"action\": \"CHECK_DUPLICATE\",\n  \"likely_invoice\": \"INV-1039\",\n  \"confidence_note\": \"moderate -- amount matches exactly and narration points to Reddy Packaging, but the invoice is already marked settled, so the credit is likely a duplicate.\"\n}",
+  "tokens_in": 1385,
+  "tokens_out": 272,
+  "txn_id": "BNK-000056",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:02:25.701450"
+}

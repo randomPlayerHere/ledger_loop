@@ -1,0 +1,19 @@
+{
+  "text": "{\"invoice_ids\":[\"INV-1162\"],\"allocations\":[{\"invoice_id\":\"INV-1162\",\"amount\":\"42676.95\"}],\"confidence\":0.98,\"reasoning\":\"gross 42,844.92 minus bank charges 167.97 equals credit amount\"}",
+  "tokens_in": 1310,
+  "tokens_out": 809,
+  "txn_id": "BNK-000228",
+  "candidates": [
+    "INV-1473",
+    "INV-1216",
+    "INV-1315",
+    "INV-1000",
+    "INV-1162",
+    "INV-1170",
+    "INV-1291",
+    "INV-1302"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": "v1",
+  "cached_at": "2026-09-04 20:03:29"
+}

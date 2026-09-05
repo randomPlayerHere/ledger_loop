@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The credit of Rs 92,787.85 matches the gross amount of INV-1134 (Rs 103,097.61) less a 10% TDS deduction of Rs 10,309.76, leaving exactly the settled amount. The narration references an RTGS transfer with UTR 355297515721 and no other party is named.\",\n  \"action\": \"CONFIRM_MATCH\",\n  \"likely_invoice\": \"INV-1134\",\n  \"confidence_note\": \"strong -- amount gap equals 10% TDS on INV-1134, narration consistent with a payment to Chatterjee Logistics.\"\n}",
+  "tokens_in": 1385,
+  "tokens_out": 274,
+  "txn_id": "BNK-000138",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:21:08.436334"
+}

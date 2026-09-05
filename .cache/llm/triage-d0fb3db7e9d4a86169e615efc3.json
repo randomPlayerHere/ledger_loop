@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"A credit of Rs\u202f40,097.07 was received from BhattTex with narration referencing INV\u20111159, but that invoice was already settled by transaction BNK\u2011000105. No open invoice matches this amount within a reasonable tolerance, suggesting the credit may be a duplicate or mis\u2011applied payment.\",\n  \"action\": \"CHECK_DUPLICATE\",\n  \"likely_invoice\": \"\",\n  \"confidence_note\": \"weak -- narration points to an already\u2011settled invoice and no open invoice fits the amount closely.\"\n}",
+  "tokens_in": 1366,
+  "tokens_out": 316,
+  "txn_id": "BNK-000158",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:24:04.065304"
+}

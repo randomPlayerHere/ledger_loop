@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The credit of Rs\u202f37,163.30 on 2026\u201107\u201131 from NEFT\u2011VENKAPOL closely matches invoice INV\u20111195 (Venkat Packaging & Co) for Rs\u202f37,191.74, leaving a small unexplained gap of Rs\u202f\u201128.44. No other candidate invoice is within a reasonable range.\",\n  \"action\": \"WRITE_OFF_SMALL\",\n  \"likely_invoice\": \"INV-1195\",\n  \"confidence_note\": \"moderate \u2013 amount difference is tiny and could be rounding/TDS, but no explicit remittance advice is present.\"\n}",
+  "tokens_in": 1346,
+  "tokens_out": 267,
+  "txn_id": "BNK-000193",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:24:19.662084"
+}

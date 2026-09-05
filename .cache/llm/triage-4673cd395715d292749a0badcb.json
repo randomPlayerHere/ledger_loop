@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"A credit of Rs 22,651.04 arrived on 2026-07-17 with narration indicating a refund (UTR 560266060308). The only open invoice considered is INV-1235 for Rs 22,705.01, leaving an unexplained shortfall of Rs 53.97. This most likely represents a partial refund of that invoice, perhaps after a small deduction or adjustment.\",\n  \"action\": \"CHECK_REFUND\",\n  \"likely_invoice\": \"INV-1235\",\n  \"confidence_note\": \"moderate -- amount close to invoice but a small gap remains unexplained\"\n}",
+  "tokens_in": 566,
+  "tokens_out": 313,
+  "txn_id": "BNK-000503",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:12:51.699647"
+}

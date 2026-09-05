@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"A UPI credit of Rs 24,475.45 arrived on 2026-05-24 from iyerinf@okutibbank (UTR 531600975146). The narration points to Iyer Infotech, but none of the candidate invoices match this amount; the closest is INV-1395 (Nair Industries LLP) which is off by Rs 105.97 and involves a different party.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"\",\n  \"confidence_note\": \"weak -- narration suggests Iyer Infotech but no invoice amount fits; the nearest candidate is from a different vendor and still off by ~Rs 106.\"\n}",
+  "tokens_in": 1357,
+  "tokens_out": 302,
+  "txn_id": "BNK-000099",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:12:38.533857"
+}

@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs 26,193.89 on 2026-07-18 (UTR 106872386235, narration RTGS AXIS106872386235 IYRINF) is close to the gross amount of invoice INV-1173 (Iyer Solutions & Co, Rs 26,239.18) but is Rs 45.29 short. No rule could explain this small gap, and the narration does not reference any invoice number.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"INV-1173\",\n  \"confidence_note\": \"moderate -- amount matches within ~0.2% and counterparty name appears in narration, but the exact shortfall is unexplained.\"\n}",
+  "tokens_in": 781,
+  "tokens_out": 286,
+  "txn_id": "BNK-000120",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:12:06.895734"
+}

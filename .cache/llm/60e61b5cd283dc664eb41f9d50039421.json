@@ -1,0 +1,13 @@
+{
+  "text": "{ \"invoice_ids\": [\"INV-1090\"], \"allocations\": [{\"invoice_id\": \"INV-1090\", \"amount\": \"Rs 72,015.23\"}], \"confidence\": 0.92, \"reasoning\": \"Narration contains iyrlg matching Iyer Logistics Ltd (INV-1090) and the shortfall of Rs 21.68 equals bank charges within the allowed limit.\" }",
+  "tokens_in": 707,
+  "tokens_out": 352,
+  "txn_id": "BNK-000106",
+  "candidates": [
+    "INV-1090",
+    "INV-1139"
+  ],
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "prompt_version": "v1",
+  "cached_at": "2026-09-04 22:03:58"
+}

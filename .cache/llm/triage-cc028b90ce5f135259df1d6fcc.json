@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs 13,689.41 on 2026-05-29 (IMPS-859775523172-ChhLg) is Rs 1,521.04 short of invoice INV-1066 (Chauhan Logistics LLP, gross Rs 15,210.45). The shortfall equals exactly 10% TDS, suggesting tax was deducted at source.\",\n  \"action\": \"CONFIRM_MATCH\",\n  \"likely_invoice\": \"INV-1066\",\n  \"confidence_note\": \"strong -- amount gap matches 10% TDS on INV-1066\"\n}",
+  "tokens_in": 610,
+  "tokens_out": 291,
+  "txn_id": "BNK-000085",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:14:18.636488"
+}

@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"Credit of Rs 63,436.63 received on 2026-08-07 from UPI reference sinhatex@oksbinbank (UTR 818008975287). The amount is close to invoice INV-1227 (Sinha Textiles Pvt Ltd, Rs 63,963.12) but is Rs 526.49 lower, and no deterministic rule could explain this gap.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"INV-1227\",\n  \"confidence_note\": \"weak -- amount near INV-1227 but unexplained shortfall; no other invoice matches closely.\"\n}",
+  "tokens_in": 1008,
+  "tokens_out": 269,
+  "txn_id": "BNK-000225",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:22:54.065899"
+}

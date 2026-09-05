@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs 95,301.40 on 2026-07-21 matches the gross amount of invoice INV-1274 (Rs 105,890.44) less a Rs 10,589.04 TDS deduction, as noted by the rule engine. The narration only shows a UPI reference with no counterparty name, so the payment cannot be directly linked to the invoice without confirming the TDS adjustment.\",\n  \"action\": \"CONFIRM_MATCH\",\n  \"likely_invoice\": \"INV-1274\",\n  \"confidence_note\": \"moderate -- amount gap equals expected 10% TDS on INV-1274, but narration lacks payer details.\"\n}",
+  "tokens_in": 617,
+  "tokens_out": 204,
+  "txn_id": "BNK-000282",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:07:37.078709"
+}

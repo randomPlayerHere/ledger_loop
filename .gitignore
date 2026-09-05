@@ -17,11 +17,16 @@ guide.md
 .env
 .env.local
 
-# Stage 2 response cache. Ignored by default because it churns while the prompt
-# is being tuned. Worth un-ignoring before the deadline: a committed cache makes
-# `make eval BATCH=dev` reproduce the reported LLM numbers with no API key at
-# all, which is a stronger reproducibility claim than a seed alone.
-.cache/
+# Stage 2 response cache -- COMMITTED, deliberately.
+#
+# Cache keys are (txn_id, candidate set, model, prompt version), and the
+# generator is seeded, so the same seed reproduces the same keys on any machine.
+# Committing it means the deployed demo and a fresh clone both show real LLM
+# exception notes with no API key, no latency and no spend -- a stronger
+# reproducibility claim than a seed alone, and the difference between a demo
+# that works on conference wifi and one that does not.
+.cache/*
+!.cache/llm/
 
 # SQLite audit database
 *.db
@@ -37,8 +42,9 @@ guide.md
 .mypy_cache/
 .ruff_cache/
 
-# Streamlit
-.streamlit/
+# Streamlit. The theme is part of the deliverable and is committed; only the
+# secrets file is kept out.
+.streamlit/secrets.toml
 streamlit_cached_theme.json
 
 # IDE/OS files

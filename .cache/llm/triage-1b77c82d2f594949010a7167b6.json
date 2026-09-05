@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs\u202f31,610.90 on 2026\u201107\u201117 (UTR\u202f296044202288) does not exactly match any open invoice. The closest candidate is INV\u20111423 for Bhatt Logistics (gross Rs\u202f31,719.94), leaving an unexplained shortfall of Rs\u202f109.04. The narration only shows a generic transfer reference with no counterparty name.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"INV-1423\",\n  \"confidence_note\": \"moderate -- amount is very close to INV\u20111423 but the Rs\u202f109 difference cannot be explained from the data.\"\n}",
+  "tokens_in": 630,
+  "tokens_out": 315,
+  "txn_id": "BNK-000021",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:24:38.604429"
+}

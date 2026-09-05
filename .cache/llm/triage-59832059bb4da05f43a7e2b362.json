@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs 82,346.37 on 2026-06-13 (UTR 436516507468) is very close to invoice INV-1218 for Rastogi Motors LLP (Rs 82,367.03), differing by only Rs 20.66. The narration contains only a UTR reference with no counterparty name, so the rule engine could not automatically confirm the match.\",\n  \"action\": \"CONFIRM_MATCH\",\n  \"likely_invoice\": \"INV-1218\",\n  \"confidence_note\": \"weak -- amount gap is small (Rs 20.66) and dates align, but narration lacks identifying details.\"\n}",
+  "tokens_in": 562,
+  "tokens_out": 262,
+  "txn_id": "BNK-000230",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:07:52.616546"
+}

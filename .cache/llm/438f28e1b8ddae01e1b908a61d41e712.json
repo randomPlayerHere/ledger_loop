@@ -1,0 +1,13 @@
+{
+  "text": "{\"invoice_ids\":[],\"allocations\":[],\"confidence\":0.85,\"reasoning\":\"Both invoices have a shortfall within allowed bank charges, making the credit ambiguous\"}",
+  "tokens_in": 908,
+  "tokens_out": 841,
+  "txn_id": "BNK-000176",
+  "candidates": [
+    "INV-1096",
+    "INV-1293"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": "v1",
+  "cached_at": "2026-09-04 19:58:04"
+}

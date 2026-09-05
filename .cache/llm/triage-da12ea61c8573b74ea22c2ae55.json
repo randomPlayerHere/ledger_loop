@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The credit of Rs 55,214.57 matches invoice INV-1380 (Chatterjee Steels & Co) after deducting 10% TDS (Rs 6,134.95) from its gross amount of Rs 61,349.52. The narration references INV-1380 and the UTR corresponds to a NEFT payment.\",\n  \"action\": \"CONFIRM_MATCH\",\n  \"likely_invoice\": \"INV-1380\",\n  \"confidence_note\": \"strong -- amount gap equals exactly 10% TDS on INV-1380, narration names the invoice.\"\n}",
+  "tokens_in": 1400,
+  "tokens_out": 301,
+  "txn_id": "BNK-000371",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:23:09.192367"
+}

@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs 86,613.89 on 2026-05-02 is labelled as an interest payment (INT.PD) with UTR 732069347976. No invoice in the ledger matches this amount, date, or any identifiable counterparty, so the deterministic engine could not find a candidate.\",\n  \"action\": \"NEEDS_MORE_DATA\",\n  \"likely_invoice\": \"\",\n  \"confidence_note\": \"weak -- narration indicates interest but no matching invoice exists; cannot infer further without additional remittance details.\"\n}",
+  "tokens_in": 508,
+  "tokens_out": 217,
+  "txn_id": "BNK-000514",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:07:50.258079"
+}

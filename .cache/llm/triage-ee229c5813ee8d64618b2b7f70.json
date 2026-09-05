@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs 38,112.96 on 2026-06-27 (RTGS from AXIS, UTR 892239961619, narration mentions AGARWTEX) does not match any invoice amount; the closest invoice (INV-1082 for Iyer Infotech) differs by only Rs 70.27 but the counterparty name does not agree with the narration.\",\n  \"action\": \"NEEDS_MORE_DATA\",\n  \"likely_invoice\": \"\",\n  \"confidence_note\": \"weak -- narration points to Agarwal but no invoice matches amount; the nearest amount belongs to a different party.\"\n}",
+  "tokens_in": 1364,
+  "tokens_out": 260,
+  "txn_id": "BNK-000203",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:10:51.596301"
+}

@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs 33,389.41 on 2026-05-17 (UPI transaction with UTR 148879334922) is close to the amount of invoice INV-1103 for Iyer Polymers & Co (Rs 33,415.24), differing by only Rs 25.83. No other invoice matches as closely, and the narration does not reveal a clear counterparty beyond the UPI ID.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"INV-1103\",\n  \"confidence_note\": \"weak -- amount gap is small but unexplained; narration gives no further detail.\"\n}",
+  "tokens_in": 708,
+  "tokens_out": 277,
+  "txn_id": "BNK-000117",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:11:15.906382"
+}

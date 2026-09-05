@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"A credit of Rs 18,333.69 arrived on 2026-05-26 with narration NEFT-IyrPc and UTR 589818301607. The amount exactly matches the open invoice INV-1193 from Iyer Packaging (gross Rs 18,333.69, issued 2026-05-20), but the rule engine flagged it as a suspected duplicate because INV-1193 was already settled by the prior credit BNK-000189.\",\n  \"action\": \"CHECK_DUPLICATE\",\n  \"likely_invoice\": \"INV-1193\",\n  \"confidence_note\": \"moderate -- amount and counterparty name match, but duplicate flag suggests possible overpayment or error.\"\n}",
+  "tokens_in": 566,
+  "tokens_out": 287,
+  "txn_id": "BNK-000190",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:25:35.951595"
+}

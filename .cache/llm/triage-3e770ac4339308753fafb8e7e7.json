@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs 6,167.09 on 2026-07-23 (UTR 581936496811) matches invoice INV-1426 for Iyer Infotech except for a Rs 685.23 shortfall, which corresponds to a 10% TDS deduction. The narration contains only a UTR reference and no additional payer details.\",\n  \"action\": \"CONFIRM_MATCH\",\n  \"likely_invoice\": \"INV-1426\",\n  \"confidence_note\": \"moderate -- amount gap exactly equals 10% TDS of the invoice, strongly suggesting TDS deduction.\"\n}",
+  "tokens_in": 602,
+  "tokens_out": 283,
+  "txn_id": "BNK-000415",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:15:38.257534"
+}

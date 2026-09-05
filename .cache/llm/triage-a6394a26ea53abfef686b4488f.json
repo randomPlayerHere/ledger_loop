@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs 39,370.57 on 2026-08-11 (UPI reference chattexp@okhdfcbank) does not exactly match any open invoice. The closest amounts are INV-1060 (Rs 38,589.60, difference +Rs 780.97) and INV-1004 (Rs 38,364.98, difference +Rs 1,005.59), but none of the considered invoices explain the exact figure after typical TDS or other adjustments.\",\n  \"action\": \"NEEDS_MORE_DATA\",\n  \"likely_invoice\": \"\",\n  \"confidence_note\": \"weak -- no invoice matches the amount; only approximate near\u2011matches exist without clear justification.\"\n}",
+  "tokens_in": 1380,
+  "tokens_out": 459,
+  "txn_id": "BNK-000122",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:24:08.839569"
+}

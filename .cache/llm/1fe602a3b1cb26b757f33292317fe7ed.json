@@ -1,0 +1,12 @@
+{
+  "text": "{\n  \"invoice_ids\": [\"INV-1218\"],\n  \"allocations\": [{\"invoice_id\": \"INV-1218\", \"amount\":  \t\"Rs 82,346.37\"}],\n  \"confidence\": 0.92,\n  \"reasoning\": \"The credit of Rs 82,346.37 is Rs 20.66 less than invoice INV-1218 gross Rs 82,367.03, and this shortfall equals bank charges (within the allowed max of Rs 50), so the payment settles that invoice.\"\n}",
+  "tokens_in": 601,
+  "tokens_out": 266,
+  "txn_id": "BNK-000230",
+  "candidates": [
+    "INV-1218"
+  ],
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "prompt_version": "v1",
+  "cached_at": "2026-09-04 22:11:47"
+}

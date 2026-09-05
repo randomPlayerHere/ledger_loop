@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"A credit of Rs 43,996.01 arrived on 2026-05-13 with UTR 654561348384 and narration 'INB/654561348384/PAYMENT'. The only candidate invoice is INV-1440 for Rs 44,080.94, leaving an unexplained shortfall of Rs 84.93; no other invoice matches the amount or counterparty.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"INV-1440\",\n  \"confidence_note\": \"weak -- amount gap of Rs 84.93 unexplained, narration gives no party name.\"\n}",
+  "tokens_in": 565,
+  "tokens_out": 203,
+  "txn_id": "BNK-000427",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:23:47.604981"
+}

@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs 42,853.54 on 2026-07-06 (UTR 715742893632) does not exactly match any invoice; the closest candidate is INV-1197 for Pillai Traders Ltd, which is Rs 109.75 higher than the payment. The narration only contains a generic UTR reference with no party name, so the shortfall cannot be explained by discount, tax, or fees visible in the data.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"INV-1197\",\n  \"confidence_note\": \"weak -- amount close but unexplained gap; narration lacks counterparty details\"\n}",
+  "tokens_in": 570,
+  "tokens_out": 343,
+  "txn_id": "BNK-000117",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:23:51.467225"
+}

@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"Credit of Rs 108,793.22 received via RTGS from HDFC (UTR 917584674648) narrated as 'DSHMSL' on 2026-06-18. The amount does not exactly match any open invoice; the closest is INV-1189 (Deshmukh Solutions Pvt Ltd, Rs 106,178.98) leaving an unexplained gap of Rs 2,614.24.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"INV-1189\",\n  \"confidence_note\": \"weak -- narration hints at Deshmukh but amount gap not explained by TDS or other known deductions.\"\n}",
+  "tokens_in": 1393,
+  "tokens_out": 349,
+  "txn_id": "BNK-000187",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:20:56.633750"
+}

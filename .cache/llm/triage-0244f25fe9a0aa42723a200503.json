@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"A credit of Rs 20,426.01 arrived on 2026-06-28 via IMPS (UTR 819103071273) with narration that does not name a party. The amount exactly matches the open invoice INV-1149 for Iyer Textiles & Co, but the rule engine notes that INV-1149 was already settled by a prior credit (BNK-000141) and suspects this is a duplicate credit left unapplied.\",\n  \"action\": \"CHECK_DUPLICATE\",\n  \"likely_invoice\": \"INV-1149\",\n  \"confidence_note\": \"moderate -- amount matches invoice exactly and narration lacks detail, but rule already flagged possible duplicate.\"\n}",
+  "tokens_in": 581,
+  "tokens_out": 252,
+  "txn_id": "BNK-000142",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T15:46:45.869160"
+}

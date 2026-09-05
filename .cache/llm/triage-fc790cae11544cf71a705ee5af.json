@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"A credit of Rs 35,293.46 arrived on 2026-07-27 from Iyer Textiles & Co (UTR 477789298437). It is Rs 34.40 short of the open invoice INV-1169 (Rs 35,327.86) and the rules engine flagged it as a suspected duplicate of the earlier settlement BNK-000255, leaving it unapplied.\",\n  \"action\": \"CHECK_DUPLICATE\",\n  \"likely_invoice\": \"INV-1169\",\n  \"confidence_note\": \"moderate -- amount very close to INV-1169, narration matches counterparty, but small unexplained gap and duplicate flag suggest need to verify if this is a duplicate credit.\"\n}",
+  "tokens_in": 1372,
+  "tokens_out": 296,
+  "txn_id": "BNK-000183",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:11:08.576700"
+}

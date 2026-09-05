@@ -1,0 +1,19 @@
+{
+  "text": "{\"invoice_ids\":[],\"allocations\":[],\"confidence\":0.92,\"reasoning\":\"credit amount equals gross minus allowed bank charge for both INV-1302 and INV-1147, creating ambiguity\"}",
+  "tokens_in": 1302,
+  "tokens_out": 556,
+  "txn_id": "BNK-000497",
+  "candidates": [
+    "INV-1302",
+    "INV-1147",
+    "INV-1323",
+    "INV-1063",
+    "INV-1189",
+    "INV-1136",
+    "INV-1453",
+    "INV-1238"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": "v1",
+  "cached_at": "2026-09-04 19:59:46"
+}

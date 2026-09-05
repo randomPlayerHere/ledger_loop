@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"Credit of Rs 38,990.82 received on 2026-07-21 from Nair Industries (UTR 634628497195) is Rs 28.15 short of the gross amount of INV-1012 (Rs 39,018.97), which the rules engine already marked as settled by BNK-000033 and flagged as a suspected duplicate credit.\",\n  \"action\": \"CHECK_DUPLICATE\",\n  \"likely_invoice\": \"INV-1012\",\n  \"confidence_note\": \"moderate -- amount gap small and narration matches counterparty, but rules already indicate duplicate.\"\n}",
+  "tokens_in": 1368,
+  "tokens_out": 282,
+  "txn_id": "BNK-000462",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:10:29.587230"
+}

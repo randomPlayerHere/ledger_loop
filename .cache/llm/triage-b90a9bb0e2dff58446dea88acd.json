@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The credit of Rs 178,961.53 on 2026-07-14 from Mehta Chemicals (UTR 234880394355) matches the net amount of invoice INV-1248 after applying the 2% TDS (gross Rs 182,613.81 less TDS Rs 3,652.28). The rule engine flagged it as a suspected duplicate, but the amount gap is fully explained by TDS.\",\n  \"action\": \"CONFIRM_MATCH\",\n  \"likely_invoice\": \"INV-1248\",\n  \"confidence_note\": \"strong -- amount equals invoice gross minus 2% TDS exactly.\"\n}",
+  "tokens_in": 1389,
+  "tokens_out": 428,
+  "txn_id": "BNK-000255",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:06:56.330286"
+}

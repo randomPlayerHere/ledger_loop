@@ -1,0 +1,13 @@
+{
+  "text": "{ \"invoice_ids\": [], \"allocations\": [], \"confidence\": 0.0, \"reasoning\": \"Both invoices fit the bank-charges explanation equally, creating ambiguity.\" }",
+  "tokens_in": 681,
+  "tokens_out": 166,
+  "txn_id": "BNK-000243",
+  "candidates": [
+    "INV-1309",
+    "INV-1140"
+  ],
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "prompt_version": "v1",
+  "cached_at": "2026-09-05 03:05:25"
+}

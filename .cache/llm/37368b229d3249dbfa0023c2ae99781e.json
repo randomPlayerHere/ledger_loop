@@ -1,0 +1,13 @@
+{
+  "text": "{\"invoice_ids\":[],\"allocations\":[],\"confidence\":0.92,\"reasoning\":\"Both INV-1404 and INV-1360 match the credit amount after allowable bank charges\"}",
+  "tokens_in": 908,
+  "tokens_out": 541,
+  "txn_id": "BNK-000505",
+  "candidates": [
+    "INV-1404",
+    "INV-1360"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": "v1",
+  "cached_at": "2026-09-04 19:49:22"
+}

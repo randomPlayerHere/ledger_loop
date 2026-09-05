@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"A credit of Rs 28,507.78 arrived on 2026-07-28 with narration 'NEFT/RastoPac/RETURN', indicating a return/refund from a party likely related to Rastogi Packaging. No invoice in the list matches this amount exactly; the closest is INV-1302 (Malhotra Polymers) which is Rs 41.24 higher, and the narration does not reference that counterparty.\",\n  \"action\": \"NEEDS_MORE_DATA\",\n  \"likely_invoice\": \"\",\n  \"confidence_note\": \"weak -- narration points to Rastogi but amount does not correspond to any invoice; insufficient data to decide.\"\n}",
+  "tokens_in": 1326,
+  "tokens_out": 360,
+  "txn_id": "BNK-000497",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:11:47.533710"
+}

@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"Credit of Rs 64,144.22 on 2026-07-17 from IMPS transaction (UTR 296917403674) narrated as AGARWTRA matches the exact gross amount of INV-1331 (Agarwal Traders Pvt Ltd). The rule engine flagged it as a suspected duplicate because INV-1331 was already settled by BNK-000324.\",\n  \"action\": \"CHECK_DUPLICATE\",\n  \"likely_invoice\": \"INV-1331\",\n  \"confidence_note\": \"strong -- amount matches exactly, narration points to Agarwal Traders, but already marked as settled/duplicate.\"\n}",
+  "tokens_in": 1382,
+  "tokens_out": 261,
+  "txn_id": "BNK-000325",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:22:49.141506"
+}

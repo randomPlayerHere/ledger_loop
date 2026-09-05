@@ -1,0 +1,19 @@
+{
+  "text": "{\"invoice_ids\":[],\"allocations\":[],\"confidence\":0.85,\"reasoning\":\"Multiple invoices have gross minus delta equal to the credit amount, creating ambiguity\"}",
+  "tokens_in": 1307,
+  "tokens_out": 825,
+  "txn_id": "BNK-000099",
+  "candidates": [
+    "INV-1395",
+    "INV-1466",
+    "INV-1441",
+    "INV-1479",
+    "INV-1074",
+    "INV-1051",
+    "INV-1286",
+    "INV-1469"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": "v1",
+  "cached_at": "2026-09-04 20:51:01"
+}

@@ -1,0 +1,19 @@
+{
+  "text": "{\"invoice_ids\":[\"INV-1469\"],\"allocations\":[{\"invoice_id\":\"INV-1469\",\"amount\":\"17584.60\"}],\"confidence\":0.96,\"reasoning\":\"credit amount equals INV-1469 gross minus Rs\u202f86.09 bank charges within allowed limit\"}",
+  "tokens_in": 1306,
+  "tokens_out": 854,
+  "txn_id": "BNK-000481",
+  "candidates": [
+    "INV-1469",
+    "INV-1052",
+    "INV-1379",
+    "INV-1059",
+    "INV-1449",
+    "INV-1033",
+    "INV-1389",
+    "INV-1150"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": "v1",
+  "cached_at": "2026-09-04 19:42:29"
+}

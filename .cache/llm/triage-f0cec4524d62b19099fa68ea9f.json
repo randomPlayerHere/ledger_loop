@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"A credit of Rs\u202f37,186.71 arrived on 2026\u201105\u201121 with narration 'INB/826871449481/PAYMENT' and UTR 826871449481. No invoice in the ledger matches this amount, date, or any identifiable counterparty, so the rule engine could not find a candidate.\",\n  \"action\": \"NEEDS_MORE_DATA\",\n  \"likely_invoice\": \"\",\n  \"confidence_note\": \"weak -- narration gives no party name and no invoice fits the amount or date.\"\n}",
+  "tokens_in": 510,
+  "tokens_out": 209,
+  "txn_id": "BNK-000168",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:10:53.559495"
+}

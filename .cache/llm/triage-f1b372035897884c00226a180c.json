@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs 152,118.78 on 2026-08-04 matches invoice INV-1130 for Iyer Textiles & Co except for a shortfall of Rs 3,104.46, which corresponds to a 2% TDS deduction. The narration only shows a UTR reference with no party name, so the match relies on the amount gap.\",\n  \"action\": \"CONFIRM_MATCH\",\n  \"likely_invoice\": \"INV-1130\",\n  \"confidence_note\": \"moderate -- amount gap exactly equals expected 2% TDS on INV-1130, but narration lacks counterparty details.\"\n}",
+  "tokens_in": 617,
+  "tokens_out": 192,
+  "txn_id": "BNK-000145",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:06:58.242823"
+}

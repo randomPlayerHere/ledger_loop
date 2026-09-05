@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"A credit of Rs 79,983.21 on 2026-07-26 with narration 'REV-661253583335-FAILED TXN' (UTR 661253583335) does not match any open invoice; the rule engine notes that INV-1152 for the same party was already settled by another credit (BNK-000166) and treats this as a suspected duplicate credit left unapplied.\",\n  \"action\": \"CHECK_DUPLICATE\",\n  \"likely_invoice\": \"\",\n  \"confidence_note\": \"weak -- narration indicates a failed/reversal transaction and no invoice amount aligns with the credit; the rule already flagged it as a suspected duplicate.\"\n}",
+  "tokens_in": 742,
+  "tokens_out": 286,
+  "txn_id": "BNK-000515",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:07:54.960312"
+}

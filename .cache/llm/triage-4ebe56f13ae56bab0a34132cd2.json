@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs 28,192.36 from IyerTex (UTR 159292331857) on 2026-05-29 does not correspond to any of the open invoices for Iyer Textiles & Co; the closest invoice amounts differ by several thousand rupees and none match after considering applicable TDS.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"\",\n  \"confidence_note\": \"weak -- narration names the party but no invoice amount fits the credit within a reasonable tolerance.\"\n}",
+  "tokens_in": 1371,
+  "tokens_out": 357,
+  "txn_id": "BNK-000484",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:11:51.458205"
+}

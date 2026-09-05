@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"A credit of Rs 37,191.74 arrived on 2026-07-21 from RTGS YESB226983628581 VENKAPAC. The amount exactly matches the gross of INV-1195 (Venkat Packaging & Co), but the rule engine notes that INV-1195 was already settled by the prior transaction BNK-000191, suggesting this credit is a duplicate or unapplied payment.\",\n  \"action\": \"CHECK_DUPLICATE\",\n  \"likely_invoice\": \"INV-1195\",\n  \"confidence_note\": \"moderate -- amount matches INV-1195 exactly and narration points to Venkat Packaging, but the invoice is already marked settled, so the credit is likely a duplicate.\"\n}",
+  "tokens_in": 1372,
+  "tokens_out": 294,
+  "txn_id": "BNK-000192",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:24:17.206542"
+}

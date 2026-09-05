@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs 12,693.60 on 2026-06-20 (UTR 795291700490) is very close to invoice INV-1200 for Venkat Distributors (gross Rs 12,714.70), differing by only Rs 21.10. No rule could explain this small gap, and the narration does not name a counterparty or reference any invoice.\",\n  \"action\": \"WRITE_OFF_SMALL\",\n  \"likely_invoice\": \"INV-1200\",\n  \"confidence_note\": \"weak -- amount matches within a small Rs 21.10 gap, but no clear reason (e.g., fee, TDS) is evident from the data.\"\n}",
+  "tokens_in": 639,
+  "tokens_out": 363,
+  "txn_id": "BNK-000185",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:14:32.997167"
+}

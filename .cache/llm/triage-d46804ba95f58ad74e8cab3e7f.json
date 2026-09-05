@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs 18,972.46 on 2026-07-11 (UTR 998601810842) does not fully match any invoice; it is Rs 57.05 short of the open invoice INV-1009 for Agarwal Industries Pvt Ltd (gross Rs 19,029.51, issued 2026-07-08). The narration only contains a generic payment reference, so the shortfall is unexplained by the data.\",\n  \"action\": \"WRITE_OFF_SMALL\",\n  \"likely_invoice\": \"INV-1009\",\n  \"confidence_note\": \"moderate -- amount close to invoice INV-1009 with a small Rs 57.05 gap, but no remittance details to confirm.\"\n}",
+  "tokens_in": 563,
+  "tokens_out": 307,
+  "txn_id": "BNK-000013",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T15:46:56.041093"
+}

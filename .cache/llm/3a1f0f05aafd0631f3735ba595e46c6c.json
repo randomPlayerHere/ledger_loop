@@ -1,0 +1,15 @@
+{
+  "text": "{\"invoice_ids\": [],\"allocations\": [],\"confidence\": 0.0,\"reasoning\": \"All four candidates have a gross\u2011credit difference that could be explained by permissible bank charges, so the match is ambiguous.\"}",
+  "tokens_in": 882,
+  "tokens_out": 332,
+  "txn_id": "BNK-000499",
+  "candidates": [
+    "INV-1262",
+    "INV-1260",
+    "INV-1010",
+    "INV-1168"
+  ],
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "prompt_version": "v1",
+  "cached_at": "2026-09-04 22:12:04"
+}

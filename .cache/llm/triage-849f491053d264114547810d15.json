@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"Credit of Rs 19,975.62 from NEFT-BHATTEXP matches the exact amount of open invoice INV-1490 (Bhatt Exports Ltd). The rule engine flagged it as a suspected duplicate because INV-1490 was already settled by transaction BNK-000121.\",\n  \"action\": \"CHECK_DUPLICATE\",\n  \"likely_invoice\": \"INV-1490\",\n  \"confidence_note\": \"strong -- amount exact match and narration counterparty align, but duplicate suspicion needs verification.\"\n}",
+  "tokens_in": 1344,
+  "tokens_out": 235,
+  "txn_id": "BNK-000468",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:25:32.268253"
+}

@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"A credit of Rs 25,441.26 was received on 2026-05-28 via UTR 723290823647 with no counterparty name in the narration. The amount exactly matches the open invoice INV-1168 for Iyer Textiles & Co, but the rule engine already marked INV-1168 as settled by a prior credit (BNK-000181) and flagged this as a suspected duplicate credit.\",\n  \"action\": \"CHECK_DUPLICATE\",\n  \"likely_invoice\": \"INV-1168\",\n  \"confidence_note\": \"high -- amount matches INV-1168 exactly and the rule engine already flagged it as a duplicate of a settled invoice.\"\n}",
+  "tokens_in": 726,
+  "tokens_out": 279,
+  "txn_id": "BNK-000182",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:12:17.601379"
+}

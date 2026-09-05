@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"A credit of Rs 3,559.71 arrived on 2026-07-12 with narration 'REFUND/995665327270/GATEWAY' and UTR 995665327270, indicating a gateway refund. No invoices in the ledger match this amount, date, or counterparty, so the rule engine could not find a candidate.\",\n  \"action\": \"CHECK_REFUND\",\n  \"likely_invoice\": \"\",\n  \"confidence_note\": \"moderate -- narration clearly indicates a refund, but without a matching invoice we cannot confirm which transaction it relates to.\"\n}",
+  "tokens_in": 510,
+  "tokens_out": 239,
+  "txn_id": "BNK-000484",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:27:16.100721"
+}

@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs 13,433.65 on 2026-07-13 (IMPS UTR 897529515996) does not exactly match any open invoice; the closest are INV-1104 (Rs 13,482.13, short by Rs 48.48) and INV-1025 (Rs 13,466.43, short by Rs 32.78). The narration reveals no counterparty name, only a generic IMPS reference, so the shortfall could be bank charges, TDS, or a partial payment.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"\",\n  \"confidence_note\": \"weak -- narration lacks party details and amount gaps are unexplained\"\n}",
+  "tokens_in": 635,
+  "tokens_out": 358,
+  "txn_id": "BNK-000101",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T15:47:05.670888"
+}

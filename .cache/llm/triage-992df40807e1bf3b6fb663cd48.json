@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"A bank credit of Rs 30,210.32 was received on 2026-07-01 via IMPS (UTR 136522163791). No invoice in the ledger matches this amount, date, or counterparty, so the transaction remains unmatched.\",\n  \"action\": \"NEEDS_MORE_DATA\",\n  \"likely_invoice\": \"\",\n  \"confidence_note\": \"weak -- no candidate invoices were found, so the correct action is to request more information.\"\n}",
+  "tokens_in": 511,
+  "tokens_out": 220,
+  "txn_id": "BNK-000331",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:11:27.972311"
+}

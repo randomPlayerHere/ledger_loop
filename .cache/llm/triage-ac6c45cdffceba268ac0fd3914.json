@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs 11,233.10 on 2026-06-24 (UTR 441107346461) matches invoice INV-1041 for Bose Infotech & Co after a 10% TDS deduction (Rs 1,248.12) from the invoice gross of Rs 12,481.22. The narration does not name a counterparty, but the UTR ties the payment to the invoice.\",\n  \"action\": \"CONFIRM_MATCH\",\n  \"likely_invoice\": \"INV-1041\",\n  \"confidence_note\": \"strong -- amount gap equals exactly 10% TDS of the invoice, and the UTR references the payment.\"\n}",
+  "tokens_in": 609,
+  "tokens_out": 460,
+  "txn_id": "BNK-000059",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:15:05.674906"
+}

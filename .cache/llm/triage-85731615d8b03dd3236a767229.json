@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"A credit of Rs 47,686.88 was posted on 2026-07-16 with narration 'INT.PD:237000908213' (UTR 237000908213). No invoice in the ledger matches this amount, date, or counterparty, suggesting it may be an interest payment, bank charge, or other non\u2011invoice credit.\",\n  \"action\": \"NEEDS_MORE_DATA\",\n  \"likely_invoice\": \"\",\n  \"confidence_note\": \"low -- narration gives no clear counterparty and no invoice fits the amount or date.\"\n}",
+  "tokens_in": 508,
+  "tokens_out": 270,
+  "txn_id": "BNK-000486",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:23:36.053518"
+}

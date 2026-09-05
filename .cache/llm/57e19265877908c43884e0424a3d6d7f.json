@@ -1,0 +1,13 @@
+{
+  "text": "{\"invoice_ids\":[],\"allocations\":[],\"confidence\":0.85,\"reasoning\":\"Both INV-1316 and INV-1189 have a shortfall matching allowed bank charges\"}",
+  "tokens_in": 908,
+  "tokens_out": 738,
+  "txn_id": "BNK-000204",
+  "candidates": [
+    "INV-1316",
+    "INV-1189"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": "v1",
+  "cached_at": "2026-09-04 20:02:18"
+}

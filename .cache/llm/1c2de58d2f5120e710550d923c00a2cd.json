@@ -1,0 +1,15 @@
+{
+  "text": "{\"invoice_ids\": [],\"allocations\": [],\"confidence\": 0.9,\"reasoning\": \"No candidate invoice's gross, less TDS 2% or 10%, or bank charges up to max(Rs 50,0.5% gross) equals the credit amount Rs 5,444.18.\"}",
+  "tokens_in": 863,
+  "tokens_out": 615,
+  "txn_id": "BNK-000269",
+  "candidates": [
+    "INV-1035",
+    "INV-1127",
+    "INV-1263",
+    "INV-1498"
+  ],
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "prompt_version": "v1",
+  "cached_at": "2026-09-04 22:05:11"
+}

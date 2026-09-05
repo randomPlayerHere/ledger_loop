@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"Bank credit of Rs 82,081.53 on 2026-07-10 (UTR 140655310597) does not fully match the open invoice INV-1102 for Agarwal Enterprises LLP (gross Rs 82,321.05), leaving a shortfall of Rs 239.52. The narration only contains the UTR, giving no counterparty or payment details.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"INV-1102\",\n  \"confidence_note\": \"weak -- amount close but unexplained gap; narration lacks details to confirm.\"\n}",
+  "tokens_in": 561,
+  "tokens_out": 258,
+  "txn_id": "BNK-000475",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:21:45.927096"
+}

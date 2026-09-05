@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs 145,989.72 on 2026-05-31 (UTR 478296550883) is Rs 57.54 less than the open invoice INV-1057 from Bose Industries (gross Rs 146,047.26, issued 2026-05-22). The narration only contains a UTR reference with no counterparty name, so the shortfall cannot be explained by any rule.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"INV-1057\",\n  \"confidence_note\": \"weak -- amount gap is small and the invoice matches the counterparty implied by the narration, but the exact reason for the difference (e.g., bank fee, discount) is not evident from the data.\"\n}",
+  "tokens_in": 562,
+  "tokens_out": 292,
+  "txn_id": "BNK-000059",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T15:45:02.896322"
+}

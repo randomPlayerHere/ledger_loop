@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs 138,410.01 on 2026-07-30 (UTR 189281077298) is Rs 42.42 less than the open invoice INV-1073 from Iyer Infotech (gross Rs 138,452.43, issued 2026-07-11). The narration only contains a generic payment reference, so the shortfall is unexplained but could be a bank charge or rounding difference.\",\n  \"action\": \"WRITE_OFF_SMALL\",\n  \"likely_invoice\": \"INV-1073\",\n  \"confidence_note\": \"moderate -- amount gap is small and matches a single open invoice, but the exact reason for the Rs 42.42 difference is not evident from the data.\"\n}",
+  "tokens_in": 570,
+  "tokens_out": 273,
+  "txn_id": "BNK-000071",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T15:45:05.091677"
+}

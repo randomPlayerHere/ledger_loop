@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs 49,223.99 on 2026-05-31 (UTR 791959279048, narration RTGS UTIB791959279048 CHATTTEX) does not exactly match any invoice; the closest is INV-1473 for Chatterjee Logistics at Rs 49,014.98, leaving an unexplained difference of Rs 209.01.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"INV-1473\",\n  \"confidence_note\": \"weak -- amount gap small but unexplained; narration only gives a generic counterparty hint.\"\n}",
+  "tokens_in": 1359,
+  "tokens_out": 284,
+  "txn_id": "BNK-000221",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:23:30.449898"
+}

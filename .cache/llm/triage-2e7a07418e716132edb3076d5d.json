@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The credit of Rs 124,889.71 on 2026-07-28 exactly matches the gross amount of invoice INV-1433 (Trivedi Enterprises). The rule engine flagged it as a suspected duplicate because invoice INV-1433 was already settled by a prior credit (BNK-000420), leaving this amount unapplied.\",\n  \"action\": \"CHECK_DUPLICATE\",\n  \"likely_invoice\": \"INV-1433\",\n  \"confidence_note\": \"strong -- amount matches invoice exactly and narration references the same invoice number.\"\n}",
+  "tokens_in": 1375,
+  "tokens_out": 230,
+  "txn_id": "BNK-000421",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:07:16.718112"
+}

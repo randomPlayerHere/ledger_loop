@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"A UPI credit of Rs 24,614.48 on 2026-05-17 matches the exact amount of invoice INV-1053 (Chatterjee Textiles), but the rule engine notes that INV-1053 was already settled by transaction BNK-000071, suggesting this credit is a duplicate or unapplied payment.\",\n  \"action\": \"CHECK_DUPLICATE\",\n  \"likely_invoice\": \"INV-1053\",\n  \"confidence_note\": \"moderate -- amount matches exactly and narration points to Chatterjee Textiles, but rule indicates prior settlement.\"\n}",
+  "tokens_in": 1084,
+  "tokens_out": 242,
+  "txn_id": "BNK-000072",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:12:27.319648"
+}

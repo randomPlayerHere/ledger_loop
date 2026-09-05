@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"A credit of Rs 29,204.64 arrived on 2026-06-12 from NEFT-NAIRIND (UTR 787461096985). The narration points to Nair Industries LLP, but none of the open invoices for that party match the amount; the closest is INV-1260 which is Rs 3,828.29 short.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"\",\n  \"confidence_note\": \"weak -- narration names Nair Industries but amount gap unexplained and no invoice fits.\"\n}",
+  "tokens_in": 1336,
+  "tokens_out": 251,
+  "txn_id": "BNK-000100",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:11:37.197215"
+}

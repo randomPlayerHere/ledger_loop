@@ -1,0 +1,18 @@
+{
+  "text": "{\n  \"invoice_ids\": [\"INV-1349\"],\n  \"allocations\": [{\"invoice_id\": \"INV-1349\", \"amount\":  \"Rs 24,420.64\"}],\n  \"confidence\": 0.92,\n  \"reasoning\": \"INV-1349 gross Rs 24,457.71 minus bank charges Rs 37.07 equals the credit Rs 24,420.64, and the shortfall is explained by allowable bank charges.\"\n}",
+  "tokens_in": 1117,
+  "tokens_out": 523,
+  "txn_id": "BNK-000245",
+  "candidates": [
+    "INV-1349",
+    "INV-1238",
+    "INV-1424",
+    "INV-1313",
+    "INV-1292",
+    "INV-1133",
+    "INV-1020"
+  ],
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "prompt_version": "v1",
+  "cached_at": "2026-09-05 03:05:01"
+}

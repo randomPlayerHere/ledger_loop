@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"A credit of Rs 59,351.88 arrived on 2026-05-20 via IMPS from an unknown remitter (UTR 625715384106). The narration does not identify any counterparty, and no invoice in the ledger matches this amount, date, or party, leaving the source of the funds unclear.\",\n  \"action\": \"NEEDS_MORE_DATA\",\n  \"likely_invoice\": \"\",\n  \"confidence_note\": \"weak -- narration gives no identifiable party and no invoice fits the amount or date.\"\n}",
+  "tokens_in": 513,
+  "tokens_out": 193,
+  "txn_id": "BNK-000509",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:09:26.367937"
+}

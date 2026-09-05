@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"A credit of Rs 78,374.56 from IyerTex (UTR 592789627535) arrived on 2026-06-24. The amount is Rs 30.04 short of the open invoice INV-1008 (Rs 78,404.60) and the rules engine notes that INV-1008 was already settled by another transaction (BNK-000028), suggesting this credit may be a duplicate or an unapplied partial payment.\",\n  \"action\": \"CHECK_DUPLICATE\",\n  \"likely_invoice\": \"INV-1008\",\n  \"confidence_note\": \"weak -- amount close to INV-1008 but rules indicate it was already settled, so likely duplicate/unapplied.\"\n}",
+  "tokens_in": 1384,
+  "tokens_out": 277,
+  "txn_id": "BNK-000045",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:08:00.983997"
+}

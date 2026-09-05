@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs 9,340.22 on 2026-08-04 (RTGS from AXIS, UTR 128993395393, narration REDDYIND) does not fully match any open invoice. The closest is INV-1180 for Iyer Polymers & Co (Rs 9,379.92), leaving a small unexplained difference of Rs -39.70.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"INV-1180\",\n  \"confidence_note\": \"moderate -- amount very close to INV-1180 with only a Rs 39.70 gap, suggesting a partial payment or rounding difference.\"\n}",
+  "tokens_in": 1369,
+  "tokens_out": 314,
+  "txn_id": "BNK-000443",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:15:18.483366"
+}

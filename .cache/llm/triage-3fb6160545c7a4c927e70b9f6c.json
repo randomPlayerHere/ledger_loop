@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The credit of Rs 11,595.71 from Mehta Agro (UTR 416844780876) does not match any open invoice; the closest is INV-1055 (Rs 24,107.50) which is overpaid by Rs 12,511.79, and INV-1047 is under by Rs 7,219.45. The narration suggests a duplicate credit of an already settled invoice (INV-1055 per BNK-000056).\",\n  \"action\": \"CHECK_DUPLICATE\",\n  \"likely_invoice\": \"\",\n  \"confidence_note\": \"weak -- narration hints duplicate but amount does not correspond to any invoice; no clear match.\"\n}",
+  "tokens_in": 726,
+  "tokens_out": 216,
+  "txn_id": "BNK-000057",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T15:47:18.974626"
+}

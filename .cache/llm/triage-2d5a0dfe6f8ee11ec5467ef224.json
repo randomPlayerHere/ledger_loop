@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The credit of Rs 112,168.49 on 2026-06-11 via RTGS (UTR 284849359148) from DESHMPAC matches the exact amount of invoice INV-1306 issued to Deshmukh Packaging Ltd on 2026-06-08, but the rule engine flagged it as a suspected duplicate because INV-1306 was already settled by transaction BNK-000302.\",\n  \"action\": \"CHECK_DUPLICATE\",\n  \"likely_invoice\": \"INV-1306\",\n  \"confidence_note\": \"strong -- amount and counterparty (Deshmukh Packaging) match exactly; only uncertainty is whether BNK-000302 truly settled the invoice.\"\n}",
+  "tokens_in": 1395,
+  "tokens_out": 227,
+  "txn_id": "BNK-000303",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:20:44.515624"
+}

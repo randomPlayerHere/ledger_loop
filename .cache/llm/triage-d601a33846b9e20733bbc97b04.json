@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The credit of Rs 164,039.64 matches invoice INV-1122 (Chatterjee Exports) after deducting 10% TDS (Rs 18,226.63), leaving a net amount that equals the transaction. The narration 'NEFT-ChattExp' points to the same counterparty.\",\n  \"action\": \"CONFIRM_MATCH\",\n  \"likely_invoice\": \"INV-1122\",\n  \"confidence_note\": \"strong -- amount gap exactly equals 10% TDS on INV-1122 and narration aligns with Chatterjee Exports.\"\n}",
+  "tokens_in": 1398,
+  "tokens_out": 236,
+  "txn_id": "BNK-000128",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:20:23.669997"
+}

@@ -1,0 +1,12 @@
+{
+  "text": "{\"invoice_ids\":[\"INV-1011\"],\"allocations\":[{\"invoice_id\":\"INV-1011\",\"amount\":\"60232.20\"}],\"confidence\":0.98,\"reasoning\":\"Shortfall of Rs 6,692.47 equals 10% TDS on gross Rs 66,924.67, matching the candidate note.\"}",
+  "tokens_in": 836,
+  "tokens_out": 467,
+  "txn_id": "BNK-000032",
+  "candidates": [
+    "INV-1011"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": "v1",
+  "cached_at": "2026-09-04 19:42:25"
+}

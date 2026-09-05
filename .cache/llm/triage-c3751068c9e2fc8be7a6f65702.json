@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"A credit of Rs 111,619.36 arrived on 2026-07-10 from NEFT-CHTTTX. The amount is within a few hundred rupees of two open invoices from Chatterjee Textiles (INV-1357 and INV-1146), but the rule engine already flagged INV-1357 as settled by another credit (BNK-000353) and suspects this is a duplicate/unapplied credit.\",\n  \"action\": \"CHECK_DUPLICATE\",\n  \"likely_invoice\": \"INV-1357\",\n  \"confidence_note\": \"moderate -- amount close to INV-1357 and INV-1146, but rules indicate INV-1357 already settled, suggesting duplicate credit.\"\n}",
+  "tokens_in": 1344,
+  "tokens_out": 361,
+  "txn_id": "BNK-000159",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:07:20.024019"
+}

@@ -1,0 +1,19 @@
+{
+  "text": "{\"invoice_ids\":[],\"allocations\":[],\"confidence\":0.97,\"reasoning\":\"Credit matches gross\u2011TDS10% for INV-1324 and also gross\u2011bank charges for INV-1005, creating ambiguous fits\"}",
+  "tokens_in": 1313,
+  "tokens_out": 495,
+  "txn_id": "BNK-000322",
+  "candidates": [
+    "INV-1324",
+    "INV-1005",
+    "INV-1208",
+    "INV-1179",
+    "INV-1325",
+    "INV-1336",
+    "INV-1185",
+    "INV-1113"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": "v1",
+  "cached_at": "2026-09-04 20:00:28"
+}

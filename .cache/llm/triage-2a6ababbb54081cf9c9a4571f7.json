@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs 70,215.43 on 2026-06-03 (IMPS transfer UTR 285753093615) is close to invoice INV-1274 from Deshmukh Packaging Ltd (gross Rs 70,394.16) but falls short by Rs 178.73. No counterparty name appears in the narration, and the amount gap cannot be explained by any rule.\",\n  \"action\": \"WRITE_OFF_SMALL\",\n  \"likely_invoice\": \"INV-1274\",\n  \"confidence_note\": \"weak -- amount close but unexplained difference; narration lacks payer details\"\n}",
+  "tokens_in": 573,
+  "tokens_out": 286,
+  "txn_id": "BNK-000025",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:22:04.324100"
+}

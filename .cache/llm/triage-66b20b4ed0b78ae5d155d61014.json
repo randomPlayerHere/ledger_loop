@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The credit of Rs 57,379.41 on 2026-07-20 from UPI/450525458521/reddypac@okkkbkbank matches the counterparty name on open invoice INV-1049 (Reddy Packaging Ltd) but leaves Rs 24,009.82 unaccounted for, with no TDS or other charge to explain the shortfall.\",\n  \"action\": \"CONFIRM_MATCH\",\n  \"likely_invoice\": \"INV-1049\",\n  \"confidence_note\": \"moderate -- counterparty name matches but the amount gap remains unexplained\"\n}",
+  "tokens_in": 1405,
+  "tokens_out": 279,
+  "txn_id": "BNK-000050",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T15:45:30.124129"
+}

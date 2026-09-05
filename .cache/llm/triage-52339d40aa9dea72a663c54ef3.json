@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The credit of Rs\u202f52,059.86 on 2026\u201107\u201114 references invoice INV\u20111437 in the narration, but the amount does not match the invoice gross (Rs\u202f83,295.77) nor any obvious TDS\u2011adjusted value; the difference is Rs\u202f\u201131,235.91, suggesting a partial or unexplained payment.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"INV-1437\",\n  \"confidence_note\": \"weak -- narration points to INV\u20111437 but the amount gap is large and unexplained\"\n}",
+  "tokens_in": 1393,
+  "tokens_out": 350,
+  "txn_id": "BNK-000425",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:09:48.593063"
+}

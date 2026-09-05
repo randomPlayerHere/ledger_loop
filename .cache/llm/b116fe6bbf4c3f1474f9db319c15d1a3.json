@@ -1,0 +1,12 @@
+{
+  "text": "{\"invoice_ids\":[\"INV-1478\"],\"allocations\":[{\"invoice_id\":\"INV-1478\",\"amount\":\"38306.50\"}],\"confidence\":0.97,\"reasoning\":\"shortfall 159.07 is within allowed bank charges (max 0.5% of 38,465.57 = 192.33)\"}",
+  "tokens_in": 831,
+  "tokens_out": 485,
+  "txn_id": "BNK-000210",
+  "candidates": [
+    "INV-1478"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": "v1",
+  "cached_at": "2026-09-04 20:03:06"
+}

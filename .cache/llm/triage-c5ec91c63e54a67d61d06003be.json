@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"A UPI credit of Rs 20,148.14 was received on 2026-07-01 from chhxp@oksbinbank (UTR 331294064172). The amount is Rs 81.02 less than the open invoice INV-1224 for Chatterjee Textiles (gross Rs 20,229.16, issued 2026-05-22, due 2026-06-21). No rule could explain this specific shortfall.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"INV-1224\",\n  \"confidence_note\": \"weak -- amount close to invoice but unexplained Rs 81.02 difference; narration gives no remittance details.\"\n}",
+  "tokens_in": 574,
+  "tokens_out": 326,
+  "txn_id": "BNK-000310",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:13:03.869560"
+}

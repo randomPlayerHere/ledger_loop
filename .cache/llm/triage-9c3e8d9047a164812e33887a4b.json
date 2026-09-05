@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs 9,116.20 on 2026-07-05 (UTR 867364005611) does not exactly match any open invoice. The closest is INV-1471 for Bhatt Enterprises LLP, which is Rs 9,124.77 \u2013 a shortfall of Rs 8.57. No other invoice is within a reasonable range.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"INV-1471\",\n  \"confidence_note\": \"weak -- amount close to INV-1471 but the Rs 8.57 gap is unexplained; narration gives no counterparty details.\"\n}",
+  "tokens_in": 622,
+  "tokens_out": 294,
+  "txn_id": "BNK-000220",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:15:23.791060"
+}

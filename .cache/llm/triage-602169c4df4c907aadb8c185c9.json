@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"A bank credit of Rs 23,202.32 was received on 2026-07-14 with narration 'INB/169341133199/PAYMENT' and UTR 169341133199. No invoice in the ledger matches this amount, date, or counterparty, leaving the transaction unexplained.\",\n  \"action\": \"NEEDS_MORE_DATA\",\n  \"likely_invoice\": \"\",\n  \"confidence_note\": \"weak -- no candidate invoices were close on amount, date, or counterparty.\"\n}",
+  "tokens_in": 510,
+  "tokens_out": 255,
+  "txn_id": "BNK-000126",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:25:17.834766"
+}

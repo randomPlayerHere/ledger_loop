@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"A UPI credit of Rs 62,146.78 from chtttx@okaxisbank on 2026-06-06 does not exactly match any open invoice; the nearest is INV-1070 for Chatterjee Textiles (Rs 65,352.88), leaving an unexplained shortfall of about Rs 3,206.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"INV-1070\",\n  \"confidence_note\": \"weak -- amount close to INV-1070 but gap unexplained, no remittance details in narration.\"\n}",
+  "tokens_in": 1287,
+  "tokens_out": 257,
+  "txn_id": "BNK-000477",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:09:07.037792"
+}

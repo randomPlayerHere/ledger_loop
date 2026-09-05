@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The credit of Rs\u202f31,457.72 on 2026\u201108\u201105 (UTR\u202f900301871916) is close to the open invoice INV\u20111052 for Pillai Traders Ltd (Rs\u202f31,591.10), differing by only Rs\u202f133.38. No other candidate invoice matches the amount, and the narration does not name a counterparty.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"INV-1052\",\n  \"confidence_note\": \"moderate -- amount gap is small and could be bank charges or rounding; narration lacks details.\"\n}",
+  "tokens_in": 632,
+  "tokens_out": 273,
+  "txn_id": "BNK-000367",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:24:43.543065"
+}

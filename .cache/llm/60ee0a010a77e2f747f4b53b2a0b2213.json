@@ -1,0 +1,12 @@
+{
+  "text": "{\"invoice_ids\":[\"INV-1407\"],\"allocations\":[{\"invoice_id\":\"INV-1407\",\"amount\":\"57389.35\"}],\"confidence\":0.97,\"reasoning\":\"gap of Rs 154.58 matches allowed bank charges (\u22640.5% of Rs 57,543.93)\"}",
+  "tokens_in": 833,
+  "tokens_out": 434,
+  "txn_id": "BNK-000512",
+  "candidates": [
+    "INV-1407"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": "v1",
+  "cached_at": "2026-09-04 19:47:23"
+}

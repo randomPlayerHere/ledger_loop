@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs 23,853.03 on 2026-06-18 (IMPS transfer from IyerExp) does not exactly match any open invoice. The closest is INV-1126 (Iyer Exports, Rs 24,050.52), leaving an unexplained shortfall of Rs 197.49.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"INV-1126\",\n  \"confidence_note\": \"weak -- amount gap is small but unexplained; narration points to Iyer Exports\"\n}",
+  "tokens_in": 1323,
+  "tokens_out": 347,
+  "txn_id": "BNK-000419",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:25:15.574294"
+}

@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"The bank credit of Rs 16,901.39 on 2026-07-03 (UTR 282895124217, narration NEFT-IYRPL) matches the gross amount of invoice INV-1169 (Rs 18,779.32) less an exact TDS deduction of Rs 1,877.93 (10%). The rule engine flagged it as short by that TDS amount, indicating the payment likely represents the net amount after tax withheld.\",\n  \"action\": \"CONFIRM_MATCH\",\n  \"likely_invoice\": \"INV-1169\",\n  \"confidence_note\": \"strong -- amount gap equals 10% TDS of the invoice, narration points to Iyer Polymers LLP.\"\n}",
+  "tokens_in": 597,
+  "tokens_out": 217,
+  "txn_id": "BNK-000166",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:26:07.796673"
+}

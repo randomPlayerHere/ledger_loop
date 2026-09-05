@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"Bank credit of Rs 32,972.34 on 2026-05-12 with narration 'INT.PD:684650796321' (UTR same) shows no matching invoice in the ledger; the amount and date do not correspond to any recorded transaction, and the narration does not reveal a counterparty.\",\n  \"action\": \"NEEDS_MORE_DATA\",\n  \"likely_invoice\": \"\",\n  \"confidence_note\": \"weak -- no invoice matches amount, date, or narration; cannot infer purpose without additional remittance details.\"\n}",
+  "tokens_in": 508,
+  "tokens_out": 201,
+  "txn_id": "BNK-000504",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:11:24.809185"
+}

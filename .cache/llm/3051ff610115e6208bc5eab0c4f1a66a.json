@@ -1,0 +1,22 @@
+{
+  "text": "{\n  \"invoice_ids\": [\"INV-1264\"],\n  \"allocations\": [\n    {\n      \"invoice_id\": \"INV-1264\",\n      \"amount\":  \t\"Rs 62,146.78\"\n    }\n  ],\n  \"confidence\": 0.82,\n  \"reasoning\": \"INV-1264 gross Rs 69,314.25 less 10% TDS (Rs 6,931.43) equals Rs 62,382.83; the credit is Rs 236.05 lower, which is within the allowed bank charge limit of max(Rs 50, 0.5% gross)=Rs 346.57.\"\n}",
+  "tokens_in": 1498,
+  "tokens_out": 1141,
+  "txn_id": "BNK-000477",
+  "candidates": [
+    "INV-1264",
+    "INV-1070",
+    "INV-1488",
+    "INV-1280",
+    "INV-1357",
+    "INV-1367",
+    "INV-1408",
+    "INV-1364",
+    "INV-1224",
+    "INV-1053",
+    "INV-1028"
+  ],
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "prompt_version": "v1",
+  "cached_at": "2026-09-04 22:04:43"
+}

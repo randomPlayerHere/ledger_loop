@@ -1,0 +1,9 @@
+{
+  "text": "{\n  \"summary\": \"Credit of Rs 110,725.48 received on 2026-08-04 from UPI ID kulkasol@okicicbank (UTR 452442243998). The amount does not exactly match any open invoice; the closest is INV-1246 for Kulkarni Solutions LLP (Rs 108,409.43), leaving an unexplained gap of Rs 2,316.05.\",\n  \"action\": \"REQUEST_REMITTANCE\",\n  \"likely_invoice\": \"INV-1246\",\n  \"confidence_note\": \"weak -- amount close to INV-1246 but the residual difference is not explained by any visible tax or discount.\"\n}",
+  "tokens_in": 1095,
+  "tokens_out": 330,
+  "txn_id": "BNK-000242",
+  "kind": "triage",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "written_at": "2026-09-05T03:20:51.331245"
+}

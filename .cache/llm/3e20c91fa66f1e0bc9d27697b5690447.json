@@ -1,0 +1,23 @@
+{
+  "text": "{\"invoice_ids\": [], \"allocations\": [], \"confidence\": 0.0, \"reasoning\": \"Both INV-1469 and INV-1327 match the credit amount with explainable bank-charge gaps, creating an equally valid alternative.\"}",
+  "tokens_in": 1605,
+  "tokens_out": 839,
+  "txn_id": "BNK-000481",
+  "candidates": [
+    "INV-1469",
+    "INV-1052",
+    "INV-1379",
+    "INV-1059",
+    "INV-1449",
+    "INV-1033",
+    "INV-1389",
+    "INV-1150",
+    "INV-1168",
+    "INV-1494",
+    "INV-1128",
+    "INV-1327"
+  ],
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "prompt_version": "v1",
+  "cached_at": "2026-09-04 22:01:49"
+}

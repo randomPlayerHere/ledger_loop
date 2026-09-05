@@ -8,7 +8,7 @@ could actually run a month-end on.
 Two ways in. **Generate** builds a synthetic statement and ledger from a seed,
 and because the generator also writes the answer key, that path can show real
 accuracy. **Upload** takes a bank.csv and a ledger.csv and runs the same
-pipeline over them — everything works except the accuracy table, which needs an
+pipeline over them. Everything works except the accuracy table, which needs an
 answer key nobody has for real data. That asymmetry is stated in the UI rather
 than papered over: a reconciliation tool that reports a precision figure it
 could not have computed is worse than one that reports none.
@@ -74,22 +74,48 @@ OUTCOME_MEANING = {
                      "reached only by rules whose measured precision earned it."),
     "NEEDS_REVIEW": ("A match is proposed, but the evidence identifies the "
                      "invoice without identifying the payer. A person confirms."),
-    "EXCEPTION": ("Nothing could be explained. Escalated deliberately — "
-                  "abstaining is a correct answer, not a failure."),
+    "EXCEPTION": ("Nothing could be explained, so it was escalated on "
+                  "purpose. Abstaining is a correct answer here."),
 }
 
 RULE_MEANING = {
     "R1_EXACT": "Amount matches one invoice to the paisa, and no other candidate does",
     "R3_TOLERANCE": "Short by exactly TDS (2% or 10%) or by bank charges within ₹50 / 0.5%",
     "R4_SUBSET_SUM": "One credit clearing several of the same customer's invoices at once",
-    "R5_UNDERPAID": "Short by an amount nothing explains — read as a part payment",
+    "R5_UNDERPAID": "Short by an amount nothing explains, so it reads as a part payment",
     "R6_OVERPAID": "Credit exceeds the invoice; the excess is left unallocated",
-    "R7_SPLIT": "Two credits that together settle one invoice exactly — an instalment pair",
+    "R7_SPLIT": "Two credits that together settle one invoice exactly, an instalment pair",
     "DEDUP": "Same invoice paid twice; the later credit is left unapplied",
-    "LLM_ADJUDICATION": "Model's suggestion — off by default, measured at 0.43 precision",
+    "LLM_ADJUDICATION": "Model's suggestion. Off by default, measured at 0.43 precision",
     "REVIEW_ACCEPT": "A reviewer confirmed this match in the queue",
     "REVIEW_REJECT": "A reviewer rejected the proposal",
     "REVIEW_WRITE_OFF": "A reviewer wrote the difference off",
+}
+
+# The generator stamps every planted link with a difficulty band. These are the
+# bands, in the generator's own terms, so the table can be read without opening
+# generate.py.
+DIFFICULTY_MEANING = {
+    "EASY": "Amount and invoice number both line up.",
+    "MEDIUM": "Off by something with a name: TDS, a bank fee, an advance.",
+    "HARD": "The link is real, but the arithmetic does not announce it.",
+    "IMPOSSIBLE": "No ledger counterpart exists. Linking nothing is the answer.",
+}
+
+# The situation each planted link represents. Written from the payer's side,
+# because that is the thing a reviewer is actually reasoning about.
+SCENARIO_MEANING = {
+    "CLEAN": "Paid in full, on time, invoice number in the narration.",
+    "LATE": "Paid in full, 20 to 60 days after the due date.",
+    "SHORT_PAID_TDS": "Paid less TDS withheld at the statutory rate.",
+    "SHORT_PAID_CHARGES": "Paid less a small bank fee, ₹5 to ₹60, taken in transit.",
+    "OVERPAID": "Paid more than the invoice. The excess is an advance.",
+    "DISPUTED": "Contested the bill and paid 55 to 85 per cent. No explanation.",
+    "PARTIAL": "One invoice settled by two instalments, weeks apart.",
+    "CONSOLIDATED": "One credit clearing several invoices at once.",
+    "NO_REF": "Amount matches exactly, but no invoice number is quoted.",
+    "DUPLICATE": "The same payment arriving twice. Only the first is real.",
+    "ORPHAN": "A credit with no invoice behind it.",
 }
 
 METRIC_MEANING = {
@@ -97,7 +123,7 @@ METRIC_MEANING = {
         "Share of the statement settled with no human involved. Coverage.",
     "Precision (auto only)":
         "Of the links posted automatically, how many were right. The number "
-        "that must never slip — a wrong auto-post moves real money.",
+        "that must never slip, because a wrong auto-post moves real money.",
     "Recall (all outcomes)":
         "Share of all true invoice links the system found, in any outcome.",
     "Abstention precision":
@@ -112,6 +138,11 @@ _ICON = ROOT / "assets" / "favicon.png"
 st.set_page_config(page_title="LedgerLoop", layout="wide",
                    page_icon=str(_ICON) if _ICON.exists() else None,
                    initial_sidebar_state="expanded")
+
+# Top-left of the sidebar, above everything Streamlit puts there. Same file as
+# the tab icon, so the browser tab and the app agree on what this product is.
+if _ICON.exists():
+    st.logo(str(_ICON), size="large")
 
 # The one thing the theme cannot express: a masthead. Everything else -- type,
 # radii, the navy sidebar, chart palettes -- is config, not CSS overrides, so
@@ -155,6 +186,15 @@ st.markdown(f"""
       text-transform: uppercase; letter-spacing: .05em;
   }}
 
+  /* st.logo stops at size="large", which renders 30px. This mark is a square
+     icon rather than a wordmark, so it needs more height than a wordmark would
+     before it reads as a logo. The header grows with it, otherwise the taller
+     image overflows onto the first control below. */
+  [data-testid="stSidebarLogo"] {{
+      height: 3.25rem; width: auto; max-width: none;
+  }}
+  [data-testid="stSidebarHeader"] {{ min-height: 4.75rem; }}
+
   h2 {{ letter-spacing: -.015em; }}
   h3 {{ font-size: 1.05rem !important; color: {NAVY}; }}
   [data-testid="stTabs"] button p {{ font-weight: 600; font-size: .93rem; }}
@@ -178,7 +218,7 @@ def generate_batch(n_invoices: int, seed: int, days: int, profile: str,
     """Build a batch on disk and return its directory.
 
     Written out rather than held in memory so the answer key lands beside the
-    CSVs exactly as `make data` produces it — the app scores a generated batch
+    CSVs exactly as `make data` produces it, so the app scores a generated batch
     through the same `evaluate_matches` path the committed reports use, not a
     parallel one that might disagree with them.
     """
@@ -224,10 +264,10 @@ def decisions_frame(batch, decisions) -> pd.DataFrame:
         "date": txns[d.txn_id].value_date,
         "amount": float(txns[d.txn_id].amount),
         "outcome": d.outcome,
-        "rule": d.rule_id or "—",
+        "rule": d.rule_id or "-",
         "by": d.decided_by,
         "confidence": round(d.confidence, 3),
-        "matched": ", ".join(d.proposed_invoice_ids) or "—",
+        "matched": ", ".join(d.proposed_invoice_ids) or "-",
         "narration": txns[d.txn_id].narration,
         "reasoning": d.reasoning,
     } for d in decisions])
@@ -257,8 +297,29 @@ def _review_record(prior: MatchDecision, action: str, note: str,
     )
 
 
+def _rate(value: float, denominator: int) -> str:
+    """Format a rate, or say it is undefined.
+
+    ORPHAN and DUPLICATE rows carry no true links by construction, and neither
+    do IMPOSSIBLE transactions. Printing `0.000` in those cells reads as a
+    failure when linking nothing was the correct answer, so they say `n/a`
+    instead. A genuine zero, where the system did predict something and got it
+    wrong, still prints as a zero.
+    """
+    return f"{value:.3f}" if denominator else "n/a"
+
+
+def _table_height(n_rows: int) -> int:
+    """Tall enough for every row, so the table does not scroll inside itself.
+
+    These breakdowns are read as a whole: a row hidden behind an inner
+    scrollbar is a scenario the reader never learns the engine was tested on.
+    """
+    return (n_rows + 1) * 35 + 3
+
+
 # --------------------------------------------------------------------------
-# Sidebar — choose a source
+# Sidebar: choose a source
 # --------------------------------------------------------------------------
 
 st.sidebar.markdown("### LedgerLoop")
@@ -267,8 +328,8 @@ st.sidebar.caption("Reconciliation control")
 source = st.sidebar.radio(
     "Input", ["Generate synthetic", "Upload CSVs"],
     help="Generated batches come with an answer key, so accuracy can be "
-         "measured. Uploaded files cannot be scored — nobody has the answers "
-         "for real data.")
+         "measured. Uploaded files cannot be scored, because nobody has the "
+         "answers for real data.")
 
 batch_dir = None
 if source == "Generate synthetic":
@@ -277,7 +338,7 @@ if source == "Generate synthetic":
         # notes are already cached and committed, so a first-time visitor gets
         # the AI queue instantly and for free. Larger sizes still work; they
         # just cost live calls.
-        n_invoices = st.slider("Invoices", 50, 1000, 150, step=50)
+        n_invoices = st.slider("Invoices", 50, 500, 150, step=50)
         seed = st.number_input("Seed", 0, 999_999, 42, step=1,
                                help="Same seed, byte-identical batch.")
         profile = st.selectbox("Profile", ["standard", "stress"])
@@ -318,7 +379,7 @@ MASTHEAD = """
   <h1>LedgerLoop</h1>
   <p>Bank statement to ledger reconciliation &nbsp;·&nbsp;
      <span class="ll-pill">blocking</span>
-     <span class="ll-pill">rules R1–R7</span>
+     <span class="ll-pill">rules R1-R7</span>
      <span class="ll-pill">LLM triage</span>
      <span class="ll-pill">audit trail</span></p>
 </div>
@@ -336,18 +397,18 @@ if batch_dir is None:
     else:
         st.subheader("Waiting for two files")
         st.write("Upload a **bank.csv** and a **ledger.csv** in the sidebar. "
-                 "The pipeline runs identically on real data — but nobody has "
-                 "an answer key for a real statement, so accuracy cannot be "
+                 "The pipeline runs identically on real data, but nobody has an "
+                 "answer key for a real statement, so accuracy cannot be "
                  "measured on that path.")
 
     a, b, c = st.columns(3)
-    a.markdown("**Stage 0 — blocking**  \n500 invoices narrowed to a shortlist "
+    a.markdown("**Stage 0 · blocking**  \n500 invoices narrowed to a shortlist "
                "of 20 per credit, on amount, date and counterparty name.")
-    b.markdown("**Stage 1 — rules**  \nSeven deterministic rules, each of which "
+    b.markdown("**Stage 1 · rules**  \nSeven deterministic rules, each of which "
                "abstains rather than guess. Precision 0.994 on measured data.")
-    c.markdown("**Stage 2 — the model**  \nWrites the exception queue. It "
-               "proposes no matches: measured at 0.43 link precision, so it "
-               "does not get that job.")
+    c.markdown("**Stage 2 · the model**  \nWrites the exception queue. It "
+               "proposes no matches. Measured at 0.43 link precision, so "
+               "that job stays with the rules.")
     st.stop()
 
 try:
@@ -373,7 +434,7 @@ st.sidebar.metric("Auto-matched", counts["AUTO_MATCHED"])
 st.sidebar.metric("Needs review", counts["NEEDS_REVIEW"])
 st.sidebar.metric("Exceptions", counts["EXCEPTION"])
 if not scored:
-    st.sidebar.warning("No answer key — accuracy cannot be measured for "
+    st.sidebar.warning("No answer key, so accuracy cannot be measured for "
                        "uploaded data.")
 
 run_tab, results_tab, queue_tab, metrics_tab = st.tabs(
@@ -415,14 +476,14 @@ with run_tab:
     st.subheader("Which rule did the work")
     st.caption("Each rule answers one question about the money, and abstains "
                "rather than guess when it cannot.")
-    fired = df[df["rule"] != "—"]["rule"].value_counts().reset_index()
+    fired = df[df["rule"] != "-"]["rule"].value_counts().reset_index()
     fired.columns = ["rule", "transactions"]
     fired["what it matched"] = fired["rule"].map(
-        lambda r: RULE_MEANING.get(r, "—"))
+        lambda r: RULE_MEANING.get(r, "-"))
     st.dataframe(fired[["rule", "what it matched", "transactions"]],
                  hide_index=True, width='stretch')
 
-    st.info("Stage 2 adjudication is **off** — measured at 0.43 link precision "
+    st.info("Stage 2 adjudication is **off**. It measured 0.43 link precision "
             "against 0.994 for the rules. The model writes exception notes "
             "instead; generate them from the Exception queue tab.")
 
@@ -435,7 +496,7 @@ with results_tab:
     st.header("Results")
     st.markdown(" &nbsp; ".join(
         f"<span style='color:{OUTCOME_COLOUR[k]};font-weight:600'>■ {k}</span> "
-        f"<span style='color:#5A6B85;font-size:.88rem'>— {v}</span><br>"
+        f"<span style='color:#5A6B85;font-size:.88rem'>{v}</span><br>"
         for k, v in OUTCOME_MEANING.items()), unsafe_allow_html=True)
     st.write("")
 
@@ -459,12 +520,12 @@ with results_tab:
                        file_name="ledgerloop_results.csv", mime="text/csv")
 
     st.subheader("Audit record")
-    pick = st.selectbox("Transaction", view["txn_id"].tolist() or ["—"])
+    pick = st.selectbox("Transaction", view["txn_id"].tolist() or ["none"])
     trail = [d for d in history if d.txn_id == pick]
     if trail:
         if len(trail) > 1:
-            st.caption(f"{len(trail)} records — this transaction was "
-                       "reconsidered. Earlier readings are kept, never "
+            st.caption(f"{len(trail)} records. This transaction was reconsidered, "
+                       "and earlier readings are kept rather than "
                        "overwritten.")
         for i, d in enumerate(trail):
             label = "current" if d is trail[-1] else "superseded"
@@ -483,13 +544,13 @@ with results_tab:
 
 
 # --------------------------------------------------------------------------
-# 3 · Exception queue — the view that makes this a product
+# 3 · Exception queue: the view that makes this a product
 # --------------------------------------------------------------------------
 
 with queue_tab:
     st.header("Exception queue")
     st.caption("Ordered by money at stake. Accepting or rejecting writes a new "
-               "audit record — it never edits the one it supersedes.")
+               "audit record; it never edits the one it supersedes.")
 
     invs = {e.invoice_id: e for e in batch.ledger}
     queue = sorted([d for d in decisions
@@ -524,8 +585,9 @@ with queue_tab:
         capped = live[:MAX_LIVE_CALLS]
 
         if not live:
-            st.caption(f"All {len(queue)} notes are already cached — free, "
-                       f"instant, and reproducible from this repo without a key.")
+            st.caption(f"All {len(queue)} notes are already cached, so this is "
+                       f"free, instant and reproducible from this repo "
+                       f"without a key.")
         else:
             st.caption(
                 f"{len(cached)} of {len(queue)} notes are cached. Writing the "
@@ -564,7 +626,7 @@ with queue_tab:
             head.caption(d.reasoning)
 
             if note:
-                head.info(f"**{note.action}** — {note.summary}\n\n"
+                head.info(f"**{note.action}** · {note.summary}\n\n"
                           f"*{note.confidence_note}"
                           + (f" · lead: {note.likely_invoice}" if note.likely_invoice else "")
                           + f" · note by {note.written_by}*")
@@ -587,8 +649,8 @@ with queue_tab:
                                    width='stretch')
             else:
                 choice = None
-                head.caption("No candidate invoice survived blocking — nothing "
-                             "in the ledger is close on amount, date or name.")
+                head.caption("No candidate invoice survived blocking. Nothing in "
+                             "the ledger is close on amount, date or name.")
 
             reviewer_note = st.text_input("Reviewer note", key=f"note-{d.txn_id}",
                                           placeholder="optional")
@@ -623,8 +685,10 @@ with queue_tab:
                               use_llm=False, config_note="reviewer session")
                 log.record(history, run_id, name)
                 log.record(list(st.session_state.reviews.values()), run_id, name)
-            st.success(f"Wrote {len(st.session_state.reviews)} reviewer records "
-                       f"to {DB} as run `{run_id}`.")
+            n_written = len(st.session_state.reviews)
+            st.success(f"Wrote {n_written} reviewer record"
+                       f"{'' if n_written == 1 else 's'} to the audit trail "
+                       f"as run `{run_id}`.")
             st.session_state.reviews = {}
 
 
@@ -639,7 +703,7 @@ with metrics_tab:
         st.warning("**This batch has no answer key, so accuracy cannot be "
                    "measured.** Precision and recall are comparisons against "
                    "known-correct links, and nobody has those for real bank "
-                   "data — which is the whole reason reconciliation is a job. "
+                   "data, which is the whole reason reconciliation is a job. "
                    "Switch to **Generate synthetic** in the sidebar for a batch "
                    "that ships with one.")
         st.subheader("Operational summary")
@@ -665,10 +729,10 @@ with metrics_tab:
             ("Abstention precision", metrics["abstention_precision"]),
             ("Missed escalation", metrics["missed_escalation_rate"]),
         ]
-        st.caption("Accuracy is measured per **link** — one (transaction, "
-                   "invoice) pair — because a single payment can settle several "
-                   "invoices, and scoring per transaction would hide a "
-                   "consolidated payment that got 2 of 3 right. Rates are per "
+        st.caption("Accuracy is measured per **link**, meaning one "
+                   "(transaction, invoice) pair, because a single payment can "
+                   "settle several invoices. Scoring per transaction would "
+                   "hide a consolidated payment that got 2 of 3 right. Rates are per "
                    "transaction, because those answer \"how much human work did "
                    "we avoid\".")
         # No target column here on purpose. The project's targets were set for
@@ -692,25 +756,58 @@ with metrics_tab:
                   help="Rupees that would have been posted to the wrong "
                        "invoice. Zero means every wrong link allocated nothing.")
         c2.metric("Missed links", o["fn"],
-                  help="True links the system never found — usually because it "
-                       "abstained, which is the cheap failure.")
+                  help="True links the system never found, usually because it "
+                       "abstained. That is the cheap failure.")
 
         st.subheader("By difficulty")
+        st.caption("The generator stamps every link it plants with how hard it "
+                   "meant that link to be, so this table separates the payments "
+                   "anyone could match from the ones that are the actual job. "
+                   "**TP** is a link drawn that the answer key agrees with, "
+                   "**FP** one it does not contain, **FN** a true link never "
+                   "found. Expect recall to fall as you read down the table; if "
+                   "it does not, the difficulty labels are wrong, not the engine.")
+        # The counts are two digits wide; the description is a sentence. Left to
+        # share the width evenly, Streamlit truncates the sentence mid-word.
+        _counts = {c: st.column_config.Column(width="small")
+                   for c in ("txns", "TP", "FP", "FN", "precision", "recall")}
+
         st.dataframe(pd.DataFrame([
-            {"difficulty": k, "txns": v["n_txns"], "TP": v["tp"], "FP": v["fp"],
-             "FN": v["fn"], "precision": round(v["precision"], 3),
-             "recall": round(v["recall"], 3)}
+            {"difficulty": k,
+             "what this band is": DIFFICULTY_MEANING.get(k, ""),
+             "txns": v["n_txns"], "TP": v["tp"], "FP": v["fp"], "FN": v["fn"],
+             "precision": _rate(v["precision"], v["tp"] + v["fp"]),
+             "recall": _rate(v["recall"], v["tp"] + v["fn"])}
             for k, v in metrics["by_difficulty"].items()]),
-            hide_index=True, width='stretch')
+            hide_index=True, width='stretch',
+            height=_table_height(len(metrics["by_difficulty"])),
+            column_config={"difficulty": st.column_config.Column(width="small"),
+                           "what this band is": st.column_config.Column(width="large"),
+                           **_counts})
 
         st.subheader("By scenario")
+        st.caption("The same links, cut by the situation that produced them. "
+                   "This is the table that says *where* the missing recall "
+                   "lives, and it is never spread evenly. Two things to read "
+                   "carefully: **TP can exceed txns**, because one consolidated "
+                   "credit settles several invoices and each is its own link; "
+                   "and **ORPHAN and DUPLICATE have no true links at all**, so "
+                   "their rates show `n/a` rather than a zero. On those rows the "
+                   "only way to score well is to link nothing, and a number in "
+                   "the FP column is the failure to watch.")
         st.dataframe(pd.DataFrame([
-            {"link type": k, "txns": v["n_txns"], "TP": v["tp"], "FP": v["fp"],
-             "FN": v["fn"], "precision": round(v["precision"], 3),
-             "recall": round(v["recall"], 3)}
+            {"link type": k,
+             "what the payer did": SCENARIO_MEANING.get(k, ""),
+             "txns": v["n_txns"], "TP": v["tp"], "FP": v["fp"], "FN": v["fn"],
+             "precision": _rate(v["precision"], v["tp"] + v["fp"]),
+             "recall": _rate(v["recall"], v["tp"] + v["fn"])}
             for k, v in metrics["by_link_type"].items()]),
-            hide_index=True, width='stretch')
+            hide_index=True, width='stretch',
+            height=_table_height(len(metrics["by_link_type"])),
+            column_config={"link type": st.column_config.Column(width="medium"),
+                           "what the payer did": st.column_config.Column(width="large"),
+                           **_counts})
 
-        st.caption("Rules only. LLM adjudication measured at 0.432–0.556 link "
-                   "precision against 0.994 here, and is switched off — see "
-                   "ARCHITECTURE.md.")
+        st.caption("Rules only. LLM adjudication measured 0.432 to 0.556 link "
+                   "precision against 0.994 here, and is switched off. "
+                   "See ARCHITECTURE.md.")

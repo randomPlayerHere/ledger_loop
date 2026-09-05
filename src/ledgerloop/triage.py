@@ -59,7 +59,7 @@ SYSTEM_PROMPT = f"""\
 You triage a reconciliation exception queue for an Indian business.
 
 Each item is a bank credit that a deterministic rule engine could not match to \
-an invoice. Your job is NOT to match it -- that decision has already been made \
+an invoice. Your job is NOT to match it. That decision has already been made \
 and you cannot change it. Your job is to tell the human who opens this queue \
 what they are looking at and what to do about it.
 
@@ -67,19 +67,34 @@ For each item, write:
 
 - `summary`: one or two plain sentences. What is this money, what makes it \
 unresolvable, and what is the most likely explanation. Name the specific \
-evidence -- the amount gap and what it does or does not correspond to, the \
+evidence: the amount gap and what it does or does not correspond to, the \
 counterparty if the narration reveals one, the dates. Write for a finance \
 person in a hurry, not for an engineer.
 - `action`: exactly one of {', '.join(ACTIONS)}.
 - `likely_invoice`: the single most plausible invoice id from the candidate \
 list, or an empty string when nothing in the list is plausible. This is a \
 lead for a human to check, never a match.
-- `confidence_note`: a short phrase saying how sure you are and why, e.g. \
-"weak -- name matches but the amount gap is unexplained".
+- `confidence_note`: a short phrase saying how sure you are and why, for \
+example "weak: the name matches but the amount gap is unexplained".
 
-Be honest about uncertainty. "The narration names nobody and no invoice fits \
-this amount" is a useful thing for a reviewer to read; a confident guess that \
-sends them down the wrong path is not. Many of these genuinely cannot be \
+HOW TO WRITE IT
+
+Sound like someone on the accounts team leaving a note for whoever picks this \
+up next. Plain, direct, slightly terse. The kind of sentence a person writes \
+when they have forty of these to get through before lunch.
+
+- Never use an em dash or an en dash, and never use a double hyphen in their \
+place. Join clauses with a comma, a colon, a semicolon or a full stop.
+- Skip openers like "This appears to be" or "It seems that". Say what it is.
+- Avoid the "not X, but Y" construction, and do not finish on a tidy \
+summarising flourish. Stop when the useful part is over.
+- No bullet points, no headings, no bold. Sentences only.
+- Use the words a finance team actually uses: short paid, part payment, \
+remittance advice, on account, TDS deducted, written off.
+
+Be honest about uncertainty. If the narration names nobody and no invoice fits \
+the amount, say exactly that; it helps a reviewer more than a confident guess \
+that sends them down the wrong path. Many of these genuinely cannot be \
 resolved from the data available, and saying so plainly is the correct answer."""
 
 RESPONSE_SCHEMA: dict = {
@@ -155,7 +170,7 @@ def build_prompt(txn: BankTransaction, decision: MatchDecision,
     ]
     if decision.proposed_invoice_ids:
         lines.append(f"  provisional {', '.join(decision.proposed_invoice_ids)} "
-                     f"at confidence {decision.confidence:.2f} -- a human must confirm")
+                     f"at confidence {decision.confidence:.2f}, a human must confirm")
 
     lines.append("")
     if decision.candidates_considered:
@@ -171,7 +186,7 @@ def build_prompt(txn: BankTransaction, decision: MatchDecision,
                 f"| due {e.due_date} | {e.status}"
                 + (f" | TDS {e.tds_rate:.0%} applicable" if e.tds_applicable else ""))
     else:
-        lines.append("INVOICES CONSIDERED: none -- nothing in the ledger was even "
+        lines.append("INVOICES CONSIDERED: none. Nothing in the ledger was even "
                      "close on amount, date or counterparty.")
 
     lines += ["", "Triage this for the reviewer."]
@@ -330,7 +345,7 @@ def write_queue(notes: list[ExceptionNote], batch_name: str,
     degraded = sum(1 for n in notes if n.degraded)
 
     md = [
-        f"# Exception queue — `{batch_name}`",
+        f"# Exception queue: `{batch_name}`",
         "",
         f"{len(notes)} items · ₹{exposure:,.2f} unresolved · "
         f"generated {datetime.now():%Y-%m-%d %H:%M}",
@@ -342,7 +357,7 @@ def write_queue(notes: list[ExceptionNote], batch_name: str,
         "",
     ]
     if degraded:
-        md += [f"> {degraded} item(s) carry no model note — the call failed and "
+        md += [f"> {degraded} item(s) carry no model note. The call failed and "
                f"the rule's own reason is shown instead. They are listed rather "
                f"than dropped: a queue that hides what it could not process "
                f"misstates how much work is left.", ""]
@@ -356,13 +371,13 @@ def write_queue(notes: list[ExceptionNote], batch_name: str,
     md += ["", "## Queue", "", "Ordered by money at stake.", ""]
     for n in notes:
         md += [
-            f"### {n.txn_id} — ₹{n.amount:,.2f} · `{n.action}`",
+            f"### {n.txn_id} · ₹{n.amount:,.2f} · `{n.action}`",
             "",
             f"*{n.value_date} · {n.outcome} · {n.narration}*",
             "",
             n.summary,
             "",
-            f"- **Lead:** {n.likely_invoice or '—'}",
+            f"- **Lead:** {n.likely_invoice or 'none'}",
             f"- **Certainty:** {n.confidence_note}",
             f"- **Rules said:** {n.rule_reason}",
             f"- **Considered:** {', '.join(n.candidates) or 'nothing'}",

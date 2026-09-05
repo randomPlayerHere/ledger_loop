@@ -6,18 +6,15 @@
 
 Built for the Razorpay AI Buildathon · Track 04, AI Finance Controller
 
-<!-- Replace the two Streamlit URLs below with your deployed app URL. -->
-[![Live demo](https://img.shields.io/badge/Live_demo-Streamlit-0D94FB?style=for-the-badge&logo=streamlit&logoColor=white)](https://your-app.streamlit.app)
+[![Live demo](https://img.shields.io/badge/Live_demo-Streamlit-0D94FB?style=for-the-badge&logo=streamlit&logoColor=white)](https://ledgerloop.streamlit.app/)
 [![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org)
 [![uv](https://img.shields.io/badge/deps-uv-DE5FE9?style=for-the-badge)](https://github.com/astral-sh/uv)
 
 ![Auto-match](https://img.shields.io/badge/auto--match-80.0%25-1B7F3B)
 ![Precision](https://img.shields.io/badge/precision-0.998-1B7F3B)
 ![Tests](https://img.shields.io/badge/tests-149_passing-1B7F3B)
-![Holdout](https://img.shields.io/badge/holdout-never_tuned_on-0C2651)
-![LLM matching](https://img.shields.io/badge/LLM_matching-off_by_measurement-B8860B)
 
-### 🔗 **[Try the live demo →](https://your-app.streamlit.app)**
+### **[Try the live demo →](https://ledgerloop.streamlit.app/)**
 
 </div>
 
@@ -48,10 +45,10 @@ first, whatever it says.
 | Metric | **holdout** | dev | stress | Target |
 |---|---|---|---|---|
 | Auto-match rate | **0.800** | 0.777 | 0.691 | ≥ 0.80 |
-| **Precision on auto-matched** | **0.998** ✅ | 1.000 ✅ | 0.995 ✅ | ≥ 0.98 |
+| **Precision on auto-matched** | **0.998** | 1.000 | 0.995 | ≥ 0.98 |
 | Recall (all outcomes) | **0.889** | 0.874 | 0.808 | ≥ 0.93 |
-| Missed escalation | **0.002** ✅ | 0.000 ✅ | 0.004 ✅ | ≤ 0.02 |
-| Abstention precision | 0.511 ⚠️ | 0.680 | 0.699 | ≥ 0.70 |
+| Missed escalation | **0.002** | 0.000 | 0.004 | ≤ 0.02 |
+| Abstention precision | 0.511 | 0.680 | 0.699 | ≥ 0.70 |
 | False-match value | ₹124,382 | ₹63,788 | ₹251,436 | report |
 | Throughput | 10,259/min | 6,500/min | 8,133/min | report |
 | Transactions | 504 | 520 | 520 | |
@@ -258,20 +255,20 @@ narrations often do carry one — exactly the messy-text problem a model beats
 
 ## Guarantees
 
-- 🔒 **The holdout batch was never touched during development.** It is read once,
+- **The holdout batch was never touched during development.** It is read once,
   at the end, behind an explicit `--allow-holdout` flag, and whatever it says is
   published.
-- 📜 **The audit trail is append-only, enforced by SQLite triggers**, not by
+- **The audit trail is append-only, enforced by SQLite triggers**, not by
   convention. A correction writes a new record carrying `supersedes`; both
   survive. `UPDATE` and `DELETE` on the decisions table abort.
-- 💰 **Money is `Decimal` everywhere**, including through JSON and SQLite. No
+- **Money is `Decimal` everywhere**, including through JSON and SQLite. No
   float ever touches a rupee.
-- ⚙️ **Every threshold lives in [`config.yaml`](config.yaml)**, each carrying the
+- **Every threshold lives in [`config.yaml`](config.yaml)**, each carrying the
   measurement that set it. No magic numbers in `rules.py`.
-- 🚫 **The model may only return invoice IDs it was shown.** A fabricated ID
+- **The model may only return invoice IDs it was shown.** A fabricated ID
   forces `EXCEPTION` and is logged. Enforced in a pure function, with
   must-not-pass tests that never open a network connection.
-- 🔁 **Reproducible data.** Fixed seeds; `manifest.json` records each batch's.
+- **Reproducible data.** Fixed seeds; `manifest.json` records each batch's.
 
 ---
 
@@ -300,6 +297,5 @@ tests/            149 tests — one per rule, plus a must-not-fire case for each
 | | |
 |---|---|
 | **[ARCHITECTURE.md](ARCHITECTURE.md)** | The four-stage design and the rationale behind every decision |
-| **[FAILURES.md](FAILURES.md)** | Six substantial things that broke, with measurements — including a token budget that silently failed 42% of our calls |
 | **[reports/](reports/)** | Every eval run, in order |
 | **[config.yaml](config.yaml)** | Every threshold, with the measurement behind it |

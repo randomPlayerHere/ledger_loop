@@ -21,11 +21,17 @@ The second question is what sets the confidence, and therefore whether the
 match posts automatically or waits for a human.
 """
 
+from collections import defaultdict
+from decimal import Decimal
+from itertools import combinations
 from typing import Callable, Optional
 
 from .config import Config
-from .models import BankTransaction, Candidate, CandidateGroup, RuleResult
+from .models import (BankTransaction, Candidate, CandidateGroup, LedgerEntry,
+                     RuleResult)
+from .utils.amounts import close
 from .utils.dates import gap_days
+from .utils.narration import extract_refs, name_score
 
 # shortfall labels that mean "the amount is short, and we know why"
 _EXPLAINED = ("TDS", "BANK_CHARGES")
@@ -189,6 +195,40 @@ def r4_subset_sum(txn: BankTransaction, candidates: list[Candidate],
     )
 
 
+def _unique_tds(explained: list[Candidate],
+                candidates: list[Candidate]) -> tuple[Optional[Candidate], str]:
+    """R1's uniqueness argument, extended to TDS and to nothing else.
+
+    R1 fires on uniqueness alone: one candidate matching the credit to the
+    paisa, nobody named, and it posts -- because landing exactly on a gross is
+    a narrow enough target that coincidence is not a serious explanation. A TDS
+    shortfall is the same kind of claim: the credit is exactly 98% or 90% of a
+    gross. So when precisely one candidate in the whole shortlist carries an
+    explainable shortfall, that shortfall is TDS, and nothing matches exactly,
+    the arithmetic identifies the invoice on its own.
+
+    Bank charges are deliberately excluded, and the exclusion is the point.
+    "At most max(Rs50, 0.5% of gross)" is a *range*, not an identity, and a
+    range catches whatever happens to sit near the payment. Measured on
+    batch_dev over the 34 transactions this branch would newly reach:
+
+        TDS            12 correct,  0 wrong     precision 1.000
+        BANK_CHARGES    6 correct, 16 wrong     precision 0.273
+
+    Every wrong answer was a bank-charge one -- orphan credits, disputed
+    invoices and overpayments matched to whichever invoice sat within Rs50.
+    Admitting both branches on uniqueness would buy 18 links and post 16 wrong
+    ones automatically. That is invariant 4 stated in measurements rather than
+    in prose.
+    """
+    if len(explained) != 1:
+        return None, ""
+    if any(c.shortfall == "EXACT" for c in candidates):
+        return None, ""          # R1's case, or an ambiguity R1 already refused
+    c = explained[0]
+    return (c, "UNIQUE_TDS") if c.shortfall.startswith("TDS") else (None, "")
+
+
 def r3_tolerance(txn: BankTransaction, candidates: list[Candidate],
                  groups: list[CandidateGroup], cfg: Config) -> Optional[RuleResult]:
     """R3: the payment is short, and the shortfall has a known cause.
@@ -219,13 +259,17 @@ def r3_tolerance(txn: BankTransaction, candidates: list[Candidate],
     # part payment, a disputed bill, or a refund from nobody in the ledger.
     # That is precisely the manufactured match invariant 4 exists to prevent.
     if c is None:
+        c, tier = _unique_tds(explained, candidates)
+    if c is None:
         return None
 
     inv_id = c.invoice.invoice_id
     is_tds = c.shortfall.startswith("TDS")
     conf = cfg.confidence
     if is_tds:
-        confidence = conf.r3_tds_with_ref if tier == "REF" else conf.r3_tds
+        confidence = (conf.r3_tds_with_ref if tier == "REF"
+                      else conf.r3_tds_unique if tier == "UNIQUE_TDS"
+                      else conf.r3_tds)
         cause = f"{c.shortfall.replace('TDS_', '').replace('PCT', '%')} TDS"
     else:
         confidence = conf.r3_charges_with_ref if tier == "REF" else conf.r3_charges
@@ -360,6 +404,148 @@ RULES: list[Callable[..., Optional[RuleResult]]] = [
     r6_overpaid,
     r5_underpaid,
 ]
+
+
+# --------------------------------------------------------------------------
+# R7: the split path -- one invoice settled by two credits
+# --------------------------------------------------------------------------
+#
+# Every rule above answers "which invoice does this transaction settle?" one
+# transaction at a time, and for an instalment that question has no answer:
+# Rs 36,483.19 against a Rs 69,359.68 invoice is not the gross, not the gross
+# less TDS, not the gross less bank charges, and not a subset of anything. Both
+# halves abstain, and both land in the exception queue for a payment that is
+# perfectly ordinary.
+#
+# What identifies them is a property of the *pair*, so R7 is the one rule that
+# is handed the batch rather than a shortlist. It stays a pure function -- data
+# in, decisions out -- so it is testable the same way as the others.
+
+def find_split_payments(
+        bank: list[BankTransaction],
+        ledger: list[LedgerEntry],
+        settled: dict[str, set[str]],
+        cfg: Config,
+        ) -> dict[str, RuleResult]:
+    """R7: two credits landing on one invoice total to the paisa.
+
+    `settled` maps txn_id -> the invoice ids Stage 1 already matched it to, an
+    empty set meaning it was left unexplained. R7 reads it rather than being
+    handed only the residual, because an instalment pair often has exactly one
+    identifiable half: R5 recognises the counterparty on one credit and matches
+    it as an unexplained shortfall, while its sibling -- narrated
+    `INB/600951639708/PAYMENT`, naming nobody -- has nothing to go on and is
+    abandoned. Measured on batch_dev, that is 20 of the 52 pairs.
+
+    So a member that is already matched to *this* invoice is treated as
+    corroboration, not as an obstacle: an independent rule reached the same
+    invoice, and the sum confirms the pairing. R7 then completes the pair by
+    matching the abandoned half. It never overrides -- a member matched to some
+    *other* invoice is a contradiction, and the pair is dropped.
+
+    Returns txn_id -> RuleResult for the transactions R7 newly resolves.
+
+    Three abstention guards, all invariant 5:
+
+      * an invoice reachable by two different pairs is ambiguous, not matched
+      * a transaction that fits two different pairs is ambiguous, not matched
+      * a member already claimed by a different invoice is a conflict, not a
+        vote to be outweighed
+
+    None of these is a tie to break. The exact sum is the whole of the
+    evidence, and it stops being evidence the moment more than one arrangement
+    produces it.
+    """
+    tol = cfg.tolerances.amount_exact
+    window = cfg.blocking.split_max_days_gap
+    cents = Decimal("0.01")
+
+    # An invoice already settled is not awaiting instalments. Indexing by gross
+    # turns the search from "every pair against every invoice" into a lookup;
+    # the key is quantised so the index is exact, and close() still makes the
+    # final comparison, as every money comparison in this project does.
+    by_gross: dict[Decimal, list[LedgerEntry]] = defaultdict(list)
+    for inv in ledger:
+        if inv.status in ("OPEN", "PARTIALLY_PAID"):
+            by_gross[inv.gross_amount.quantize(cents)].append(inv)
+
+    pool = [t for t in bank if t.direction == "CREDIT"
+            and len(settled.get(t.txn_id, set())) <= 1]
+
+    # invoice_id -> every pair that lands on it; more than one means ambiguous
+    hits: dict[str, list[tuple[BankTransaction, BankTransaction]]] = defaultdict(list)
+    for a, b in combinations(pool, 2):
+        if gap_days(a.value_date, b.value_date) > window:
+            continue
+        total = a.amount + b.amount
+        for inv in by_gross.get(total.quantize(cents), []):
+            if not close(total, inv.gross_amount, tol):
+                continue
+            # Whatever either half is already matched to must be this invoice
+            # or nothing at all. Anything else is two rules disagreeing, and
+            # R7's evidence is not the kind that settles a disagreement.
+            if any(s and s != {inv.invoice_id}
+                   for s in (settled.get(a.txn_id, set()),
+                             settled.get(b.txn_id, set()))):
+                continue
+            hits[inv.invoice_id].append((a, b))
+
+    gross_of = {inv.invoice_id: inv for inv in ledger}
+    fits: dict[str, list[str]] = defaultdict(list)
+    accepted: dict[str, tuple[BankTransaction, BankTransaction]] = {}
+    for inv_id, pairs in hits.items():
+        if len(pairs) != 1:
+            continue                       # two ways to make the total: abstain
+        a, b = pairs[0]
+        accepted[inv_id] = (a, b)
+        fits[a.txn_id].append(inv_id)
+        fits[b.txn_id].append(inv_id)
+
+    out: dict[str, RuleResult] = {}
+    for inv_id, (a, b) in accepted.items():
+        # a transaction that could complete two different invoices is a
+        # question for a human, not a coin toss
+        if len(fits[a.txn_id]) != 1 or len(fits[b.txn_id]) != 1:
+            continue
+        inv = gross_of[inv_id]
+        num = inv.invoice_id.split("-")[-1]
+        refs = extract_refs(a.narration, a.utr, cfg.blocking.max_ref_digits) | \
+               extract_refs(b.narration, b.utr, cfg.blocking.max_ref_digits)
+        ref_hit = num in refs
+        conf = (cfg.confidence.r7_split_with_ref if ref_hit
+                else cfg.confidence.r7_split)
+
+        for this, other in ((a, b), (b, a)):
+            # The half a rule already matched keeps its own record. Re-deciding
+            # it would add an audit entry that changes nothing, and would claim
+            # R7 found something R5 had already found.
+            if settled.get(this.txn_id):
+                continue
+            out[this.txn_id] = RuleResult(
+                rule_id="R7_SPLIT",
+                invoice_ids=[inv_id],
+                allocated={inv_id: this.amount},
+                confidence=conf,
+                reasoning=(
+                    f"Instalment of {inv_id}: this credit and {other.txn_id} "
+                    f"together settle the invoice exactly"
+                    + (" and the narration cites it" if ref_hit else "")
+                    + "; no other pair does."
+                ),
+                evidence={
+                    "amount_delta": inv.gross_amount - (a.amount + b.amount),
+                    "date_gap_days": gap_days(a.value_date, b.value_date),
+                    "name_similarity": max(
+                        name_score(a.narration, inv.counterparty),
+                        name_score(b.narration, inv.counterparty)),
+                    "ref_hit": ref_hit,
+                    "invoice_gross": inv.gross_amount,
+                    "paired_with": other.txn_id,
+                    "this_instalment": this.amount,
+                    "other_instalment": other.amount,
+                },
+            )
+    return out
 
 
 def apply_rules(txn: BankTransaction, candidates: list[Candidate],

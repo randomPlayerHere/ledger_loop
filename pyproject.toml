@@ -8,7 +8,22 @@ dependencies = [
     "pydantic>=2.13.5",
     "rapidfuzz>=3.14.6",
     "pyyaml>=6.0",
+    # Stage 2's default provider. In the base dependency set, not an extra, so
+    # `make setup && make eval` from a fresh clone cannot fail on a missing
+    # client for the path the README documents.
+    "groq>=0.11.0",
+    # NVIDIA NIM speaks the OpenAI wire format; this is its client, not a
+    # dependency on OpenAI as a provider.
+    "openai>=1.40.0",
+    "python-dotenv>=1.0.0",
+    "streamlit>=1.63.0",
+    "pandas>=3.0.5",
 ]
+
+[project.optional-dependencies]
+# The comparison path. Optional because the default provider is Groq and this
+# pulls a second SDK for a run most people will never make.
+anthropic = ["anthropic>=0.40.0"]
 
 [dependency-groups]
 dev = [

@@ -151,15 +151,46 @@ def test_r3_must_not_fire_on_an_unexplainable_delta():
     assert r3_tolerance(txn("15052.34"), [c], [], CFG) is None
 
 
-def test_r3_must_not_fire_on_an_explainable_delta_alone():
-    """MUST NOT FIRE: no reference, no readable name, just a plausible gap.
+def test_r3_must_not_auto_match_on_a_lone_tds_gap():
+    """MUST NOT AUTO-MATCH: no reference, no readable name, one TDS-shaped gap.
 
-    Measured at 0.516 precision over 31 transactions on batch_dev. A shortfall
-    the right size to be TDS says nothing about *whose* TDS it is, and an
-    anonymous narration leaves nothing else to go on.
+    An anonymous narration says nothing about *whose* TDS this is, so this can
+    never post unattended -- BNK-000160 on batch_dev is a part payment sitting
+    exactly 10% below an unrelated customer's gross, and at auto-match
+    confidence this branch posted it. But landing on 90% of a gross when
+    nothing else in the shortlist fits is still evidence about *which* invoice,
+    measured 12/12 on batch_dev, so the rule proposes and a human confirms.
     """
     c = cand(inv("INV-1006", "49414.96"), name=WEAK, shortfall="TDS_10PCT")
-    assert r3_tolerance(txn("44473.46"), [c], [], CFG) is None
+    got = r3_tolerance(txn("44473.46"), [c], [], CFG)
+
+    assert got is not None
+    assert got.evidence["tier"] == "UNIQUE_TDS"
+    assert got.confidence < CFG.thresholds.auto_match
+
+
+def test_r3_must_not_fire_on_a_lone_bank_charge_gap():
+    """MUST NOT FIRE: the same uniqueness argument, on a range instead of an
+    identity, and it does not hold.
+
+    'At most max(Rs50, 0.5% of gross)' catches whatever sits near the payment.
+    Measured over the 34 transactions this branch would newly reach on
+    batch_dev: TDS 12 correct / 0 wrong, bank charges 6 correct / 16 wrong.
+    Every wrong answer came from this side, so this side stays shut.
+    """
+    c = cand(inv("INV-1006", "49414.96"), name=WEAK, shortfall="BANK_CHARGES")
+    assert r3_tolerance(txn("49390.00"), [c], [], CFG) is None
+
+
+def test_r3_uniqueness_needs_the_shortlist_to_be_unambiguous():
+    """MUST NOT FIRE: a second explainable candidate destroys the argument.
+
+    Uniqueness is the whole of the evidence here, so it stops being evidence
+    the moment two candidates carry an explainable gap.
+    """
+    cands = [cand(inv("INV-1006", "49414.96"), name=WEAK, shortfall="TDS_10PCT"),
+             cand(inv("INV-1007", "45380.06"), name=WEAK, shortfall="TDS_2PCT")]
+    assert r3_tolerance(txn("44473.46"), cands, [], CFG) is None
 
 
 def test_r3_must_not_fire_when_two_named_candidates_are_both_explainable():

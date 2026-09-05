@@ -41,7 +41,10 @@ class MatchDecision(BaseModel):
     allocated: dict[str, Decimal]
     outcome: Literal["AUTO_MATCHED", "NEEDS_REVIEW", "EXCEPTION"]
     confidence: float                  # 0.0 - 1.0
-    decided_by: Literal["RULE", "LLM"]
+    # HUMAN is what a reviewer's accept/reject writes. It is a third kind of
+    # author, not a flag on an existing record: the trail has to be able to say
+    # that a person overrode a rule, and which person-shaped action it was.
+    decided_by: Literal["RULE", "LLM", "HUMAN"]
     rule_id: str | None                # "R3_TOLERANCE_TDS"
     reasoning: str                     # human-readable, one sentence
     evidence: dict                     # amount_delta, date_gap, name_similarity, ref_hit

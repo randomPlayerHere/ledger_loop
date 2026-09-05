@@ -17,6 +17,12 @@ guide.md
 .env
 .env.local
 
+# Stage 2 response cache. Ignored by default because it churns while the prompt
+# is being tuned. Worth un-ignoring before the deadline: a committed cache makes
+# `make eval BATCH=dev` reproduce the reported LLM numbers with no API key at
+# all, which is a stronger reproducibility claim than a seed alone.
+.cache/
+
 # SQLite audit database
 *.db
 *.sqlite
@@ -44,3 +50,6 @@ streamlit_cached_theme.json
 # Logs
 *.log
 logs/
+
+# The audit trail is generated per run, not committed. `make demo` rebuilds it.
+audit.db

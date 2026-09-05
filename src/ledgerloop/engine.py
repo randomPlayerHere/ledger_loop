@@ -23,7 +23,7 @@ from .config import Config
 from .loaders import Batch
 from .models import (BankTransaction, Candidate, CandidateGroup, MatchDecision,
                      RuleResult)
-from .rules import apply_rules
+from .rules import apply_rules, find_split_payments
 from .utils.amounts import close
 
 logger = logging.getLogger(__name__)
@@ -49,8 +49,23 @@ def _route(result: Optional[RuleResult], cfg: Config) -> tuple[str, str]:
 def _decide(txn: BankTransaction, candidates: list[Candidate],
             result: Optional[RuleResult], cfg: Config,
             started: float,
-            groups: list[CandidateGroup] | None = None) -> MatchDecision:
+            groups: list[CandidateGroup] | None = None,
+            *,
+            decided_by: str = "RULE",
+            tokens: tuple[int | None, int | None] = (None, None),
+            forced: tuple[str, str] | None = None,
+            extra_evidence: dict | None = None) -> MatchDecision:
+    """Build the one audit record this transaction gets.
+
+    The keyword arguments exist for Stage 2 and are inert for Stage 1. `forced`
+    overrides confidence routing outright -- a hallucinated invoice id or a
+    timeout is an EXCEPTION regardless of what the model claimed, and routing
+    such a response on its own confidence would be trusting the thing that just
+    proved untrustworthy.
+    """
     outcome, reason = _route(result, cfg)
+    if forced is not None:
+        outcome, reason = forced
 
     # Everything the reviewer was entitled to consider, both shortlists. A group
     # member is invisible to the single-invoice path, so recording only
@@ -67,8 +82,16 @@ def _decide(txn: BankTransaction, candidates: list[Candidate],
     # an exception with no candidates is a different job for the reviewer than
     # one with three plausible invoices, so the queue must be able to tell them
     # apart from the record alone
-    if result is None and not considered:
+    if result is None and not considered and forced is None:
         reason = NO_CANDIDATES
+
+    # Evidence survives both paths: a rule's own dict, or -- when the record
+    # exists precisely because something went wrong -- what the model said and
+    # what the validator caught it on. An unexplained record is a bug even when
+    # the record is an exception.
+    evidence = dict(result.evidence) if result else {}
+    if extra_evidence:
+        evidence.update(extra_evidence)
 
     return MatchDecision(
         decision_id=str(uuid4()),
@@ -79,17 +102,71 @@ def _decide(txn: BankTransaction, candidates: list[Candidate],
         confidence=result.confidence if result else 0.0,
         # "RULE" even when nothing fired: the rules stage handled this txn, and
         # it handled it by declining. evaluate.py counts decided_by == "LLM" to
-        # get the invocation rate, so an abstention must never be labelled LLM.
-        decided_by="RULE",
+        # get the invocation rate, so a rules abstention must never be labelled
+        # LLM -- only a transaction Stage 2 actually looked at carries that.
+        decided_by=decided_by,
         rule_id=result.rule_id if result else None,
-        reasoning=result.reasoning if result else reason,
-        evidence=result.evidence if result else {},
+        reasoning=result.reasoning if (result and forced is None) else reason,
+        evidence=evidence,
         candidates_considered=considered,
-        llm_tokens_in=None,
-        llm_tokens_out=None,
+        llm_tokens_in=tokens[0],
+        llm_tokens_out=tokens[1],
         latency_ms=int((time.perf_counter() - started) * 1000),
         created_at=datetime.now(),
     )
+
+
+def _apply_splits(history: list[MatchDecision], batch: Batch,
+                  cfg: Config) -> list[MatchDecision]:
+    """R7's second pass: pair up instalments Stage 1 could not explain alone.
+
+    Appends rather than edits, like every other correction in this file. The
+    original abstention stays in the trail with its own reasoning, and the new
+    record points back at it through `supersedes` -- so the audit shows that
+    nothing was known about this credit until its sibling was found, which is
+    the honest account of how the match was actually made.
+    """
+    # Only a match strong enough to post unattended counts as settled. A
+    # decision below that bar is a proposal awaiting a human, and R7's evidence
+    # -- two credits landing on the invoice total to the paisa, with no other
+    # pair that does -- is stronger than any of the single-line readings that
+    # land there. Treating a provisional guess as final let R3's lone-TDS
+    # branch pre-empt three pairings R7 had better grounds for.
+    settled = {d.txn_id: (set(d.proposed_invoice_ids)
+                          if d.confidence >= cfg.thresholds.auto_match else set())
+               for d in history}
+    found = find_split_payments(batch.bank, batch.ledger, settled, cfg)
+    if not found:
+        return []
+
+    prior = {d.txn_id: d for d in history}
+    out: list[MatchDecision] = []
+    for txn_id, result in found.items():
+        was = prior[txn_id]
+        outcome, _ = _route(result, cfg)
+        out.append(MatchDecision(
+            decision_id=str(uuid4()),
+            txn_id=txn_id,
+            proposed_invoice_ids=result.invoice_ids,
+            allocated=result.allocated,
+            outcome=outcome,
+            confidence=result.confidence,
+            decided_by="RULE",
+            rule_id=result.rule_id,
+            reasoning=result.reasoning,
+            evidence=result.evidence,
+            candidates_considered=was.candidates_considered,
+            llm_tokens_in=None,
+            llm_tokens_out=None,
+            latency_ms=0,
+            created_at=datetime.now(),
+            supersedes=was.decision_id,
+        ))
+
+    logger.info("split payments paired", extra={"batch": batch.name,
+                                                "transactions": len(out),
+                                                "invoices": len(out) // 2})
+    return out
 
 
 def _supersede_duplicates(history: list[MatchDecision], batch: Batch,
@@ -159,16 +236,50 @@ def _supersede_duplicates(history: list[MatchDecision], batch: Batch,
     return corrections
 
 
-def reconcile(batch: Batch, cfg: Config, use_llm: bool = True) -> list[MatchDecision]:
-    """Run the pipeline over one batch.
+def _worth_asking(candidates: list[Candidate], groups: list[CandidateGroup],
+                  cfg: Config) -> bool:
+    """Whether Stage 2 has a question to ask about this transaction.
 
-    Returns the *effective* decision per bank line -- one each, latest wins.
-    `history` keeps every record including superseded ones; that is what the
-    audit trail stores. Returning the history instead would double-count a
-    corrected match, since evaluate.py reads links from every decision it is
-    given.
+    An empty shortlist is not a hard case, it is an unanswerable one: the
+    model would be asked to choose from nothing and could only either abstain
+    or invent an id. Both outcomes are already known before the call, so the
+    call is not made. This gate is also what keeps the invocation rate near
+    half of what the residual set would otherwise cost.
+    """
+    return len(candidates) + len(groups) >= cfg.llm.min_candidates
+
+
+def reconcile(batch: Batch, cfg: Config, use_llm: bool = True,
+              adjudicator: "Adjudicator | None" = None) -> list[MatchDecision]:
+    """The effective decision per bank line. See `run_pipeline` for the trail."""
+    return run_pipeline(batch, cfg, use_llm, adjudicator)[0]
+
+
+def run_pipeline(batch: Batch, cfg: Config, use_llm: bool = True,
+                 adjudicator: "Adjudicator | None" = None,
+                 ) -> tuple[list[MatchDecision], list[MatchDecision]]:
+    """Run the pipeline over one batch. Returns (effective, history).
+
+    `effective` is one decision per bank line, latest wins -- what evaluate.py
+    scores, since scoring the history instead would double-count a corrected
+    match. `history` is every record ever produced, superseded ones included,
+    and that is what audit.py stores: the trail is the product, and a trail
+    that keeps only the final answer cannot say why the answer changed.
+
+    `adjudicator` is injectable so tests can drive Stage 2 with a scripted
+    client; left None with use_llm it is built from config, which fails loudly
+    if the provider's key is missing rather than quietly reporting rules-only
+    numbers under an LLM label.
     """
     history: list[MatchDecision] = []
+
+    # `llm.adjudicate` is off by default and the reason is in config.yaml: the
+    # model measured worse than the rules at choosing invoices. Stage 2's live
+    # job is triage, which runs after this loop over the queue this loop
+    # produces -- so a normal run builds no adjudicator at all.
+    if use_llm and adjudicator is None and cfg.llm.adjudicate:
+        from .llm import build_adjudicator     # local: keeps --no-llm import-free
+        adjudicator = build_adjudicator(cfg)
 
     for txn in batch.bank:
         started = time.perf_counter()
@@ -179,10 +290,28 @@ def reconcile(batch: Batch, cfg: Config, use_llm: bool = True) -> list[MatchDeci
         groups = generate_group_candidates(txn, batch.ledger, cfg)
         result = apply_rules(txn, candidates, cfg, groups)
 
-        # TODO Stage 2: when result is None and use_llm, adjudicate with the LLM
-        # and rebuild the decision with decided_by="LLM" plus token counts.
+        # Stage 2. Only the residual reaches it: a rule that fired has already
+        # explained the money in terms a human can check, and re-deciding it
+        # with a model would trade an auditable reason for an opaque one.
+        if (result is None and adjudicator is not None
+                and _worth_asking(candidates, groups, cfg)):
+            verdict = adjudicator.adjudicate(txn, candidates, groups)
+            history.append(_decide(
+                txn, candidates, verdict.result, cfg, started, groups,
+                decided_by="LLM",
+                tokens=(verdict.tokens_in, verdict.tokens_out),
+                forced=verdict.forced,
+                extra_evidence=verdict.evidence,
+            ))
+            continue
 
         history.append(_decide(txn, candidates, result, cfg, started, groups))
+
+    # R7 runs here rather than inside the loop because its evidence is a
+    # property of a pair of transactions, and no rule looking at one line at a
+    # time can see it. It searches only what Stage 1 left unexplained, so it
+    # can never contradict a rule that fired on better evidence.
+    history.extend(_apply_splits(history, batch, cfg))
 
     corrections = _supersede_duplicates(history, batch, cfg)
     history.extend(corrections)
@@ -195,5 +324,7 @@ def reconcile(batch: Batch, cfg: Config, use_llm: bool = True) -> list[MatchDeci
     logger.info("reconciled batch", extra={"batch": batch.name,
                                            "n_txns": len(batch.bank),
                                            "superseded": len(corrections),
-                                           "outcomes": counts})
-    return effective
+                                           "outcomes": counts,
+                                           "stage2": adjudicator.stats
+                                           if adjudicator else None})
+    return effective, history

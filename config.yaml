@@ -1,10 +1,157 @@
 # Configuration
 
-# LLM settings
+# Stage 2 settings.
+#
+# The provider is a config key, not a code decision: the adjudicator talks to a
+# two-method client interface, so swapping `provider` below is the whole change.
+# That is what makes the "same batch, two models" comparison in the README a
+# config edit instead of a rewrite.
 llm:
-  model: claude-3-5-sonnet-20241022
-  temperature: 0.0
-  max_tokens: 1000
+  provider: nim          # groq | anthropic | nim
+  temperature: 0.0        # a reconciliation is a judgement, not a draft
+
+  # The two jobs Stage 2 could do, and the measured decision about each.
+  #
+  # adjudicate -- let the model pick invoices from the shortlist when the rules
+  #   abstain. Built, tested, measured, and OFF. Link precision came out at
+  #   0.432 (groq gpt-oss-120b) and 0.556 (nim nemotron-3-super) against 0.994
+  #   for the rules, and the models' own confidence carried no signal to filter
+  #   on. The code and its guards stay -- invariant 3 validation, the cache,
+  #   the timeout handling, its tests -- because the measurement is the
+  #   deliverable and a flag you can flip is how you show your working. Set it
+  #   true to reproduce the numbers in reports/.
+  #
+  # triage -- write the exception queue: why this credit is stuck, what
+  #   evidence exists, what a human should do next. ON. It proposes no links,
+  #   so it cannot move precision in either direction, and it is language work
+  #   rather than arithmetic -- which is the half of this problem a model is
+  #   actually better at than a rule.
+  adjudicate: false
+  triage: true
+
+  # Headroom, not a target. On a reasoning model the completion budget is shared
+  # with the reasoning the model does before it writes anything, and under
+  # strict schema a budget that runs out mid-object is not a truncated answer --
+  # the provider rejects the whole request. Measured on batch_dev: a typical
+  # adjudication spends ~900 output tokens and the worst case seen spent 3,492,
+  # so 1,000 failed 46 of 110 calls outright. Billing is on tokens used, so the
+  # unused ceiling costs nothing.
+  max_tokens: 4000
+
+  # The shortlist the model sees, cut from the 20 blocking produces. Candidates
+  # arrive ranked, so this is a top-k.
+  #
+  # Measured on batch_dev -- of the 110 residuals reaching Stage 2, how many
+  # have their whole truth answer inside the cut, i.e. are winnable at all:
+  #
+  #     k = 8   76 winnable   263 prompt tokens
+  #     k = 12  80 winnable   312
+  #     k = 16  81 winnable   349
+  #     k = 20  82 winnable   378
+  #
+  # 8 was throwing away four winnable transactions -- part payments rank low
+  # because their amount sits far from gross, and one measured case had the
+  # right invoice at rank 17. 12 recovers all but two of those. The last two
+  # cost eight more distractors on every single call, and a model choosing
+  # between twelve near-identical invoices already chooses worse than one
+  # choosing between eight; that is a poor trade for two transactions.
+  max_candidates: 12
+  max_groups: 3           # consolidated combinations shown alongside
+
+  # Stage 2 is only reached when the rules abstained AND blocking left
+  # something to choose from. A transaction with an empty shortlist has no
+  # question to ask -- there is no ledger to pick from -- so calling the model
+  # would burn a request to be told what we already know.
+  min_candidates: 1
+
+  # Ceiling on what an LLM decision may claim, applied after validation.
+  #
+  # Every rule confidence in this file was set from a precision that tier
+  # actually measured on batch_dev. A model's self-reported confidence has no
+  # such backing -- it is a number the model wrote, not one we observed. Set
+  # just below thresholds.auto_match, so an LLM answer's best outcome is
+  # NEEDS_REVIEW and Stage 2 cannot move the auto-precision number in either
+  # direction on its first run.
+  #
+  # MEASURED on batch_dev, and the answer is that it stays where it is.
+  # Scoring every cached adjudication against truth:
+  #
+  #   model                     committed   link precision
+  #   groq openai/gpt-oss-120b     44          0.432
+  #   nim  nemotron-3-super       	9          0.556
+  #
+  # against 0.994 for the rules. Worse, the self-reported number carries no
+  # signal: both models claim >= 0.95 on nearly every answer, and precision
+  # inside that bucket is 0.404. A floor of 0.99 keeps 4 of 52 answers -- there
+  # is no threshold that separates its right answers from its wrong ones.
+  #
+  # So Stage 2's honest job is to put a suggestion and its reasoning in front of
+  # a human, not to post. Do not raise this above thresholds.auto_match without
+  # a model that measures better than the rules it would be overriding.
+  confidence_ceiling: 0.94
+
+  # Keyed on (txn_id, candidate id set, model, prompt version) -- see llm.py.
+  # Re-running an eval during development must not re-bill.
+  cache_dir: .cache/llm
+
+  # Free-tier throttling is measured in tokens per minute, and a batch of 500
+  # will trip it. A 429 is the provider saying "later", not "no", so the client
+  # waits and retries; the SDK honours the retry-after header. Set high enough
+  # that a whole eval completes unattended -- a run that dies two thirds of the
+  # way through leaves a cache half full and a report not worth reading.
+  max_retries: 8
+
+  providers:
+    groq:
+      # Chosen over llama-3.3-70b-versatile, kimi-k2 and the 20B sibling for
+      # one reason that matters more here than benchmark scores: it is in the
+      # small set of Groq models that support *strict* JSON-schema structured
+      # output. Strict mode means the response either matches the schema or the
+      # request fails -- so a malformed answer never reaches the validator, and
+      # the exception queue fills with real ambiguity instead of broken JSON.
+      # It is also 4x cheaper on input than llama-3.3-70b and reasons better
+      # about multi-invoice allocation, which is exactly what the residual set
+      # is made of. Fall back to openai/gpt-oss-20b if free-tier limits bite.
+      model: openai/gpt-oss-120b
+      reasoning_effort: medium   # gpt-oss only; null to omit the parameter
+      # Rupees per million tokens. Groq lists $0.15 / $0.60; at Rs 85/$ that is
+      # the pair below. Update the rate, not the code, when the rate moves.
+      price_in: 12.75
+      price_out: 51.00
+    nim:
+      # The default. NVIDIA's hosted catalogue, OpenAI-compatible.
+      #
+      # It is the default because of the shape of the free tier, not the model:
+      # Groq meters free use in tokens per day (200k), which a single pass over
+      # a 520-line batch exhausts outright, while NVIDIA meters it in request
+      # credits at 40/min and one adjudication is one credit. A full eval is
+      # ~110 credits of ~1,000.
+      #
+      # That billing shape also decides the model. When a request costs one
+      # credit regardless of size, a smaller model buys nothing -- there is no
+      # cost axis left to trade capability against, so the only question is
+      # which model is most capable at acceptable latency. Nemotron Super is
+      # NVIDIA's own reasoning model on NVIDIA's own platform (best-supported
+      # path for strict structured output), and its MoE routing keeps 120B-class
+      # quality at 12B-class speed, which matters across 110 sequential calls.
+      # Ultra 550B was rejected on latency alone: 55B active params, same one
+      # credit, several times the wall clock.
+      model: nvidia/nemotron-3-super-120b-a12b
+      reasoning_effort: medium
+      max_tokens: 4000
+      # Published per-token rates for a model of this class, NOT what NVIDIA
+      # charged -- the free tier bills credits, so the true figure is zero and a
+      # zero would make the cost column meaningless. Read the report line as
+      # "what this run would cost at commercial per-token rates".
+      price_in: 12.75
+      price_out: 51.00
+    anthropic:
+      # The quality ceiling to compare the cheap path against, not the default.
+      model: claude-opus-5
+      reasoning_effort: null
+      max_tokens: 4000           # thinking is on by default and shares the budget
+      price_in: 425.00           # $5.00 per Mtok at Rs 85/$
+      price_out: 2125.00         # $25.00 per Mtok
 
 # Matching tolerances
 tolerances:
@@ -48,6 +195,22 @@ confidence:
   # narrower target than "at most max(Rs50, 0.5%)".
   r3_tds: 0.96
   r3_tds_with_ref: 0.98
+  # No name, no quoted number, but exactly one candidate in the shortlist is a
+  # TDS-shaped distance from the credit and nothing matches exactly. Measured
+  # 11/11 correct on batch_dev -- and still parked below auto_match on purpose.
+  #
+  # The arithmetic identifies *which invoice*; nothing here identifies *who
+  # paid*. Scored at 0.96 this branch posted BNK-000160 against INV-1295: a
+  # part payment that happens to land exactly 10% below an unrelated customer's
+  # gross. It reads as 11/11 today only because R7 has better evidence for that
+  # particular credit and takes it back -- a rescue this rule cannot count on.
+  # So the branch keeps its recall and gives up its autonomy, the same trade
+  # r5_underpaid_named makes below.
+  #
+  # The bank-charge branch of the same uniqueness test measured 6/22 and is
+  # refused outright in rules.py: a range catches whatever sits near the
+  # payment, where an exact 2% or 10% identity does not.
+  r3_tds_unique: 0.92
   r3_charges: 0.95
   r3_charges_with_ref: 0.97
 
@@ -57,6 +220,13 @@ confidence:
   # human -- the rule only offers it at all when no larger invoice is in view.
   r6_overpaid_with_ref: 0.96
   r6_overpaid_named: 0.90
+
+  # R7: two credits landing on one invoice total to the paisa, with no second
+  # pair that also works. Scored beside R4 because the evidence is the same
+  # evidence -- an exact sum that coincidence does not produce -- and measured
+  # the same way: 25 of 25 correct on batch_dev, no ambiguous invoice.
+  r7_split: 0.96
+  r7_split_with_ref: 0.98
 
   # R5: short by an amount nothing accounts for. A quoted invoice number still
   # identifies the payer, so the match itself is sound and posts automatically.
@@ -102,3 +272,20 @@ blocking:
   group_max_results: 5    # more distinct subsets than this is not a ranking
                           # problem, it is an ambiguous transaction -- R4
                           # abstains and it goes to the exception queue
+
+  # R7, the split path: one invoice settled by two credits.
+  #
+  # A customer clearing an invoice in two instalments pays neither the gross nor
+  # any explainable fraction of it, so every single-invoice rule abstains and
+  # both halves land in the exception queue. Neither half is identifiable alone;
+  # what identifies them is that together they land on the invoice total to the
+  # paisa. That is R4 transposed -- subset-sum over transactions rather than
+  # over invoices.
+  #
+  # The window is wide because instalments are weeks apart by nature; the
+  # evidence carrying that reach is the exact sum, exactly as with the group
+  # path. Measured on batch_dev: 25 pairs found, 25 correct, no invoice matched
+  # by two different pairs. The window is measured, not guessed: instalment
+  # gaps in batch_dev run 9-48 days (median 29), so 60 covers every pair with
+  # headroom and anything wider only invites coincidental sums.
+  split_max_days_gap: 60

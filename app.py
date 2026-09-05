@@ -401,14 +401,25 @@ if batch_dir is None:
                  "answer key for a real statement, so accuracy cannot be "
                  "measured on that path.")
 
-    a, b, c = st.columns(3)
-    a.markdown("**Stage 0 · blocking**  \n500 invoices narrowed to a shortlist "
-               "of 20 per credit, on amount, date and counterparty name.")
-    b.markdown("**Stage 1 · rules**  \nSeven deterministic rules, each of which "
-               "abstains rather than guess. Precision 0.994 on measured data.")
-    c.markdown("**Stage 2 · the model**  \nWrites the exception queue. It "
-               "proposes no matches. Measured at 0.43 link precision, so "
-               "that job stays with the rules.")
+    st.divider()
+
+    st.subheader("What this does")
+    st.write("Money arrives in the bank. Invoices sit in the ledger. Someone "
+             "has to say which paid which, and it is rarely obvious: customers "
+             "pay late, pay half, deduct TDS, or clear five bills with one "
+             "transfer. LedgerLoop settles what it can prove and queues the "
+             "rest with a reason attached.")
+
+    st.caption("HOW A PAYMENT BECOMES A DECISION")
+    a, b, c, d = st.columns(4)
+    a.markdown("**1 · Narrow it down**  \nAmount, date and name cut 500 "
+               "invoices to the 20 worth checking.")
+    b.markdown("**2 · Look for a reason**  \nSeven rules ask what explains the "
+               "amount. If nothing does, nothing fires.")
+    c.markdown("**3 · Write it up**  \nA model notes what the leftover money "
+               "probably is and what to do next. It only suggests.")
+    d.markdown("**4 · Decide who looks**  \nStrong evidence posts itself, weak "
+               "evidence comes to you, the rest is queued. All of it recorded.")
     st.stop()
 
 try:
